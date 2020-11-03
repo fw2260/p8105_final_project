@@ -11,17 +11,27 @@ library(rvest)
 ```
 
 ```{r}
-title_vec <- c()
-
-for (i in 1:10) {
-url <- paste("https://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?page=", i, sep = "")
-
-metacritic_html <- read_html(url)
+# scrape the first page only
+metacritic_html <-
+  read_html("https://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered")
 
 title_vec <-
   metacritic_html %>% 
   html_nodes(".title h3") %>% 
   html_text()
+
+# scrape the remaining 179 pages
+for (i in 1:10) {
+url <- paste("https://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?page=", i, sep = "")
+
+metacritic_html <- read_html(url)
+
+titles_100 <-
+  metacritic_html %>% 
+  html_nodes(".title h3") %>% 
+  html_text() 
+
+title_vec <- append(title_vec, titles_100)
 
 }
 

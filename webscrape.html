@@ -369,17 +369,27 @@ summary {
 </div>
 
 
-<pre class="r"><code>title_vec &lt;- c()
-
-for (i in 1:10) {
-url &lt;- paste(&quot;https://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?page=&quot;, i, sep = &quot;&quot;)
-
-metacritic_html &lt;- read_html(url)
+<pre class="r"><code># scrape the first page only
+metacritic_html &lt;-
+  read_html(&quot;https://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered&quot;)
 
 title_vec &lt;-
   metacritic_html %&gt;% 
   html_nodes(&quot;.title h3&quot;) %&gt;% 
   html_text()
+
+# scrape the remaining 179 pages
+for (i in 1:10) {
+url &lt;- paste(&quot;https://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?page=&quot;, i, sep = &quot;&quot;)
+
+metacritic_html &lt;- read_html(url)
+
+titles_100 &lt;-
+  metacritic_html %&gt;% 
+  html_nodes(&quot;.title h3&quot;) %&gt;% 
+  html_text() 
+
+title_vec &lt;- append(title_vec, titles_100)
 
 }
 
