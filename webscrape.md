@@ -1,16 +1,9 @@
----
-title: "Webscraping"
-author: "Lily Wang"
-date: "11/3/2020"
-output: github_document
----
+Webscraping
+================
+Lily Wang
+11/3/2020
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(rvest)
-```
-
-```{r}
+``` r
 title_vec <- c()
 platform_vec = c()
 release_date_vec = c()
@@ -53,18 +46,14 @@ release_date_vec = append(release_date_vec,release_date)
 #meta_score_vec = append(meta_score_vec,meta_score)
 
 }
-
-
 ```
-
 
 Create a table to store all variables.
 
-```{r}
+``` r
 games_df <- tibble(
   title = title_vec,
   platform = platform_vec,
   release_date = release_date_vec
   )
 ```
-
