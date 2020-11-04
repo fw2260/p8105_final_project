@@ -1,19 +1,19 @@
 ---
 title: "Webscraping"
-author: "Lily Wang"
 date: "11/3/2020"
-output: html_document
+output: github_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup}
 library(tidyverse)
 library(rvest)
 ```
 
+Scrape the game title, release date, platform, metascore, and user score from all 180 pages:
+
 ```{r}
 title_vec <- c()
 
-# scrape all 180 pages
 for (i in 0:10) {
 url <- paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
 
@@ -31,3 +31,4 @@ title_vec <- append(title_vec, titles_100)
 games_df <- tibble(title = title_vec)
 ```
 
+Scrape the 
