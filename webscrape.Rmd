@@ -12,23 +12,23 @@ library(rvest)
 Scrape the game title, release date, platform, metascore, and user score from all 180 pages:
 
 ```{r}
-title_vec <- c()
+title_vec = c()
 platform_vec = c()
 release_date_vec = c()
 meta_score_vec = c()
 user_score_vec = c()
 
 for (i in 0:10) {
-url <- paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
+url = paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
 
-metacritic_html <- read_html(url)
+metacritic_html = read_html(url)
 
-titles_100 <-
+title =
   metacritic_html %>% 
   html_nodes(".title h3") %>% 
   html_text()
   
-title_vec <- append(title_vec, titles_100[-1])
+title_vec = append(title_vec, title[-1])
 
 platform = 
   metacritic_html %>% 
@@ -66,7 +66,7 @@ user_score_vec = append(user_score_vec,user_score)
 ```
 
 
-Create a table to store all variables.
+Create a tibble to store all variables:
 
 ```{r}
 games_df <- tibble(
@@ -77,5 +77,3 @@ games_df <- tibble(
   user_score = user_score_vec
   )
 ```
-
-Scrape the 
