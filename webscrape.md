@@ -3,6 +3,8 @@ Webscraping
 Lily Wang
 11/3/2020
 
+Scrape from home pages
+
 ``` r
 title_vec <- c()
 platform_vec = c()
@@ -27,7 +29,8 @@ platform =
   html_nodes(".platform .data") %>% 
   html_text() %>% 
   gsub("\n","",.)  %>% 
-  gsub(" ","",.)
+  gsub("^\\s+|\\s+$","",.) 
+  
 
 platform_vec = append(platform_vec,platform)
 
@@ -56,4 +59,30 @@ games_df <- tibble(
   platform = platform_vec,
   release_date = release_date_vec
   )
+```
+
+Scrape from detail pages
+
+``` r
+platform_add = tolower(platform_vec) %>% 
+  str_replace(" ","-")
+  
+title_add = tolower(title_vec) %>% 
+  str_replace_all(":","") %>% 
+   str_replace_all("'","") %>% 
+   str_replace_all(" /","") %>% 
+   str_replace_all(";","") %>% 
+   str_replace_all("\\(","") %>% 
+   str_replace_all("\\)","") %>% 
+   str_replace_all("\\.","") %>% 
+   str_replace_all("\\ &","") %>%
+   str_replace_all("\\$","") %>% 
+  str_replace_all(",","") %>% 
+   str_replace_all(" ","-")  
+  
+
+for (i in 1:1100) {
+  url_add = "https://www.metacritic.com/game"
+  url = paste(url_add,platform_add[i],title_add[i],sep = "/")
+}
 ```

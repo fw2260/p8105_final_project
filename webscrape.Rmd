@@ -10,12 +10,13 @@ library(tidyverse)
 library(rvest)
 ```
 
+Scrape from home pages
+
 ```{r}
 title_vec <- c()
 platform_vec = c()
 release_date_vec = c()
 meta_score_vec = c()
-user_score_vec = c()
 
 # scrape all 180 pages
 for (i in 0:10) {
@@ -35,7 +36,8 @@ platform =
   html_nodes(".platform .data") %>% 
   html_text() %>% 
   gsub("\n","",.)  %>% 
-  gsub(" ","",.)
+  gsub("^\\s+|\\s+$","",.) 
+  
 
 platform_vec = append(platform_vec,platform)
 
@@ -46,25 +48,17 @@ release_date =
 
 release_date_vec = append(release_date_vec,release_date)
 
-meta_score = 
-  metacritic_html %>% 
-  html_nodes(".clamp-metascore .positive") %>% 
-  html_text()
+#meta_score = 
+ # metacritic_html %>% 
+  #html_nodes(".large") %>% 
+  #html_text()
 
-meta_score_vec = append(meta_score_vec,meta_score)
-
-user_score = 
-  metacritic_html %>% 
-  html_nodes(".user") %>% 
-  html_text()
-
-user_score_vec = append(user_score_vec,user_score)
+#meta_score_vec = append(meta_score_vec,meta_score)
 
 }
 
 
 ```
-
 
 Create a table to store all variables.
 
@@ -72,9 +66,44 @@ Create a table to store all variables.
 games_df <- tibble(
   title = title_vec,
   platform = platform_vec,
-  release_date = release_date_vec,
-  meta_score = meta_score_vec,
-  user_score = user_score_vec
+  release_date = release_date_vec
   )
 ```
+
+Scrape from detail pages
+
+```{r}
+platform_add = tolower(platform_vec) %>% 
+  str_replace(" ","-")
+  
+title_add = tolower(title_vec) %>% 
+  str_replace_all(":","") %>% 
+   str_replace_all("'","") %>% 
+   str_replace_all(" /","") %>% 
+   str_replace_all(";","") %>% 
+   str_replace_all("\\(","") %>% 
+   str_replace_all("\\)","") %>% 
+   str_replace_all("\\.","") %>% 
+   str_replace_all("\\ &","") %>%
+   str_replace_all("\\$","") %>% 
+  str_replace_all(",","") %>% 
+   str_replace_all(" ","-")  
+ 
+developer_vec = c()
+ 
+
+for (i in 1:1100) {
+  url_add = "https://www.metacritic.com/game"
+  url = paste(url_add,platform_add[i],title_add[i],sep = "/")
+  webpage_add = read_html(url)
+  
+  developer = 
+    webpage_add %>% 
+    html_nodes(".developer .data") %>% 
+    html_text()
+  developer_vec = append(developer_vec,developer)
+}
+```
+
+
 
