@@ -1,23 +1,15 @@
----
-title: "Webscraping"
-date: "11/3/2020"
-output: github_document
----
+Webscraping
+================
+Lily Wang
+11/3/2020
 
-```{r setup}
-library(tidyverse)
-library(rvest)
-```
-
-Scrape the game title, release date, platform, metascore, and user score from all 180 pages:
-
-```{r}
+``` r
 title_vec <- c()
 platform_vec = c()
 release_date_vec = c()
 meta_score_vec = c()
-user_score_vec = c()
 
+# scrape all 180 pages
 for (i in 0:10) {
 url <- paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
 
@@ -46,36 +38,22 @@ release_date =
 
 release_date_vec = append(release_date_vec,release_date)
 
-meta_score = 
-  metacritic_html %>% 
-  html_nodes(".clamp-metascore .positive") %>% 
-  html_text()
+#meta_score = 
+ # metacritic_html %>% 
+  #html_nodes(".large") %>% 
+  #html_text()
 
-meta_score_vec = append(meta_score_vec,meta_score)
-
-user_score = 
-  metacritic_html %>% 
-  html_nodes(".user") %>% 
-  html_text()
-
-user_score_vec = append(user_score_vec,user_score)
+#meta_score_vec = append(meta_score_vec,meta_score)
 
 }
-
-
 ```
-
 
 Create a table to store all variables.
 
-```{r}
+``` r
 games_df <- tibble(
   title = title_vec,
   platform = platform_vec,
-  release_date = release_date_vec,
-  meta_score = meta_score_vec,
-  user_score = user_score_vec
+  release_date = release_date_vec
   )
 ```
-
-Scrape the 
