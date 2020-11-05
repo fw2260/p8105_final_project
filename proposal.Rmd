@@ -10,7 +10,7 @@ The meme our title references
 
 ## Members
 
-Lily Wang (fw2260), Haoyang Yi, Pengyuan Su (ps3195), Ying Jin (yj2622), Tu Nguyen
+Lily Wang (fw2260), Haoyang Yi (hy2669), Pengyuan Su (ps3195), Ying Jin (yj2622), Tu Nguyen (tnn2113)
 
 ## Proposal
 
@@ -30,7 +30,9 @@ We are interested in the following analyses:
 6. Preference of users from different regions
 7. What factors influence sales? How do they influence it?
 
-Most, if not all, data will be visualized in the form of interactive graphs on a dashboard. Anticipated coding challenges will be scraping, cleaning, and combining the data from the two websites because of possible discrepancies in naming conventions as well as not all information being on a single webpage.
+Most, if not all, data will be visualized in the form of interactive graphs on a dashboard. In the end, we want a series of dashboards which provides insights on topics we are interested in and conveys our findings to the audience.
+
+Anticipated coding challenges will be scraping, cleaning, and combining the data from the two websites because of possible discrepancies in naming conventions as well as not all information being on a single webpage.
 
 ## Timeline
 
