@@ -22,13 +22,14 @@ their relationship to actual sales numbers.
 
 Our first data source for review scores and general information will
 come from
-<https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0>.
+[metacritic](https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0).
 We will be scraping information such as game title, platform, genre,
 release date, developer, ESRB rating, Metascore, and user score.
 
 Our second data source for actual sales numbers will come from
-<https://www.vgchartz.com/games/games.php>. We will be scraping
-information such as units shipped and revenue by geographical region.
+[vgchartz](https://www.vgchartz.com/games/games.php). We will be
+scraping information such as units shipped and revenue by geographical
+region.
 
 We are interested in the following analyses:
 
