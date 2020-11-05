@@ -5,7 +5,7 @@ output: github_document
 ---
 # Tentative title: they're good games Brent
 
-![good dogs](images/meme_reference.png)
+![good dogs](images/meme_reference.png)  
 The meme our title references
 
 ## Members
@@ -16,9 +16,7 @@ Lily Wang (fw2260), Haoyang Yi (hy2669), Pengyuan Su (ps3195), Ying Jin (yj2622)
 
 Video games are becoming increasingly popular and mainstream, a favorite pastime across a wide demographic with something out there for everyone. As video game and data enthusiasts, we think it would be interesting to explore the various aspects of the most critically-acclaimed games according to Metacritic, a critic and user review aggregate site, and their relationship to actual sales numbers.
 
-Our first data source for review scores and general information will come from [metacritic](https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0). We will be scraping information such as game title, platform, genre, release date, developer, ESRB rating, Metascore, and user score.
-
-Our second data source for actual sales numbers will come from [vgchartz](https://www.vgchartz.com/games/games.php). We will be scraping information such as units shipped and revenue by geographical region.
+Our first data source for review scores and general information will come from [metacritic](https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0). We will be scraping information such as game title, platform, genre, release date, developer, ESRB rating, Metascore, and user score. Our second data source for actual sales numbers will come from [vgchartz](https://www.vgchartz.com/games/games.php). We will be scraping information such as units shipped and revenue by geographical region.
 
 We are interested in the following analyses:
 

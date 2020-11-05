@@ -4,7 +4,8 @@ Proposal
 
 # Tentative title: they’re good games Brent
 
-![good dogs](images/meme_reference.png) The meme our title references
+![good dogs](images/meme_reference.png)  
+The meme our title references
 
 ## Members
 
@@ -24,9 +25,8 @@ Our first data source for review scores and general information will
 come from
 [metacritic](https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0).
 We will be scraping information such as game title, platform, genre,
-release date, developer, ESRB rating, Metascore, and user score.
-
-Our second data source for actual sales numbers will come from
+release date, developer, ESRB rating, Metascore, and user score. Our
+second data source for actual sales numbers will come from
 [vgchartz](https://www.vgchartz.com/games/games.php). We will be
 scraping information such as units shipped and revenue by geographical
 region.
