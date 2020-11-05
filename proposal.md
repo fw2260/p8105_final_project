@@ -8,8 +8,8 @@ Proposal
 
 ## Members
 
-Lily Wang (fw2260), Haoyang Yi, Pengyuan Su (ps3195), Ying Jin (yj2622),
-Tu Nguyen
+Lily Wang (fw2260), Haoyang Yi (hy2669), Pengyuan Su (ps3195), Ying Jin
+(yj2622), Tu Nguyen (tnn2113)
 
 ## Proposal
 
@@ -36,17 +36,21 @@ We are interested in the following analyses:
 1.  User score vs. Metascore
 2.  Total sales by genre over time
 3.  Which time period generated the most popular games?
-4.  Which developer released the most/least popular games or the
+4.  Which developers released the most/least popular games or the
     highest/lowest scored?
 5.  Preference of users of different platform
 6.  Preference of users from different regions
 7.  What factors influence sales? How do they influence it?
 
 Most, if not all, data will be visualized in the form of interactive
-graphs on a dashboard. Anticipated coding challenges will be scraping,
-cleaning, and combining the data from the two websites because of
-possible discrepancies in naming conventions as well as not all
-information being on a single webpage.
+graphs on a dashboard. In the end, we want a series of dashboards that
+provides insights on the aforementioned topics and conveys our findings
+clearly to the audience.
+
+Anticipated coding challenges will be scraping, cleaning, and combining
+the data from the two websites because of possible discrepancies in
+naming conventions as well as not all information being on a single
+webpage.
 
 ## Timeline
 
@@ -58,14 +62,14 @@ Nov 8-14: Data wrangling and EDA
 
 Nov 15, 9:30 AM: Third group discussion
 
-Nov 15-21: Building models
+Nov 15-21: Build models
 
 Nov 22, 9:30 AM: Fourth group discussion
 
-Nov 22-28: Build webset and make dashboard
+Nov 22-28: Build website and make dashboard
 
 Nov 29, 9:30 AM: Fifth group discussion
 
-Nov 29-5: Modify and fix problems
+Nov 29-Dec 5: Modify and fix problems
 
-Dec 5, 4 PM: Written report, webpage, and screencast
+Dec 5, 4 PM: Written report, webpage, and screencast due
