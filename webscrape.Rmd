@@ -91,7 +91,7 @@ Scrape from detail pages
 
 ```{r}
 platform_add = tolower(platform_vec) %>% 
-  str_replace(" ","-")
+  str_replace_all(" ","-")
   
 title_add = tolower(title_vec) %>% 
   str_replace_all(":","") %>% 
@@ -105,11 +105,24 @@ title_add = tolower(title_vec) %>%
    str_replace_all("\\$","") %>% 
   str_replace_all(",","") %>% 
    str_replace_all(" ","-")  
+
+developer_vec = c()
  
-for (i in 1:1100) {
-  url_add = "https://www.metacritic.com/game"
-  url = paste(url_add,platform_add[i],title_add[i],sep = "/")
-}
+  for (i in 1:400) {
+  url = paste("https://www.metacritic.com/game",platform_add[i],title_add[i],sep = "/")
+  tryCatch({
+    detail_html = read_html(url)
+    developer = 
+    detail_html %>% 
+    html_nodes(".developer .data") %>% 
+    html_text() %>% 
+    gsub("\n","",.)  %>% 
+    gsub("^\\s+|\\s+$","",.)
+    developer_vec = append(developer_vec,developer)},
+           error = function(e) print(i))
+    } 
+
+
 ```
 
 
