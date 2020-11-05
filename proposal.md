@@ -50,7 +50,22 @@ information being on a single webpage.
 
 ## Timeline
 
-Nov 7: Web scraping and data combining due  
-Nov 8, 9:30 AM: Second group discussion  
-…  
+Nov 3-7: Web scraping and data combining due
+
+Nov 8, 9:30 AM: Second group discussion
+
+Nov 8-14: Data wrangling and EDA
+
+Nov 15, 9:30 AM: Third group discussion
+
+Nov 15-21: Building models
+
+Nov 22, 9:30 AM: Fourth group discussion
+
+Nov 22-28: Build webset and make dashboard
+
+Nov 29, 9:30 AM: Fifth group discussion
+
+Nov 29-5: Modify and fix problems
+
 Dec 5, 4 PM: Written report, webpage, and screencast
