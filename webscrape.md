@@ -6,14 +6,14 @@ Webscraping
 library(tidyverse)
 ```
 
-    ## -- Attaching packages --------------------------------- tidyverse 1.3.0 --
+    ## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
 
-    ## √ ggplot2 3.3.2     √ purrr   0.3.4
-    ## √ tibble  3.0.3     √ dplyr   1.0.2
-    ## √ tidyr   1.1.2     √ stringr 1.4.0
-    ## √ readr   1.3.1     √ forcats 0.5.0
+    ## v ggplot2 3.3.2     v purrr   0.3.4
+    ## v tibble  3.0.3     v dplyr   1.0.2
+    ## v tidyr   1.1.2     v stringr 1.4.0
+    ## v readr   1.3.1     v forcats 0.5.0
 
-    ## -- Conflicts ------------------------------------ tidyverse_conflicts() --
+    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -34,15 +34,15 @@ library(rvest)
     ## 
     ##     guess_encoding
 
-\<\<\<\<\<\<\< HEAD Scrape from home pages ======= Scrape the game
-title, release date, platform, metascore, and user score from all 180
-pages: \>\>\>\>\>\>\> 8245790c3573851bbb7528ac6ba212d823307f4d
+Scrape the game title, release date, platform, metascore, and user score
+from all 180 pages:
 
 ``` r
 title_vec = c()
 platform_vec = c()
 release_date_vec = c()
 meta_score_vec = c()
+user_score_vec = c()
 
 for (i in 0:10) {
 url = paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
@@ -63,7 +63,6 @@ platform =
   gsub("\n","",.)  %>% 
   gsub("^\\s+|\\s+$","",.) 
   
-
 platform_vec = append(platform_vec,platform)
 
 release_date = 
@@ -73,54 +72,106 @@ release_date =
 
 release_date_vec = append(release_date_vec,release_date)
 
-#meta_score = 
- # metacritic_html %>% 
-  #html_nodes(".large") %>% 
-  #html_text()
+meta_score = 
+  metacritic_html %>% 
+  html_nodes(".clamp-metascore .positive") %>% 
+  html_text()
 
-#meta_score_vec = append(meta_score_vec,meta_score)
+meta_score_vec = append(meta_score_vec,meta_score)
 
+user_score = 
+  metacritic_html %>% 
+  html_nodes(".user") %>% 
+  html_text()
+
+user_score_vec = append(user_score_vec,user_score)
 }
 ```
 
-\<\<\<\<\<\<\< HEAD Create a table to store all variables. =======
-
-Create a tibble to store all variables: \>\>\>\>\>\>\>
-8245790c3573851bbb7528ac6ba212d823307f4d
+Create a tibble to store all variables scraped:
 
 ``` r
-games_df <- tibble(
+games_df = tibble(
   title = title_vec,
   platform = platform_vec,
-  release_date = release_date_vec
+  release_date = release_date_vec,
+  meta_score = meta_score_vec,
+  user_score = user_score_vec
   )
 ```
 
-\<\<\<\<\<\<\< HEAD
-
-Scrape from detail pages
+Scrape genre, ESRB rating, and developer from individual game detail
+pages:
 
 ``` r
+developer_vec = c()
+genre_vec = c()
+esrb_rating_vec = c()
+
 platform_add = tolower(platform_vec) %>% 
-  str_replace(" ","-")
+  str_replace_all(" ","-")
   
-title_add = tolower(title_vec) %>% 
-  str_replace_all(":","") %>% 
-   str_replace_all("'","") %>% 
-   str_replace_all(" /","") %>% 
-   str_replace_all(";","") %>% 
-   str_replace_all("\\(","") %>% 
-   str_replace_all("\\)","") %>% 
-   str_replace_all("\\.","") %>% 
-   str_replace_all("\\ &","") %>%
-   str_replace_all("\\$","") %>% 
-  str_replace_all(",","") %>% 
-   str_replace_all(" ","-")  
+# I think this works too? It's also shorter
+title_add = tolower(title_vec) %>%
+  str_replace_all("\\ &","") %>%
+  str_replace_all(" /","") %>%
+  str_replace_all(" :","") %>% 
+  str_replace_all("[^[:alnum:][:blank:]-!+]", "") %>%
+  str_replace_all(" ","-")
+
+# title_add = tolower(title_vec) %>%
+#   str_replace_all(":","") %>%
+#    str_replace_all("'","") %>%
+#    str_replace_all(" /","") %>%
+#    str_replace_all(";","") %>%
+#    str_replace_all("\\(","") %>%
+#    str_replace_all("\\)","") %>%
+#    str_replace_all("\\.","") %>%
+#    str_replace_all("\\ &","") %>%
+#    str_replace_all("\\$","") %>%
+#   str_replace_all(",","") %>%
+#    str_replace_all(" ","-")
  
 for (i in 1:1100) {
-  url_add = "https://www.metacritic.com/game"
-  url = paste(url_add,platform_add[i],title_add[i],sep = "/")
-}
-```
+url = paste("https://www.metacritic.com/game",platform_add[i],title_add[i],sep = "/")
+  tryCatch({
+    detail_html = read_html(url)
+    developer = 
+      detail_html %>% 
+      html_nodes(".developer .data") %>% 
+      html_text() %>% 
+      ifelse(length(.) == 0, NA, .) %>% 
+      gsub("\n","",.)  %>% 
+      gsub("^\\s+|\\s+$","",.)
+    developer_vec = append(developer_vec,developer)},
+    error = function(e) {
+      print(i)
+      return(NA)}) 
 
-\======= \>\>\>\>\>\>\> 8245790c3573851bbb7528ac6ba212d823307f4d
+genre = 
+  detail_html %>% 
+  html_nodes(".product_genre .data") %>% 
+  html_text() %>% 
+  ifelse(length(.) == 0, NA, .) %>% 
+  gsub("\n","",.)
+
+genre_vec = append(genre_vec,genre)
+
+esrb_rating = 
+  detail_html %>% 
+  html_nodes(".product_rating .data") %>% 
+  html_text() %>% 
+  ifelse(length(.) == 0, NA, .) %>% 
+  gsub("\n","",.)
+
+esrb_rating_vec = append(esrb_rating_vec,esrb_rating)
+
+}
+
+games_df = games_df %>% 
+  mutate(developer = developer_vec,
+         genre = genre_vec,
+         esrb_rating = esrb_rating_vec)
+
+write_csv(games_df, "data/metacritic.csv")
+```

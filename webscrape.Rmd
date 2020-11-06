@@ -9,11 +9,7 @@ library(tidyverse)
 library(rvest)
 ```
 
-<<<<<<< HEAD
-Scrape from home pages
-=======
 Scrape the game title, release date, platform, metascore, and user score from all 180 pages:
->>>>>>> 8245790c3573851bbb7528ac6ba212d823307f4d
 
 ```{r}
 title_vec = c()
@@ -41,7 +37,6 @@ platform =
   gsub("\n","",.)  %>% 
   gsub("^\\s+|\\s+$","",.) 
   
-
 platform_vec = append(platform_vec,platform)
 
 release_date = 
@@ -66,18 +61,13 @@ user_score =
 user_score_vec = append(user_score_vec,user_score)
 }
 
-
 ```
 
-<<<<<<< HEAD
-Create a table to store all variables.
-=======
 
-Create a tibble to store all variables:
->>>>>>> 8245790c3573851bbb7528ac6ba212d823307f4d
+Create a tibble to store all variables scraped:
 
 ```{r}
-games_df <- tibble(
+games_df = tibble(
   title = title_vec,
   platform = platform_vec,
   release_date = release_date_vec,
@@ -85,47 +75,80 @@ games_df <- tibble(
   user_score = user_score_vec
   )
 ```
-<<<<<<< HEAD
 
-Scrape from detail pages
+
+Scrape genre, ESRB rating, and developer from individual game detail pages:
 
 ```{r}
+developer_vec = c()
+genre_vec = c()
+esrb_rating_vec = c()
+
 platform_add = tolower(platform_vec) %>% 
   str_replace_all(" ","-")
   
-title_add = tolower(title_vec) %>% 
-  str_replace_all(":","") %>% 
-   str_replace_all("'","") %>% 
-   str_replace_all(" /","") %>% 
-   str_replace_all(";","") %>% 
-   str_replace_all("\\(","") %>% 
-   str_replace_all("\\)","") %>% 
-   str_replace_all("\\.","") %>% 
-   str_replace_all("\\ &","") %>%
-   str_replace_all("\\$","") %>% 
-  str_replace_all(",","") %>% 
-   str_replace_all(" ","-")  
+# I think this works too? It's also shorter
+title_add = tolower(title_vec) %>%
+  str_replace_all("\\ &","") %>%
+  str_replace_all(" /","") %>%
+  str_replace_all(" :","") %>% 
+  str_replace_all("[^[:alnum:][:blank:]-!+]", "") %>%
+  str_replace_all(" ","-")
 
-developer_vec = c()
+# title_add = tolower(title_vec) %>%
+#   str_replace_all(":","") %>%
+#    str_replace_all("'","") %>%
+#    str_replace_all(" /","") %>%
+#    str_replace_all(";","") %>%
+#    str_replace_all("\\(","") %>%
+#    str_replace_all("\\)","") %>%
+#    str_replace_all("\\.","") %>%
+#    str_replace_all("\\ &","") %>%
+#    str_replace_all("\\$","") %>%
+#   str_replace_all(",","") %>%
+#    str_replace_all(" ","-")
  
-  for (i in 1:400) {
-  url = paste("https://www.metacritic.com/game",platform_add[i],title_add[i],sep = "/")
+for (i in 1:1100) {
+url = paste("https://www.metacritic.com/game",platform_add[i],title_add[i],sep = "/")
   tryCatch({
     detail_html = read_html(url)
     developer = 
-    detail_html %>% 
-    html_nodes(".developer .data") %>% 
-    html_text() %>% 
-    gsub("\n","",.)  %>% 
-    gsub("^\\s+|\\s+$","",.)
+      detail_html %>% 
+      html_nodes(".developer .data") %>% 
+      html_text() %>% 
+      ifelse(length(.) == 0, NA, .) %>% 
+      gsub("\n","",.)  %>% 
+      gsub("^\\s+|\\s+$","",.)
     developer_vec = append(developer_vec,developer)},
-           error = function(e) print(i))
-    } 
+    error = function(e) {
+      print(i)
+      return(NA)}) 
 
+genre = 
+  detail_html %>% 
+  html_nodes(".product_genre .data") %>% 
+  html_text() %>% 
+  ifelse(length(.) == 0, NA, .) %>% 
+  gsub("\n","",.)
+
+genre_vec = append(genre_vec,genre)
+
+esrb_rating = 
+  detail_html %>% 
+  html_nodes(".product_rating .data") %>% 
+  html_text() %>% 
+  ifelse(length(.) == 0, NA, .) %>% 
+  gsub("\n","",.)
+
+esrb_rating_vec = append(esrb_rating_vec,esrb_rating)
+
+}
+
+games_df = games_df %>% 
+  mutate(developer = developer_vec,
+         genre = genre_vec,
+         esrb_rating = esrb_rating_vec)
+
+write_csv(games_df, "data/metacritic.csv")
 
 ```
-
-
-
-=======
->>>>>>> 8245790c3573851bbb7528ac6ba212d823307f4d
