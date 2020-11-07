@@ -1,15 +1,20 @@
 ---
-title: "Webscrape 2.0"
-author: "Lily Wang"
+title: "Metacritic scrape"
 date: "11/6/2020"
 output: github_document
 ---
+
+**WARNING:** The following code (specifically the second half) takes over 24 hours to run.
+
+Metacritic limits the number of requests that can be made in a time period and the user will experience HTTP connection errors if they make requests too quickly. The `polite` package is used to safely and respectfully scrape data from websites.
 
 ```{r setup}
 library(tidyverse)
 library(rvest)
 library(polite)
 ```
+
+Scrape the title, hyperlink of the title, platform, release date, Metascore, and user score from the main Metacritic "Game Release by Score" page:
 
 ```{r}
 title_vec = c()
@@ -19,10 +24,12 @@ release_date_vec = c()
 meta_score_vec = c()
 user_score_vec = c()
 
-for (i in 0:10) {
+for (i in 0:179) {
+  message("Scraping pg ",i)
+  tryCatch({
   url = paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
 
-  metacritic_html = bow(url, force = TRUE)
+  metacritic_html = bow(url, user_agent = "Lily", force = TRUE)
 
   link = scrape(metacritic_html) %>% 
   html_nodes(".title") %>% 
@@ -64,11 +71,17 @@ for (i in 0:10) {
     html_nodes(".user") %>% 
     html_text()
   
-  user_score_vec = append(user_score_vec,user_score)
-
+  user_score_vec = append(user_score_vec,user_score)},
+    error = function(e) {
+      print(i)
+      print(e)
+      return(NA)}) 
 }
 
 ```
+
+
+Enter each individual game's detail page to scrape developer, genre, and ESRB rating:
 
 ```{r}
 developer_vec = c()
@@ -114,11 +127,15 @@ url = paste("https://www.metacritic.com", link_vec[i], sep = "")
 }
 ```
 
+Put all scraped data into one dataframe and output it as a csv:
+
 ```{r}
 games_df = tibble(
   title = title_vec,
+  link = link_vec,
   platform = platform_vec,
   release_date = release_date_vec,
+  meta_score = meta_score_vec,
   user_score = user_score_vec,
   developer = developer_vec,
   genre = genre_vec,
