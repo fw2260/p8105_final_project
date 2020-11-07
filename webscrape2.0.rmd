@@ -33,6 +33,7 @@ for (i in 0:179) {
   title = scrape(metacritic_html) %>% 
   html_nodes(".title h3") %>% 
   html_text() 
+  
   title_vec = append(title_vec, title[-1])
 
   platform = 
@@ -41,25 +42,28 @@ for (i in 0:179) {
     html_text() %>% 
     gsub("\n","",.)  %>% 
     gsub("^\\s+|\\s+$","",.) 
+  
   platform_vec = append(platform_vec,platform)
 
   release_date = 
     scrape(metacritic_html) %>% 
     html_nodes(".platform+ span") %>% 
     html_text()
+  
   release_date_vec = append(release_date_vec,release_date)
   
   meta_score = 
     scrape(metacritic_html) %>% 
     html_nodes(".clamp-metascore .positive") %>% 
-    html_text() %>% 
-    ifelse(length(.) == 0, NA, .)
+    html_text() 
+  
   meta_score_vec = append(meta_score_vec,meta_score)
   
   user_score = 
     scrape(metacritic_html) %>% 
     html_nodes(".user") %>% 
     html_text()
+  
   user_score_vec = append(user_score_vec,user_score)
 
 }
@@ -75,6 +79,7 @@ for (i in 1:length(link_vec)) {
 url = paste("https://www.metacritic.com", link_vec[i], sep = "")
   tryCatch({
     detail_html = bow(url, force = TRUE)
+    
     developer = 
       scrape(detail_html) %>% 
       html_nodes(".developer .data") %>% 
@@ -82,30 +87,30 @@ url = paste("https://www.metacritic.com", link_vec[i], sep = "")
       ifelse(length(.) == 0, NA, .) %>% 
       gsub("\n","",.)  %>% 
       gsub("^\\s+|\\s+$","",.)
-    developer_vec = append(developer_vec,developer)},
+    
+   developer_vec = append(developer_vec,developer)
+    
+   genre = 
+     scrape(detail_html) %>% 
+     html_nodes(".product_genre .data") %>% 
+     html_text() %>% 
+     ifelse(length(.) == 0, NA, .) %>% 
+     gsub("\n","",.)
+
+  genre_vec = append(genre_vec,genre)
+
+  esrb_rating = 
+    scrape(detail_html) %>% 
+    html_nodes(".product_rating .data") %>% 
+    html_text() %>% 
+    ifelse(length(.) == 0, NA, .) %>% 
+    gsub("\n","",.)
+
+esrb_rating_vec = append(esrb_rating_vec,esrb_rating)},
     error = function(e) {
       print(i)
       print(e)
       return(NA)}) 
-
-genre = 
-  scrape(detail_html) %>% 
-  html_nodes(".product_genre .data") %>% 
-  html_text() %>% 
-  ifelse(length(.) == 0, NA, .) %>% 
-  gsub("\n","",.)
-
-genre_vec = append(genre_vec,genre)
-
-esrb_rating = 
-  scrape(detail_html) %>% 
-  html_nodes(".product_rating .data") %>% 
-  html_text() %>% 
-  ifelse(length(.) == 0, NA, .) %>% 
-  gsub("\n","",.)
-
-esrb_rating_vec = append(esrb_rating_vec,esrb_rating)
-
 }
 ```
 
