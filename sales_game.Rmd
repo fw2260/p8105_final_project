@@ -1,5 +1,5 @@
 ---
-title: "Scrape game sales website"
+title: "Scrape Game Sales Website"
 output: github_document
 ---
 
@@ -13,10 +13,8 @@ library(polite)
 library(tidyverse)
 ```
 
-
 ```{r}
 #url = "https://www.vgchartz.com/games/games.php?page=%d&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No"
-
 ```
 
 ### title
@@ -94,7 +92,6 @@ library(tidyverse)
 #})
 #```
 
-
 ```{r}
 
 title_vec = c()
@@ -107,6 +104,7 @@ other_sale_vec = c()
 
 
 for (i in 1:96) {
+  message("Scraping pg ",i)
   url = paste("https://www.vgchartz.com/games/games.php?page=", i, "&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No", sep = "")
 
   sales_html = bow(url, force = TRUE)
