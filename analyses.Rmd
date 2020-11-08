@@ -1,0 +1,61 @@
+---
+title: "Analyses"
+date: "11/8/2020"
+output: github_document
+---
+
+This document contains all of our analyses.
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+
+## 1. User score vs Metascore
+
+```{r}
+
+```
+
+
+## 2. Total sales by genre
+
+```{r}
+
+```
+
+
+## 3. Which time period generated the most popular games?
+
+```{r}
+
+```
+
+
+## 4. Which developers released the most/least popular games or the highest/lowest scored?
+
+```{r}
+
+```
+
+
+## 5. Preference of users of different platform
+
+```{r}
+
+```
+
+
+## 6. Preference of users from different regions
+
+```{r}
+
+```
+
+
+## 7. What factors influence sales? How do they influence it?
+
+```{r}
+
+```
+
