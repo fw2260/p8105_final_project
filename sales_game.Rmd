@@ -83,8 +83,6 @@ for (i in 1:96) {
 ```
 
 
-
-
 ```{r}
 sum_df = 
   tibble(
