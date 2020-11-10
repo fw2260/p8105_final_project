@@ -1,0 +1,89 @@
+---
+title: "Scrape game sales website"
+output: github_document
+---
+
+```{r}
+library(rvest)
+library(dplyr)
+library(purrr)
+library(tibble)
+library(httr)
+library(stringr)
+library(tidyverse)
+```
+
+
+```{r}
+url = "https://www.vgchartz.com/games/games.php?page=1&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No"
+
+read_sales_values = function(url) {
+
+html = read_html(url)
+
+titles = 
+  html %>% 
+  html_nodes("td~ td+ td a:nth-child(1)") %>% 
+  html_text()
+
+consoles = 
+  html %>% 
+  html_nodes("td~ td+ td img") %>% 
+  html_attr(., name = "alt") 
+
+total_sales = 
+  html %>% 
+  html_nodes("#generalBody td:nth-child(5)") %>% 
+  html_text()
+  
+na_sales = 
+  html %>% 
+  html_nodes("#generalBody td:nth-child(6)") %>% 
+  html_text()
+
+japan_sales = 
+  html %>% 
+  html_nodes("#generalBody td:nth-child(7)") %>% 
+  html_text()
+
+other_sales = 
+  html %>% 
+  html_nodes("#generalBody td:nth-child(8)") %>% 
+  html_text()
+
+tibble(
+  title = titles,
+  console = consoles,
+  total_sale = total_sales,
+  na_sale = na_sales,
+  japan_sale = japan_sales,
+  other_sale = other_sales
+)
+}
+```
+
+We can use this function to read 96 pages 
+
+```{r}
+url_base = "https://www.vgchartz.com/games/games.php?page=&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No"
+
+vec_urls = str_c(url_base, 1:96)
+```
+
+```{r}
+output = vector("list", 96)
+
+for (i in 1:96) {
+  output[[i]] = read_sales_values(vec_urls[[i]])
+}
+
+sale_values = bind_rows(output)
+
+sale_values = map_df(vec_urls, read_sales_values)
+```
+
+
+```{r}
+write_csv(sale_values, "data/sales.csv")
+```
+
