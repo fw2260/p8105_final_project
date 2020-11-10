@@ -1,24 +1,62 @@
----
-title: "Metacritic scrape"
-date: "11/6/2020"
-output: github_document
----
+Metacritic scrape
+================
+11/6/2020
 
-**WARNING:** The following code (specifically the second half) may take over 24 hours to run.
+**WARNING:** The following code (specifically the second half) may take
+over 24 hours to run.
 
-Some websites limit the number of requests that can be made in a time period and the user will experience HTTP connection errors if they make requests too quickly. The `polite` package is used to safely and respectfully scrape data from websites.
+Some websites limit the number of requests that can be made in a time
+period and the user will experience HTTP connection errors if they make
+requests too quickly. The `polite` package is used to safely and
+respectfully scrape data from websites.
 
-The Metacritic site is constantly updating as new games are released, so the dataset we use in our analyses is the latest version as of the morning of 11/10/2020. 
+The Metacritic site is constantly updating as new games are released, so
+the dataset we use in our analyses is the latest version as of the
+morning of 11/10/2020.
 
-```{r setup}
+``` r
 library(tidyverse)
+```
+
+    ## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+
+    ## v ggplot2 3.3.2     v purrr   0.3.4
+    ## v tibble  3.0.3     v dplyr   1.0.2
+    ## v tidyr   1.1.2     v stringr 1.4.0
+    ## v readr   1.3.1     v forcats 0.5.0
+
+    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+    ## x dplyr::filter() masks stats::filter()
+    ## x dplyr::lag()    masks stats::lag()
+
+``` r
 library(rvest)
+```
+
+    ## Loading required package: xml2
+
+    ## 
+    ## Attaching package: 'rvest'
+
+    ## The following object is masked from 'package:purrr':
+    ## 
+    ##     pluck
+
+    ## The following object is masked from 'package:readr':
+    ## 
+    ##     guess_encoding
+
+``` r
 library(polite)
 ```
 
-Scrape the title, hyperlink of the title, platform, release date, Metascore, and user score from the main Metacritic "Game Release by Score" page:
+    ## Warning: package 'polite' was built under R version 4.0.3
 
-```{r main_page, eval = FALSE}
+Scrape the title, hyperlink of the title, platform, release date,
+Metascore, and user score from the main Metacritic “Game Release by
+Score” page:
+
+``` r
 title_vec = c()
 link_vec = c()
 platform_vec = c()
@@ -74,13 +112,12 @@ for (i in 0:179) {
   
   user_score_vec = append(user_score_vec,user_score)
   }
-
 ```
 
+Enter each individual game’s detail page to scrape developer, publisher,
+genre, and ESRB rating:
 
-Enter each individual game's detail page to scrape developer, publisher, genre, and ESRB rating:
-
-```{r detail_pages, eval = FALSE}
+``` r
 developer_vec = c()
 genre_vec = c()
 esrb_rating_vec = c()
@@ -133,10 +170,9 @@ for (i in 1:length(link_vec)) {
 }
 ```
 
-
 Put all scraped data into one dataframe and output it as a csv:
 
-```{r eval = FALSE}
+``` r
 games_df = tibble(
   title = title_vec,
   link = link_vec,
@@ -151,4 +187,3 @@ games_df = tibble(
 
 write_csv(games_df, "data/metacritic.csv")
 ```
-
