@@ -76,14 +76,16 @@ for (i in 0:179) {
 ```
 
 
-Enter each individual game's detail page to scrape developer, genre, and ESRB rating:
+Enter each individual game's detail page to scrape developer, publisher, genre, and ESRB rating:
 
 ```{r}
 developer_vec = c()
 genre_vec = c()
 esrb_rating_vec = c()
+publisher_vec = c()
  
-for (i in 1:length(link_vec)) {
+for (i in 17092:length(link_vec)) {
+  message("scraping link ",i)
   url = paste("https://www.metacritic.com", link_vec[i], sep = "")
   detail_html = bow(url, force = TRUE)
     
@@ -96,13 +98,24 @@ for (i in 1:length(link_vec)) {
     gsub("^\\s+|\\s+$","",.)
     
   developer_vec = append(developer_vec,developer)
+  
+  publisher = 
+    scrape(detail_html) %>% 
+    html_nodes(".publisher a") %>% 
+    html_text() %>% 
+    ifelse(length(.) == 0, NA, .) %>% 
+    gsub("\n","",.) %>% 
+    gsub("^\\s+|\\s+$","",.)
+  publisher_vec = append(publisher_vec, publisher)
     
   genre = 
     scrape(detail_html) %>% 
-    html_nodes(".product_genre .data") %>% 
+    html_nodes(".product_genre") %>% 
     html_text() %>% 
     ifelse(length(.) == 0, NA, .) %>% 
-    gsub("\n","",.)
+    gsub("\n","",.) %>% 
+    str_remove("Genre\\(s\\):") %>% 
+    str_squish()
 
   genre_vec = append(genre_vec,genre)
 
@@ -114,7 +127,7 @@ for (i in 1:length(link_vec)) {
     gsub("\n","",.)
 
   esrb_rating_vec = append(esrb_rating_vec,esrb_rating)
-  
+  message("Length of vector is ",length(genre_vec))
 }
 ```
 
@@ -130,6 +143,7 @@ games_df = tibble(
   meta_score = meta_score_vec,
   user_score = user_score_vec,
   developer = developer_vec,
+  publisher = publisher_vec,
   genre = genre_vec,
   esrb_rating = esrb_rating_vec)
 
