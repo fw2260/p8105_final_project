@@ -1214,6 +1214,7 @@ Call of Duty 2,/game/pc/call-of-duty-2,PC,25-Oct-05,86,8.5,Infinity Ward,Activis
 F1 2017,/game/playstation-4/f1-2017,PlayStation 4,25-Aug-17,86,7.5,Codemasters,Codemasters,"Racing, Simulation, Automobile",E
 Astebreed,/game/pc/astebreed,PC,30-May-14,86,7.4,Edelweiss,Active Gaming Media Inc.,"Action, Shooter, Scrolling, Shoot-'Em-Up, Vertical, Horizontal",NA
 Winning Eleven: Pro Evolution Soccer 2007,/game/playstation-2/winning-eleven-pro-evolution-soccer-2007,PlayStation 2,6-Feb-07,86,8.9,Konami,Konami,"Sports, Traditional, Soccer, Sim",E
+Devil May Cry 5: Special Edition,/game/playstation-5/devil-may-cry-5-special-edition,PlayStation 5,NA,NA,NA,NA,NA,NA,NA
 Sid Meier's Civilization VI,/game/xbox-one/sid-meiers-civilization-vi,Xbox One,22-Nov-19,86,7,Aspyr,2K Games,"Strategy, Turn-Based, 4X",E10+
 NASCAR 2005: Chase for the Cup,/game/xbox/nascar-2005-chase-for-the-cup,Xbox,31-Aug-04,86,tbd,EA Tiburon,EA Games,"Driving, Racing, Stock Car",E
 Onimusha: Warlords,/game/playstation-2/onimusha-warlords,PlayStation 2,13-Mar-01,86,8.3,Capcom,Capcom,"Action Adventure, Fantasy",M
@@ -1359,6 +1360,7 @@ Minecraft: PlayStation 3 Edition,/game/playstation-3/minecraft-playstation-3-edi
 Sonic Mania,/game/playstation-4/sonic-mania,PlayStation 4,15-Aug-17,86,8,"SegaSoft, Sega, PagodaWest Games",SegaSoft,"Action, Platformer, 2D",E
 The Legend of Zelda: Four Swords Adventures,/game/gamecube/the-legend-of-zelda-four-swords-adventures,GameCube,7-Jun-04,86,7.5,Nintendo,Nintendo,"Action Adventure, Fantasy",E
 Joe Danger,/game/playstation-3/joe-danger,PlayStation 3,8-Jun-10,86,7.7,Hello Games,Hello Games,"Driving, Racing, Arcade, Arcade, Automobile",E
+Yakuza: Like a Dragon,/game/xbox-series-x/yakuza-like-a-dragon,Xbox Series X,10-Nov-20,85,tbd,Ryu ga Gotoku Studios,Sega,"Role-Playing, Japanese-Style",NA
 Tales of Symphonia,/game/gamecube/tales-of-symphonia,GameCube,13-Jul-04,86,9.1,Namco,Namco,"Role-Playing, Console-style RPG",T
 Fight Night Champion,/game/xbox-360/fight-night-champion,Xbox 360,1-Mar-11,86,7.4,EA Canada,EA Sports,"Sports, Traditional, Individual, Boxing, Boxing, Combat, Boxing / Martial Arts",M
 NBA Live 2004,/game/playstation-2/nba-live-2004,PlayStation 2,14-Oct-03,86,7.7,EA Sports,EA Sports,"Sports, Traditional, Basketball, Sim",E
@@ -1544,7 +1546,6 @@ Pillars of Eternity: Complete Edition,/game/playstation-4/pillars-of-eternity-co
 Bravely Default,/game/3ds/bravely-default,3DS,7-Feb-14,85,8.4,Silicon Studio,Nintendo,"Console-style RPG, Role-Playing, Console-style RPG, Japanese-Style",T
 Guacamelee! 2,/game/xbox-one/guacamelee!-2,Xbox One,18-Jan-19,85,6.4,DrinkBox Studios,DrinkBox Studios,"Action, Platformer, 2D",NA
 DOOM,/game/playstation-4/doom,PlayStation 4,13-May-16,85,8.4,id Software,Bethesda Softworks,"Sci-Fi, Third-Person, Action, Shooter, First-Person, Arcade",M
-Yakuza: Like a Dragon,/game/xbox-series-x/yakuza-like-a-dragon,Xbox Series X,10-Nov-20,85,tbd,Ryu ga Gotoku Studios,Sega,"Role-Playing, Japanese-Style",NA
 Slay the Spire,/game/switch/slay-the-spire,Switch,6-Jun-19,85,8.2,Mega Crit Games,Mega Crit Games,"Strategy, Turn-Based, Card Battle",E10+
 Far Cry Instincts,/game/xbox/far-cry-instincts,Xbox,27-Sep-05,85,5.9,Ubisoft Montreal,Ubisoft,"Action, Shooter, First-Person, Modern",M
 "Warhammer 40,000: Dawn of War II",/game/pc/warhammer-40000-dawn-of-war-ii,PC,18-Feb-09,85,8.1,Relic,THQ,"Strategy, Real-Time, Sci-Fi, Sci-Fi, General",M
@@ -1602,6 +1603,7 @@ Fable,/game/xbox/fable,Xbox,14-Sep-04,85,8.5,Big Blue Box,Microsoft Game Studios
 Forza Horizon,/game/xbox-360/forza-horizon,Xbox 360,23-Oct-12,85,8.4,"PLAYGROUND, Playground Games",Microsoft Game Studios,"Driving, Racing, Simulation, GT / Street, GT / Street, Automobile",T
 Chaos Reborn,/game/pc/chaos-reborn,PC,26-Oct-15,85,7.9,Snapshot Games Inc.,Snapshot Games Inc.,"Fantasy, Strategy, Turn-Based, General",NA
 Assassin's Creed Origins,/game/xbox-one/assassins-creed-origins,Xbox One,27-Oct-17,85,7.6,"Ubisoft, Ubisoft Montreal",Ubisoft,"Action Adventure, Open-World",M
+Assassin's Creed Valhalla,/game/xbox-series-x/assassins-creed-valhalla,Xbox Series X,NA,NA,NA,NA,NA,NA,NA
 GTR: FIA GT Racing Game,/game/pc/gtr-fia-gt-racing-game,PC,3-May-05,85,8,SimBin,10tacle Studios,"Driving, Racing, Simulation, GT / Street, Automobile",E
 Final Fantasy IX,/game/playstation-4/final-fantasy-ix,PlayStation 4,19-Sep-17,85,8.5,"SquareSoft, Square Enix",Square Enix,"Role-Playing, Japanese-Style",T
 The Witcher 3: Wild Hunt - Complete Edition,/game/switch/the-witcher-3-wild-hunt---complete-edition,Switch,15-Oct-19,85,8.5,"Saber Interactive, CD Projekt Red Studio",Warner Bros. Interactive Entertainment,"Role-Playing, Action RPG",M
@@ -1616,6 +1618,7 @@ NBA Live 2005,/game/xbox/nba-live-2005,Xbox,28-Sep-04,85,7.6,EA Canada,EA Sports
 NHL 2004,/game/playstation-2/nhl-2004,PlayStation 2,22-Sep-03,85,7.6,EA Sports,EA Sports,"Sports, Traditional, Ice Hockey, Sim",E
 NFL 2K2,/game/playstation-2/nfl-2k2,PlayStation 2,19-Nov-01,85,7.5,Visual Concepts,Sega,"Sports, Traditional, Football, Sim",E
 South Park: The Stick of Truth,/game/pc/south-park-the-stick-of-truth,PC,4-Mar-14,85,8.6,Obsidian Entertainment,Ubisoft,"Role-Playing, General, General",M
+Marvel's Spider-Man: Miles Morales,/game/playstation-5/marvels-spider-man-miles-morales,PlayStation 5,12-Nov-20,85,tbd,Insomniac Games,PlayStation Studios,"Action Adventure, Open-World",NA
 Monkey Island 2 Special Edition: LeChuck's Revenge,/game/xbox-360/monkey-island-2-special-edition-lechucks-revenge,Xbox 360,7-Jul-10,85,8.2,LucasArts,LucasArts,"Adventure, General, General, Point-and-Click",E10+
 Assassin's Creed III,/game/playstation-3/assassins-creed-iii,PlayStation 3,30-Oct-12,85,6.9,Ubisoft,Ubisoft,"Action Adventure, Historic, Historic, Open-World",M
 Fire Emblem: The Sacred Stones,/game/game-boy-advance/fire-emblem-the-sacred-stones,Game Boy Advance,23-May-05,85,8.9,Intelligent Systems,Nintendo,"Strategy, Turn-Based, Fantasy",E
@@ -1627,6 +1630,7 @@ Shadow Tactics: Blades of the Shogun,/game/pc/shadow-tactics-blades-of-the-shogu
 Super Smash Bros. for Nintendo 3DS,/game/3ds/super-smash-bros-for-nintendo-3ds,3DS,3-Oct-14,85,8.5,Bandai Namco Games,Nintendo,"Fighting, 3D, 2D, Action, Fighting, 2D, 3D",E10+
 Medieval II: Total War Kingdoms,/game/pc/medieval-ii-total-war-kingdoms,PC,28-Aug-07,85,8.8,Creative Assembly,Sega,"Strategy, Real-Time, Historic, General",T
 Call of Duty: World at War,/game/playstation-3/call-of-duty-world-at-war,PlayStation 3,10-Nov-08,85,7.7,Treyarch,Activision,"Action, Shooter, Shooter, First-Person, Historic, Historic, Arcade",M
+Assassin's Creed Valhalla,/game/pc/assassins-creed-valhalla,PC,NA,NA,NA,NA,NA,NA,NA
 Dragon Quest Builders 2,/game/pc/dragon-quest-builders-2,PC,10-Dec-19,85,7.4,"Omega Force, Koei Tecmo Games",Square Enix,"Action Adventure, Sandbox",E10+
 The Outer Worlds,/game/xbox-one/the-outer-worlds,Xbox One,25-Oct-19,85,8.1,Obsidian Entertainment,Obsidian Entertainment,"Role-Playing, Western-Style",M
 VA-11 Hall-A: Cyberpunk Bartender Action,/game/playstation-4/va-11-hall-a-cyberpunk-bartender-action,PlayStation 4,2-May-19,85,6.3,Sukeban Games,Ysbryd Games,"Simulation, General",M
@@ -1651,7 +1655,6 @@ Prince of Persia: The Two Thrones,/game/pc/prince-of-persia-the-two-thrones,PC,1
 Sam & Max Episode 204: Chariots of the Dogs,/game/pc/sam-max-episode-204-chariots-of-the-dogs,PC,13-Mar-08,85,7.1,Telltale Games,Telltale Games,"Adventure, General, 3D, Point-and-Click, Third-Person",T
 Marvel vs. Capcom 3: Fate of Two Worlds,/game/xbox-360/marvel-vs-capcom-3-fate-of-two-worlds,Xbox 360,15-Feb-11,85,7.1,Capcom,Capcom,"Action, Fighting, Fighting, 2D, 2D",T
 Assetto Corsa,/game/pc/assetto-corsa,PC,19-Dec-14,85,8.4,Kunos Simulazioni,Kunos Simulazioni,"Driving, General, GT / Street, Racing, Simulation, Automobile",E
-Marvel's Spider-Man: Miles Morales,/game/playstation-5/marvels-spider-man-miles-morales,PlayStation 5,12-Nov-20,85,tbd,Insomniac Games,PlayStation Studios,"Action Adventure, Open-World",NA
 Ys VIII: Lacrimosa of DANA,/game/playstation-4/ys-viii-lacrimosa-of-dana,PlayStation 4,12-Sep-17,85,8.4,Falcom,NIS America,"Role-Playing, Action RPG",T
 Machinarium,/game/pc/machinarium,PC,16-Oct-09,85,8.7,Amanita Design,Amanita Design,"Adventure, General, Third-Person, General, Point-and-Click, Sci-Fi",NA
 Nioh 2,/game/playstation-4/nioh-2,PlayStation 4,13-Mar-20,85,7.9,Team Ninja,Koei Tecmo Games,"Role-Playing, Action RPG",M
@@ -1725,6 +1728,7 @@ Ikaruga,/game/gamecube/ikaruga,GameCube,15-Apr-03,85,8.5,Treasure,Atari,"Action,
 Yakuza Kiwami 2,/game/playstation-4/yakuza-kiwami-2,PlayStation 4,28-Aug-18,85,8.3,"Sega, Ryu ga Gotoku Studios",Sega,"Action Adventure, Open-World",M
 Thief: Deadly Shadows,/game/pc/thief-deadly-shadows,PC,25-May-04,85,8.3,Ion Storm,Eidos Interactive,"Action Adventure, Fantasy, General, Fantasy",M
 Borderlands: The Secret Armory of General Knoxx,/game/xbox-360/borderlands-the-secret-armory-of-general-knoxx,Xbox 360,23-Feb-10,85,8.1,Gearbox Software,2K Games,"Action, Shooter, Shooter, First-Person, Sci-Fi, Sci-Fi, Arcade",M
+Manifold Garden,/game/pc/manifold-garden,PC,20-Oct-20,84,7.9,William Chyr Studio LLC,William Chyr Studio LLC,"Action Adventure, General",NA
 West of Loathing,/game/switch/west-of-loathing,Switch,31-May-18,85,8,Asymmetric Publications,Asymmetric Publications,"Role-Playing, General",T
 Sam & Max: The Devil's Playhouse - Episode 2: The Tomb of Sammun-Mak,/game/playstation-3/sam-max-the-devils-playhouse---episode-2-the-tomb-of-sammun-mak,PlayStation 3,18-May-10,85,7.8,Telltale Games,Telltale Games,"Miscellaneous, Adventure, General, 3D, Compilation, Third-Person",T
 UFC Undisputed 3,/game/xbox-360/ufc-undisputed-3,Xbox 360,14-Feb-12,85,7.5,Yuke's,THQ,"Action, Sports, Fighting, Fighting, Individual, Wrestling, Combat, Wrestling",T
@@ -1867,6 +1871,7 @@ Sid Meier's SimGolf,/game/pc/sid-meiers-simgolf,PC,23-Jan-02,84,7.6,Firaxis Game
 Quake III Revolution,/game/playstation-2/quake-iii-revolution,PlayStation 2,26-Mar-01,84,7.5,Bullfrog Productions,Electronic Arts,"Action, Shooter, First-Person, Sci-Fi",M
 Street Fighter III: Double Impact,/game/dreamcast/street-fighter-iii-double-impact,Dreamcast,19-Jun-00,84,8.4,Capcom,Capcom,"Action, Fighting, 2D",T
 Tom Clancy's Ghost Recon Advanced Warfighter 2,/game/playstation-3/tom-clancys-ghost-recon-advanced-warfighter-2,PlayStation 3,23-Aug-07,84,7.6,"Red Storm Entertainment, Ubisoft Paris",Ubisoft,"Action, Shooter, Shooter, First-Person, Third-Person, Tactical, Modern, Modern",T
+Pikmin 3 Deluxe,/game/switch/pikmin-3-deluxe,Switch,30-Oct-20,84,8.4,"Eighting, Nintendo",Nintendo,"Strategy, Real-Time, General",E10+
 Middle-earth: Shadow of Mordor,/game/pc/middle-earth-shadow-of-mordor,PC,30-Sep-14,84,7.9,Monolith Productions,Warner Bros. Interactive Entertainment,"Fantasy, Action Adventure, Fantasy, Open-World",M
 Middle-earth: Shadow of Mordor,/game/playstation-4/middle-earth-shadow-of-mordor,PlayStation 4,30-Sep-14,84,8,Monolith Productions,Warner Bros. Interactive Entertainment,"Fantasy, Action Adventure, Fantasy, Open-World",M
 SpaceChem,/game/pc/spacechem,PC,2-Mar-11,84,8.4,Zachtronics Industries,Zachtronics Industries,"Miscellaneous, Puzzle, General, Puzzle, General",NA
@@ -1874,12 +1879,12 @@ Viva Pinata,/game/xbox-360/viva-pinata,Xbox 360,9-Nov-06,84,8,Rare Ltd.,Microsof
 Freedom Planet,/game/wii-u/freedom-planet,Wii U,20-Aug-15,84,8.5,GalaxyTrail,GalaxyTrail,"Action, Platformer, 2D",E10+
 Pinball FX 2,/game/pc/pinball-fx-2,PC,27-Oct-12,84,7.7,Zen Studios,Microsoft Game Studios,"Action, Miscellaneous, Parlor, Pinball, Pinball",E
 Thronebreaker: The Witcher Tales,/game/switch/thronebreaker-the-witcher-tales,Switch,28-Jan-20,84,7.6,CD Projekt Red Studio,CD Projekt Red Studio,"Strategy, Turn-Based, Card Battle",T
-Manifold Garden,/game/pc/manifold-garden,PC,20-Oct-20,84,7.9,William Chyr Studio LLC,William Chyr Studio LLC,"Action Adventure, General",NA
 Pokemon Ultra Sun,/game/3ds/pokemon-ultra-sun,3DS,17-Nov-17,84,7.9,Game Freak,Nintendo,"Role-Playing, Trainer",E
 Fatal Frame II: Crimson Butterfly Director's Cut,/game/xbox/fatal-frame-ii-crimson-butterfly-directors-cut,Xbox,1-Nov-04,84,8.9,Tecmo,Tecmo,"Action Adventure, Horror",M
 South Park: The Fractured But Whole,/game/xbox-one/south-park-the-fractured-but-whole,Xbox One,17-Oct-17,84,7.9,Ubisoft San Francisco,Ubisoft,"Role-Playing, General",M
 Blast Off,/game/psp/blast-off,PSP,24-Nov-09,84,7.6,Halfbrick Studios,Halfbrick Studios,"Miscellaneous, Puzzle, Puzzle, General, Puzzle, General",E
 Star Wars: Starfighter,/game/playstation-2/star-wars-starfighter,PlayStation 2,19-Feb-01,84,8,LucasArts,LucasArts,"Simulation, Sci-Fi, Small Spaceship",T
+Yakuza: Like a Dragon,/game/playstation-4/yakuza-like-a-dragon,PlayStation 4,10-Nov-20,84,tbd,Ryu ga Gotoku Studios,Sega,"Role-Playing, Japanese-Style",M
 If Found...,/game/pc/if-found,PC,19-May-20,84,6.3,dreamfeel,Annapurna Interactive,"Adventure, Visual Novel",NA
 Guitar Hero World Tour,/game/playstation-3/guitar-hero-world-tour,PlayStation 3,26-Oct-08,84,7.4,Neversoft Entertainment,Activision,"Action, Miscellaneous, Rhythm, Music, Music",T
 TimeSplitters: Future Perfect,/game/playstation-2/timesplitters-future-perfect,PlayStation 2,21-Mar-05,84,8.9,Free Radical Design,EA Games,"Action, Shooter, First-Person, Sci-Fi",M
@@ -1894,7 +1899,6 @@ Guilty Gear Xrd -SIGN-,/game/playstation-4/guilty-gear-xrd--sign-,PlayStation 4,
 Might & Magic: Clash of Heroes,/game/playstation-3/might-magic-clash-of-heroes,PlayStation 3,12-Apr-11,84,8.2,Capy Games,Ubisoft,"Role-Playing, General, General",E10+
 TxK,/game/playstation-vita/txk,PlayStation Vita,11-Feb-14,84,7.4,Llamasoft,Llamasoft,"Action, Shooter, Static, Shoot-'Em-Up, Top-Down",E
 Pro Evolution Soccer 2009,/game/wii/pro-evolution-soccer-2009,Wii,17-Mar-09,84,7.8,Konami,Konami,"Sports, Traditional, Team, Soccer, Sim, Sim",E
-Yakuza: Like a Dragon,/game/playstation-4/yakuza-like-a-dragon,PlayStation 4,10-Nov-20,84,tbd,Ryu ga Gotoku Studios,Sega,"Role-Playing, Japanese-Style",M
 Beyond Good & Evil HD,/game/xbox-360/beyond-good-evil-hd,Xbox 360,2-Mar-11,84,8.6,Ubisoft,Ubisoft,"Action Adventure, Fantasy, General, Fantasy",T
 Midnight Club 3: DUB Edition,/game/playstation-2/midnight-club-3-dub-edition,PlayStation 2,11-Apr-05,84,8.8,Rockstar San Diego,Rockstar Games,"Driving, Racing, GT / Street",E10+
 High Heat Major League Baseball 2003,/game/playstation-2/high-heat-major-league-baseball-2003,PlayStation 2,9-Feb-02,84,7.8,3DO,3DO,"Sports, Traditional, Baseball, Sim",E
@@ -1949,8 +1953,8 @@ Mega Man X Legacy Collection,/game/switch/mega-man-x-legacy-collection,Switch,24
 Rayman Legends: Definitive Edition,/game/switch/rayman-legends-definitive-edition,Switch,12-Sep-17,84,8.4,"Ubisoft Montpellier, Pasta Games",Ubisoft,"Action, Platformer, 2D",E10+
 Shin Megami Tensei: Devil Survivor 2 Record Breaker,/game/3ds/shin-megami-tensei-devil-survivor-2-record-breaker,3DS,5-May-15,84,4.4,Atlus,Atlus,"Role-Playing, General, Strategy, Turn-Based, Tactics",T
 Gears of War 4,/game/xbox-one/gears-of-war-4,Xbox One,11-Oct-16,84,7,The Coalition,Microsoft Game Studios,"Sci-Fi, Action, Shooter, Third-Person, Arcade",M
-Pikmin 3 Deluxe,/game/switch/pikmin-3-deluxe,Switch,30-Oct-20,84,8.4,"Eighting, Nintendo",Nintendo,"Strategy, Real-Time, General",E10+
 Mass Effect 3: Citadel,/game/xbox-360/mass-effect-3-citadel,Xbox 360,5-Mar-13,84,8.2,BioWare,Electronic Arts,"Role-Playing, Action RPG, Action RPG",M
+Horace,/game/switch/horace,Switch,21-Oct-20,84,6.7,Paul Helman,505 Games,"Adventure, General",NA
 Halo 5: Guardians,/game/xbox-one/halo-5-guardians,Xbox One,27-Oct-15,84,6.4,343 Industries,Microsoft Game Studios,"Shooter, Sci-Fi, Sci-Fi, Action, Shooter, First-Person, Arcade",T
 DiRT,/game/pc/dirt,PC,19-Jun-07,84,7.3,Codemasters,Codemasters,"Driving, Racing, Simulation, Rally / Offroad, Rally / Offroad, Automobile",E
 F1 2017,/game/xbox-one/f1-2017,Xbox One,25-Aug-17,84,7.4,Codemasters,Codemasters,"Racing, Simulation, Automobile",E
@@ -1972,7 +1976,6 @@ F1 2018,/game/xbox-one/f1-2018,Xbox One,24-Aug-18,84,8,Codemasters,Codemasters,"
 Gorogoa,/game/pc/gorogoa,PC,14-Dec-17,84,8.5,"Jason Roberts, Buried Signal",Jason Roberts,"Puzzle, General",NA
 No More Heroes 2: Desperate Struggle,/game/wii/no-more-heroes-2-desperate-struggle,Wii,26-Jan-10,84,8.8,Grasshopper Manufacture,Ubisoft,"Action, Beat-'Em-Up, Beat-'Em-Up, 3D",M
 LEGO Star Wars II: The Original Trilogy,/game/playstation-2/lego-star-wars-ii-the-original-trilogy,PlayStation 2,12-Sep-06,84,8.7,Traveller's Tales,LucasArts,"Action Adventure, Sci-Fi",E10+
-Horace,/game/switch/horace,Switch,21-Oct-20,84,6.7,Paul Helman,505 Games,"Adventure, General",NA
 Battle Chasers: Nightwar,/game/xbox-one/battle-chasers-nightwar,Xbox One,3-Oct-17,84,7,Airship Syndicate Entertainment,Nordic Games Publishing,"Role-Playing, Action RPG, Japanese-Style",T
 NBA 2K14,/game/playstation-3/nba-2k14,PlayStation 3,1-Oct-13,84,5,Visual Concepts,2K Sports,"Sports, Traditional, Team, Basketball, Sim, Sim",E
 Darkest Dungeon,/game/pc/darkest-dungeon,PC,19-Jan-16,84,7.8,Red Hook Studios,Red Hook Studios,"Role-Playing, General",NA
@@ -2279,6 +2282,7 @@ MDK2,/game/pc/mdk2,PC,31-May-00,83,7.8,BioWare,Interplay,"Action, Shooter, Shoot
 Kid Icarus: Uprising,/game/3ds/kid-icarus-uprising,3DS,23-Mar-12,83,8.7,"Opus, Project Sora",Nintendo,"Action Adventure, Fantasy, General, Fantasy",E10+
 Tales of Vesperia: Definitive Edition,/game/switch/tales-of-vesperia-definitive-edition,Switch,11-Jan-19,83,7.8,Bandai Namco Games,Bandai Namco Games,"Role-Playing, Action RPG",T
 Gunpoint,/game/pc/gunpoint,PC,3-Jun-13,83,8.4,Tom Francis,Tom Francis,"Miscellaneous, Puzzle, General, Puzzle, General",NA
+DIRT 5,/game/xbox-one/dirt-5,Xbox One,3-Nov-20,82,8.1,Codemasters,Codemasters,"Racing, Simulation, Automobile",E
 Detention,/game/pc/detention,PC,12-Jan-17,83,7.8,Red Candle Games,Red Candle Games,"Adventure, General",M
 Sly 3: Honor Among Thieves,/game/playstation-2/sly-3-honor-among-thieves,PlayStation 2,26-Sep-05,83,8.8,Sucker Punch,SCEA,"Action, Platformer, 3D",E10+
 Bloodstained: Ritual of the Night,/game/pc/bloodstained-ritual-of-the-night,PC,18-Jun-19,83,8.4,ArtPlay,505 Games,"Action, Role-Playing, Platformer, Action RPG, 2D",T
@@ -2521,7 +2525,6 @@ No Man's Sky Beyond,/game/playstation-4/no-mans-sky-beyond,PlayStation 4,14-Aug-
 Yakuza 5,/game/playstation-3/yakuza-5,PlayStation 3,8-Dec-15,83,8.6,Ryu ga Gotoku Studios,Sega,"Modern, Action Adventure, Open-World",M
 DiRT,/game/playstation-3/dirt,PlayStation 3,11-Sep-07,83,8,Codemasters,Codemasters,"Driving, Racing, Simulation, Rally / Offroad, Rally / Offroad, Automobile",E
 FIFA Soccer 08,/game/playstation-2/fifa-soccer-08,PlayStation 2,9-Oct-07,83,6.9,EA Canada,EA Sports,"Sports, Traditional, Soccer, Sim",E
-EA SPORTS UFC 4,/game/xbox-one/ea-sports-ufc-4,Xbox One,14-Aug-20,83,1.6,Electronic Arts,Electronic Arts,"Sports, Individual, Combat, Boxing / Martial Arts",T
 Creaks,/game/playstation-4/creaks,PlayStation 4,22-Jul-20,83,6.8,Amanita Design,Amanita Design,"Adventure, General",T
 Zero Escape: Zero Time Dilemma,/game/playstation-vita/zero-escape-zero-time-dilemma,PlayStation Vita,28-Jun-16,83,8.2,"Spike Chunsoft, Chime",Aksys Games,"Adventure, Visual Novel",M
 Outland,/game/playstation-3/outland,PlayStation 3,14-Jun-11,83,7.8,Housemarque,Ubisoft,"Action, Platformer, Platformer, 3D, 2D",E10+
@@ -2681,7 +2684,6 @@ Pokemon Platinum Version,/game/ds/pokemon-platinum-version,DS,22-Mar-09,83,8.9,G
 Assassin's Creed Odyssey,/game/playstation-4/assassins-creed-odyssey,PlayStation 4,2-Oct-18,83,6.3,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 Donkey Kong Country: Tropical Freeze,/game/wii-u/donkey-kong-country-tropical-freeze,Wii U,21-Feb-14,83,8.9,Retro Studios,Nintendo,"Platformer, 2D, Action, Platformer, 2D",E
 Valkyria Chronicles II,/game/psp/valkyria-chronicles-ii,PSP,30-Aug-10,83,8.3,Sega,Sega,"Role-Playing, Strategy, Action RPG, Turn-Based, Historic, Historic, Tactics",T
-Fuser,/game/playstation-4/fuser,PlayStation 4,10-Nov-20,83,tbd,Harmonix Music Systems,NCSOFT,"Action, Rhythm, Music",T
 No More Heroes 2: Desperate Struggle,/game/switch/no-more-heroes-2-desperate-struggle,Switch,28-Oct-20,83,10,"Engine Software, Grasshopper Manufacture",XSEED Games,"Action, Beat-'Em-Up, 3D",NA
 One Step From Eden,/game/pc/one-step-from-eden,PC,26-Mar-20,83,8.7,Thomas Moon Kang,Thomas Moon Kang,"Strategy, Real-Time, Defense",NA
 Code:Realize - Guardian of Rebirth,/game/switch/coderealize---guardian-of-rebirth,Switch,6-Feb-20,83,6.6,Otomate,Aksys Games,"Adventure, Visual Novel",T
@@ -2708,7 +2710,6 @@ SOMA,/game/xbox-one/soma,Xbox One,1-Dec-17,82,8.3,Frictional Games,Frictional Ga
 Dark Souls II: Crown of the Ivory King,/game/pc/dark-souls-ii-crown-of-the-ivory-king,PC,29-Sep-14,82,7.9,Namco Bandai Games,Bandai Namco Games,"Role-Playing, Action RPG",NA
 Defense Grid: The Awakening,/game/xbox-360/defense-grid-the-awakening,Xbox 360,2-Sep-09,82,7.8,Hidden Path Entertainment,Hidden Path Entertainment,"Strategy, Real-Time, General, Sci-Fi, Defense",E10+
 Sega Genesis Collection,/game/psp/sega-genesis-collection,PSP,16-Nov-06,82,8,Sega,Sega,"Miscellaneous, Compilation, Compilation",T
-DIRT 5,/game/xbox-one/dirt-5,Xbox One,3-Nov-20,82,8.1,Codemasters,Codemasters,"Racing, Simulation, Automobile",E
 Gears of War: Ultimate Edition,/game/xbox-one/gears-of-war-ultimate-edition,Xbox One,25-Aug-15,82,7.7,"Splash Damage, The Coalition",Microsoft Game Studios,"Action, Shooter, Third-Person, Arcade",M
 Tomb Raider: Legend,/game/xbox/tomb-raider-legend,Xbox,11-Apr-06,82,6.9,Crystal Dynamics,Eidos Interactive,"Action Adventure, Modern",T
 Tom Clancy's Rainbow Six Vegas 2,/game/xbox-360/tom-clancys-rainbow-six-vegas-2,Xbox 360,18-Mar-08,82,7.8,Ubisoft Montreal,Ubisoft,"Action, Shooter, Shooter, First-Person, Tactical, Modern, Modern",M
@@ -2739,6 +2740,7 @@ GT Advance Championship Racing,/game/game-boy-advance/gt-advance-championship-ra
 Ridge Racer 64,/game/nintendo-64/ridge-racer-64,Nintendo 64,14-Feb-00,82,8.3,Nintendo,Nintendo,"Driving, Racing, Arcade",E
 Pokemon Alpha Sapphire,/game/3ds/pokemon-alpha-sapphire,3DS,21-Nov-14,82,7.4,Game Freak,Nintendo,"Role-Playing, Console-style RPG, Japanese-Style, Trainer",E
 Nuclear Throne,/game/playstation-4/nuclear-throne,PlayStation 4,5-Dec-15,82,6.3,Vlambeer,Vlambeer,"General, Action, General, Shooter, Shoot-'Em-Up, Top-Down",E10+
+Assassin's Creed Valhalla,/game/xbox-one/assassins-creed-valhalla,Xbox One,NA,NA,NA,NA,NA,NA,NA
 Rock Band,/game/playstation-2/rock-band,PlayStation 2,18-Dec-07,82,6.9,Harmonix Music Systems,MTV Games,"Miscellaneous, Rhythm, Music",T
 Stealth Inc 2: A Game of Clones,/game/xbox-one/stealth-inc-2-a-game-of-clones,Xbox One,3-Apr-15,82,6.9,Curve Digital,Curve Digital,"Action, Platformer, 2D",T
 Wreckfest,/game/playstation-4/wreckfest,PlayStation 4,27-Aug-19,82,7,Bugbear,THQ Nordic,"Racing, General, Arcade, Automobile",T
@@ -2821,7 +2823,6 @@ Ruiner,/game/switch/ruiner,Switch,18-Jun-20,82,8.2,Reikon Games,Devolver Digital
 Blazing Chrome,/game/xbox-one/blazing-chrome,Xbox One,11-Jul-19,82,7.8,"JoyMasher, Seaven Studio",The Arcade Crew,"Action, Platformer, 2D",T
 Operencia: The Stolen Sun,/game/xbox-one/operencia-the-stolen-sun,Xbox One,29-Mar-19,82,7.1,Zen Studios,Zen Studios,"Role-Playing, Action RPG",T
 NHL 19,/game/xbox-one/nhl-19,Xbox One,11-Sep-18,82,6,EA Sports,Electronic Arts,"Sports, Team, Ice Hockey, Sim",E10+
-Astro's Playroom,/game/playstation-5/astros-playroom,PlayStation 5,12-Nov-20,82,tbd,"JapanStudio, Team Asobi",PlayStation Studios,"Action, Platformer, 3D",NA
 Lovers in a Dangerous Spacetime,/game/xbox-one/lovers-in-a-dangerous-spacetime,Xbox One,9-Sep-15,82,7.2,Asteroid Base,Asteroid Base,"Platformer, 2D, Action, Shooter, Shoot-'Em-Up, Horizontal",E10+
 Bejeweled 3,/game/pc/bejeweled-3,PC,7-Dec-10,82,7.8,PopCap,PopCap,"Miscellaneous, Puzzle, Puzzle, Puzzle, Matching, Matching",E
 Dangerous Waters,/game/pc/dangerous-waters,PC,22-Feb-05,82,8.6,Sonalysts,Strategy First,"Simulation, Submarine, Marine, Combat",NA
@@ -2852,6 +2853,7 @@ Neverwinter Nights 2,/game/pc/neverwinter-nights-2,PC,31-Oct-06,82,6.6,Obsidian 
 Mega Man Powered Up,/game/psp/mega-man-powered-up,PSP,14-Mar-06,82,8.7,Capcom,Capcom,"Action, Platformer, Platformer, 2D, 2D",E
 Desperados III,/game/playstation-4/desperados-iii,PlayStation 4,16-Jun-20,82,7.6,Mimimi Productions,THQ Nordic,"Strategy, Real-Time, Tactics",M
 Darkstalkers Resurrection,/game/xbox-360/darkstalkers-resurrection,Xbox 360,13-Mar-13,82,6.6,Iron Galaxy Studios,Capcom,"Action, Miscellaneous, Fighting, Compilation, 2D",T
+Astro's Playroom,/game/playstation-5/astros-playroom,PlayStation 5,12-Nov-20,82,tbd,"JapanStudio, Team Asobi",PlayStation Studios,"Action, Platformer, 3D",NA
 Dark Souls III: The Ringed City,/game/playstation-4/dark-souls-iii-the-ringed-city,PlayStation 4,28-Mar-17,82,8.3,From Software,Bandai Namco Games,"Role-Playing, Action RPG",M
 Dragon Age: Origins - Awakening,/game/pc/dragon-age-origins---awakening,PC,16-Mar-10,82,7.9,BioWare,Electronic Arts,"Role-Playing, PC-style RPG, PC-style RPG, Western-Style",M
 Peter Jackson's King Kong: The Official Game of the Movie,/game/xbox/peter-jacksons-king-kong-the-official-game-of-the-movie,Xbox,21-Nov-05,82,7.9,Ubisoft Montpellier,Ubisoft,"Action Adventure, Modern",T
@@ -2881,7 +2883,6 @@ The Walking Dead: A Telltale Games Series - The Complete First Season,/game/play
 Blur,/game/xbox-360/blur,Xbox 360,25-May-10,82,8.2,Bizarre Creations,Activision,"Driving, Racing, Arcade, Arcade, Automobile",E10+
 FIFA 15,/game/xbox-one/fifa-15,Xbox One,23-Sep-14,82,5.4,EA Sports,Electronic Arts,"Sports, Traditional, Team, Soccer, Sim",E
 Neverwinter Nights 2: Mask of The Betrayer,/game/pc/neverwinter-nights-2-mask-of-the-betrayer,PC,9-Oct-07,82,8.5,Obsidian Entertainment,Atari,"Role-Playing, PC-style RPG, PC-style RPG, Western-Style",T
-Disc Room,/game/pc/disc-room,PC,22-Oct-20,82,7.7,"Terri, Dose, Kitty, and JW",Devolver Digital,"Action, General",NA
 Need for Speed Most Wanted,/game/playstation-2/need-for-speed-most-wanted,PlayStation 2,15-Nov-05,82,8.9,EA Canada,Electronic Arts,"Driving, Racing, GT / Street",T
 Sins of a Solar Empire: Rebellion,/game/pc/sins-of-a-solar-empire-rebellion,PC,12-Jun-12,82,7.8,Ironclad Games,Stardock,"Strategy, General, General",T
 Broken Sword: The Sleeping Dragon,/game/pc/broken-sword-the-sleeping-dragon,PC,17-Nov-03,82,7.3,Revolution Software,The Adventure Company,"Adventure, 3D, Modern, Third-Person, Modern",T
@@ -2917,6 +2918,7 @@ PixelJunk Shooter 2,/game/playstation-3/pixeljunk-shooter-2,PlayStation 3,1-Mar-
 Tekken Tag Tournament 2,/game/playstation-3/tekken-tag-tournament-2,PlayStation 3,11-Sep-12,82,8.3,Namco Bandai Games,Namco Bandai Games,"Action, Fighting, Fighting, 3D, 3D",T
 Shantae and the Pirate's Curse,/game/3ds/shantae-and-the-pirates-curse,3DS,23-Oct-14,82,8.6,WayForward,Rising Star Games,"Platformer, 2D, Action, Platformer, 2D",T
 The Elder Scrolls V: Skyrim - Dragonborn,/game/xbox-360/the-elder-scrolls-v-skyrim---dragonborn,Xbox 360,4-Dec-12,82,8.2,Bethesda Game Studios,Bethesda Softworks,"Role-Playing, First-Person, First-Person, Western-Style",M
+Disc Room,/game/pc/disc-room,PC,22-Oct-20,82,7.7,"Terri, Dose, Kitty, and JW",Devolver Digital,"Action, General",NA
 Galak-Z: The Dimensional,/game/playstation-4/galak-z-the-dimensional,PlayStation 4,4-Aug-15,82,7.1,17-Bit,17-Bit,"General, Shooter, Scrolling, Scrolling, Action, Shooter, Shoot-'Em-Up, Vertical",E10+
 Sportsfriends,/game/playstation-4/sportsfriends,PlayStation 4,6-May-14,82,6.3,Die Gute Fabrik,Die Gute Fabrik,"Sports, Miscellaneous, General, Party, Party / Minigame",E10+
 Dragon Age II,/game/pc/dragon-age-ii,PC,8-Mar-11,82,4.6,BioWare,Electronic Arts,"Role-Playing, PC-style RPG, Action RPG",M
@@ -2951,6 +2953,7 @@ Death Stranding,/game/playstation-4/death-stranding,PlayStation 4,8-Nov-19,82,7.
 S.T.A.L.K.E.R.: Shadow of Chernobyl,/game/pc/stalker-shadow-of-chernobyl,PC,20-Mar-07,82,8.5,GSC Game World,THQ,"Action, Shooter, Shooter, First-Person, Sci-Fi, Sci-Fi, Arcade",M
 Mega Man 9,/game/xbox-360/mega-man-9,Xbox 360,1-Oct-08,82,8.9,Inti Creates,Capcom,"Action, Platformer, Platformer, 2D, 2D",E
 Far Cry 5,/game/xbox-one/far-cry-5,Xbox One,27-Mar-18,82,6.8,Ubisoft Montreal,Ubisoft,"Action, Shooter, First-Person, Arcade",M
+Assassin's Creed Valhalla,/game/playstation-4/assassins-creed-valhalla,PlayStation 4,NA,NA,NA,NA,NA,NA,NA
 Okamiden,/game/ds/okamiden,DS,10-Mar-11,82,8.2,Capcom,Capcom,"Action Adventure, Fantasy, General, Fantasy",E10+
 Space Invaders Extreme 2,/game/ds/space-invaders-extreme-2,DS,19-Oct-09,82,7.4,Taito Corporation,Square Enix,"Action, Shooter, Shooter, Scrolling, Scrolling, Shoot-'Em-Up, Vertical",E
 The Evil Within 2,/game/xbox-one/the-evil-within-2,Xbox One,13-Oct-17,82,9.1,Tango Gameworks,Bethesda Softworks,"Action Adventure, Survival",M
@@ -3028,6 +3031,7 @@ Tekken 6,/game/psp/tekken-6,PSP,24-Nov-09,82,8.2,"Namco Bandai Games America, Na
 Strong Bad's Cool Game for Attractive People Episode 2: Strong Badia the Free,/game/wii/strong-bads-cool-game-for-attractive-people-episode-2-strong-badia-the-free,Wii,15-Sep-08,82,7.9,Telltale Games,Telltale Games,"Miscellaneous, Adventure, General, Compilation",E10+
 Mario Kart Wii,/game/wii/mario-kart-wii,Wii,27-Apr-08,82,8.4,Nintendo,Nintendo,"Driving, Racing, Arcade, Kart, Kart, Automobile",E
 College Hoops 2K8,/game/playstation-3/college-hoops-2k8,PlayStation 3,19-Nov-07,82,5.9,Visual Concepts,2K Sports,"Sports, Traditional, Team, Basketball, Sim, Sim",E
+EA SPORTS UFC 4,/game/xbox-one/ea-sports-ufc-4,Xbox One,14-Aug-20,83,1.6,Electronic Arts,Electronic Arts,"Sports, Individual, Combat, Boxing / Martial Arts",T
 GRIS,/game/playstation-4/gris,PlayStation 4,26-Nov-19,82,8,Nomada Studio,Devolver Digital,"Action, Platformer, 2D",E
 Borderlands 2: Mr. Torgue's Campaign of Carnage,/game/pc/borderlands-2-mr-torgues-campaign-of-carnage,PC,20-Nov-12,82,7.2,Gearbox Software,2K Games,"Action, Shooter, Shooter, First-Person, Sci-Fi, Sci-Fi, Arcade",M
 Split/Second,/game/xbox-360/splitsecond,Xbox 360,18-May-10,82,8.1,Black Rock Studio,Disney Interactive Studios,"Driving, Racing, General, General, Arcade, Automobile",E10+
@@ -3304,7 +3308,6 @@ Phantom Brave,/game/playstation-2/phantom-brave,PlayStation 2,31-Aug-04,81,7.8,N
 LEGO Star Wars II: The Original Trilogy,/game/xbox-360/lego-star-wars-ii-the-original-trilogy,Xbox 360,12-Sep-06,81,8,Traveller's Tales,LucasArts,"Action Adventure, Sci-Fi, Sci-Fi, General",E10+
 VVVVVV,/game/pc/vvvvvv,PC,11-Jan-10,81,7.9,Terry Cavanagh,Terry Cavanagh,"Action, Platformer, Platformer, 2D, 2D",NA
 Monster Hunter Freedom Unite,/game/psp/monster-hunter-freedom-unite,PSP,22-Jun-09,81,8.5,Capcom,Capcom,"Role-Playing, Action RPG, Action RPG",T
-Amnesia: Rebirth,/game/pc/amnesia-rebirth,PC,20-Oct-20,81,6.3,Frictional Games,Frictional Games,"Action Adventure, Survival",M
 Tokyo Mirage Sessions #FE Encore,/game/switch/tokyo-mirage-sessions-fe-encore,Switch,17-Jan-20,81,6.2,Atlus,Nintendo,"Role-Playing, Japanese-Style",T
 The Sims 4: Discover University,/game/pc/the-sims-4-discover-university,PC,17-Dec-19,81,4.5,Maxis,Electronic Arts,"Simulation, Virtual, Virtual Life",T
 Contra Anniversary Collection,/game/switch/contra-anniversary-collection,Switch,11-Jun-19,81,7,Konami,Konami,"Miscellaneous, Compilation",E10+
@@ -3320,8 +3323,8 @@ Tom Clancy's Rainbow Six Vegas 2,/game/playstation-3/tom-clancys-rainbow-six-veg
 Resident Evil 5: Lost in Nightmares,/game/playstation-3/resident-evil-5-lost-in-nightmares,PlayStation 3,18-Feb-10,81,7.8,Capcom,Capcom,"Action Adventure, Horror, Horror, Survival",M
 Wolfenstein: The New Order,/game/pc/wolfenstein-the-new-order,PC,19-May-14,81,8.2,MachineGames,Bethesda Softworks,"General, Action, Shooter, First-Person, Historic, Arcade",M
 Fallout: New Vegas - Old World Blues,/game/playstation-3/fallout-new-vegas---old-world-blues,PlayStation 3,19-Jul-11,81,7.6,Obsidian Entertainment,Bethesda Softworks,"Role-Playing, First-Person, First-Person, Western-Style",M
+Amnesia: Rebirth,/game/pc/amnesia-rebirth,PC,20-Oct-20,81,6.3,Frictional Games,Frictional Games,"Action Adventure, Survival",M
 Super Mega Baseball 2,/game/xbox-one/super-mega-baseball-2,Xbox One,1-May-18,81,7.2,Metalhead Software,Metalhead Software,"Sports, Team, Baseball, Arcade",E
-Nioh 2: Darkness in the Capital,/game/playstation-4/nioh-2-darkness-in-the-capital,PlayStation 4,15-Oct-20,81,6.7,Team Ninja,Koei Tecmo Games,"Role-Playing, Action RPG",NA
 Remnant: From the Ashes - Swamps of Corsus,/game/pc/remnant-from-the-ashes---swamps-of-corsus,PC,28-Apr-20,81,7.1,Gunfire Games,Perfect World Entertainment,"Action, Shooter, Third-Person, Arcade",NA
 World of Final Fantasy Maxima,/game/xbox-one/world-of-final-fantasy-maxima,Xbox One,6-Nov-18,81,7.8,Square Enix,Square Enix,"Role-Playing, Japanese-Style",E10+
 Mega Man Anniversary Collection,/game/playstation-2/mega-man-anniversary-collection,PlayStation 2,22-Jun-04,81,8.8,Atomic Planet Entertainment,Capcom,"Miscellaneous, Compilation",E
@@ -3343,12 +3346,14 @@ Call of Duty: Advanced Warfare,/game/xbox-one/call-of-duty-advanced-warfare,Xbox
 Star Wars Jedi: Fallen Order,/game/xbox-one/star-wars-jedi-fallen-order,Xbox One,15-Nov-19,81,8.2,Respawn Entertainment,Electronic Arts,"Action, Action Adventure, General",T
 Star Wars Jedi: Fallen Order,/game/pc/star-wars-jedi-fallen-order,PC,15-Nov-19,81,7.9,Respawn Entertainment,Electronic Arts,"Action, Action Adventure, General",T
 Capcom Classics Collection,/game/xbox/capcom-classics-collection,Xbox,27-Sep-05,81,tbd,Digital Eclipse,Capcom,"Miscellaneous, Compilation",T
+Nioh 2: Darkness in the Capital,/game/playstation-4/nioh-2-darkness-in-the-capital,PlayStation 4,15-Oct-20,81,6.7,Team Ninja,Koei Tecmo Games,"Role-Playing, Action RPG",NA
 Rising Storm 2: Vietnam,/game/pc/rising-storm-2-vietnam,PC,30-May-17,81,7.5,Antimatter Games,Tripwire Interactive,"Action, Shooter, First-Person, Tactical",NA
 Alien: Isolation,/game/pc/alien-isolation,PC,6-Oct-14,81,8.5,Creative Assembly,Sega,"Action Adventure, Sci-Fi, General, Survival",M
 Phantom Dust,/game/xbox/phantom-dust,Xbox,15-Mar-05,81,7.6,Microsoft Game Studios Japan,Majesco Games,"Action, Shooter, Third-Person, Sci-Fi",T
 The Witcher,/game/pc/the-witcher,PC,30-Oct-07,81,8.7,CD Projekt Red Studio,Atari,"Role-Playing, Action RPG, Action RPG",M
 Unravel Two,/game/xbox-one/unravel-two,Xbox One,9-Jun-18,81,7.4,Coldwood Interactive,Electronic Arts,"Action, Platformer, 2D",E
 Overcooked! 2,/game/switch/overcooked!-2,Switch,7-Aug-18,81,7.7,Ghost Town Games Ltd.,Team17,"Action, Arcade",E
+Yakuza: Like a Dragon,/game/pc/yakuza-like-a-dragon,PC,10-Nov-20,79,tbd,Ryu ga Gotoku Studios,Sega,"Role-Playing, Japanese-Style",M
 Phoenix Wright: Ace Attorney Trilogy,/game/3ds/phoenix-wright-ace-attorney-trilogy,3DS,9-Dec-14,81,8.5,NATSUME ATARI Inc.,Capcom,"Miscellaneous, Compilation",T
 Kentucky Route Zero - Act I,/game/pc/kentucky-route-zero---act-i,PC,7-Jan-13,81,7.5,Cardboard Computer,Cardboard Computer,"Adventure, General, General",NA
 Call of Duty: Black Ops II,/game/wii-u/call-of-duty-black-ops-ii,Wii U,18-Nov-12,81,6.9,Treyarch,Activision,"Action, Shooter, Shooter, First-Person, Historic, Modern, Arcade",M
@@ -3360,6 +3365,7 @@ Frog Detective 2: The Case of the Invisible Wizard,/game/pc/frog-detective-2-the
 The Elder Scrolls Online: Dragonhold,/game/pc/the-elder-scrolls-online-dragonhold,PC,21-Oct-19,81,4.6,ZeniMax Media,ZeniMax Media,"Role-Playing, Massively Multiplayer",M
 Irony Curtain: From Matryoshka with Love,/game/pc/irony-curtain-from-matryoshka-with-love,PC,16-May-19,81,7.9,Artifex Mundi,Artifex Mundi,"Adventure, General",NA
 Unruly Heroes,/game/pc/unruly-heroes,PC,23-Jan-19,81,6.7,Magic Design Studios,Magic Design Studios,"Action, Platformer, 2D",NA
+DIRT 5,/game/playstation-4/dirt-5,PlayStation 4,3-Nov-20,81,5.9,Codemasters,Codemasters,"Racing, Simulation, Automobile",NA
 Lone Survivor: The Director's Cut,/game/playstation-vita/lone-survivor-the-directors-cut,PlayStation Vita,24-Sep-13,81,8,"Curve Studios, superflat games",Curve Studios,"Action Adventure, Horror, Horror, Survival",T
 Strong Bad's Cool Game for Attractive People Episode 4: Dangeresque 3: The Criminal Projective,/game/wii/strong-bads-cool-game-for-attractive-people-episode-4-dangeresque-3-the-criminal-projective,Wii,17-Nov-08,81,8.6,Telltale Games,Telltale Games,"Miscellaneous, Adventure, General, Compilation",E10+
 SnowRunner,/game/pc/snowrunner,PC,28-Apr-20,81,6.7,Saber Interactive,Focus Home Interactive,"Racing, Arcade, Automobile",E
@@ -3476,6 +3482,7 @@ Untitled Goose Game,/game/switch/untitled-goose-game,Switch,20-Sep-19,81,7.6,Hou
 Jak and Daxter Collection,/game/playstation-3/jak-and-daxter-collection,PlayStation 3,7-Feb-12,81,8.7,Mass Media,SCEA,"Action, Miscellaneous, Platformer, Compilation, Compilation, 3D",T
 Samurai Shodown,/game/playstation-4/samurai-shodown,PlayStation 4,25-Jun-19,81,7.8,SNK Corporation,SNK Corporation,"Action, Fighting, 2D",M
 Firewatch,/game/pc/firewatch,PC,9-Feb-16,81,7,Campo Santo,Panic Inc.,"General, Adventure, 3D, First-Person",NA
+Sakuna: Of Rice and Ruin,/game/switch/sakuna-of-rice-and-ruin,Switch,NA,NA,NA,NA,NA,NA,NA
 No More Heroes,/game/switch/no-more-heroes,Switch,28-Oct-20,81,9.6,"Engine Software, Grasshopper Manufacture",XSEED Games,"Action, Beat-'Em-Up, 3D",NA
 Filament,/game/pc/filament,PC,23-Apr-20,81,7.5,Beard Envy,Kasedo Games,"Puzzle, Action",NA
 Torchlight II,/game/switch/torchlight-ii,Switch,3-Sep-19,81,8.4,Panic Button,Perfect World Entertainment,"Role-Playing, Action RPG",T
@@ -3515,7 +3522,6 @@ Phoenix Wright: Ace Attorney - Spirit of Justice,/game/3ds/phoenix-wright-ace-at
 CHUCHEL,/game/pc/chuchel,PC,7-Mar-18,81,6.6,Amanita Design,Amanita Design,"Adventure, General",NA
 Gran Turismo 6,/game/playstation-3/gran-turismo-6,PlayStation 3,6-Dec-13,81,8,Polyphony Digital,SCEA,"Driving, Racing, Simulation, GT / Street, GT / Street, Automobile",E
 Strong Bad's Cool Game for Attractive People Episode 4: Dangeresque 3: The Criminal Projective,/game/pc/strong-bads-cool-game-for-attractive-people-episode-4-dangeresque-3-the-criminal-projective,PC,17-Nov-08,81,7.8,Telltale Games,Telltale Games,"Miscellaneous, Adventure, General, Compilation",E10+
-DIRT 5,/game/playstation-4/dirt-5,PlayStation 4,3-Nov-20,81,5.9,Codemasters,Codemasters,"Racing, Simulation, Automobile",NA
 GoldenEye 007,/game/wii/goldeneye-007,Wii,2-Nov-10,81,7.7,"Eurocom Entertainment Software, Eurocom",Activision,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",T
 Kirby: Nightmare in Dream Land,/game/game-boy-advance/kirby-nightmare-in-dream-land,Game Boy Advance,2-Dec-02,81,8.6,HAL Labs,Nintendo,"Action, Platformer, 2D",E
 Rochard,/game/pc/rochard,PC,15-Nov-11,81,7.8,Recoil Games,Recoil Games,"Action, Adventure, General, Platformer, Platformer, 2D, 2D",T
@@ -3644,7 +3650,6 @@ Valiant Hearts: The Great War,/game/xbox-one/valiant-hearts-the-great-war,Xbox O
 Fast RMX,/game/switch/fast-rmx,Switch,3-Mar-17,81,7.9,Shin'en,Shin'en,"Racing, Arcade, Futuristic",E
 Maldita Castilla EX: Cursed Castilla,/game/xbox-one/maldita-castilla-ex-cursed-castilla,Xbox One,20-Jul-16,81,7.8,Locomalito,Abylight,"Action, Platformer, 2D",T
 Sam & Max Episode 101: Culture Shock,/game/pc/sam-max-episode-101-culture-shock,PC,18-Oct-06,81,7.7,Telltale Games,GameTap,"Adventure, General, 3D, Point-and-Click, Third-Person",T
-Fall Guys: Ultimate Knockout,/game/playstation-4/fall-guys-ultimate-knockout,PlayStation 4,4-Aug-20,81,7.1,Mediatonic,Devolver Digital,"Miscellaneous, Party / Minigame",E
 Overcooked!,/game/pc/overcooked!,PC,3-Aug-16,81,7.9,Ghost Town Games Ltd.,Team17,"Action, Simulation, Arcade, Virtual, Career",NA
 Child of Eden,/game/playstation-3/child-of-eden,PlayStation 3,27-Sep-11,81,7.9,Q Entertainment,Ubisoft,"Action, Shooter, Shooter, Third-Person, Rail, Rail, Fantasy",E10+
 Prince of Persia Classic Trilogy HD,/game/playstation-3/prince-of-persia-classic-trilogy-hd,PlayStation 3,19-Apr-11,81,8,Ubisoft,Ubisoft,"Miscellaneous, Action Adventure, Fantasy, Compilation",M
@@ -3735,6 +3740,7 @@ Wargroove,/game/xbox-one/wargroove,Xbox One,1-Feb-19,81,5.4,Chucklefish,Chucklef
 Lumines Remastered,/game/xbox-one/lumines-remastered,Xbox One,26-Jun-18,81,tbd,Enhance Games,Enhance Games,"Puzzle, Matching",E10+
 Antihero,/game/pc/antihero,PC,10-Jul-17,81,6.9,Tim Conkling,Versus Evil,"Strategy, Turn-Based, Tactics",NA
 Halo Wars: Definitive Edition,/game/xbox-one/halo-wars-definitive-edition,Xbox One,21-Feb-17,81,7.7,"Microsoft Game Studios, Microsoft",Microsoft Game Studios,"Strategy, Real-Time, General",T
+Fall Guys: Ultimate Knockout,/game/playstation-4/fall-guys-ultimate-knockout,PlayStation 4,4-Aug-20,81,7.1,Mediatonic,Devolver Digital,"Miscellaneous, Party / Minigame",E
 OutRun 2006: Coast 2 Coast,/game/playstation-2/outrun-2006-coast-2-coast,PlayStation 2,25-Apr-06,81,8.5,Sumo Digital,Sega,"Driving, Racing, Arcade",E
 Subnautica,/game/xbox-one/subnautica,Xbox One,4-Dec-18,81,8.1,Unknown Worlds Entertainment,Unknown Worlds Entertainment,"Adventure, General",E10+
 The Legend of Zelda: Breath of the Wild - The Champions' Ballad,/game/switch/the-legend-of-zelda-breath-of-the-wild---the-champions-ballad,Switch,7-Dec-17,81,8.5,Nintendo,Nintendo,"Action Adventure, Open-World",E10+
@@ -3760,7 +3766,6 @@ Battle Chef Brigade,/game/switch/battle-chef-brigade,Switch,20-Nov-17,81,8.3,Tri
 Affordable Space Adventures,/game/wii-u/affordable-space-adventures,Wii U,9-Apr-15,81,8.1,KnapNok Games,KnapNok Games,"Scrolling, Action, Shooter, Shoot-'Em-Up, Vertical",E
 Prince of Persia,/game/xbox-360/prince-of-persia,Xbox 360,2-Dec-08,81,7.1,Ubisoft Montreal,Ubisoft,"Action Adventure, Fantasy, General, Fantasy",T
 Dragon Quest VII: Fragments of the Forgotten Past,/game/3ds/dragon-quest-vii-fragments-of-the-forgotten-past,3DS,16-Sep-16,81,8.3,ArtePiazza,Square Enix,"Role-Playing, Japanese-Style",E10+
-I Am Dead,/game/switch/i-am-dead,Switch,8-Oct-20,81,6.6,Hollow Ponds and Richard Hogg,Annapurna Interactive,"Adventure, General",NA
 AVICII Invector Encore Edition,/game/switch/avicii-invector-encore-edition,Switch,8-Sep-20,81,7.3,Wired Productions,Wired Productions,"Action, Rhythm, Music",T
 Yooka-Laylee and the Impossible Lair,/game/switch/yooka-laylee-and-the-impossible-lair,Switch,8-Oct-19,81,7.8,Playtonic Games,Team17,"Action, Platformer, 2D",E
 Darksiders: Warmastered Edition,/game/playstation-4/darksiders-warmastered-edition,PlayStation 4,22-Nov-16,81,7.7,"Nordic Games Publishing, Kaiko",Nordic Games Publishing,"Action Adventure, Open-World",M
@@ -3783,6 +3788,7 @@ Donkey Kong Jungle Beat,/game/gamecube/donkey-kong-jungle-beat,GameCube,14-Mar-0
 Call of Duty: Modern Warfare,/game/xbox-one/call-of-duty-modern-warfare,Xbox One,25-Oct-19,80,3.7,Infinity Ward,Activision,"Action, Shooter, First-Person, Arcade",M
 Dungeon Defenders,/game/playstation-3/dungeon-defenders,PlayStation 3,18-Oct-11,80,6.7,Trendy Entertainment,Trendy Entertainment,"Role-Playing, Action RPG, Action RPG",E10+
 Ultimate Marvel vs. Capcom 3,/game/playstation-3/ultimate-marvel-vs-capcom-3,PlayStation 3,15-Nov-11,80,6.6,Capcom,Capcom,"Action, Fighting, Fighting, 2D, 2D",T
+I Am Dead,/game/switch/i-am-dead,Switch,8-Oct-20,81,6.6,Hollow Ponds and Richard Hogg,Annapurna Interactive,"Adventure, General",NA
 Mario Power Tennis,/game/gamecube/mario-power-tennis,GameCube,8-Nov-04,80,8.5,Camelot Software Planning,Nintendo,"Sports, Traditional, Tennis",E
 Final Fantasy VIII Remastered,/game/playstation-4/final-fantasy-viii-remastered,PlayStation 4,3-Sep-19,80,7,Square Enix,Square Enix,"Role-Playing, Japanese-Style",T
 Gears Tactics,/game/pc/gears-tactics,PC,28-Apr-20,80,7.7,"Splash Damage, The Coalition",Microsoft Game Studios,"Strategy, Turn-Based, Tactics",M
@@ -3791,6 +3797,7 @@ Buzz! Quiz World,/game/playstation-3/buzz!-quiz-world,PlayStation 3,11-Nov-09,80
 Plants vs Zombies: Garden Warfare 2,/game/xbox-one/plants-vs-zombies-garden-warfare-2,Xbox One,23-Feb-16,80,7.9,PopCap,Electronic Arts,"Action, Shooter, Third-Person, Tactical",E10+
 Phoenix Wright: Ace Attorney Trilogy,/game/pc/phoenix-wright-ace-attorney-trilogy,PC,9-Apr-19,80,8.5,Capcom,Capcom,"Miscellaneous, Compilation",NA
 Shantae: Half-Genie Hero,/game/wii-u/shantae-half-genie-hero,Wii U,20-Dec-16,80,8.4,WayForward,XSEED Games,"Action, Platformer, Platformer, 2D, 2D",T
+Ghostrunner,/game/pc/ghostrunner,PC,27-Oct-20,80,8.3,ONE MORE LEVEL,505 Games,"Adventure, General",NA
 Madden NFL 25,/game/xbox-360/madden-nfl-25,Xbox 360,27-Aug-13,80,5.6,EA Sports,Electronic Arts,"Sports, Traditional, Team, Football, Arcade, Arcade, Sim",E
 The Red Strings Club,/game/switch/the-red-strings-club,Switch,14-Mar-19,80,7.7,Deconstructeam,Devolver Digital,"Adventure, Visual Novel",M
 Tales of Vesperia: Definitive Edition,/game/xbox-one/tales-of-vesperia-definitive-edition,Xbox One,11-Jan-19,80,7.2,Bandai Namco Games,Bandai Namco Games,"Role-Playing, Action RPG",T
@@ -3822,7 +3829,6 @@ Pokemon Black Version 2,/game/ds/pokemon-black-version-2,DS,7-Oct-12,80,7.8,Game
 Tom Clancy's Ghost Recon 2,/game/xbox/tom-clancys-ghost-recon-2,Xbox,16-Nov-04,80,8.6,Red Storm Entertainment,Ubisoft,"Action, Shooter, First-Person, Tactical, Modern",T
 Soul Reaver 2,/game/playstation-2/soul-reaver-2,PlayStation 2,31-Oct-01,80,8.6,Crystal Dynamics,Eidos Interactive,"Action Adventure, Horror",M
 Rocket Riot,/game/xbox-360/rocket-riot,Xbox 360,17-Jun-09,80,7.6,Codeglue,THQ,"Action, General, General",E
-Ghostrunner,/game/pc/ghostrunner,PC,27-Oct-20,80,8.3,ONE MORE LEVEL,505 Games,"Adventure, General",NA
 The Chronicles of Riddick: Assault on Dark Athena,/game/playstation-3/the-chronicles-of-riddick-assault-on-dark-athena,PlayStation 3,7-Apr-09,80,8,Starbreeze,Atari,"Action, Shooter, Shooter, First-Person, Sci-Fi, Sci-Fi, Arcade",M
 Detroit: Become Human,/game/pc/detroit-become-human,PC,12-Dec-19,80,7.4,Quantic Dream,Quantic Dream,"Adventure, 3D, Third-Person",M
 Leap of Fate,/game/pc/leap-of-fate,PC,30-Mar-16,80,7.5,Clever-Plays,Clever-Plays,"Action, General",NA
@@ -4195,6 +4201,7 @@ SSX On Tour,/game/playstation-2/ssx-on-tour,PlayStation 2,11-Oct-05,80,7.8,EA Ca
 Fallen Enchantress: Legendary Heroes,/game/pc/fallen-enchantress-legendary-heroes,PC,22-May-13,80,7.7,Stardock,Stardock,"Strategy, Turn-Based, Fantasy, General, 4X",NA
 Medal of Honor Frontline,/game/gamecube/medal-of-honor-frontline,GameCube,10-Nov-02,80,7.6,Dreamworks Games,EA Games,"Action, Shooter, First-Person, Historic",T
 Call of Duty 3,/game/playstation-3/call-of-duty-3,PlayStation 3,14-Nov-06,80,6.9,Treyarch,Activision,"Action, Shooter, Shooter, First-Person, Historic, Historic, Arcade",T
+Fuser,/game/playstation-4/fuser,PlayStation 4,10-Nov-20,83,tbd,Harmonix Music Systems,NCSOFT,"Action, Rhythm, Music",T
 Darkwood,/game/xbox-one/darkwood,Xbox One,17-May-19,80,7.8,Acid Wizard Studio,Crunching Koalas,"Action Adventure, Survival",M
 Dragon's Dogma: Dark Arisen,/game/xbox-one/dragons-dogma-dark-arisen,Xbox One,3-Oct-17,80,7.8,Capcom,Capcom,"Role-Playing, Action RPG",M
 Danganronpa V3: Killing Harmony,/game/playstation-vita/danganronpa-v3-killing-harmony,PlayStation Vita,26-Sep-17,80,7.4,Spike Chunsoft,NIS America,"Adventure, Visual Novel",M
@@ -4403,8 +4410,10 @@ CAPSIZED,/game/pc/capsized,PC,29-Apr-11,80,7.1,Alientrap,Alientrap,"Action, Plat
 Skate 3,/game/playstation-3/skate-3,PlayStation 3,11-May-10,80,8,EA Black Box,EA Games,"Sports, Alternative, Individual, Skateboarding, Skateboarding, Skate / Skateboard",T
 Enslaved: Odyssey to the West,/game/playstation-3/enslaved-odyssey-to-the-west,PlayStation 3,5-Oct-10,80,7.6,Ninja Theory,Namco Bandai Games,"Action Adventure, Modern, General, Modern",T
 FlatOut: Ultimate Carnage,/game/xbox-360/flatout-ultimate-carnage,Xbox 360,2-Oct-07,80,8.6,Bugbear,Empire Interactive,"Driving, Racing, Demolition Derby, Arcade, Demolition Derby, Automobile",T
+Fuser,/game/switch/fuser,Switch,NA,NA,NA,NA,NA,NA,NA
 Total War: Three Kingdoms - A World Betrayed,/game/pc/total-war-three-kingdoms---a-world-betrayed,PC,19-Mar-20,80,5.9,Creative Assembly,Sega,"Strategy, Real-Time, General",NA
 Autonauts,/game/pc/autonauts,PC,17-Oct-19,80,8,Denki,Curve Digital,"Strategy, Management, Government",NA
+Children of Morta,/game/playstation-4/children-of-morta,PlayStation 4,15-Oct-19,79,8.2,"Dead Mage Studio, Dead Mage",Dead Mage Studio,"Role-Playing, Adventure, General, Action RPG",T
 NBA 2K20,/game/xbox-one/nba-2k20,Xbox One,6-Sep-19,80,1.4,Visual Concepts,2K Games,"Sports, Team, Basketball, Sim",E
 Judgment,/game/playstation-4/judgment,PlayStation 4,21-Jun-19,80,8.4,Ryu ga Gotoku Studios,Sega,"Action Adventure, General, Open-World",M
 Minit,/game/switch/minit,Switch,9-Aug-18,80,7.8,"JW, Kitty, Jukio, and Dom",Devolver Digital,"Adventure, General",E
@@ -4439,7 +4448,6 @@ LocoRoco 2 Remastered,/game/playstation-4/locoroco-2-remastered,PlayStation 4,9-
 Hitman: Absolution,/game/pc/hitman-absolution,PC,19-Nov-12,79,7.1,"Io Interactive, Nixxes Software",Square Enix,"Action Adventure, Modern, General, Modern",M
 Wolfenstein: The New Order,/game/playstation-4/wolfenstein-the-new-order,PlayStation 4,20-May-14,79,8.1,MachineGames,Bethesda Softworks,"General, Shooter, Historic, Action, Shooter, First-Person, Historic, Arcade",M
 Fallout 3: Point Lookout,/game/pc/fallout-3-point-lookout,PC,23-Jun-09,79,7.6,Bethesda Game Studios,Bethesda Softworks,"Role-Playing, First-Person, First-Person, General, Western-Style",M
-Children of Morta,/game/playstation-4/children-of-morta,PlayStation 4,15-Oct-19,79,8.2,"Dead Mage Studio, Dead Mage",Dead Mage Studio,"Role-Playing, Adventure, General, Action RPG",T
 Fractured Space,/game/pc/fractured-space,PC,22-Sep-16,79,7.6,Edge Case Games,Edge Case Games,"Sci-Fi, Strategy, Real-Time, General",NA
 Resident Evil 5: Lost in Nightmares,/game/xbox-360/resident-evil-5-lost-in-nightmares,Xbox 360,17-Feb-10,79,8.1,Capcom,Capcom,"Action Adventure, Horror, Horror, Survival",M
 Test Drive Unlimited,/game/pc/test-drive-unlimited,PC,20-Mar-07,79,8.1,Eden Studios,Atari,"Driving, Racing, Simulation, GT / Street, GT / Street, Automobile",T
@@ -4512,7 +4520,6 @@ Otogi 2: Immortal Warriors,/game/xbox/otogi-2-immortal-warriors,Xbox,21-Oct-04,7
 Chime,/game/xbox-360/chime,Xbox 360,3-Feb-10,79,7.9,Zoe Mode,Valcon Games,"Action, Miscellaneous, Rhythm, Music, Music",E
 Brothers: A Tale of Two Sons,/game/switch/brothers-a-tale-of-two-sons,Switch,28-May-19,79,8.4,Turn Me Up Games,505 Games,"Action Adventure, Linear",T
 Pro Evolution Soccer 2009,/game/pc/pro-evolution-soccer-2009,PC,12-Nov-08,79,7.3,Konami,Konami,"Sports, Traditional, Team, Soccer, Sim, Sim",E
-Yakuza: Like a Dragon,/game/pc/yakuza-like-a-dragon,PC,10-Nov-20,79,tbd,Ryu ga Gotoku Studios,Sega,"Role-Playing, Japanese-Style",M
 Return to Mysterious Island,/game/pc/return-to-mysterious-island,PC,2-Nov-04,79,7.8,Kheops Studio,DreamCatcher Interactive,"Adventure, First-Person, Point-and-Click, Modern, Modern",T
 Rubik's Puzzle Galaxy: RUSH,/game/wii/rubiks-puzzle-galaxy-rush,Wii,14-Dec-09,79,tbd,Two Tribes,The Game Factory,"Miscellaneous, Puzzle, Puzzle, General, General",E
 Euro Truck Simulator 2,/game/pc/euro-truck-simulator-2,PC,16-Jan-13,79,8.7,SCS Software,SCS Software,"Simulation, General, General, Vehicle, Civilian",NA
@@ -4531,6 +4538,7 @@ Pac-Man Collection,/game/game-boy-advance/pac-man-collection,Game Boy Advance,12
 Emperor: Battle for Dune,/game/pc/emperor-battle-for-dune,PC,12-Jun-01,79,8,Westwood Studios,EA Games,"Strategy, Real-Time, Sci-Fi, Sci-Fi, General",T
 Rowan's Battle of Britain,/game/pc/rowans-battle-of-britain,PC,31-Jan-01,79,tbd,Rowan Software Ltd.,Empire Interactive,"Simulation, Flight, WWII, Combat",T
 echochrome,/game/psp/echochrome,PSP,1-May-08,79,7.9,"SCE/WWS, SCE Japan Studio",SCEA,"Miscellaneous, Puzzle, Action, Puzzle, General, Puzzle, General",E
+Crown Trick,/game/switch/crown-trick,Switch,NA,NA,NA,NA,NA,NA,NA
 Budget Cuts,/game/playstation-4/budget-cuts,PlayStation 4,10-Jul-20,79,tbd,Neat Corporation,Neat Corporation,"Action, Shooter, First-Person, Arcade",T
 EarthNight,/game/playstation-4/earthnight,PlayStation 4,23-Jan-20,79,6.8,cleaversoft,cleaversoft,"Action, Platformer, 2D",E10+
 Stories Untold,/game/switch/stories-untold,Switch,16-Jan-20,79,8.5,No Code,Devolver Digital,"Adventure, Text",M
@@ -4778,6 +4786,7 @@ ZEN Pinball 3D,/game/3ds/zen-pinball-3d,3DS,12-Jan-12,79,7.8,Zen Studios,Zen Stu
 King's Bounty: The Legend,/game/pc/kings-bounty-the-legend,PC,23-Sep-08,79,8.6,Katauri Interactive,Atari,"Strategy, Turn-Based, Fantasy, General, Fantasy, Tactics",T
 Metal Slug Advance,/game/game-boy-advance/metal-slug-advance,Game Boy Advance,2-Dec-04,79,8.6,Noise Factory,SNK,"Action, Shooter, Scrolling",T
 Buffy the Vampire Slayer,/game/xbox/buffy-the-vampire-slayer,Xbox,18-Aug-02,79,7.8,Double Helix Games,Electronic Arts,"Action, Beat-'Em-Up",T
+Bugsnax,/game/playstation-4/bugsnax,PlayStation 4,NA,NA,NA,NA,NA,NA,NA
 Bleed 2,/game/switch/bleed-2,Switch,8-Mar-18,79,8.1,BootdiskRevolution,Digerati Distribution,"Action, Platformer, 2D",T
 ECHO,/game/playstation-4/echo,PlayStation 4,10-Oct-17,79,6.8,Ultra Ultra,Ultra Ultra,"Action Adventure, General",M
 Hitman - Episode 2: Sapienza,/game/xbox-one/hitman---episode-2-sapienza,Xbox One,26-Apr-16,79,6.7,Io Interactive,Square Enix,"Action Adventure, General",NA
@@ -4936,6 +4945,7 @@ Marble Blast Ultra,/game/xbox-360/marble-blast-ultra,Xbox 360,23-Jan-06,79,8.2,G
 echochrome ii,/game/playstation-3/echochrome-ii,PlayStation 3,21-Dec-10,79,6.5,SCE Japan Studio,SCEA,"Miscellaneous, Puzzle, Action, Puzzle, General, Puzzle, General",E
 The Metronomicon,/game/pc/the-metronomicon,PC,1-Sep-16,79,7.3,Puuba,Kasedo Games,"Action, Rhythm, Music",T
 Pro Evolution Soccer 2011,/game/xbox-360/pro-evolution-soccer-2011,Xbox 360,19-Oct-10,79,6,Konami,Konami,"Sports, Traditional, Team, Soccer, Sim, Sim",E
+Part Time UFO,/game/switch/part-time-ufo,Switch,28-Oct-20,78,9.6,HAL Labs,Nintendo,"Action, Arcade",E10+
 Rival Megagun,/game/playstation-4/rival-megagun,PlayStation 4,29-Nov-18,79,tbd,Spacewave Software,Spacewave Software,"Action, Shooter, Shoot-'Em-Up, Vertical",E10+
 The Book of Unwritten Tales 2,/game/xbox-one/the-book-of-unwritten-tales-2,Xbox One,18-Sep-15,79,7.5,KING Art,Nordic Games Publishing,"Adventure, General, Point-and-Click",T
 Tom Clancy's Rainbow Six Siege,/game/pc/tom-clancys-rainbow-six-siege,PC,1-Dec-15,79,7.1,Ubisoft Montreal,Ubisoft,"Modern, Action, Shooter, First-Person, Tactical",M
@@ -5076,6 +5086,7 @@ Indivisible,/game/pc/indivisible,PC,8-Oct-19,78,6.4,Lab Zero Games,505 Games,"Ro
 Transformers: Fall of Cybertron,/game/pc/transformers-fall-of-cybertron,PC,20-Aug-12,78,8,"High Moon Studios, Mercenary Technologies",Activision,"Action, General, General, Shooter, Third-Person, Arcade",T
 Gurumin: A Monstrous Adventure,/game/psp/gurumin-a-monstrous-adventure,PSP,12-Feb-07,78,7.6,Falcom,Mastiff,"Role-Playing, Action RPG, Action RPG",E10+
 Vanquish,/game/pc/vanquish,PC,25-May-17,78,8.8,PlatinumGames,Sega,"Action, Shooter, Third-Person, Arcade",M
+Oddworld: Abe's Oddysee - New 'n' Tasty,/game/switch/oddworld-abes-oddysee---new-n-tasty,Switch,27-Oct-20,78,7.8,Square One Games,Oddworld Inhabitants,"Action, Platformer, 2D",T
 Octahedron: Transfixed Edition,/game/switch/octahedron-transfixed-edition,Switch,17-Jan-19,78,8,Demimonde,Square Enix,"Action, Platformer, 2D",E10+
 Madden NFL 07,/game/psp/madden-nfl-07,PSP,22-Aug-06,78,6.6,EA Tiburon,EA Sports,"Sports, Traditional, Team, Football, Sim, Sim",E
 FIFA Soccer 06,/game/pc/fifa-soccer-06,PC,4-Oct-05,78,6.8,EA Canada,EA Sports,"Sports, Traditional, Team, Soccer, Sim, Sim",E
@@ -5121,7 +5132,7 @@ Overcooked!,/game/playstation-4/overcooked!,PlayStation 4,2-Aug-16,78,7.9,Ghost 
 Marvel: Ultimate Alliance,/game/playstation-3/marvel-ultimate-alliance,PlayStation 3,17-Nov-06,78,7.7,Raven Software,Activision,"Role-Playing, Action RPG, Action RPG",T
 Grand Kingdom,/game/playstation-4/grand-kingdom,PlayStation 4,21-Jun-16,78,7.3,Spike Chunsoft,NIS America,"Strategy, Turn-Based, Tactics",T
 Dauntless,/game/pc/dauntless,PC,21-May-19,78,5.3,Phoenix Labs,Phoenix Labs,"Role-Playing, Action RPG",T
-Oddworld: Abe's Oddysee - New 'n' Tasty,/game/switch/oddworld-abes-oddysee---new-n-tasty,Switch,27-Oct-20,78,7.8,Square One Games,Oddworld Inhabitants,"Action, Platformer, 2D",T
+Fuser,/game/xbox-one/fuser,Xbox One,NA,NA,NA,NA,NA,NA,NA
 Noita,/game/pc/noita,PC,15-Oct-20,78,7.9,Nolla Games,Nolla Games,"Adventure, General, Action Adventure, Open-World",NA
 Freedom Finger,/game/xbox-one/freedom-finger,Xbox One,24-Mar-20,78,8.7,Wide Right Interactive,Wide Right Interactive,"Action, Shooter, Shoot-'Em-Up, Horizontal",M
 Bridge Constructor Portal,/game/playstation-4/bridge-constructor-portal,PlayStation 4,1-Mar-18,78,3.4,ClockStone Software,Headup Games,"Simulation, Virtual, Career",E10+
@@ -5260,7 +5271,6 @@ Chaos on Deponia,/game/pc/chaos-on-deponia,PC,6-Nov-12,78,8.3,Daedalic Entertain
 Ashen,/game/xbox-one/ashen,Xbox One,7-Dec-18,78,7.1,A44,Annapurna Interactive,"Role-Playing, Action Adventure, Action RPG, Open-World",T
 James Bond 007: NightFire,/game/xbox/james-bond-007-nightfire,Xbox,18-Nov-02,78,7.9,Eurocom Entertainment Software,Electronic Arts,"Action, Shooter, First-Person, Modern",T
 "That Dragon, Cancer",/game/pc/that-dragon-cancer,PC,11-Jan-16,78,6.1,Numinous Games,Numinous Games,"General, Adventure, General",NA
-Part Time UFO,/game/switch/part-time-ufo,Switch,28-Oct-20,78,9.6,HAL Labs,Nintendo,"Action, Arcade",E10+
 Spellbreak,/game/xbox-one/spellbreak,Xbox One,3-Sep-20,78,7.3,"Proletariat, Inc.","Proletariat, Inc.","Action, Shooter, Third-Person, Arcade",NA
 Control: The Foundation,/game/playstation-4/control-the-foundation,PlayStation 4,26-Mar-20,78,6.2,Remedy Entertainment,505 Games,"Action Adventure, General",M
 Life is Strange 2: Episode 3 - Wastelands,/game/pc/life-is-strange-2-episode-3---wastelands,PC,9-May-19,78,6.1,DONTNOD Entertainment,Square Enix,"Action Adventure, General",M
@@ -5377,7 +5387,6 @@ Sonic & All-Stars Racing Transformed,/game/wii-u/sonic-all-stars-racing-transfor
 Under Night In-Birth Exe:Late[st],/game/playstation-4/under-night-in-birth-exelatest,PlayStation 4,9-Feb-18,78,7.4,French-Bread,Aksys Games,"Action, Fighting, 2D",T
 Fallout 4: Far Harbor,/game/xbox-one/fallout-4-far-harbor,Xbox One,19-May-16,78,6.5,Bethesda Game Studios,Bethesda Softworks,"Role-Playing, Western-Style",M
 Sonic Colors,/game/wii/sonic-colors,Wii,16-Nov-10,78,8.4,Sonic Team,Sega,"Action, Platformer, Platformer, 3D, 2D, 3D",E
-Jurassic World Evolution: Complete Edition,/game/switch/jurassic-world-evolution-complete-edition,Switch,3-Nov-20,78,8.4,Frontier Developments,Frontier Developments,"Strategy, Management, Business / Tycoon",NA
 NHL 06,/game/playstation-2/nhl-06,PlayStation 2,6-Sep-05,78,8.6,EA Canada,EA Sports,"Sports, Traditional, Ice Hockey, Sim",E10+
 Far Cry Instincts Predator,/game/xbox-360/far-cry-instincts-predator,Xbox 360,28-Mar-06,78,6.4,Ubisoft Montreal,Ubisoft,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",M
 LEGO City Undercover,/game/switch/lego-city-undercover,Switch,4-Apr-17,78,7.8,TT Games,Warner Bros. Interactive Entertainment,"Action Adventure, Open-World",E10+
@@ -5443,6 +5452,7 @@ The Banner Saga 2,/game/playstation-4/the-banner-saga-2,PlayStation 4,5-Jul-16,7
 Plants vs Zombies: Garden Warfare,/game/pc/plants-vs-zombies-garden-warfare,PC,24-Jun-14,78,7.7,PopCap,Electronic Arts,"General, Action, General, Shooter, Third-Person, Tactical",E10+
 Dragon Ball: Origins,/game/ds/dragon-ball-origins,DS,4-Nov-08,78,7.8,Game Republic,Atari,"Action, Action Adventure, General, General",T
 SingStar '80s,/game/playstation-2/singstar-80s,PlayStation 2,18-Sep-07,78,8.1,SCEA,SCEA,"Miscellaneous, Rhythm, Music",T
+Need for Speed: Hot Pursuit Remastered,/game/xbox-one/need-for-speed-hot-pursuit-remastered,Xbox One,6-Nov-20,76,tbd,Criterion Games,Electronic Arts,"Racing, Arcade, Automobile",NA
 Fury Unleashed,/game/playstation-4/fury-unleashed,PlayStation 4,8-May-20,78,6.1,Awesome Games Studio,Awesome Games Studio,"Action, Platformer, 2D",T
 Operencia: The Stolen Sun,/game/pc/operencia-the-stolen-sun,PC,29-Mar-19,78,6.1,Zen Studios,Zen Studios,"Role-Playing, Action RPG",T
 The Walking Dead: The Telltale Series - The Final Season Episode 3: Broken Toys,/game/playstation-4/the-walking-dead-the-telltale-series---the-final-season-episode-3-broken-toys,PlayStation 4,15-Jan-19,78,7,"Telltale Games, Skybound Games",Telltale Games,"Adventure, Point-and-Click",NA
@@ -5543,7 +5553,6 @@ Desperados: Wanted Dead or Alive,/game/pc/desperados-wanted-dead-or-alive,PC,23-
 Mars Matrix,/game/dreamcast/mars-matrix,Dreamcast,30-Apr-01,78,7.5,Takumi Corporation,Capcom,"Action, General",E
 Zone of the Enders,/game/playstation-2/zone-of-the-enders,PlayStation 2,26-Mar-01,78,7.3,KCEJ,Konami,"Simulation, Sci-Fi, Mech",M
 Dirt Track Racing: Sprint Cars,/game/pc/dirt-track-racing-sprint-cars,PC,19-Oct-00,78,8.3,Ratbag,WizardWorks,"Driving, Racing, Simulation, Stock Car, Stock Car, Automobile",E
-DIRT 5,/game/pc/dirt-5,PC,6-Nov-20,78,tbd,Codemasters,Deep Silver,"Racing, Simulation, Automobile",NA
 Star Trek: Bridge Crew,/game/pc/star-trek-bridge-crew,PC,30-May-17,78,7.6,"Ubisoft, Red Storm Entertainment",Ubisoft,"Action Adventure, General",E10+
 Alice in Wonderland,/game/ds/alice-in-wonderland,DS,2-Mar-10,78,7.9,Etranges Libellules,Disney Interactive Studios,"Action, Action Adventure, General, General, Fantasy",E10+
 Eastshade,/game/pc/eastshade,PC,13-Feb-19,78,8,Eastshade Studios,Eastshade Studios,"Adventure, 3D, First-Person",NA
@@ -5588,7 +5597,6 @@ EyeToy: Play 2,/game/playstation-2/eyetoy-play-2,PlayStation 2,16-Aug-05,78,6.9,
 Destiny 2: Shadowkeep,/game/pc/destiny-2-shadowkeep,PC,1-Oct-19,78,5.6,Bungie,Activision,"Action, Shooter, First-Person, Arcade",T
 Pro Evolution Soccer 2010,/game/xbox-360/pro-evolution-soccer-2010,Xbox 360,3-Nov-09,78,7.6,Konami,Konami,"Sports, Traditional, Team, Soccer, Sim, Sim",E
 Mega Man 10,/game/playstation-3/mega-man-10,PlayStation 3,11-Mar-10,78,8.1,Inti Creates,Capcom,"Action, Platformer, Platformer, 2D, 2D",E
-Need for Speed: Hot Pursuit Remastered,/game/pc/need-for-speed-hot-pursuit-remastered,PC,6-Nov-20,78,tbd,Criterion Games,Electronic Arts,"Racing, Arcade, Automobile",NA
 Inmost,/game/switch/inmost,Switch,21-Aug-20,78,7.7,Hidden Layer Games,Chucklefish,"Action, Platformer, 3D",NA
 Atomicrops,/game/pc/atomicrops,PC,28-May-20,78,6,"Daniel Wynne, Bird Bath Games",Raw Fury,"Action, Shooter, Shoot-'Em-Up, Top-Down",T
 Depixtion,/game/switch/depixtion,Switch,28-Feb-20,78,7.5,"DevHour Games, LLC","DevHour Games, LLC","Puzzle, Logic",E
@@ -5827,6 +5835,7 @@ Massive Assault,/game/pc/massive-assault,PC,28-Oct-03,77,6.9,Wargaming.net,Matri
 Fatal Frame,/game/xbox/fatal-frame,Xbox,22-Nov-02,77,8.8,Tecmo,Tecmo,"Action Adventure, Horror",T
 Kelly Slater's Pro Surfer,/game/playstation-2/kelly-slaters-pro-surfer,PlayStation 2,16-Sep-02,77,8.7,Treyarch,Activision,"Sports, Alternative, Surfing",E
 MTV Music Generator 2,/game/playstation-2/mtv-music-generator-2,PlayStation 2,19-May-01,77,8.4,Jester Interactive,Codemasters,"Miscellaneous, Music Maker",T
+Watch Dogs: Legion,/game/xbox-one/watch-dogs-legion,Xbox One,29-Oct-20,77,5.7,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 Taiko Drum Master,/game/playstation-2/taiko-drum-master,PlayStation 2,26-Oct-04,77,8.1,Namco,Namco,"Miscellaneous, Rhythm, Music",E
 Sonic Generations,/game/xbox-360/sonic-generations,Xbox 360,1-Nov-11,77,8.1,"Sega, Sonic Team",Sega,"Action, Platformer, Platformer, 3D, 3D",E
 Duke Nukem 3D: 20th Anniversary World Tour,/game/playstation-4/duke-nukem-3d-20th-anniversary-world-tour,PlayStation 4,11-Oct-16,77,7.2,Gearbox Software,Gearbox Software,"Action, Shooter, First-Person, Arcade",M
@@ -5838,6 +5847,7 @@ Batman: The Enemy Within - Episode 1: The Enigma,/game/xbox-one/batman-the-enemy
 Bomb Chicken,/game/switch/bomb-chicken,Switch,12-Jul-18,77,8.1,Nitrome,Nitrome,"Action, Platformer, 2D",E10+
 Sonic the Hedgehog (Live Arcade),/game/xbox-360/sonic-the-hedgehog-live-arcade,Xbox 360,11-Jul-07,77,7.4,Backbone Entertainment,Sega,"Action, Platformer, Platformer, 2D, 2D",E
 Thomas Was Alone,/game/pc/thomas-was-alone,PC,30-Jun-12,77,8.1,Mike Bithell,Mike Bithell,"Action, Platformer, Platformer, 2D, 2D",NA
+DIRT 5,/game/pc/dirt-5,PC,6-Nov-20,78,tbd,Codemasters,Deep Silver,"Racing, Simulation, Automobile",NA
 The Adventure Pals,/game/switch/the-adventure-pals,Switch,3-Apr-18,77,7.7,Massive Monster,Armor Games,"Action, Platformer, 2D",E10+
 World of Final Fantasy,/game/pc/world-of-final-fantasy,PC,21-Nov-17,77,7.7,Square Enix,Square Enix,"Role-Playing, Japanese-Style",E10+
 Ittle Dew 2+,/game/switch/ittle-dew-2+,Switch,14-Nov-17,77,7.7,Ludosity Interactive,Nintendo,"Role-Playing, Action Adventure, General, Action RPG",E10+
@@ -5854,7 +5864,6 @@ I Am Dead,/game/pc/i-am-dead,PC,8-Oct-20,77,tbd,Hollow Ponds and Richard Hogg,An
 The Council - Episode 3: Ripples,/game/xbox-one/the-council---episode-3-ripples,Xbox One,24-Jul-18,77,tbd,Big Bad Wolf,Focus Home Interactive,"Adventure, General",NA
 Herald: An Interactive Period Drama,/game/pc/herald-an-interactive-period-drama,PC,22-Feb-17,77,tbd,Wispfire,Wispfire,"Adventure, 3D, First-Person",NA
 3D Classics: Kid Icarus,/game/3ds/3d-classics-kid-icarus,3DS,23-Mar-12,77,7.4,Arika,Nintendo,"Action, Platformer, Platformer, 2D, 2D",E
-Watch Dogs: Legion,/game/xbox-one/watch-dogs-legion,Xbox One,29-Oct-20,77,5.7,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 Daytona USA,/game/xbox-360/daytona-usa,Xbox 360,26-Oct-11,77,8,Sega AM2,Sega,"Driving, Racing, Arcade, Arcade, Automobile",E
 Teslagrad,/game/pc/teslagrad,PC,13-Dec-13,77,7.7,Rain Games,Rain Games,"Action, Platformer, Platformer, 2D, 2D",E
 Fae Tactics,/game/pc/fae-tactics,PC,31-Jul-20,77,4.4,Humble Bundle,Humble Bundle,"Strategy, Turn-Based, Tactics",NA
@@ -6452,6 +6461,7 @@ Beautiful Desolation,/game/pc/beautiful-desolation,PC,26-Feb-20,76,7.7,THE BROTH
 ToeJam & Earl: Back in the Groove,/game/pc/toejam-earl-back-in-the-groove,PC,1-Mar-19,76,6.5,Humanature Studios,Adult Swim,"Action, General, Platformer, 2D",E10+
 Race the Sun,/game/playstation-4/race-the-sun,PlayStation 4,21-Oct-14,76,6.1,Flippfly,Flippfly,"Action, Racing, General, Arcade, Futuristic",E
 Operation Flashpoint: Dragon Rising,/game/pc/operation-flashpoint-dragon-rising,PC,6-Oct-09,76,4.9,Codemasters,Codemasters,"Action, Shooter, Shooter, First-Person, Tactical, Modern, Modern",M
+Ghostrunner,/game/xbox-one/ghostrunner,Xbox One,NA,NA,NA,NA,NA,NA,NA
 RIDE 4,/game/pc/ride-4,PC,8-Oct-20,76,7.6,Milestone S.r.l,Milestone S.r.l,"Racing, Simulation, Automobile",E
 Transport Fever 2,/game/pc/transport-fever-2,PC,11-Dec-19,76,7.3,Urban Games,Good Shepherd Entertainment,"Strategy, Management, Business / Tycoon",NA
 Blazing Chrome,/game/playstation-4/blazing-chrome,PlayStation 4,11-Jul-19,76,7.6,JoyMasher,The Arcade Crew,"Action, Platformer, 2D",T
@@ -6734,12 +6744,12 @@ JYDGE,/game/playstation-4/jydge,PlayStation 4,3-Oct-17,76,6.6,10tons,10tons,"Act
 Future Unfolding,/game/pc/future-unfolding,PC,15-Mar-17,76,6.8,Spaces of Play,Spaces of Play,"Action Adventure, Open-World",NA
 Pode,/game/switch/pode,Switch,21-Jun-18,76,7.4,Henchman & Goon,Henchman & Goon,"Adventure, 3D, Third-Person",E
 Story of Seasons,/game/3ds/story-of-seasons,3DS,31-Mar-15,76,8,Marvelous AQL,XSEED Games,"Breeding/Constructing, Strategy, General",E10+
-Watch Dogs: Legion,/game/pc/watch-dogs-legion,PC,29-Oct-20,76,5.8,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 Destroy All Humans!,/game/xbox/destroy-all-humans!,Xbox,21-Jun-05,76,8.2,Pandemic Studios,THQ,"Action Adventure, Sci-Fi",T
 Aliens: Infestation,/game/ds/aliens-infestation,DS,11-Oct-11,76,8.2,"Gearbox Software, WayForward",Sega,"Action, Platformer, Platformer, 2D, 2D",T
 Evolve,/game/playstation-4/evolve,PlayStation 4,10-Feb-15,76,4.3,Turtle Rock Studios,2K Games,"Sci-Fi, Action, Shooter, First-Person, Arcade",M
 Battlestations: Pacific,/game/xbox-360/battlestations-pacific,Xbox 360,12-May-09,76,8,Eidos Interactive,Eidos Interactive,"Strategy, Real-Time, Historic, General, Historic",T
 Manhunt,/game/playstation-2/manhunt,PlayStation 2,18-Nov-03,76,8.4,Rockstar North,Rockstar Games,"Action Adventure, Modern",M
+Watch Dogs: Legion,/game/pc/watch-dogs-legion,PC,29-Oct-20,76,5.8,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 The Swords of Ditto: Mormo's Curse,/game/switch/the-swords-of-ditto-mormos-curse,Switch,2-May-19,76,6.9,One Bit Beyond,Devolver Digital,"Role-Playing, Action RPG",E10+
 Battlestar Galactica Deadlock,/game/playstation-4/battlestar-galactica-deadlock,PlayStation 4,8-Dec-17,76,tbd,Black Lab Games,Slitherine Software,"Strategy, General",E10+
 Serious Sam's Bogus Detour,/game/pc/serious-sams-bogus-detour,PC,20-Jun-17,76,8.3,Crackshell,Devolver Digital,"Action, Shooter, Shoot-'Em-Up, Top-Down",NA
@@ -6766,7 +6776,6 @@ Din's Curse,/game/pc/dins-curse,PC,31-Mar-10,76,7.4,Soldak Entertainment,Soldak 
 Hyrule Warriors,/game/wii-u/hyrule-warriors,Wii U,26-Sep-14,76,8.3,Omega Force,Nintendo,"Action, Beat-'Em-Up, 3D",T
 Stuntman: Ignition,/game/playstation-3/stuntman-ignition,PlayStation 3,17-Sep-07,76,6.1,Paradigm Entertainment,THQ,"Driving, Racing, Mission-based, Arcade, Mission-based, Automobile",T
 ShootMania Storm,/game/pc/shootmania-storm,PC,10-Apr-13,76,7.3,Nadeo,Ubisoft,"Action, Shooter, Shooter, First-Person, Fantasy, Arcade",NA
-Need for Speed: Hot Pursuit Remastered,/game/xbox-one/need-for-speed-hot-pursuit-remastered,Xbox One,6-Nov-20,76,tbd,Criterion Games,Electronic Arts,"Racing, Arcade, Automobile",NA
 Post Void,/game/pc/post-void,PC,6-Aug-20,76,7.2,YCJY Games,YCJY Games,"Action, Shooter, First-Person, Arcade",NA
 Utawarerumono: Prelude to the Fallen,/game/playstation-4/utawarerumono-prelude-to-the-fallen,PlayStation 4,26-May-20,76,5.9,Aqua Plus,NIS America,"General, Strategy, Turn-Based, Tactics",M
 Broken Lines,/game/pc/broken-lines,PC,25-Feb-20,76,7.4,PortaPlay,SUPER.COM,"Strategy, Turn-Based, Tactics",NA
@@ -6816,6 +6825,7 @@ Worms,/game/playstation-3/worms,PlayStation 3,26-Mar-09,76,7.6,Team17,Team17,"St
 Suikoden V,/game/playstation-2/suikoden-v,PlayStation 2,21-Mar-06,76,8.9,Konami,Konami,"Role-Playing, Console-style RPG",T
 The King of Fighters 02/03,/game/xbox/the-king-of-fighters-0203,Xbox,31-Aug-05,76,tbd,SNK,SNK,"Miscellaneous, Compilation",T
 Demigod,/game/pc/demigod,PC,14-Apr-09,76,7.7,Gas Powered Games,Stardock,"Strategy, Real-Time, Fantasy, MOBA, MOBA",T
+Need for Speed: Hot Pursuit Remastered,/game/pc/need-for-speed-hot-pursuit-remastered,PC,6-Nov-20,78,tbd,Criterion Games,Electronic Arts,"Racing, Arcade, Automobile",NA
 A Hat in Time,/game/switch/a-hat-in-time,Switch,18-Oct-19,76,8,Gears for Breakfast,Gears for Breakfast,"Action, Platformer, 3D",T
 Amnesia Collection,/game/switch/amnesia-collection,Switch,12-Sep-19,76,7.5,Frictional Games,Frictional Games,"Miscellaneous, Compilation",M
 RIDE 3,/game/xbox-one/ride-3,Xbox One,30-Nov-18,76,7.5,"MileStone Inc., Milestone S.r.l",MileStone Inc.,"Racing, Simulation, Automobile",NA
@@ -6875,6 +6885,7 @@ The Dream Machine,/game/pc/the-dream-machine,PC,14-Dec-10,75,8.2,Cockroach Inc.,
 MX vs. ATV Reflex,/game/xbox-360/mx-vs-atv-reflex,Xbox 360,1-Dec-09,75,6.5,Rainbow Studios,THQ,"Driving, Racing, Simulation, Rally / Offroad, Rally / Offroad, Automobile",E
 TT Isle of Man: Ride On The Edge 2,/game/xbox-one/tt-isle-of-man-ride-on-the-edge-2,Xbox One,19-Mar-20,75,7.2,KT Racing,Bigben Interactive,"Racing, Arcade, Automobile",E
 Darksiders II: Deathinitive Edition,/game/xbox-one/darksiders-ii-deathinitive-edition,Xbox One,30-Oct-15,75,7.3,"Gunfire Games, Kaiko",Nordic Games Publishing,"Action Adventure, Open-World",M
+Partisans 1941,/game/pc/partisans-1941,PC,14-Oct-20,75,8.1,Alter Games,Daedalic Entertainment,"Strategy, Real-Time, Tactics",NA
 The Mummy Demastered,/game/playstation-4/the-mummy-demastered,PlayStation 4,24-Oct-17,75,7.2,WayForward,WayForward,"Action, Platformer, 2D",E10+
 Armello,/game/pc/armello,PC,1-Sep-15,75,7.1,League of Geeks,League of Geeks,"Miscellaneous, General, Board / Card Game",E10+
 Poker Night 2,/game/pc/poker-night-2,PC,26-Apr-13,75,7,Telltale Games,Telltale Games,"Miscellaneous, Parlor, Gambling, Gambling",M
@@ -6935,7 +6946,6 @@ Nanostray 2,/game/ds/nanostray-2,DS,11-Mar-08,75,7.8,Shin'en,Majesco Games,"Acti
 NHL 2K6,/game/xbox-360/nhl-2k6,Xbox 360,16-Nov-05,75,6.1,2K Sports,2K Sports,"Sports, Traditional, Team, Ice Hockey, Sim, Sim",E10+
 Command & Conquer: Renegade,/game/pc/command-conquer-renegade,PC,27-Feb-02,75,7.7,Westwood Studios,Electronic Arts,"Action, Shooter, Shooter, First-Person, Sci-Fi, Sci-Fi, Arcade",T
 After Burner Climax,/game/playstation-3/after-burner-climax,PlayStation 3,22-Apr-10,75,6.7,Sega AM2,Sega,"Simulation, Flight, Modern Jet, Modern Jet, Combat",E10+
-Partisans 1941,/game/pc/partisans-1941,PC,14-Oct-20,75,8.1,Alter Games,Daedalic Entertainment,"Strategy, Real-Time, Tactics",NA
 Rick and Morty: Virtual Rick-ality,/game/pc/rick-and-morty-virtual-rick-ality,PC,15-Apr-17,75,6.2,Owlchemy Labs,Adult Swim,"Simulation, General",NA
 Strange Brigade,/game/xbox-one/strange-brigade,Xbox One,28-Aug-18,75,6.3,Rebellion,Rebellion,"Action, Shooter, Third-Person, Arcade",T
 SUPERHOT VR,/game/playstation-4/superhot-vr,PlayStation 4,21-Jul-17,75,7.6,SUPERHOT,SUPERHOT,"Action, Shooter, First-Person, Tactical",T
@@ -7077,7 +7087,6 @@ Blacklight: Retribution,/game/pc/blacklight-retribution,PC,3-Apr-12,75,7.5,Zombi
 One Piece: Pirate Warriors 4,/game/playstation-4/one-piece-pirate-warriors-4,PlayStation 4,27-Mar-20,75,7.1,Omega Force,Bandai Namco Games,"Action, Beat-'Em-Up, 3D",T
 Cattails,/game/switch/cattails,Switch,29-Nov-18,75,7.6,Falcon Development,Falcon Development,"Role-Playing, Action RPG",NA
 Sonic & Sega All-Stars Racing with Banjo-Kazooie,/game/xbox-360/sonic-sega-all-stars-racing-with-banjo-kazooie,Xbox 360,23-Feb-10,75,7.7,Sumo Digital,Sega,"Driving, Racing, Arcade, Kart, Kart, Automobile",E10+
-Need for Speed: Hot Pursuit Remastered,/game/playstation-4/need-for-speed-hot-pursuit-remastered,PlayStation 4,6-Nov-20,75,tbd,Criterion Games,Electronic Arts,"Racing, Arcade, Automobile",NA
 Mortal Shell,/game/xbox-one/mortal-shell,Xbox One,18-Aug-20,75,7.2,Cold Symmetry,Playstack,"Role-Playing, Action RPG",M
 God's Trigger,/game/pc/gods-trigger,PC,18-Apr-19,75,8.2,ONE MORE LEVEL,Techland,"Action, Action Adventure, Shooter, Linear, Shoot-'Em-Up, Top-Down",NA
 MTX Mototrax,/game/pc/mtx-mototrax,PC,15-Nov-04,75,7.5,Aspyr,Aspyr,"Driving, Racing, Arcade, Motorcycle, Other, Motocross, Motocross",E
@@ -7089,6 +7098,7 @@ Infinite Space,/game/ds/infinite-space,DS,16-Mar-10,75,8.2,"PlatinumGames, NUDE 
 Donut County,/game/playstation-4/donut-county,PlayStation 4,28-Aug-18,75,7,Ben Esposito,Annapurna Interactive,"Action Adventure, General",E
 FIFA Manager 10,/game/pc/fifa-manager-10,PC,30-Oct-09,75,5.4,Bright Future GmbH,Electronic Arts,"Sports, Traditional, Team, Soccer, Management, Management",E
 Etherborn,/game/playstation-4/etherborn,PlayStation 4,18-Jul-19,75,7.5,Altered Matter,Akupara Games,"Adventure, 3D, First-Person, Third-Person",E
+Battle Chasers: Nightwar,/game/playstation-4/battle-chasers-nightwar,PlayStation 4,3-Oct-17,75,6.7,Airship Syndicate Entertainment,Nordic Games Publishing,"Role-Playing, Action RPG, Japanese-Style",T
 Battle Chasers: Nightwar,/game/playstation-4/battle-chasers-nightwar,PlayStation 4,3-Oct-17,75,6.7,Airship Syndicate Entertainment,Nordic Games Publishing,"Role-Playing, Action RPG, Japanese-Style",T
 F.E.A.R. Extraction Point,/game/pc/fear-extraction-point,PC,24-Oct-06,75,7.5,"Monolith Productions, TimeGate Studios",Vivendi Games,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",M
 Medal of Honor,/game/playstation-3/medal-of-honor,PlayStation 3,12-Oct-10,75,7.5,"EA DICE, Danger Close",Electronic Arts,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",M
@@ -7189,7 +7199,6 @@ Star Wars Rogue Squadron III: Rebel Strike,/game/gamecube/star-wars-rogue-squadr
 Savage: The Battle for Newerth,/game/pc/savage-the-battle-for-newerth,PC,9-Sep-03,75,7.6,S2 Games,iGames,"Action, Shooter, Shooter, First-Person, Fantasy, Fantasy, Arcade",T
 Hegemonia: Legions of Iron,/game/pc/hegemonia-legions-of-iron,PC,13-Nov-02,75,7.6,Digital Reality,DreamCatcher Interactive,"Strategy, Real-Time, Sci-Fi, Sci-Fi, General",T
 Need for Speed: Hot Pursuit 2,/game/xbox/need-for-speed-hot-pursuit-2,Xbox,1-Oct-02,75,7.5,EA Seattle,Electronic Arts,"Driving, Racing, Arcade",E
-The Sims: Vacation,/game/pc/the-sims-vacation,PC,25-Mar-02,75,7.8,Maxis,EA Games,"Simulation, Miscellaneous, Virtual Life, Virtual, Virtual Life",T
 Victorious Boxers: Ippo's Road to Glory,/game/playstation-2/victorious-boxers-ippos-road-to-glory,PlayStation 2,5-Nov-01,75,8,New,Empire Interactive,"Sports, Traditional, Boxing",T
 World Driver Championship,/game/nintendo-64/world-driver-championship,Nintendo 64,31-May-99,75,8.2,Boss Game Studios,Midway,"Driving, Racing, GT / Street",E
 WWE All Stars,/game/playstation-3/wwe-all-stars,PlayStation 3,29-Mar-11,75,6.6,THQ,THQ,"Action, Sports, Fighting, Fighting, Individual, Wrestling, Combat, Wrestling",T
@@ -8104,6 +8113,7 @@ Game of Thrones: Episode Two - The Lost Lords,/game/pc/game-of-thrones-episode-t
 Call of Duty: Ghosts,/game/xbox-360/call-of-duty-ghosts,Xbox 360,5-Nov-13,73,2.7,Infinity Ward,Activision,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",M
 Scrapland,/game/xbox/scrapland,Xbox,28-Feb-05,73,7,Mercury Steam,Enlight Software,"Action Adventure, Sci-Fi",T
 Pursuit Force: Extreme Justice,/game/psp/pursuit-force-extreme-justice,PSP,29-Jan-08,73,7.3,Bigbig Studios,SCEA,"Simulation, Driving, Car Combat, Car Combat, Vehicle, Combat",T
+Jurassic World Evolution: Complete Edition,/game/switch/jurassic-world-evolution-complete-edition,Switch,3-Nov-20,78,8.4,Frontier Developments,Frontier Developments,"Strategy, Management, Business / Tycoon",NA
 Batman: The Telltale Series - Episode 4: Guardian of Gotham,/game/playstation-4/batman-the-telltale-series---episode-4-guardian-of-gotham,PlayStation 4,22-Nov-16,73,6.2,Telltale Games,Telltale Games,"Adventure, Point-and-Click",M
 Phantom Doctrine,/game/pc/phantom-doctrine,PC,14-Aug-18,73,7.4,CreativeForge Games,Good Shepherd Entertainment,"Strategy, Turn-Based, General",M
 Namco Museum Battle Collection,/game/psp/namco-museum-battle-collection,PSP,23-Aug-05,73,7.6,TOSE,Namco,"Miscellaneous, Compilation, Compilation",E10+
@@ -8441,6 +8451,7 @@ Anarchy Online: Alien Invasion,/game/pc/anarchy-online-alien-invasion,PC,31-Aug-
 "Bury me, my Love",/game/switch/bury-me-my-love,Switch,10-Jan-19,73,4.9,Plug In Digital,Plug In Digital,"Adventure, Visual Novel",E10+
 Call of Duty: Infinite Warfare,/game/pc/call-of-duty-infinite-warfare,PC,3-Nov-16,73,3.6,Infinity Ward,Activision,"Action, Shooter, First-Person, Tactical",M
 Secrets of the Ark: A Broken Sword Game,/game/pc/secrets-of-the-ark-a-broken-sword-game,PC,13-Feb-07,73,5.9,Sumo Digital,DreamCatcher Interactive,"Adventure, 3D, Modern, Third-Person, Modern",T
+Bugsnax,/game/playstation-5/bugsnax,PlayStation 5,NA,NA,NA,NA,NA,NA,NA
 Surviving Mars,/game/playstation-4/surviving-mars,PlayStation 4,15-Mar-18,73,6.2,Haemimont Games,Paradox Interactive,"Strategy, Management, Government",E10+
 Penumbra: Overture,/game/pc/penumbra-overture,PC,30-Mar-07,73,7.7,Frictional Games,Strategy First,"Action Adventure, Horror, Horror, Survival",M
 LEGO Batman 3: Beyond Gotham,/game/playstation-4/lego-batman-3-beyond-gotham,PlayStation 4,11-Nov-14,73,7,TT Games,Warner Bros. Interactive Entertainment,"Action Adventure, General, Modern",E10+
@@ -8460,7 +8471,6 @@ Rocket Arena,/game/pc/rocket-arena,PC,14-Jul-20,73,5,Final Strike Games,Electron
 Late Shift,/game/switch/late-shift,Switch,26-Apr-18,73,6.4,Wales Interactive Ltd.,Wales Interactive Ltd.,"Adventure, General",M
 Hybrid,/game/xbox-360/hybrid,Xbox 360,8-Aug-12,73,7.3,5TH Cell,Microsoft Game Studios,"Action, General, General, Shooter, Third-Person, Tactical",T
 Dance Dance Revolution SuperNOVA,/game/playstation-2/dance-dance-revolution-supernova,PlayStation 2,26-Sep-06,73,7.8,Konami,Konami,"Miscellaneous, Rhythm, Dancing",E10+
-The Dark Pictures - Little Hope,/game/pc/the-dark-pictures---little-hope,PC,30-Oct-20,73,6.7,Supermassive Games,Bandai Namco Games,"Action Adventure, Survival",M
 Picross e,/game/3ds/picross-e,3DS,13-Jun-13,73,7.1,Jupiter Corporation,Jupiter Corporation,"Miscellaneous, Puzzle, Puzzle, Logic, Logic",E
 Dishonored: Dunwall City Trials,/game/xbox-360/dishonored-dunwall-city-trials,Xbox 360,11-Dec-12,73,6.5,Arkane Studios,Bethesda Softworks,"Action Adventure, Modern, General, Modern",M
 Dragon Ball Z: Supersonic Warriors,/game/game-boy-advance/dragon-ball-z-supersonic-warriors,Game Boy Advance,22-Jun-04,73,7.1,Arc System Works,Atari,"Action, Fighting, 2D",T
@@ -8546,6 +8556,7 @@ Mighty Switch Force! 2,/game/3ds/mighty-switch-force!-2,3DS,13-Jun-13,73,7.4,Way
 Assetto Corsa,/game/playstation-4/assetto-corsa,PlayStation 4,30-Aug-16,73,6,Kunos Simulazioni,505 Games,"Racing, Simulation, Automobile",E
 Birds of Steel,/game/playstation-3/birds-of-steel,PlayStation 3,13-Mar-12,73,8,Gaijin Entertainment,Konami,"Simulation, Flight, WWII, WWII, Combat",T
 Call of Duty: Modern Warfare - Mobilized,/game/ds/call-of-duty-modern-warfare---mobilized,DS,10-Nov-09,73,7.3,n-Space,Activision,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",T
+The Dark Pictures - Little Hope,/game/pc/the-dark-pictures---little-hope,PC,30-Oct-20,73,6.7,Supermassive Games,Bandai Namco Games,"Action Adventure, Survival",M
 Cars,/game/pc/cars,PC,6-Jun-06,73,7.9,Beenox,THQ,"Driving, Racing, Mission-based, Arcade, Mission-based, Automobile",E
 Killer Instinct,/game/xbox-one/killer-instinct,Xbox One,22-Nov-13,73,6.4,Double Helix Games,Microsoft Game Studios,"Action, Fighting, Fighting, 3D, 2D, 3D",T
 Guitar Hero: Smash Hits,/game/playstation-3/guitar-hero-smash-hits,PlayStation 3,16-Jun-09,73,7.3,Beenox,Activision,"Action, Miscellaneous, Rhythm, Music, Music",T
@@ -8580,6 +8591,7 @@ HAWKEN,/game/pc/hawken,PC,12-Dec-12,73,7.7,"Adhesive Games, Reloaded Games",Adhe
 Worms Revolution,/game/pc/worms-revolution,PC,10-Oct-12,73,6.7,Team17,Warner Bros. Interactive Entertainment,"Strategy, Turn-Based, Fantasy, Fantasy, Artillery",E10+
 Raiden V: Director's Cut,/game/playstation-4/raiden-v-directors-cut,PlayStation 4,10-Oct-17,73,6.9,Moss,UFO Interactive,"Action, Shooter, Shoot-'Em-Up, Vertical",E10+
 FAST - Racing League,/game/wii/fast---racing-league,Wii,30-May-11,73,7.8,Shin'en,Shin'en,"Driving, Racing, Arcade, Futuristic, Futuristic",E
+Need for Speed: Hot Pursuit Remastered,/game/playstation-4/need-for-speed-hot-pursuit-remastered,PlayStation 4,6-Nov-20,75,tbd,Criterion Games,Electronic Arts,"Racing, Arcade, Automobile",NA
 Madden NFL 25,/game/xbox-one/madden-nfl-25,Xbox One,19-Nov-13,73,5.8,EA Sports,Electronic Arts,"Sports, Traditional, Team, Football, Arcade, Arcade, Sim",E
 Star Wars Episode III: Revenge of the Sith,/game/ds/star-wars-episode-iii-revenge-of-the-sith,DS,4-May-05,73,7.8,Ubisoft,Ubisoft,"Action Adventure, Sci-Fi, Sci-Fi, General",E10+
 0RBITALIS,/game/pc/0rbitalis,PC,28-May-15,73,7.3,Alan Zucconi,Mastertronic,"Miscellaneous, Puzzle, Action",NA
@@ -8818,7 +8830,6 @@ Anno 2205,/game/pc/anno-2205,PC,2-Nov-15,72,6.1,Blue Byte,Ubisoft,"Strategy, Man
 NBA 06,/game/psp/nba-06,PSP,4-Oct-05,72,5.4,SCEA Sports Studio,SCEA,"Sports, Traditional, Team, Basketball, Sim, Sim",E
 Lost Dimension,/game/playstation-vita/lost-dimension,PlayStation Vita,28-Jul-15,72,7.8,FuRyu,Atlus,"Adventure, General",T
 Commanders: Attack of the Genos,/game/xbox-360/commanders-attack-of-the-genos,Xbox 360,13-Feb-08,72,8,Southend Interactive,Sierra Online,"Strategy, Turn-Based, Sci-Fi, Sci-Fi, General",E10+
-The Falconeer,/game/pc/the-falconeer,PC,10-Nov-20,72,tbd,Tomas Sala,Wired Productions,"Simulation, Flight, Combat",T
 "Warhammer 40,000: Mechanicus",/game/switch/warhammer-40000-mechanicus,Switch,17-Jul-20,72,5.9,Bulwark Studios,Kalypso,"Action, General",NA
 Monster Energy Supercross - The Official Videogame 2,/game/playstation-4/monster-energy-supercross---the-official-videogame-2,PlayStation 4,5-Feb-19,72,5.2,Milestone S.r.l,Milestone S.r.l,"Racing, Arcade, Automobile",NA
 Regalia: Of Men and Monarchs - Royal Edition,/game/switch/regalia-of-men-and-monarchs---royal-edition,Switch,12-Apr-18,72,6.1,Pixelated Milk,Crunching Koalas,"Strategy, Turn-Based, Tactics",T
@@ -9031,6 +9042,7 @@ Syberia,/game/xbox/syberia,Xbox,23-Jul-03,72,7,Microids,XS Games,"Adventure, Thi
 Gato Roboto,/game/switch/gato-roboto,Switch,30-May-19,72,7.1,Doinksoft,Devolver Digital,"Action, Platformer, 2D",E
 LEGO The Hobbit,/game/playstation-4/lego-the-hobbit,PlayStation 4,8-Apr-14,72,6.6,TT Games,Warner Bros. Interactive Entertainment,"Historic, Action Adventure, General, Fantasy",E10+
 Medal of Honor,/game/pc/medal-of-honor,PC,12-Oct-10,72,6.4,"Dice, Danger Close",Electronic Arts,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",M
+NHL 21,/game/playstation-4/nhl-21,PlayStation 4,13-Oct-20,72,2.7,Electronic Arts,Electronic Arts,"Sports, Team, Ice Hockey, Sim",E10+
 WWE '12,/game/playstation-3/wwe-12,PlayStation 3,22-Nov-11,72,6.8,Yuke's,THQ,"Action, Sports, Fighting, Fighting, Individual, Wrestling, Combat, Wrestling",T
 Primordia,/game/pc/primordia,PC,5-Dec-12,72,8.7,Wormwood Studios,Wadjet Eye Games,"General, Adventure, General, Point-and-Click",NA
 Wolfenstein,/game/xbox-360/wolfenstein,Xbox 360,18-Aug-09,72,7.5,"id Software, Raven Software",Activision,"Action, Shooter, Shooter, First-Person, Historic, Historic, Arcade",M
@@ -9145,6 +9157,7 @@ DOFUS,/game/pc/dofus,PC,1-Sep-05,72,7.4,Ankama Games,Ankama Games,"Role-Playing,
 Dark Devotion,/game/pc/dark-devotion,PC,25-Apr-19,72,7.4,Hibernian Workshop,Hibernian Workshop,"Action Adventure, General",NA
 FIFA World Cup: Germany 2006,/game/xbox-360/fifa-world-cup-germany-2006,Xbox 360,24-Apr-06,72,6.6,EA Canada,Electronic Arts,"Sports, Traditional, Team, Soccer, Sim, Sim",E
 LEGO Indiana Jones 2: The Adventure Continues,/game/wii/lego-indiana-jones-2-the-adventure-continues,Wii,17-Nov-09,72,6.3,Traveller's Tales,LucasArts,"Action Adventure, Historic, General, Historic",E10+
+The Falconeer,/game/pc/the-falconeer,PC,10-Nov-20,72,tbd,Tomas Sala,Wired Productions,"Simulation, Flight, Combat",T
 Marvel's Guardians of the Galaxy - Episode 5: Don't Stop Believin',/game/playstation-4/marvels-guardians-of-the-galaxy---episode-5-dont-stop-believin,PlayStation 4,7-Nov-17,72,6.2,Telltale Games,Telltale Games,"Action, Adventure, General, 3D, Third-Person",T
 Semispheres,/game/playstation-4/semispheres,PlayStation 4,14-Feb-17,72,tbd,Vivid Helix,Vivid Helix,"Puzzle, Action",E
 Steep,/game/xbox-one/steep,Xbox One,2-Dec-16,72,6.5,Ubisoft Annecy,Ubisoft,"Sports, Individual, Ski / Snowboard",T
@@ -9162,7 +9175,6 @@ Candle: The Power of the Flame,/game/switch/candle-the-power-of-the-flame,Switch
 The Count Lucanor,/game/switch/the-count-lucanor,Switch,19-Oct-17,72,7.5,Baroque Decay,Merge Games,"Action Adventure, General",T
 Disc Jam,/game/playstation-4/disc-jam,PlayStation 4,7-Mar-17,72,6.3,High Horse Entertainment,High Horse Entertainment,"Sports, Team, Futuristic",E
 Serious Sam HD: The Second Encounter,/game/xbox-360/serious-sam-hd-the-second-encounter,Xbox 360,22-Sep-10,72,7.3,Croteam,Majesco Games,"Action, Shooter, Shooter, First-Person, Sci-Fi, Sci-Fi, Arcade",M
-NHL 21,/game/playstation-4/nhl-21,PlayStation 4,13-Oct-20,72,2.7,Electronic Arts,Electronic Arts,"Sports, Team, Ice Hockey, Sim",E10+
 Cities in Motion 2,/game/pc/cities-in-motion-2,PC,2-Apr-13,72,7.2,Colossal Order,Paradox Interactive,"Simulation, General, General",NA
 Borderlands 2 VR,/game/playstation-4/borderlands-2-vr,PlayStation 4,14-Dec-18,72,7.3,Gearbox Software,2K Games,"Action, Shooter, First-Person, Arcade",M
 Fist of the North Star: Lost Paradise,/game/playstation-4/fist-of-the-north-star-lost-paradise,PlayStation 4,2-Oct-18,72,7.8,Ryu ga Gotoku Studios,Sega,"Action, Role-Playing, General, Action RPG",M
@@ -9432,7 +9444,6 @@ NBA Live 06,/game/pc/nba-live-06,PC,26-Sep-05,71,7.4,EA Canada,EA Sports,"Sports
 CT Special Forces,/game/game-boy-advance/ct-special-forces,Game Boy Advance,4-Jan-04,71,tbd,LSP,Hip Games,"Action, General",T
 Styx: Master of Shadows,/game/pc/styx-master-of-shadows,PC,7-Oct-14,71,7.2,Cyanide,Focus Home Interactive,"Action Adventure, Sci-Fi, General",M
 Medal of Honor Heroes,/game/psp/medal-of-honor-heroes,PSP,20-Oct-06,71,7.9,Team Fusion,EA Games,"Action, Shooter, Shooter, First-Person, Historic, Historic, Arcade",T
-Watch Dogs: Legion,/game/playstation-4/watch-dogs-legion,PlayStation 4,29-Oct-20,71,5,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 Sacred 2: Fallen Angel,/game/xbox-360/sacred-2-fallen-angel,Xbox 360,11-May-09,71,7.4,"Ascaron Entertainment GmbH, Ascaron Entertainment",cdv Software,"Role-Playing, Action RPG, Action RPG",M
 UEFA Champions League 2006-2007,/game/psp/uefa-champions-league-2006-2007,PSP,20-Mar-07,71,tbd,EA Canada,EA Sports,"Sports, Traditional, Team, Soccer, Sim, Management",E
 Team Sonic Racing,/game/switch/team-sonic-racing,Switch,21-May-19,71,7.2,Sumo Digital,Sega,"Racing, Arcade, Automobile",E
@@ -9744,7 +9755,6 @@ Destroy All Humans!,/game/pc/destroy-all-humans!,PC,28-Jul-20,71,8,Black Forest 
 Daytona USA,/game/playstation-3/daytona-usa,PlayStation 3,25-Oct-11,71,7,Sega AM2,Sega,"Driving, Racing, Arcade, Arcade, Automobile",E
 The Kings' Crusade,/game/pc/the-kings-crusade,PC,8-Oct-10,71,7.2,NeocoreGames,Paradox Interactive,"Strategy, Real-Time, Historic, General",NA
 X3: Reunion,/game/pc/x3-reunion,PC,10-Nov-05,71,6.8,Egosoft,Enlight Software,"Simulation, Sci-Fi, Space, Small Spaceship, Small Spaceship, Combat",T
-The Dark Pictures - Little Hope,/game/playstation-4/the-dark-pictures---little-hope,PlayStation 4,30-Oct-20,71,7.1,Supermassive Games,Bandai Namco Games,"Action Adventure, Survival",M
 Bendy and the Ink Machine,/game/playstation-4/bendy-and-the-ink-machine,PlayStation 4,20-Nov-18,71,7,TheMeatly Games,TheMeatly Games,"Adventure, 3D, First-Person",T
 The Invisible Hours,/game/xbox-one/the-invisible-hours,Xbox One,24-Apr-18,71,tbd,GameTrust,GameTrust,"Adventure, General",T
 Aragami,/game/pc/aragami,PC,4-Oct-16,71,7.1,Lince Works,Lince Works,"Action Adventure, General",M
@@ -9782,6 +9792,7 @@ Legends of Eisenwald,/game/pc/legends-of-eisenwald,PC,2-Jul-15,71,7.7,Aterdux En
 Mass Effect 2: Kasumi - Stolen Memory,/game/xbox-360/mass-effect-2-kasumi---stolen-memory,Xbox 360,6-Apr-10,71,7.9,BioWare,Electronic Arts,"Role-Playing, Action RPG, Action RPG",M
 NBA 2K10: Draft Combine,/game/xbox-360/nba-2k10-draft-combine,Xbox 360,26-Aug-09,71,7.3,Visual Concepts,2K Games,"Sports, Traditional, Team, Basketball, Sim, Sim",E
 Thrillville,/game/xbox/thrillville,Xbox,21-Nov-06,71,1.7,Frontier Developments,LucasArts,"Strategy, General",E10+
+Watch Dogs: Legion,/game/playstation-4/watch-dogs-legion,PlayStation 4,29-Oct-20,71,5,Ubisoft,Ubisoft,"Action Adventure, Open-World",M
 Death's Gambit,/game/pc/deaths-gambit,PC,13-Aug-18,71,7.3,White Rabbit Interactive,Adult Swim,"Role-Playing, Action RPG",NA
 Onimusha: Warlords,/game/switch/onimusha-warlords,Switch,15-Jan-19,71,7.5,"Capcom, NeoBards Entertainment",Capcom,"Action Adventure, General",M
 Assassin's Creed: The Ezio Collection,/game/xbox-one/assassins-creed-the-ezio-collection,Xbox One,15-Nov-16,71,7.8,Ubisoft Montreal,Ubisoft,"Miscellaneous, Compilation",M
@@ -9845,6 +9856,7 @@ Battle Worlds: Kronos,/game/pc/battle-worlds-kronos,PC,4-Nov-13,71,7,KING Art,KI
 Ace Combat: Joint Assault,/game/psp/ace-combat-joint-assault,PSP,31-Aug-10,71,7.4,Project Aces,Namco Bandai Games,"Action, Simulation, Flight, Flight, Combat",T
 Black Mirror II: Reigning Evil,/game/pc/black-mirror-ii-reigning-evil,PC,8-Feb-11,71,7.5,Cranberry Studios,Viva Media,"Adventure, 3D, Modern, Third-Person, Modern",T
 Rampage Puzzle Attack,/game/game-boy-advance/rampage-puzzle-attack,Game Boy Advance,29-Nov-01,71,8,Ninai Games,Midway,"Action, General",E
+The Dark Pictures - Little Hope,/game/playstation-4/the-dark-pictures---little-hope,PlayStation 4,30-Oct-20,71,7.1,Supermassive Games,Bandai Namco Games,"Action Adventure, Survival",M
 Psychonauts in The Rhombus of Ruin,/game/playstation-4/psychonauts-in-the-rhombus-of-ruin,PlayStation 4,21-Feb-17,71,7,Double Fine Productions,Double Fine Productions,"Action, General",E10+
 Through the Darkest of Times,/game/pc/through-the-darkest-of-times,PC,30-Jan-20,71,6.7,Paintbucket Games,HandyGames,"Strategy, General",NA
 Gods Eater Burst,/game/psp/gods-eater-burst,PSP,15-Mar-11,71,8,"Shift, Bandai Namco Games",D3Publisher,"Role-Playing, Action Adventure, Action RPG, Sci-Fi, Action RPG",T
@@ -10081,7 +10093,6 @@ Code Vein,/game/playstation-4/code-vein,PlayStation 4,27-Sep-19,70,7.8,Bandai Na
 Ratchet & Clank: All 4 One,/game/playstation-3/ratchet-clank-all-4-one,PlayStation 3,18-Oct-11,70,6.5,Insomniac Games,SCEA,"Action, Platformer, Platformer, 3D, 3D",E10+
 NBA Ballers: Phenom,/game/xbox/nba-ballers-phenom,Xbox,29-Mar-06,70,tbd,Midway,Midway,"Sports, Traditional, Basketball, Arcade",E
 Just Dance 3,/game/xbox-360/just-dance-3,Xbox 360,7-Oct-11,70,7.7,Ubisoft,Ubisoft,"Action, Miscellaneous, Rhythm, Dancing, Dancing",E10+
-Crysis Remastered,/game/pc/crysis-remastered,PC,18-Sep-20,70,3.2,Saber Interactive,Crytek,"Action, Shooter, First-Person, Arcade",M
 Redout,/game/switch/redout,Switch,14-May-19,70,7.1,34BigThings,Nicalis,"Racing, Arcade, Futuristic",E
 Tokyo 42,/game/pc/tokyo-42,PC,31-May-17,70,7,SMAC Games,Mode 7 Games,"General, Action, Shooter, Shoot-'Em-Up, Top-Down",NA
 Obliteracers,/game/playstation-4/obliteracers,PlayStation 4,20-Jul-16,70,tbd,Varkian Empire,Deck 13,"Racing, Arcade, Futuristic",E
@@ -10187,6 +10198,7 @@ Beyond A Steel Sky,/game/pc/beyond-a-steel-sky,PC,16-Jul-20,70,7.1,Revolution So
 Guitar Hero: Aerosmith,/game/xbox-360/guitar-hero-aerosmith,Xbox 360,29-Jun-08,70,6.6,Neversoft Entertainment,Activision,"Action, Miscellaneous, Rhythm, Music, Music",T
 The Urbz: Sims in the City,/game/xbox/the-urbz-sims-in-the-city,Xbox,9-Nov-04,70,6.5,Maxis,EA Games,"Miscellaneous, Virtual Life",T
 GripShift,/game/psp/gripshift,PSP,12-Sep-05,70,8.5,Sidhe Interactive,Sony Platform Publishing,"Driving, Racing, Mission-based, Arcade, Mission-based, Automobile",E
+Crysis Remastered,/game/pc/crysis-remastered,PC,18-Sep-20,70,3.2,Saber Interactive,Crytek,"Action, Shooter, First-Person, Arcade",M
 Radical Rabbit Stew,/game/playstation-4/radical-rabbit-stew,PlayStation 4,16-Jul-20,70,6.8,Pugstorm,Sold Out,"Action, Arcade",NA
 Namco Museum Archives Vol. 1,/game/switch/namco-museum-archives-vol-1,Switch,18-Jun-20,70,tbd,B.B.Studio,Bandai Namco Games,"Miscellaneous, Compilation",E10+
 TT Isle of Man: Ride On The Edge 2,/game/pc/tt-isle-of-man-ride-on-the-edge-2,PC,19-Mar-20,70,7.6,KT Racing,Bigben Interactive,"Racing, Arcade, Automobile",E
@@ -10511,9 +10523,9 @@ Alice: Madness Returns,/game/playstation-3/alice-madness-returns,PlayStation 3,1
 Tokyo Dark,/game/pc/tokyo-dark,PC,7-Sep-17,70,6.2,"Square Enix, Cherrymochi",Square Enix,"Adventure, Point-and-Click",NA
 Advent Rising,/game/pc/advent-rising,PC,9-Aug-05,70,8.6,GlyphX Games,Majesco Games,"Action Adventure, Sci-Fi, Sci-Fi, General",T
 UEFA Euro 2012,/game/xbox-360/uefa-euro-2012,Xbox 360,24-Apr-12,70,2.8,EA Canada,EA Sports,"Sports, Traditional, Team, Soccer, Sim, Sim",E
+No Straight Roads,/game/playstation-4/no-straight-roads,PlayStation 4,25-Aug-20,70,6.7,Metronomik,Sold Out,"Action, Rhythm, Music, Action Adventure, Open-World",E10+
 Two Worlds II,/game/playstation-3/two-worlds-ii,PlayStation 3,25-Jan-11,70,6.9,Reality Pump,SouthPeak Games,"Role-Playing, Third-Person, Third-Person, General, Action RPG",M
 Guitar Hero On Tour: Modern Hits,/game/ds/guitar-hero-on-tour-modern-hits,DS,9-Jun-09,70,6.8,Activision,Activision,"Action, Miscellaneous, Rhythm, Music, Music",E10+
-No Straight Roads,/game/playstation-4/no-straight-roads,PlayStation 4,25-Aug-20,70,6.7,Metronomik,Sold Out,"Action, Rhythm, Music, Action Adventure, Open-World",E10+
 ToeJam & Earl: Back in the Groove,/game/xbox-one/toejam-earl-back-in-the-groove,Xbox One,1-Mar-19,70,5.7,"Humanature Studios, 22nd Century Toys",Adult Swim,"Action, General, Platformer, 2D",E
 That's You!,/game/playstation-4/thats-you!,PlayStation 4,4-Jul-17,70,7.2,Wish Studios,Wish Studios,"Miscellaneous, Party / Minigame",T
 Planetbase,/game/xbox-one/planetbase,Xbox One,3-May-17,70,tbd,Madruga Works,Madruga Works,"Strategy, Management, Government",E10+
@@ -10765,7 +10777,6 @@ Blitz: The League,/game/xbox-360/blitz-the-league,Xbox 360,13-Nov-06,69,6.6,Midw
 The King of Fighters: Maximum Impact - Maniax,/game/xbox/the-king-of-fighters-maximum-impact---maniax,Xbox,28-Jun-05,69,6.6,SNK Playmore,SNK Playmore,"Action, Fighting, 3D",T
 Q.U.B.E.,/game/pc/qube,PC,17-Dec-11,69,7.5,Toxic Games,Toxic Games,"Miscellaneous, Puzzle, Puzzle, Logic, Logic",NA
 Ghost Squad,/game/wii/ghost-squad,Wii,20-Nov-07,69,7.6,"Artificial Mind and Movement, Polygon Magic",Sega,"Action, Shooter, Shooter, Light Gun, Light Gun",T
-Foregone,/game/switch/foregone,Switch,13-Oct-20,69,6.5,Big Blue Bubble Inc.,Big Blue Bubble Inc.,"Action, Platformer, 2D",NA
 The Survivalists,/game/pc/the-survivalists,PC,9-Oct-20,69,5.2,Team17,Team17,"Action Adventure, Survival",NA
 Edna & Harvey: The Breakout - 10th Anniversary Edition,/game/playstation-4/edna-harvey-the-breakout---10th-anniversary-edition,PlayStation 4,17-Jun-20,69,tbd,Daedalic Entertainment,Daedalic Entertainment,"Adventure, General",NA
 Exit the Gungeon,/game/switch/exit-the-gungeon,Switch,17-Mar-20,69,6.7,Dodge Roll,Devolver Digital,"Action, Platformer, 2D",NA
@@ -10917,6 +10928,7 @@ Phantasy Star Portable 2,/game/psp/phantasy-star-portable-2,PSP,13-Sep-10,69,8.1
 Jack Keane,/game/pc/jack-keane,PC,15-Apr-08,69,6.6,Legacy Interactive,Strategy First,"Adventure, General, General",T
 Arslan: The Warriors of Legend,/game/playstation-4/arslan-the-warriors-of-legend,PlayStation 4,9-Feb-16,69,6.6,Omega Force,Koei Tecmo Games,"Action, Beat-'Em-Up, 3D",T
 Silent Line: Armored Core,/game/playstation-2/silent-line-armored-core,PlayStation 2,17-Jul-03,69,8.6,From Software,Agetec Inc.,"Simulation, Sci-Fi, Mech",T
+9 Monkeys of Shaolin,/game/switch/9-monkeys-of-shaolin,Switch,NA,NA,NA,NA,NA,NA,NA
 Evan's Remains,/game/switch/evans-remains,Switch,11-Jun-20,69,8.4,Matias Schmied,Whitethorn Digital,"Adventure, General",NA
 Football Manager 2019 Touch,/game/switch/football-manager-2019-touch,Switch,6-Dec-18,69,6.8,Sega,Sega,"Sports, Team, Soccer, Management",E
 Megaquarium,/game/pc/megaquarium,PC,13-Sep-18,69,7.4,Twice Circled,Twice Circled,"Strategy, Management, Business / Tycoon",NA
@@ -11102,6 +11114,7 @@ Night Call,/game/pc/night-call,PC,17-Jul-19,68,5.3,"Raw Fury, BlackMuffin Studio
 Tiny Metal,/game/pc/tiny-metal,PC,21-Dec-17,68,3.8,AREA35,AREA35,"Strategy, Turn-Based, Tactics",E10+
 Ninjala,/game/switch/ninjala,Switch,24-Jun-20,68,6.6,"GungHo Online Entertainment America, Inc.","GungHo Online Entertainment America, Inc.","Action, General",E10+
 1942: Joint Strike,/game/xbox-360/1942-joint-strike,Xbox 360,23-Jul-08,68,6.2,Backbone Entertainment,Capcom,"Action, Shooter, Shooter, Scrolling, Scrolling, Shoot-'Em-Up, Vertical",E10+
+Torchlight III,/game/xbox-one/torchlight-iii,Xbox One,13-Oct-20,68,4.6,"Echtra Games, Inc.",Perfect World Entertainment,"Role-Playing, Action RPG",NA
 Pokemon Mystery Dungeon: Rescue Team DX,/game/switch/pokemon-mystery-dungeon-rescue-team-dx,Switch,6-Mar-20,68,8.2,Spike Chunsoft,Nintendo,"Role-Playing, Roguelike",E
 Warriors Orochi 4,/game/xbox-one/warriors-orochi-4,Xbox One,16-Oct-18,68,6.8,Koei Tecmo Games,Koei Tecmo Games,"Action, Beat-'Em-Up, 3D",T
 Bear With Me: Episode 1,/game/pc/bear-with-me-episode-1,PC,8-Aug-16,68,6.1,Exordium Games,Exordium Games,"Adventure, Point-and-Click",NA
@@ -11319,7 +11332,6 @@ Buzz! Master Quiz,/game/psp/buzz!-master-quiz,PSP,23-Sep-08,68,7,Relentless Soft
 Costume Quest 2,/game/pc/costume-quest-2,PC,7-Oct-14,68,7.5,Double Fine Productions,Midnight City,"Role-Playing, Action RPG, Japanese-Style",E10+
 Juiced 2: Hot Import Nights,/game/xbox-360/juiced-2-hot-import-nights,Xbox 360,17-Sep-07,68,7.5,Juice Games,THQ,"Driving, Racing, Simulation, GT / Street, GT / Street, Automobile",T
 Grand Theft Auto,/game/game-boy-advance/grand-theft-auto,Game Boy Advance,26-Oct-04,68,7.2,Digital Eclipse,Rockstar Games,"Action Adventure, Modern",M
-Torchlight III,/game/xbox-one/torchlight-iii,Xbox One,13-Oct-20,68,4.6,"Echtra Games, Inc.",Perfect World Entertainment,"Role-Playing, Action RPG",NA
 Star Wars Jedi Knight: Jedi Academy,/game/switch/star-wars-jedi-knight-jedi-academy,Switch,26-Mar-20,68,5.1,Aspyr,Aspyr,"Action, Shooter, First-Person, Arcade",T
 American Fugitive,/game/xbox-one/american-fugitive,Xbox One,24-May-19,68,6.3,Fallen Tree Games,Curve Digital,"Action Adventure, Sandbox, Open-World",M
 NASCAR Heat 3,/game/xbox-one/nascar-heat-3,Xbox One,7-Sep-18,68,7.3,704Games,704Games,"Racing, Simulation, Automobile",E10+
@@ -11576,6 +11588,7 @@ Space Empires V,/game/pc/space-empires-v,PC,16-Oct-06,68,7.7,Malfador Machinatio
 Gungrave: Overdose,/game/playstation-2/gungrave-overdose,PlayStation 2,15-Sep-04,68,8.4,Seta Corporation,Mastiff,"Action, Shooter, Third-Person, Fantasy",M
 Digimon World: Next Order,/game/playstation-4/digimon-world-next-order,PlayStation 4,31-Jan-17,68,6.7,B.B.Studio,Bandai Namco Games,"Role-Playing, Trainer",E10+
 Agatha Christie: And Then There Were None,/game/pc/agatha-christie-and-then-there-were-none,PC,30-Oct-05,68,7.5,AWE Games,The Adventure Company,"Adventure, First-Person, 3D, Point-and-Click, Modern, Third-Person, Modern",T
+Bugsnax,/game/pc/bugsnax,PC,NA,NA,NA,NA,NA,NA,NA
 Ageless,/game/switch/ageless,Switch,28-Jul-20,68,tbd,One More Dream Studios,Team17,"Action, Platformer, 2D",NA
 The Complex,/game/xbox-one/the-complex,Xbox One,31-Mar-20,68,6.8,Wales Interactive Ltd.,Wales Interactive Ltd.,"Adventure, General",M
 Stela,/game/pc/stela,PC,13-Mar-20,68,5.7,SkyBox Labs,SkyBox Labs,"Action, Platformer, 2D",NA
@@ -12049,6 +12062,7 @@ Touch Detective 2 1/2,/game/ds/touch-detective-2-12,DS,9-Oct-07,67,tbd,BeeWorks,
 TT Isle of Man: Ride On The Edge,/game/playstation-4/tt-isle-of-man-ride-on-the-edge,PlayStation 4,6-Mar-18,67,6.2,"Kylotonn, Maximum Games",Bigben Interactive,"Racing, Arcade, Automobile",E
 Teenage Mutant Ninja Turtles: Smash-Up,/game/wii/teenage-mutant-ninja-turtles-smash-up,Wii,22-Sep-09,67,8.1,Game Arts,Ubisoft,"Action, Fighting, Beat-'Em-Up, Fighting, 3D, 2D",E10+
 Faces of War,/game/pc/faces-of-war,PC,12-Sep-06,67,8.5,Best Way,Ubisoft,"Strategy, Real-Time, Historic, General, Historic",M
+The Last Blade: Beyond the Destiny,/game/switch/the-last-blade-beyond-the-destiny,Switch,NA,NA,NA,NA,NA,NA,NA
 V-Rally 4,/game/xbox-one/v-rally-4,Xbox One,11-Sep-18,67,6.1,Kylotonn,Bigben Interactive,"Racing, Arcade, Automobile",E
 The King's Bird,/game/pc/the-kings-bird,PC,23-Aug-18,67,7,Serenity Forge,Serenity Forge,"Action, Platformer, 2D",NA
 Crossing Souls,/game/switch/crossing-souls,Switch,26-Jul-18,67,6.1,Fourattic,Devolver Digital,"Action Adventure, General",M
@@ -12237,6 +12251,7 @@ Battletoads,/game/pc/battletoads,PC,20-Aug-20,66,5.1,"Rare Ltd., Dlala Studios",
 Unmechanical: Extended Edition,/game/xbox-one/unmechanical-extended-edition,Xbox One,30-Jan-15,66,7.1,Grip Games,Grip Games,"Action, Puzzle, General, Platformer, 2D",E
 Final Fantasy Crystal Chronicles: The Crystal Bearers,/game/wii/final-fantasy-crystal-chronicles-the-crystal-bearers,Wii,26-Dec-09,66,8.8,Square Enix,Square Enix,"Role-Playing, Action RPG, Action RPG",T
 Frogger Helmet Chaos,/game/psp/frogger-helmet-chaos,PSP,29-Sep-05,66,7,Konami Computer Entertainment Hawaii,Konami,"Action, Platformer, Platformer, 3D, 3D",E
+Foregone,/game/switch/foregone,Switch,13-Oct-20,69,6.5,Big Blue Bubble Inc.,Big Blue Bubble Inc.,"Action, Platformer, 2D",NA
 Doki-Doki Universe,/game/playstation-vita/doki-doki-universe,PlayStation Vita,10-Dec-13,66,5.2,SCEA,SCEA,"General, Miscellaneous, General",E10+
 Classic NES Series: Dr. Mario,/game/game-boy-advance/classic-nes-series-dr-mario,Game Boy Advance,25-Oct-04,66,8.2,Nintendo,Nintendo,"Miscellaneous, Puzzle, Matching",E
 Super Trucks Racing,/game/playstation-2/super-trucks-racing,PlayStation 2,29-Oct-03,66,tbd,Jester Interactive,XS Games,"Driving, Racing, Arcade",E
@@ -13184,6 +13199,7 @@ Pressure,/game/pc/pressure,PC,26-Mar-13,64,6.9,Chasing Carrots,TopWare Interacti
 Dragon Age II: Legacy,/game/xbox-360/dragon-age-ii-legacy,Xbox 360,26-Jul-11,64,5.2,BioWare,Electronic Arts,"Role-Playing, PC-style RPG, Action RPG",M
 MXGP Pro,/game/playstation-4/mxgp-pro,PlayStation 4,10-Jul-18,64,tbd,Milestone S.r.l,Milestone S.r.l,"Racing, Arcade, Automobile",E
 Chasing Aurora,/game/wii-u/chasing-aurora,Wii U,18-Nov-12,64,6.9,Broken Rules,Broken Rules,"Action, General, Flight, Flight",E
+The Dark Pictures - Little Hope,/game/xbox-one/the-dark-pictures---little-hope,Xbox One,NA,NA,NA,NA,NA,NA,NA
 Deadcore,/game/playstation-4/deadcore,PlayStation 4,14-Jul-17,64,tbd,Grip Games,Grip Games,"Action, Shooter, First-Person, Arcade",E
 Sonic Heroes,/game/playstation-2/sonic-heroes,PlayStation 2,27-Jan-04,64,7.3,Sonic Team,Sega,"Action, Platformer, 3D",E
 Egg Mania: Eggstreme Madness,/game/gamecube/egg-mania-eggstreme-madness,GameCube,11-Sep-02,64,8,Kemco,Kemco,"Miscellaneous, Puzzle, General",E
@@ -13945,6 +13961,7 @@ Space Crew,/game/switch/space-crew,Switch,15-Oct-20,62,tbd,Runner Duck,Curve Dig
 Rad Rodgers: Radical Edition,/game/switch/rad-rodgers-radical-edition,Switch,26-Feb-19,62,4.5,Interceptor Entertainment,HandyGames,"Action, Platformer, 2D",M
 Sparkle Unleashed,/game/xbox-one/sparkle-unleashed,Xbox One,3-Jun-15,62,7,"10tons Entertainment, 10tons",10tons Ltd,"Puzzle, Matching",E
 Tom Clancy's Ghost Recon: Breakpoint,/game/xbox-one/tom-clancys-ghost-recon-breakpoint,Xbox One,1-Oct-19,62,3.2,Ubisoft Paris,Ubisoft,"Action Adventure, Open-World",M
+Georifters,/game/switch/georifters,Switch,NA,NA,NA,NA,NA,NA,NA
 Ninjin: Clash of Carrots,/game/playstation-4/ninjin-clash-of-carrots,PlayStation 4,4-Sep-18,62,5.3,Pocket Trap,Pocket Trap,"Action, Beat-'Em-Up, 2D",E10+
 Need for Speed ProStreet,/game/playstation-2/need-for-speed-prostreet,PlayStation 2,13-Nov-07,62,6.3,Black Box,EA Games,"Driving, Racing, GT / Street",E10+
 Kersploosh!,/game/3ds/kersploosh!,3DS,7-Mar-13,62,7,Poisoft,Nintendo,"Miscellaneous, General, General",E
@@ -14605,7 +14622,6 @@ SNK Heroines: Tag Team Frenzy,/game/playstation-4/snk-heroines-tag-team-frenzy,P
 Teenage Mutant Ninja Turtles: Turtles in Time Re-Shelled,/game/xbox-360/teenage-mutant-ninja-turtles-turtles-in-time-re-shelled,Xbox 360,5-Aug-09,60,7,Ubisoft Singapore,Ubisoft,"Action, Beat-'Em-Up, Beat-'Em-Up, 2D",E10+
 Assassin's Creed Chronicles: Russia,/game/playstation-4/assassins-creed-chronicles-russia,PlayStation 4,9-Feb-16,60,4.5,"Ubisoft, Climax Studios",Ubisoft,"General, Action Adventure, Linear",T
 Dynasty Warriors 6,/game/xbox-360/dynasty-warriors-6,Xbox 360,19-Feb-08,60,7.2,Omega Force,Koei,"Action, Beat-'Em-Up, Beat-'Em-Up, 3D",T
-Final Fantasy Crystal Chronicles: Remastered Edition,/game/playstation-4/final-fantasy-crystal-chronicles-remastered-edition,PlayStation 4,27-Aug-20,60,5,Square Enix,Square Enix,"Role-Playing, Action RPG",T
 How to Survive,/game/pc/how-to-survive,PC,23-Oct-13,60,7,EKO Software,505 Games,"Action Adventure, Horror, Horror, Survival",M
 Pyramids,/game/3ds/pyramids,3DS,27-Oct-11,60,6,Visual Impact,Enjoy Gaming,"Miscellaneous, Puzzle, General, Puzzle, General",E
 Wild Earth: African Safari,/game/wii/wild-earth-african-safari,Wii,22-Apr-08,60,7.2,Super X Studios,Majesco Games,"Simulation, Miscellaneous, General, General, Edutainment",E
@@ -14742,6 +14758,7 @@ Saint Seiya: Soldiers' Soul,/game/playstation-4/saint-seiya-soldiers-soul,PlaySt
 Bionicle Heroes,/game/pc/bionicle-heroes,PC,14-Nov-06,59,8.2,Traveller's Tales,Eidos Interactive,"Action, Action Adventure, Sci-Fi, Sci-Fi, General, Shooter, First-Person, Third-Person, Arcade",E10+
 Saw,/game/playstation-3/saw,PlayStation 3,6-Oct-09,59,6.3,Zombie Studios,Konami,"Action Adventure, Horror, Horror, Survival",M
 Worms Ultimate Mayhem,/game/xbox-360/worms-ultimate-mayhem,Xbox 360,28-Sep-11,59,7.8,Team17,Team17,"Strategy, Turn-Based, General, General, Artillery",E10+
+Final Fantasy Crystal Chronicles: Remastered Edition,/game/playstation-4/final-fantasy-crystal-chronicles-remastered-edition,PlayStation 4,27-Aug-20,60,5,Square Enix,Square Enix,"Role-Playing, Action RPG",T
 Samurai Jack: The Shadow of Aku,/game/playstation-2/samurai-jack-the-shadow-of-aku,PlayStation 2,24-Mar-04,59,8.5,Adrenium,Sega,"Action, General, Platformer, 3D",T
 Legends of Wrestling II,/game/gamecube/legends-of-wrestling-ii,GameCube,26-Nov-02,59,tbd,Acclaim,Acclaim,"Action, Fighting, Wrestling",T
 Namco Museum,/game/xbox/namco-museum,Xbox,9-Oct-02,59,7,Mass Media,Namco,"Miscellaneous, Compilation",E
@@ -16698,12 +16715,12 @@ Don Bluth Presents: Dragon's Lair HD,/game/pc/don-bluth-presents-dragons-lair-hd
 Family Guy,/game/playstation-2/family-guy,PlayStation 2,16-Oct-06,50,5.7,High Voltage Software,2K Games,"Adventure, General",M
 Animal Gods,/game/pc/animal-gods,PC,12-Oct-15,50,tbd,Still Games,Still Games,"Role-Playing, Action RPG",NA
 Marvel: Ultimate Alliance 2,/game/wii/marvel-ultimate-alliance-2,Wii,15-Sep-09,50,5.7,n-Space,Activision,"Role-Playing, Action RPG, Action RPG",T
-Bakugan: Champions of Vestroia,/game/switch/bakugan-champions-of-vestroia,Switch,3-Nov-20,50,3.8,WayForward,Warner Bros. Interactive Entertainment,"Role-Playing, Action RPG",E10+
 Planet 51,/game/playstation-3/planet-51,PlayStation 3,17-Nov-09,50,tbd,Pyro Studios,Sega,"Action, General, General",E
 Soldier of Fortune: Payback,/game/playstation-3/soldier-of-fortune-payback,PlayStation 3,19-Nov-07,50,5.2,Cauldron Ltd.,Activision Value,"Action, Shooter, Shooter, First-Person, Modern, Modern, Arcade",M
 Whiteout,/game/playstation-2/whiteout,PlayStation 2,24-Nov-02,50,tbd,Vicarious Visions,Konami,"Driving, Racing, Snow / Water",T
 WTA Tour Tennis,/game/playstation-2/wta-tour-tennis,PlayStation 2,26-Mar-02,50,tbd,Konami,Konami,"Sports, Traditional, Tennis",E
 Reservoir Dogs,/game/xbox/reservoir-dogs,Xbox,24-Oct-06,50,tbd,Volatile Games,Eidos Interactive,"Action Adventure, Modern",M
+Bakugan: Champions of Vestroia,/game/switch/bakugan-champions-of-vestroia,Switch,3-Nov-20,50,3.8,WayForward,Warner Bros. Interactive Entertainment,"Role-Playing, Action RPG",E10+
 Baroque,/game/wii/baroque,Wii,8-Apr-08,50,8.3,Sting,Atlus,"Role-Playing, General, Action RPG, Roguelike",T
 50 Cent: Bulletproof,/game/xbox/50-cent-bulletproof,Xbox,17-Nov-05,50,5.6,Genuine Games,VU Games,"Action Adventure, Modern",M
 Spider-Man 3,/game/playstation-2/spider-man-3,PlayStation 2,4-May-07,50,6.7,Vicarious Visions,Activision,"Action, Platformer, 3D",T
@@ -17565,7 +17582,6 @@ Battle: Los Angeles,/game/xbox-360/battle-los-angeles,Xbox 360,11-Mar-11,39,4.6,
 Montague's Mount,/game/pc/montagues-mount,PC,9-Oct-13,39,5,Polypusher Studios,Mastertronic,"Action Adventure, Horror, Horror",NA
 Charlie and the Chocolate Factory,/game/gamecube/charlie-and-the-chocolate-factory,GameCube,11-Jul-05,39,3.2,"High Voltage Software, Backbone Entertainment",Global Star Software,"Action Adventure, Modern",E
 SuperPower,/game/pc/superpower,PC,28-Mar-02,39,3.9,GolemLabs,DreamCatcher Interactive,"Strategy, Turn-Based, Wargame, Turn-Based, General",E
-Remothered: Broken Porcelain,/game/pc/remothered-broken-porcelain,PC,13-Oct-20,39,5.4,Stormind Games,Modus Games,"Adventure, 3D, First-Person",M
 The Cursed Crusade,/game/xbox-360/the-cursed-crusade,Xbox 360,25-Oct-11,39,4.5,Kylotonn,Atlus,"Action Adventure, Fantasy, General, Fantasy",M
 Ultimate Beach Soccer,/game/xbox/ultimate-beach-soccer,Xbox,10-Nov-03,39,6.8,Pam Development,DreamCatcher Interactive,"Sports, Traditional, Soccer, Arcade",E
 Torino 2006 - the Official Video Game of the XX Olympic Winter Games,/game/playstation-2/torino-2006---the-official-video-game-of-the-xx-olympic-winter-games,PlayStation 2,24-Jan-06,39,7.3,49Games,2K Sports,"Sports, Olympic Sports",E
@@ -17600,6 +17616,7 @@ The Mummy: Tomb of the Dragon Emperor,/game/wii/the-mummy-tomb-of-the-dragon-emp
 Cartoon Network Racing,/game/playstation-2/cartoon-network-racing,PlayStation 2,4-Dec-06,39,6.5,Eutechnyx,The Game Factory,"Driving, Racing, Arcade",E
 The Deer God,/game/switch/the-deer-god,Switch,21-Dec-17,39,2.8,Cinopt Studios LLC,Cinopt Studios LLC,"Action, Platformer, 2D",T
 Coffee Tycoon,/game/pc/coffee-tycoon,PC,11-Sep-06,39,4.7,Anarchy Enterprises,Tri Synergy,"Strategy, Tycoon, Tycoon",E
+Remothered: Broken Porcelain,/game/pc/remothered-broken-porcelain,PC,13-Oct-20,39,5.4,Stormind Games,Modus Games,"Adventure, 3D, First-Person",M
 Universal Studios Theme Parks Adventure,/game/gamecube/universal-studios-theme-parks-adventure,GameCube,18-Dec-01,39,3.2,Kemco,Kemco,"Miscellaneous, Party",T
 Resident Evil: Survivor,/game/playstation/resident-evil-survivor,PlayStation,30-Aug-00,39,6.1,Capcom,Capcom,"Action Adventure, Horror",M
 Realms of Ancient War,/game/pc/realms-of-ancient-war,PC,4-Oct-12,39,4.6,Wizarbox,Focus Home Interactive,"Action Adventure, Fantasy, General, Fantasy",T
