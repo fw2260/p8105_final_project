@@ -1,0 +1,28 @@
+---
+title: "Tidy sales data"
+date: "11/10/2020"
+output: github_document
+---
+
+This document contains all of our analyses.
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(dplyr)
+
+```
+
+
+Load sales data and remove `m` in each sale column
+
+```{r}
+sales_data = 
+  read.csv("data/sales.csv") %>% 
+  separate(total_sale, into = c("total_sale", NA), sep = "[m]") %>% 
+  separate(na_sale, into = c("na_sale", NA), sep = "[m]") %>% 
+  separate(pal_sale, into = c("pal_sale", NA), sep = "[m]") %>% 
+  separate(japan_sale, into = c("japan_sale", NA), sep = "[m]") %>% 
+  separate(other_sale, into = c("other_sale", NA), sep = "[m]")
+
+```
+
