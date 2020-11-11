@@ -64,7 +64,7 @@ New name for console values
 ```{r}
 sales_df = 
   sales_data %>% 
-  mutate(platform = console_df)
+  mutate(console = console_df)
 
 write_csv(sales_df, "data/sales_rename.csv")
 ```
