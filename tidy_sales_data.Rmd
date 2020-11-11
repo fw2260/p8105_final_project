@@ -27,5 +27,47 @@ sales_data =
 ```
 
 
+To list the unique name of console.
+There are 39 of them. 
+```{r}
+sales_data %>% 
+  distinct(console)
+```
+
+
+Rename console in sales data
+
+**NOTE: The following console cannot be found to match in the `metacritic.csv` file: 2600, GBC, GEN, PSN, SAT, SCD, WS, VC, NG, WW, PCE, XBL, 3D0, GG, OSX, PCFX, Mob
+
+
+```{r}
+console_df = 
+  recode(sales_data$console, 
+       PS = "PlayStation",
+       PS2 = "PlayStation 2",
+       PS3 = "PlayStation 3",
+       PS4 = "PlayStation 4",
+       GB = "Game Boy Advance",
+       X360 = "Xbox 360",
+       NS = "Switch",
+       N64 = "Nintendo 64",
+       XOne = "Xbox One",
+       XB = "Xbox",
+       WiiU = "Wii U",
+       GC = "GameCube",
+       PSV = "PlayStation Vita",
+       DC = "Dreamcast"
+       )
+```
+
+New name for console values
+```{r}
+sales_df = 
+  sales_data %>% 
+  mutate(console = console_df)
+
+write_csv(sales_df, "data/sales_rename.csv")
+```
+
 
 
