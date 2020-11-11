@@ -1,5 +1,5 @@
 ---
-title: "Tidy sales data"
+title: "Tidy data"
 date: "11/10/2020"
 output: github_document
 ---

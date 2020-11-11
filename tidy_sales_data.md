@@ -1,4 +1,4 @@
-Tidy sales data
+Tidy data
 ================
 11/10/2020
 
