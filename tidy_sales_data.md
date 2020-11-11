@@ -111,7 +111,8 @@ New name for console values
 ``` r
 sales_df = 
   sales_data %>% 
-  mutate(console = console_df)
+  mutate(console = console_df) %>% 
+  rename(platform = console)
 
 write_csv(sales_df, "data/sales_rename.csv")
 ```
