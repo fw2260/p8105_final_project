@@ -40,7 +40,8 @@ Rename console in sales data
 
 
 ```{r}
-recode(sales_data$console, 
+console_df = 
+  recode(sales_data$console, 
        PS = "PlayStation",
        PS2 = "PlayStation 2",
        PS3 = "PlayStation 3",
@@ -54,8 +55,16 @@ recode(sales_data$console,
        WiiU = "Wii U",
        GC = "GameCube",
        PSV = "PlayStation Vita",
-       DC = "Dreamcast",
+       DC = "Dreamcast"
        )
 ```
 
+New name for console values
+```{r}
+sales_df = 
+  sales_data %>% 
+  mutate(console = console_df)
+
+write_csv(sales_df, "data/sales_rename.csv")
+```
 
