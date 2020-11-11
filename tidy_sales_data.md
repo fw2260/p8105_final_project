@@ -116,3 +116,57 @@ sales_df =
 
 write_csv(sales_df, "data/sales_rename.csv")
 ```
+
+Merge dataframe
+
+``` r
+sales_rename = read_csv("data/sales_rename.csv")
+```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   title = col_character(),
+    ##   platform = col_character(),
+    ##   total_sale = col_double(),
+    ##   na_sale = col_character(),
+    ##   pal_sale = col_character(),
+    ##   japan_sale = col_character(),
+    ##   other_sale = col_character()
+    ## )
+
+``` r
+metacritic = read_csv("data/metacritic.csv")
+```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   title = col_character(),
+    ##   link = col_character(),
+    ##   platform = col_character(),
+    ##   release_date = col_character(),
+    ##   meta_score = col_double(),
+    ##   user_score = col_character(),
+    ##   developer = col_character(),
+    ##   publisher = col_character(),
+    ##   genre = col_character(),
+    ##   esrb_rating = col_character()
+    ## )
+
+``` r
+game_df = full_join(metacritic, sales_rename, by = "title", "platform")
+
+game_data =
+  game_df %>% 
+  mutate(platform.y = coalesce(platform.x, platform.y))
+  
+
+game_new_data = 
+  game_data %>% 
+  select(-platform.x) %>% 
+  rename(platform = platform.y)
+
+game = game_new_data[!duplicated(game_new_data[c(1,10)]),]
+  
+
+write_csv(game, "data/game.csv")
+```

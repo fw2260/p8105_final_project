@@ -70,4 +70,27 @@ sales_df =
 write_csv(sales_df, "data/sales_rename.csv")
 ```
 
+Merge dataframe 
+
+```{r}
+sales_rename = read_csv("data/sales_rename.csv")
+metacritic = read_csv("data/metacritic.csv")
+
+game_df = full_join(metacritic, sales_rename, by = "title", "platform")
+
+game_data =
+  game_df %>% 
+  mutate(platform.y = coalesce(platform.x, platform.y))
+  
+
+game_new_data = 
+  game_data %>% 
+  select(-platform.x) %>% 
+  rename(platform = platform.y)
+
+game = game_new_data[!duplicated(game_new_data[c(1,10)]),]
+  
+
+write_csv(game, "data/game.csv")
+```
 
