@@ -117,7 +117,7 @@ sales_df =
 write_csv(sales_df, "data/sales_rename.csv")
 ```
 
-Merge dataframe
+Merge dataframe, remove duplicates based on `title` and `platform`
 
 ``` r
 sales_rename = read_csv("data/sales_rename.csv")
