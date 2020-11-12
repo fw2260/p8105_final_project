@@ -8,6 +8,7 @@ This document contains steps to clean the sales data.
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(dplyr)
 ```
 
 
@@ -92,7 +93,7 @@ Merge dataframe, remove duplicates based on `title` and `platform`
 sales_rename = read_csv("./data/sales_rename_2.csv")
 metacritic = read_csv("data/metacritic.csv")
 
-game_df = full_join(metacritic, sales_rename, by = "title", "platform")
+game_df = left_join(metacritic, sales_rename, by = "title", "platform")
 
 game_data =
   game_df %>% 
@@ -102,7 +103,9 @@ game_data =
 game_new_data = 
   game_data %>% 
   select(-platform.x) %>% 
-  rename(platform = platform.y)
+  rename(platform = platform.y) %>% 
+  drop_na(total_sale:other_sale) %>% 
+  drop_na(meta_score)
 
 game = game_new_data[!duplicated(game_new_data[c(1,10)]),]
   

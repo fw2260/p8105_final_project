@@ -36,31 +36,6 @@ sales_data =
     ##   other_sale = col_character()
     ## )
 
-    ## Warning in FUN(X[[i]], ...): strings not representable in native encoding will
-    ## be translated to UTF-8
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C4>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00D6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E4>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00F6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00DF>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00D8>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00F8>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C5>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E5>' to native encoding
-
     ## Warning: `funs()` is deprecated as of dplyr 0.8.0.
     ## Please use a list of either functions or lambdas: 
     ## 
@@ -95,7 +70,7 @@ sales_data %>%
     ##  8 PS3    
     ##  9 PS4    
     ## 10 3DS    
-    ## # ... with 29 more rows
+    ## # … with 29 more rows
 
 There are 39 of them.
 
@@ -179,7 +154,7 @@ metacritic = read_csv("data/metacritic.csv")
     ## )
 
 ``` r
-game_df = full_join(metacritic, sales_rename, by = "title", "platform")
+game_df = left_join(metacritic, sales_rename, by = "title", "platform")
 
 game_data =
   game_df %>% 
@@ -189,7 +164,9 @@ game_data =
 game_new_data = 
   game_data %>% 
   select(-platform.x) %>% 
-  rename(platform = platform.y)
+  rename(platform = platform.y) %>% 
+  drop_na(total_sale:other_sale) %>% 
+  drop_na(meta_score)
 
 game = game_new_data[!duplicated(game_new_data[c(1,10)]),]
   
