@@ -26,8 +26,10 @@ Load sales data and remove `m` in each sale column
 
 sales_data = 
   read_csv("./data/sales.csv") %>%
-  apply(2,function(x) gsub("m$","",x)) %>% 
-  as.tibble()
+  janitor::clean_names() %>% 
+  mutate_at(
+    3:7, funs(gsub("m$","",.))
+  )
 ```
 
 
