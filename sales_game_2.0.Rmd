@@ -5,11 +5,7 @@ output: github_document
 
 ```{r}
 library(rvest)
-library(dplyr)
-library(purrr)
-library(tibble)
 library(httr)
-library(stringr)
 library(tidyverse)
 ```
 

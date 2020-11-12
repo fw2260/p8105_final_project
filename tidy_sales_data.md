@@ -4,7 +4,7 @@ Tidy Sales Data
 
 This document contains steps to clean the sales data.
 
-Load sales data and remove `m` in each sale column
+Load sales data, remove `m` in each sale column, and change “N/A” to NA
 
 ``` r
 #sales_data = 
@@ -20,9 +20,8 @@ Load sales data and remove `m` in each sale column
 sales_data = 
   read_csv("./data/sales.csv") %>%
   janitor::clean_names() %>% 
-  mutate_at(
-    3:7, funs(gsub("m$","",.))
-  )
+  mutate_at(3:7, funs(gsub("m$","",.))) %>% 
+  mutate_at(3:7, funs(gsub("N/A",NA,.)))
 ```
 
     ## Parsed with column specification:
@@ -35,31 +34,6 @@ sales_data =
     ##   japan_sale = col_character(),
     ##   other_sale = col_character()
     ## )
-
-    ## Warning in FUN(X[[i]], ...): strings not representable in native encoding will
-    ## be translated to UTF-8
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C4>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00D6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E4>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00F6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00DF>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E6>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00D8>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00F8>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C5>' to native encoding
-
-    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E5>' to native encoding
 
     ## Warning: `funs()` is deprecated as of dplyr 0.8.0.
     ## Please use a list of either functions or lambdas: 
@@ -97,7 +71,7 @@ sales_data %>%
     ## 10 3DS    
     ## # ... with 29 more rows
 
-There are 39 of them.
+There are 39 unique consoles listed.
 
 Rename console in sales data
 
@@ -143,7 +117,7 @@ write the new sales dataset into a .csv file
 write_csv(sales_df, "./data/sales_rename_2.csv")
 ```
 
-Merge dataframe, remove duplicates based on `title` and `platform`
+Merge the Metacritic dataset and the sales dataset
 
 ``` r
 sales_rename = read_csv("./data/sales_rename_2.csv")
@@ -154,10 +128,10 @@ sales_rename = read_csv("./data/sales_rename_2.csv")
     ##   title = col_character(),
     ##   platform = col_character(),
     ##   total_sale = col_double(),
-    ##   na_sale = col_character(),
-    ##   pal_sale = col_character(),
-    ##   japan_sale = col_character(),
-    ##   other_sale = col_character()
+    ##   na_sale = col_double(),
+    ##   pal_sale = col_double(),
+    ##   japan_sale = col_double(),
+    ##   other_sale = col_double()
     ## )
 
 ``` r
@@ -179,20 +153,8 @@ metacritic = read_csv("data/metacritic.csv")
     ## )
 
 ``` r
-game_df = full_join(metacritic, sales_rename, by = "title", "platform")
+game_df = 
+  left_join(metacritic, sales_rename, by = c("title", "platform"))
 
-game_data =
-  game_df %>% 
-  mutate(platform.y = coalesce(platform.x, platform.y))
-  
-
-game_new_data = 
-  game_data %>% 
-  select(-platform.x) %>% 
-  rename(platform = platform.y)
-
-game = game_new_data[!duplicated(game_new_data[c(1,10)]),]
-  
-
-write_csv(game, "./data/game_2.csv")
+write_csv(game_df, "./data/game_2.csv")
 ```
