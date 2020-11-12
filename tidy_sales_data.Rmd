@@ -8,6 +8,7 @@ This document contains steps to clean the sales data.
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(dplyr)
 ```
 
 
@@ -95,5 +96,6 @@ game_df =
   left_join(metacritic, sales_rename, by = c("title", "platform"))
 
 write_csv(game_df, "./data/game_2.csv")
+
 ```
 
