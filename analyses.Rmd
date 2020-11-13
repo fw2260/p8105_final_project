@@ -11,6 +11,15 @@ library(tidyverse)
 ```
 
 
+```{r message = FALSE, warning = FALSE}
+game_df = read_csv("./data/game_2.csv")
+
+game_df = game_df %>% 
+  separate(release_date, into = c("month_day","year"), sep = ",") %>% 
+  separate(genre, into = "genre", sep = ",")
+```
+
+
 ## 1. User score vs Metascore
 
 ```{r}
