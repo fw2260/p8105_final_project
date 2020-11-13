@@ -1,35 +1,49 @@
 ---
 title: "Analyses"
 date: "11/8/2020"
-output: github_document
+output: html_document
 ---
 
 This document contains all of our analyses.
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(plotly)
+library(corrplot)
+source("http://www.sthda.com/upload/rquery_cormat.r")
 ```
 
 
 ```{r message = FALSE, warning = FALSE}
-game_df = read_csv("./data/game_2.csv")
-
-game_df = game_df %>% 
+game_df = read_csv("./data/game_2.csv") %>% 
   separate(release_date, into = c("month_day","year"), sep = ",") %>% 
   separate(genre, into = "genre", sep = ",")
 ```
 
 
-## 1. User score vs Metascore
+## 1. User score vs Metascore vs Sales?
 
 ```{r}
-
+game_df %>% 
+  drop_na() %>% 
+  select(meta_score, user_score, total_sale) %>% 
+  mutate(user_score = as.numeric(user_score)) %>% 
+  rquery.cormat()
 ```
 
 
 ## 2. Total sales by genre
 
 ```{r}
+game_df %>% 
+  drop_na() %>% 
+  group_by(genre) %>% 
+  mutate(count = n(),
+         genre = str_c(genre, " (n=", count, ")")) %>%  
+  ungroup() %>% 
+  mutate(genre = fct_reorder(genre, total_sale),
+         text_label = str_c("Title: ", title, "\nPublisher: ", publisher)) %>% 
+  plot_ly(x = ~total_sale, color = ~genre, type = "box", colors = "viridis", text = ~text_label)
 
 ```
 
