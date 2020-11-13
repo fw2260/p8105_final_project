@@ -21,7 +21,7 @@ sales_data =
   read_csv("./data/sales.csv") %>%
   janitor::clean_names() %>% 
   mutate_at(3:7, funs(gsub("m$","",.))) %>% 
-  mutate_at(3:7, funs(gsub("N/A",NA,.)))
+  mutate_at(3:7, funs(gsub("N/A",NA,.))) 
 ```
 
     ## Parsed with column specification:
@@ -117,7 +117,7 @@ write the new sales dataset into a .csv file
 write_csv(sales_df, "./data/sales_rename_2.csv")
 ```
 
-Merge the Metacritic dataset and the sales dataset
+Merge the Metacritic dataset and the sales dataset, change “tbd” to NA
 
 ``` r
 sales_rename = read_csv("./data/sales_rename_2.csv")
@@ -135,7 +135,9 @@ sales_rename = read_csv("./data/sales_rename_2.csv")
     ## )
 
 ``` r
-metacritic = read_csv("data/metacritic.csv")
+metacritic = 
+  read_csv("data/metacritic.csv") %>% 
+  mutate(user_score = na_if(user_score, "tbd"))
 ```
 
     ## Parsed with column specification:
@@ -154,7 +156,7 @@ metacritic = read_csv("data/metacritic.csv")
 
 ``` r
 game_df = 
-  left_join(metacritic, sales_rename, by = c("title", "platform"))
+  left_join(metacritic, sales_rename, by = c("title", "platform")) 
 
 write_csv(game_df, "./data/game_2.csv")
 ```
