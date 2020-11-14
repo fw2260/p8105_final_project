@@ -21,11 +21,10 @@ game_df = read_csv("./data/game_2.csv") %>%
 ```
 
 
-## 1. User score vs Metascore vs Sales?
+## 1. User score vs Metascore (vs Sales)?
 
 ```{r}
 game_df %>% 
-  drop_na() %>% 
   select(meta_score, user_score, total_sale) %>% 
   mutate(user_score = as.numeric(user_score)) %>% 
   rquery.cormat()
@@ -36,7 +35,6 @@ game_df %>%
 
 ```{r}
 game_df %>% 
-  drop_na() %>% 
   group_by(genre) %>% 
   mutate(count = n(),
          genre = str_c(genre, " (n=", count, ")")) %>%  
