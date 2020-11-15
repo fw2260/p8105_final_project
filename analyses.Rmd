@@ -9,6 +9,7 @@ This document contains all of our analyses.
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(plotly)
+library(ggpubr)
 library(corrplot)
 source("http://www.sthda.com/upload/rquery_cormat.r")
 ```
@@ -25,13 +26,35 @@ game_df = read_csv("./data/game_2.csv") %>%
 
 ```{r}
 game_df %>% 
+  mutate(text_label = str_c("Title: ", title, "\nPublisher: ", publisher)) %>% 
+  plot_ly(x = ~meta_score, y = ~user_score, type = "scatter", text = ~text_label)
+
+game_df %>% 
+  group_by(genre) %>% 
+  mutate(count = n()) %>% 
+  filter(count > 3) %>% 
+  ggscatter(., x = "meta_score", y = "user_score", add = "reg.line") +
+  facet_wrap(~genre) +
+  stat_cor(label.x = 3, label.y = 11) +
+  stat_regline_equation(label.x = 3, label.y = 10)
+
+game_df %>% 
+  group_by(platform) %>% 
+  mutate(count = n()) %>% 
+  filter(count > 3) %>% 
+  ggscatter(., x = "meta_score", y = "user_score", add = "reg.line") +
+  facet_wrap(~platform) +
+  stat_cor(label.x = 3, label.y = 11) +
+  stat_regline_equation(label.x = 3, label.y = 10)
+
+game_df %>% 
   select(meta_score, user_score, total_sale) %>% 
   mutate(user_score = as.numeric(user_score)) %>% 
   rquery.cormat()
 ```
 
 
-## 2. Total sales by genre
+## 2. Total sales by genre / Distribution of sales by genre
 
 ```{r}
 game_df %>% 
