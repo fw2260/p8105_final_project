@@ -157,7 +157,7 @@ metacritic =
 ``` r
 game_df = 
   left_join(metacritic, sales_rename, by = c("title", "platform")) %>% 
-  drop_na()
+  drop_na(title:total_sale)
 
 write_csv(game_df, "./data/game_2.csv")
 ```
