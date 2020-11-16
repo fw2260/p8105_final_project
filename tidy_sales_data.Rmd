@@ -11,20 +11,11 @@ library(tidyverse)
 library(dplyr)
 ```
 
+## Clean Sales Dataset
 
 Load sales data, remove `m` in each sale column, and change "N/A" to NA
 
 ```{r}
-#sales_data = 
-#  read_csv("data/sales.csv") %>% 
-#  separate(total_sale, into = c("total_sale", NA), sep = "[m]") %>% 
-#  separate(na_sale, into = c("na_sale", NA), sep = "[m]") %>% 
-#  separate(pal_sale, into = c("pal_sale", NA), sep = "[m]") %>% 
-#  separate(japan_sale, into = c("japan_sale", NA), sep = "[m]") %>% 
-#  separate(other_sale, into = c("other_sale", NA), sep = "[m]")
-
-# a shorter one. It also works!
-
 sales_data = 
   read_csv("./data/sales.csv") %>%
   janitor::clean_names() %>% 
@@ -44,7 +35,7 @@ There are `r sales_data %>% distinct(console) %>% nrow` unique consoles listed.
 
 Rename console in sales data
 
-**NOTE: The following console cannot be found to match in the `metacritic.csv` file: 2600, GBC, GEN, PSN, SAT, SCD, WS, VC, NG, WW, PCE, XBL, 3D0, GG, OSX, PCFX, Mob
+**NOTE: The following console cannot be found to match in the `metacritic.csv` file: NES, 2600, GBC, GEN, PSN, SAT, SCD, WS, VC, NG, WW, PCE, XBL, 3D0, GG, OSX, PCFX, Mob, SNES
 
 
 ```{r}
@@ -57,7 +48,7 @@ sales_df =
        PS2 = "PlayStation 2",
        PS3 = "PlayStation 3",
        PS4 = "PlayStation 4",
-       GB = "Game Boy Advance",
+       GBA = "Game Boy Advance",
        X360 = "Xbox 360",
        NS = "Switch",
        N64 = "Nintendo 64",
@@ -74,29 +65,77 @@ sales_df =
  
 ```
 
-#New name for console values
-
 write the new sales dataset into a .csv file
 ```{r}
-#sales_df = 
-#  sales_data %>% 
-#  mutate(console = console_df) %>% 
-#  rename(platform = console)
-
 write_csv(sales_df, "./data/sales_rename_2.csv")
 ```
 
-Merge the Metacritic dataset and the sales dataset, change "tbd" to NA
+## Merge Metacritic and Sales Dataset
+
+Merge the Metacritic dataset and the sales dataset, change "tbd" to NA and tidy pokemon games in metacritic dataset
 
 ```{r}
 sales_rename = read_csv("./data/sales_rename_2.csv")
-metacritic = 
-  read_csv("data/metacritic.csv") %>% 
-  mutate(user_score = na_if(user_score, "tbd"))
 
+metacritic = read_csv("./data/metacritic.csv") 
+
+metacritic= 
+  metacritic %>% 
+  mutate(
+    user_score = na_if(user_score, "tbd"),
+    user_score = as.numeric(user_score)) 
+
+metacritic_pokemon =
+  metacritic %>% 
+  filter(str_detect(title,"^Pokemon+")) %>% 
+  mutate(
+    title = str_replace(title,"e","é")
+  ) %>% 
+  group_by(release_date) %>%
+  summarise(
+    user_score = mean(user_score),
+    meta_score = mean(meta_score),
+    title = paste(title, collapse = " / "),
+    platform = platform,
+    developer = developer,
+    publisher = publisher,
+    genre = genre,
+    esrb_rating = esrb_rating
+  ) %>% 
+  distinct(title, .keep_all = TRUE) 
+
+metacritic_recode = 
+  metacritic %>% 
+  filter(!(str_detect(title,"^Pokémon+"))) %>% 
+  bind_rows(metacritic_pokemon) %>% 
+  mutate(
+    title = recode(title,
+      "Pokémon Sun / Pokémon Moon" = "Pokémon Sun/Moon",
+      "Pokémon Omega Ruby / Pokémon Alpha Sapphire" = 
+      "Pokémon Omega Ruby/Pokémon Alpha Sapphire",
+      "Pokémon Y / Pokémon X" = 
+      "Pokémon X/Y",
+      "Pokémon White Version / Pokémon Black Version" =
+      "Pokémon Black / White Version",
+      "Pokémon FireRed Version / Pokémon LeafGreen Version" =
+      "Pokémon FireRed / LeafGreen Version",
+      "Pokémon SoulSilver Version / Pokémon HeartGold Version" =
+      "Pokémon Heart Gold / Soul Silver Version",
+      "Pokémon Pearl Version / Pokémon Diamond Version" =
+      "Pokémon Diamond / Pearl Version",
+      "Pokémon Mystery Dungeon: Explorers of Time / Pokémon Darkness" =
+      "Pokémon Mystery Dungeon: Explorers of Time / Darkness" 
+    )
+  ) %>% 
+  select(-link)
+
+  
 game_df = 
-  left_join(metacritic, sales_rename, by = c("title", "platform")) %>% 
-  drop_na(title:total_sale)
+  metacritic_recode %>% 
+  left_join(sales_rename, by = c("title", "platform")) %>% 
+  filter(platform != "PC") %>% 
+  filter(total_sale != 0) %>% 
+  filter(!is.na(total_sale)) 
 
 write_csv(game_df, "./data/game_2.csv")
 
