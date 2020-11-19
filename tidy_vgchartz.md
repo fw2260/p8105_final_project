@@ -12,7 +12,8 @@ game_df <-
   unnest(data) %>% 
   select(-path) %>% 
   select(title, console, genre, release_date, everything()) %>%   mutate_at(7:11, funs(gsub("m","",.))) %>% 
-  mutate_at(7:11, funs(gsub("N/A",NA,.)))
+  mutate_at(7:11, funs(gsub("N/A",NA,.))) %>% 
+  mutate(release_date = lubridate::dmy(release_date))
 ```
 
     ## 
@@ -238,6 +239,12 @@ game_df <-
     ##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
     ## This warning is displayed once every 8 hours.
     ## Call `lifecycle::last_warnings()` to see where this warning was generated.
+
+    ## Warning: Problem with `mutate()` input `release_date`.
+    ## i  8 failed to parse.
+    ## i Input `release_date` is `lubridate::dmy(release_date)`.
+
+    ## Warning: 8 failed to parse.
 
 ``` r
 write_csv(game_df, "./data/vgchartz.csv")
