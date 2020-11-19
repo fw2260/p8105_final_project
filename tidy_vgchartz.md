@@ -14,7 +14,7 @@ game_df <-
   select(title, console, genre, release_date, everything()) %>%   mutate_at(7:11, funs(gsub("m","",.))) %>% 
   mutate_at(7:11, funs(gsub("N/A",NA,.))) %>% 
   mutate(release_date = lubridate::dmy(release_date)) %>% 
-  distinct(title, console, genre, .keep_all = T)
+  distinct(.keep_all = T)
 ```
 
     ## 
