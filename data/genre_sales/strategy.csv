@@ -1,0 +1,801 @@
+title,console,publisher,developer,total_sale,na_sale,pal_sale,japan_sale,other_sale,release_date
+Pokémon Stadium    ,N64,Nintendo  ,HAL Laboratory  ,5.45m,3.18m,1.24m,0.94m,0.09m,06th Mar 00  
+Warzone 2100    ,PS,Eidos Interactive  ,Pumpkin Studios  ,5.01m,2.79m,1.89m,N/A,0.33m,31st May 99  
+StarCraft II: Wings of Liberty    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.86m,2.60m,1.70m,N/A,0.56m,27th Jul 10  
+Warcraft II: Tides of Darkness    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.21m,1.70m,2.27m,N/A,0.23m,30th Apr 96  
+Pokémon Trading Card Game    ,GB,Nintendo  ,Hudson Soft  ,3.70m,1.49m,0.73m,1.38m,0.10m,10th Apr 00  
+Command & Conquer: Red Alert    ,PC,Virgin Interactive  ,Westwood Studios  ,2.85m,1.37m,1.34m,N/A,0.14m,01st Nov 96  
+Pokémon Stadium 2    ,N64,Nintendo  ,HAL Laboratory  ,2.73m,1.02m,0.36m,1.13m,0.23m,28th Mar 01  
+Halo Wars    ,X360,Microsoft Game Studios  ,Ensemble Studios  ,2.67m,1.58m,0.80m,0.04m,0.25m,03rd Mar 09  
+Mario + Rabbids: Kingdom Battle    ,NS,Ubisoft  ,Ubisoft Milan  ,2.59m,1.10m,1.08m,0.22m,0.20m,29th Aug 17  
+Theme Hospital    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.40m,2.30m,0.10m,N/A,N/A,31st Mar 97  
+Sim Theme Park    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.08m,2.04m,0.04m,N/A,N/A,31st Oct 99  
+Warcraft: Orcs & Humans    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,2.08m,0.89m,1.08m,N/A,0.11m,15th Jan 94  
+Yu-Gi-Oh! The Eternal Duelist Soul    ,GBA,Konami  ,Konami Computer Entertainment Japan  ,2.07m,1.64m,0.36m,N/A,0.07m,15th Oct 02  
+Sid Meier's Civilization V    ,PC,2K Games  ,Firaxis Games  ,1.70m,1.00m,0.53m,N/A,0.17m,21st Sep 10  
+StarCraft II: Heart of the Swarm    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.67m,0.85m,0.68m,N/A,0.14m,12th Mar 13  
+Pikmin    ,GC,Nintendo  ,Nintendo EAD  ,1.63m,0.78m,0.25m,0.56m,0.04m,03rd Dec 01  
+Yu-Gi-Oh! Duel Monsters    ,GB,Konami  ,Konami Computer Entertainment Shinjuku  ,1.61m,N/A,N/A,1.61m,0.01m,16th Dec 98  
+Command & Conquer: Tiberian Sun    ,PC,Westwood Studios  ,Westwood Studios  ,1.55m,1.55m,0.00m,N/A,N/A,24th Aug 99  
+Warcraft III: The Frozen Throne    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.54m,0.58m,0.87m,N/A,0.09m,01st Jul 03  
+LEGO Battles: Ninjago    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.48m,1.03m,0.33m,N/A,0.12m,12th Apr 11  
+Anno 2070    ,PC,Ubisoft  ,Blue Byte Studio  ,1.40m,N/A,1.14m,N/A,0.26m,17th Nov 11  
+Pocket Monsters Stadium    ,N64,Nintendo  ,HAL Laboratory  ,1.37m,N/A,N/A,1.37m,N/A,01st Aug 98  
+Command & Conquer: Red Alert 2    ,PC,Electronic Arts  ,Westwood Studios  ,1.34m,1.32m,0.02m,N/A,N/A,21st Oct 00  
+LEGO Battles    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.29m,0.79m,0.38m,N/A,0.12m,10th Jun 09  
+RollerCoaster Tycoon 2    ,PC,Atari  ,Chris Sawyer  ,1.25m,1.19m,0.06m,N/A,N/A,15th Oct 02  
+Pikmin 3    ,WiiU,Nintendo  ,Nintendo EAD  ,1.23m,0.47m,0.38m,0.29m,0.08m,04th Aug 13  
+Pikmin 2    ,GC,Nintendo  ,Nintendo EAD  ,1.20m,0.48m,0.13m,0.56m,0.03m,30th Aug 04  
+Spore    ,PC,Electronic Arts  ,Maxis  ,1.16m,0.03m,1.06m,N/A,0.07m,07th Sep 08  
+Plants vs. Zombies    ,DS,PopCap Games  ,PopCap Games  ,1.11m,0.90m,0.13m,N/A,0.09m,18th Jan 11  
+Yu-Gi-Oh! Duel Monsters II: Dark Duel Stories    ,GB,Konami  ,Konami  ,1.10m,N/A,N/A,1.10m,0.00m,08th Jul 99  
+Empire: Total War    ,PC,Sega  ,The Creative Assembly  ,1.07m,0.01m,0.98m,N/A,0.09m,03rd Mar 09  
+Worms Armageddon    ,PS,Microprose  ,Team17 Software  ,1.06m,0.18m,0.81m,N/A,0.08m,30th Nov 99  
+Zoo Tycoon DS    ,DS,THQ  ,Blue Fang Games  ,0.98m,0.86m,0.03m,0.01m,0.07m,11th Oct 05  
+Fire Emblem    ,GBA,Nintendo  ,Intelligent Systems  ,0.97m,0.49m,0.18m,0.29m,0.01m,03rd Nov 03  
+Kessen    ,PS2,Electronic Arts  ,Koei  ,0.95m,0.27m,0.21m,0.41m,0.07m,13th Nov 00  
+Tom Clancy's EndWar    ,X360,Ubisoft  ,Ubisoft Shanghai  ,0.91m,0.58m,0.24m,0.01m,0.09m,04th Nov 08  
+Fire Emblem: The Sacred Stones    ,GBA,Nintendo  ,Intelligent Systems  ,0.89m,0.42m,0.16m,0.30m,0.02m,23rd May 05  
+Pokémon Card GB2: GRdan Sanjou    ,GB,Nintendo  ,Hudson Soft  ,0.89m,N/A,N/A,0.89m,N/A,28th Mar 01  
+Metal Gear Ac!d    ,PSP,Konami  ,Konami  ,0.87m,0.32m,0.26m,0.12m,0.17m,22nd Mar 05  
+Sid Meier's Civilization Revolution    ,X360,2K Games  ,Firaxis Games  ,0.83m,0.58m,0.17m,0.00m,0.07m,08th Jul 08  
+Battle of Giants: Dinosaurs    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.81m,0.37m,0.35m,N/A,0.08m,21st Oct 08  
+Super Robot Taisen α    ,PS,Banpresto  ,Banpresto  ,0.80m,N/A,N/A,0.75m,0.05m,25th May 00  
+Invizimals    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.79m,0.17m,0.51m,N/A,0.11m,12th Oct 10  
+Sid Meier's Civilization Revolution    ,PS3,2K Games  ,Firaxis Games  ,0.78m,0.49m,0.19m,0.01m,0.09m,08th Jul 08  
+Battle Stations    ,PS,Electronic Arts  ,Realtime Associates  ,0.78m,0.43m,0.29m,N/A,0.05m,31st Mar 97  
+Worms: Open Warfare    ,PSP,THQ  ,Team17 Software  ,0.77m,0.11m,0.43m,N/A,0.23m,22nd Mar 06  
+Full Spectrum Warrior    ,XB,THQ  ,Pandemic Studios  ,0.73m,0.54m,0.16m,N/A,0.03m,01st Jun 04  
+XCOM: Enemy Unknown    ,PC,2K Games  ,Firaxis Games  ,0.72m,0.28m,0.37m,N/A,0.07m,09th Oct 12  
+SD Gundam G Generation    ,PS,Bandai  ,Bandai  ,0.72m,N/A,N/A,0.67m,0.05m,06th Aug 98  
+Yu-Gi-Oh! The Falsebound Kingdom    ,GC,Konami  ,Konami  ,0.71m,0.49m,0.13m,0.07m,0.02m,04th Nov 03  
+Command & Conquer: Red Alert Retaliation    ,PS,Virgin Interactive  ,Westwood Studios  ,0.70m,0.39m,0.27m,N/A,0.05m,28th Aug 98  
+Advance Wars    ,GBA,Nintendo  ,Intelligent Systems  ,0.70m,0.50m,0.19m,N/A,0.01m,09th Sep 01  
+Fire Emblem: Monshou no Nazo    ,SNES,Nintendo  ,Intelligent Systems  ,0.70m,N/A,N/A,0.70m,N/A,21st Jan 94  
+Total War: Rome II    ,PC,Sega  ,The Creative Assembly  ,0.69m,0.12m,0.52m,N/A,0.05m,03rd Sep 13  
+Tom Clancy's EndWar    ,PS3,Ubisoft  ,Ubisoft Shanghai  ,0.67m,0.33m,0.22m,0.01m,0.11m,04th Nov 08  
+Napoleon: Total War    ,PC,Sega  ,The Creative Assembly  ,0.67m,0.02m,0.54m,N/A,0.11m,23rd Feb 10  
+Command & Conquer: Red Alert 3    ,PC,Electronic Arts  ,EA Los Angeles  ,0.66m,0.01m,0.64m,N/A,0.02m,28th Oct 08  
+Thrillville    ,PS2,LucasArts  ,Frontier Developments  ,0.66m,0.55m,0.02m,N/A,0.09m,21st Nov 06  
+Advance Wars 2: Black Hole Rising    ,GBA,Nintendo  ,Intelligent Systems  ,0.65m,0.47m,0.17m,N/A,0.01m,24th Jun 03  
+Super Robot Taisen Impact    ,PS2,Banpresto  ,Banpresto  ,0.65m,N/A,N/A,0.65m,N/A,28th Mar 02  
+New Play Control! Pikmin    ,Wii,Nintendo  ,Nintendo EAD  ,0.64m,0.28m,0.13m,0.19m,0.04m,09th Mar 09  
+Sim Theme Park    ,PS,Electronic Arts  ,Climax Group  ,0.63m,0.35m,0.24m,N/A,0.04m,24th Oct 99  
+Nobunaga no Yabou: Haouden    ,SNES,KOEI  ,Koei  ,0.62m,0.30m,N/A,0.32m,N/A,09th Dec 93  
+Battle of Giants: Dragons    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.62m,0.30m,0.25m,N/A,0.06m,29th Sep 09  
+Super Robot Taisen α Gaiden    ,PS,Banpresto  ,Banpresto  ,0.62m,N/A,N/A,0.58m,0.04m,29th Mar 01  
+Fire Emblem: Shadow Dragon    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.29m,0.03m,0.27m,0.03m,16th Feb 09  
+Advance Wars: Days of Ruin    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.43m,0.13m,N/A,0.05m,21st Jan 08  
+New Play Control! Pikmin 2    ,Wii,Nintendo  ,Nintendo EAD  ,0.61m,0.11m,0.13m,0.34m,0.02m,10th Jun 12  
+Shogun 2: Total War    ,PC,Sega  ,The Creative Assembly  ,0.60m,0.19m,0.32m,N/A,0.08m,15th Mar 11  
+Front Mission    ,SNES,Square  ,G-Craft  ,0.60m,N/A,N/A,0.60m,N/A,24th Feb 95  
+Dai-2-Ji Super Robot Taisen α    ,PS2,Banpresto  ,Banpresto  ,0.60m,N/A,N/A,0.60m,N/A,27th Mar 03  
+Dai-3-Ji Super Robot Taisen α: Shuuen no Ginga e    ,PS2,Banpresto  ,Banpresto  ,0.59m,N/A,N/A,0.59m,N/A,28th Jul 05  
+XCOM: Enemy Unknown    ,PS3,2K Games  ,Firaxis Games  ,0.59m,0.25m,0.24m,N/A,0.10m,09th Oct 12  
+Fire Emblem: Seisen no Keifu    ,SNES,Nintendo  ,Intelligent Systems  ,0.58m,N/A,N/A,0.58m,N/A,14th May 96  
+Theme Park    ,PS,Electronic Arts  ,Bullfrog Productions  ,0.57m,0.24m,0.16m,0.13m,0.04m,01st Jan 95  
+StarCraft II: Legacy of the Void    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,0.57m,0.23m,0.30m,N/A,0.05m,10th Nov 15  
+Mobile Suit Gundam: Giren no Yabou- Zeon no Keifu    ,PS,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.54m,0.04m,10th Feb 00  
+SD Gundam G Generation Neo    ,PS2,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.57m,N/A,28th Nov 02  
+Yu-Gi-Oh! Reshef of Destruction    ,GBA,Konami  ,Konami  ,0.56m,0.40m,0.15m,N/A,0.01m,29th Jun 04  
+Shin Super Robot Taisen    ,PS,Banpresto  ,Winky Soft  ,0.55m,N/A,N/A,0.52m,0.04m,27th Dec 96  
+SD Gundam G Generation Zero    ,PS,Bandai  ,Bandai  ,0.55m,N/A,N/A,0.51m,0.04m,12th Aug 99  
+Super Robot Taisen F Kanketsuhen    ,SAT,Banpresto  ,Banpresto  ,0.55m,N/A,N/A,0.55m,0.00m,23rd Apr 98  
+Front Mission 4    ,PS2,Square Enix  ,Square Enix  ,0.54m,0.14m,0.11m,0.25m,0.04m,15th Jun 04  
+Romance of the Three Kingdoms IV: Wall of Fire    ,SNES,KOEI  ,Koei / Inis  ,0.53m,N/A,N/A,0.53m,N/A,13th Jan 95  
+Front Mission 2    ,PS,Square  ,SquareSoft  ,0.53m,N/A,N/A,0.49m,0.03m,25th Sep 97  
+Front Mission 3    ,PS,Square  ,SquareSoft  ,0.52m,0.10m,0.07m,0.31m,0.03m,29th Feb 00  
+Halo Wars 2    ,XOne,Microsoft Studios  ,Creative Assembly  ,0.51m,0.31m,0.15m,N/A,0.05m,21st Feb 17  
+Dai-4-Ji Super Robot Taisen S    ,PS,Banpresto  ,Winky Soft  ,0.51m,N/A,N/A,0.48m,0.03m,26th Jan 96  
+R.U.S.E.    ,PS3,Ubisoft  ,Eugen Systems  ,0.50m,0.18m,0.22m,0.02m,0.08m,07th Sep 10  
+Super Robot Taisen MX    ,PS2,Banpresto  ,TOSE  ,0.50m,N/A,N/A,0.50m,N/A,27th May 04  
+Super Robot Taisen Z    ,PS2,Namco Bandai  ,Banpresto  ,0.50m,N/A,N/A,0.50m,N/A,25th Sep 08  
+Fire Emblem: Radiant Dawn    ,Wii,Nintendo  ,Intelligent Systems  ,0.49m,0.27m,0.03m,0.17m,0.03m,05th Nov 07  
+Theme Park Roller Coaster    ,PS2,Electronic Arts  ,Bullfrog Productions  ,0.48m,0.23m,0.18m,N/A,0.06m,04th Dec 00  
+"Warhammer 40,000: Dawn of War II    ",PC,THQ  ,Relic  ,0.47m,N/A,0.45m,N/A,0.01m,19th Feb 09  
+Kessen II    ,PS2,KOEI  ,Koei  ,0.46m,0.13m,0.10m,0.20m,0.03m,26th Sep 01  
+Command & Conquer: Red Alert 3    ,X360,Bethesda Softworks  ,EA Los Angeles  ,0.45m,0.18m,0.23m,N/A,0.05m,11th Nov 08  
+Worms: Open Warfare 2    ,PSP,THQ  ,Team17 Software / Two Tribes  ,0.45m,0.04m,0.27m,N/A,0.14m,04th Sep 07  
+Sid Meier's Civilization Revolution    ,DS,2K Games  ,Firaxis  ,0.45m,0.37m,0.03m,0.02m,0.03m,08th Jul 08  
+Super Robot Taisen OG: Original Generations    ,PS2,Banpresto  ,Banpresto  ,0.44m,N/A,N/A,0.44m,N/A,28th Jun 07  
+Yu-Gi-Oh! 5D's Tag Force 4    ,PSP,Konami  ,Konami  ,0.44m,0.19m,0.07m,0.12m,0.05m,17th Nov 09  
+Sid Meier's Civilization VI    ,PC,2K Games  ,Firaxis Games  ,0.44m,0.12m,0.29m,N/A,0.03m,21st Oct 16  
+Thrillville: Off the Rails    ,Wii,LucasArts  ,Frontier Developments  ,0.44m,0.38m,0.02m,N/A,0.03m,09th Oct 07  
+Dai-2-Ji Super Robot Taisen Z: Hakai-hen    ,PSP,Banpresto  ,Banpresto  ,0.42m,N/A,N/A,0.42m,N/A,14th Apr 11  
+Command & Conquer 3: Tiberium Wars    ,X360,Electronic Arts  ,EA Los Angeles  ,0.42m,0.35m,0.04m,N/A,0.03m,08th May 07  
+Thrillville: Off the Rails    ,PS2,LucasArts  ,Frontier Developments  ,0.42m,0.20m,0.16m,N/A,0.05m,09th Oct 07  
+Yu-Gi-Oh! GX: Tag Force 2    ,PSP,Konami  ,Konami  ,0.42m,0.03m,0.19m,0.10m,0.10m,18th Sep 07  
+Command & Conquer: Red Alert    ,PS,Westwood Studios  ,Westwood Studios  ,0.41m,0.23m,0.16m,N/A,0.03m,31st Oct 97  
+Pet in TV    ,PS,Sony Computer Entertainment  ,SCE  ,0.40m,N/A,N/A,0.38m,0.03m,01st Aug 98  
+Battalion Wars    ,GC,Nintendo  ,Kuju Entertainment  ,0.40m,0.25m,0.07m,0.07m,0.01m,19th Sep 05  
+Command & Conquer    ,PS,Westwood Studios  ,Westwood Studios  ,0.40m,0.22m,0.15m,N/A,0.03m,28th Feb 97  
+SD Gundam G Generation Seed    ,PS2,Bandai  ,Bandai  ,0.40m,N/A,N/A,0.40m,N/A,19th Feb 04  
+Combat of Giants: Dinosaurs 3D    ,3DS,Ubisoft  ,Ubisoft  ,0.39m,0.25m,0.07m,0.05m,0.03m,22nd Mar 11  
+Advance Wars: Dual Strike    ,DS,Nintendo  ,Intelligent Systems  ,0.39m,0.30m,0.03m,0.04m,0.03m,22nd Aug 05  
+SD Gundam G Generation Spirits    ,PS2,Namco Bandai  ,Tom Create  ,0.38m,N/A,N/A,0.38m,N/A,29th Nov 07  
+Mobile Suit Gundam: Giren no Yabou Zeon Dokuritsu Sensouden    ,PS2,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.38m,N/A,02nd May 02  
+SD Gundam G Generation-F    ,PS,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.36m,0.02m,03rd Aug 00  
+Risk: Global Domination    ,PS2,Atari  ,Cyberlore Studios  ,0.38m,0.19m,0.15m,N/A,0.05m,05th Nov 03  
+Dai-4-Ji Super Robot Taisen    ,SNES,Banpresto  ,Banpresto  ,0.38m,N/A,N/A,0.38m,N/A,17th Mar 95  
+Age of Empires III    ,PC,Microsoft Game Studios  ,Ensemble Studios  ,0.37m,N/A,0.33m,N/A,0.04m,18th Oct 05  
+Super Robot Taisen EX    ,SNES,Banpresto  ,WinkySoft  ,0.37m,N/A,N/A,0.37m,N/A,25th Mar 94  
+Mini-Yonku GB: Let's & Go!!    ,GB,ASCII Entertainment  ,Jupiter Multimedia  ,0.37m,N/A,N/A,0.37m,0.00m,23rd May 97  
+Medieval II: Total War Gold Edition    ,PC,Sega  ,The Creative Assembly  ,0.36m,N/A,0.34m,N/A,0.03m,05th Feb 08  
+Dai-2-Ji Super Robot Taisen Z Saisei-hen    ,PSP,Namco Bandai Games  ,Banpresto  ,0.36m,N/A,N/A,0.36m,N/A,05th Apr 12  
+Super Robot Taisen A    ,GBA,Banpresto  ,Banpresto  ,0.36m,N/A,N/A,0.35m,0.01m,21st Sep 01  
+Worms: Open Warfare 2    ,DS,THQ  ,Team17 Software / Two Tribes  ,0.35m,0.07m,0.24m,N/A,0.04m,04th Sep 07  
+Command & Conquer: Red Alert 3 Ultimate Edition    ,PS3,Electronic Arts  ,EA Los Angeles  ,0.35m,0.14m,0.16m,N/A,0.06m,23rd Mar 09  
+Tropico 4    ,X360,Kalypso  ,Haemimont Games  ,0.35m,0.20m,0.12m,N/A,0.03m,18th Oct 11  
+Yu-Gi-Oh! 5D's Tag Force 5    ,PSP,Konami  ,Konami  ,0.35m,0.13m,0.05m,0.14m,0.03m,26th Oct 10  
+SD Gundam G Generation World    ,PSP,Namco Bandai  ,Tom Create  ,0.34m,N/A,N/A,0.34m,N/A,24th Feb 11  
+Battalion Wars 2    ,Wii,Nintendo  ,Kuju Entertainment  ,0.34m,0.22m,0.02m,0.08m,0.02m,29th Oct 07  
+Supreme Commander 2    ,X360,Square Enix  ,Gas Powered Games  ,0.34m,0.23m,0.09m,N/A,0.03m,16th Mar 10  
+Iron Storm    ,SAT,Working Designs  ,SystemSoft  ,0.34m,N/A,N/A,0.34m,0.00m,01st Jan 96  
+Tom Clancy's Ghost Recon: Shadow Wars    ,3DS,Ubisoft  ,Ubisoft  ,0.34m,0.22m,0.10m,N/A,0.03m,22nd Mar 11  
+The Eye of Judgment    ,PS3,Sony Computer Entertainment  ,SCE Japan Studio  ,0.34m,0.28m,0.00m,0.02m,0.03m,24th Oct 07  
+Kidou Senshi Gundam F91: Formula Senki 0122    ,SNES,Bandai  ,Bandai  ,0.33m,N/A,N/A,0.33m,0.00m,06th Jul 91  
+"Warhammer 40,000: Squad Command    ",PSP,THQ  ,RedLynx  ,0.33m,0.11m,0.14m,N/A,0.08m,12th Nov 07  
+Battlestations: Pacific    ,X360,Eidos Interactive  ,Eidos Studios Hungary  ,0.32m,0.17m,0.11m,0.01m,0.03m,12th May 09  
+Dragon Quest Monsters: Battle Road Victory    ,Wii,Square Enix  ,Armor Project/Bird Studio  ,0.32m,N/A,N/A,0.32m,N/A,15th Jul 10  
+Shin Super Robot Taisen Special Disk    ,PS,Banpresto  ,Banpresto  ,0.32m,N/A,N/A,0.30m,0.02m,28th Mar 97  
+Kingdom Under Fire: The Crusaders    ,XB,Microsoft  ,Phantagram  ,0.32m,0.24m,0.07m,N/A,0.01m,12th Oct 04  
+Romance of the Three Kingdoms VII    ,PS2,KOEI  ,Koei  ,0.32m,0.08m,0.06m,0.16m,0.02m,25th Jun 02  
+WarCraft II: The Dark Saga    ,PS,Electronic Arts  ,Blizzard Entertainment  ,0.31m,0.18m,0.12m,N/A,0.02m,31st Aug 97  
+Yu-Gi-Oh! The Dawn of Destiny    ,XB,Konami  ,Konami Computer Entertainment Japan  ,0.31m,0.23m,0.07m,N/A,0.01m,23rd Mar 04  
+SD Gundam G Generation Wars    ,PS2,Bandai  ,Tom Create  ,0.31m,N/A,N/A,0.31m,N/A,06th Aug 09  
+Super Robot Taisen Complete Box    ,PS,Banpresto  ,Bandai  ,0.31m,N/A,N/A,0.29m,0.02m,10th Jun 99  
+XCOM 2    ,PC,2K Games  ,Firaxis Games  ,0.31m,0.12m,0.16m,N/A,0.02m,30th Nov 15  
+Lord of the Rings: Battle for Middle-Earth     ,X360,Electronic Arts  ,EA Los Angeles  ,0.31m,0.28m,N/A,N/A,0.02m,05th Jul 06  
+Yu-Gi-Oh! 5D's World Championship 2010 Reverse of Arcadia    ,DS,Konami  ,Konami  ,0.31m,0.18m,0.02m,0.09m,0.02m,23rd Feb 10  
+SD Gundam G Generation: Overworld    ,PSP,Namco Bandai Games  ,Namco Bandai Games  ,0.31m,N/A,N/A,0.31m,N/A,27th Sep 12  
+XCOM 2    ,PS4,2K Games  ,Firaxis Games  ,0.31m,0.16m,0.10m,N/A,0.05m,27th Sep 16  
+The Settlers 7: Paths to a Kingdom    ,PC,Ubisoft  ,Blue Byte  ,0.31m,N/A,0.27m,N/A,0.04m,23rd Mar 10  
+Super Robot Taisen W    ,DS,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,01st Mar 07  
+Super Robot Taisen OG: Original Generations Gaiden    ,PS2,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,27th Dec 07  
+Romance of the Three Kingdoms VIII    ,PS2,KOEI  ,Koei  ,0.30m,0.05m,0.04m,0.19m,0.01m,13th Aug 03  
+Invizimals: Shadow Zone    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.30m,0.05m,0.16m,N/A,0.08m,25th Oct 11  
+Dragon Force    ,SAT,Working Designs  ,Sega  ,0.30m,N/A,N/A,0.30m,0.00m,30th Nov 96  
+Full Spectrum Warrior    ,PS2,THQ  ,Pandemic Studios  ,0.30m,0.15m,0.11m,N/A,0.04m,21st Mar 05  
+Little King's Story    ,Wii,Xseed Games  ,Cing Inc. / Town Factory  ,0.29m,0.14m,0.11m,0.02m,0.02m,21st Jul 09  
+Kagero: Deception II    ,PS,Tecmo  ,Tecmo  ,0.29m,0.03m,0.02m,0.22m,0.02m,14th Oct 98  
+Zoo Tycoon 2 DS    ,DS,THQ  ,Altron  ,0.29m,0.24m,0.03m,N/A,0.02m,04th Feb 08  
+SD Gundam G Century    ,PS,Bandai  ,Bandai  ,0.29m,N/A,N/A,0.27m,0.02m,20th Mar 97  
+Dynasty Tactics    ,PS2,KOEI  ,Koei  ,0.29m,0.06m,0.05m,0.16m,0.02m,17th Sep 02  
+Romance of the Three Kingdoms III: Dragon of Destiny    ,SNES,KOEI  ,Koei  ,0.29m,N/A,N/A,0.29m,N/A,01st Jan 93  
+Culdcept    ,3DS,NIS America  ,OmiyaSoft  ,0.29m,0.04m,0.01m,0.23m,0.01m,03rd Oct 17  
+Lord of Darkness    ,SNES,KOEI  ,Koei  ,0.28m,N/A,N/A,0.28m,0.00m,01st Jan 94  
+Yu-Gi-Oh! World Championship 2008    ,DS,Konami  ,Konami  ,0.28m,0.13m,0.02m,0.12m,0.01m,04th Dec 07  
+Kakyuusei    ,SAT,Elf  ,Elf  ,0.28m,N/A,N/A,0.28m,0.00m,25th Apr 97  
+Civilization II    ,PS,Activision  ,LTI Grey Matter  ,0.28m,0.15m,0.11m,N/A,0.02m,20th Jan 98  
+SD Gundam G Generation Portable    ,PSP,Namco Bandai  ,Bandai Namco Games  ,0.27m,N/A,N/A,0.27m,N/A,03rd Aug 06  
+Command & Conquer    ,N64,Nintendo  ,Looking Glass Studios  ,0.27m,0.22m,0.05m,N/A,0.00m,31st May 99  
+Fire Emblem: Shin Monshou no Nazo Hikari to Kage no Eiyuu    ,DS,Nintendo  ,Intelligent Systems  ,0.27m,N/A,N/A,0.27m,N/A,15th Jul 10  
+Plants vs. Zombies    ,X360,PopCap Games  ,PopCap Games  ,0.27m,0.24m,N/A,N/A,0.02m,28th Sep 10  
+R.U.S.E.    ,X360,Ubisoft  ,Eugen Systems  ,0.27m,0.12m,0.11m,0.00m,0.02m,07th Sep 10  
+Duel Masters    ,PS2,Atari  ,High Voltage Software  ,0.27m,0.13m,0.10m,N/A,0.03m,02nd Nov 04  
+Battle of Giants: Mutant Insects    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.27m,0.09m,0.15m,N/A,0.03m,02nd Mar 10  
+Total War: Attila    ,PC,Sega  ,Creative Assembly  ,0.26m,0.11m,0.14m,N/A,0.02m,17th Feb 15  
+Tropico 4    ,PC,Kalypso  ,Haemimont Games  ,0.26m,0.10m,0.13m,N/A,0.03m,30th Aug 11  
+R.U.S.E.    ,PC,Ubisoft  ,Eugen Systems  ,0.26m,0.04m,0.19m,N/A,0.03m,07th Sep 10  
+Battlestations: Midway    ,X360,Eidos Interactive  ,Eidos Hungary  ,0.26m,0.21m,0.02m,0.00m,0.02m,30th Jan 07  
+SD Gundam G Generation: Cross Drive    ,DS,Namco Bandai  ,Vanguard  ,0.26m,N/A,N/A,0.26m,N/A,09th Aug 07  
+RollerCoaster Tycoon 3    ,PC,Atari  ,Frontier Developments  ,0.26m,0.01m,0.22m,N/A,0.02m,26th Oct 04  
+Fire Emblem: Thracia 776    ,SNES,Nintendo  ,Intelligent Systems  ,0.26m,N/A,N/A,0.26m,N/A,01st Sep 99  
+Super Robot Taisen R    ,GBA,Banpresto  ,Banpresto  ,0.26m,N/A,N/A,0.25m,0.01m,02nd Aug 02  
+Romance of the Three Kingdoms II    ,SNES,KOEI  ,Koei  ,0.25m,N/A,N/A,0.25m,N/A,01st May 92  
+A. IV Evolution: A Ressha de Ikou 4    ,PS,ArtDink  ,ArtDink  ,0.25m,N/A,N/A,0.24m,0.02m,03rd Dec 94  
+Sid Meier's Civilization VI    ,NS,2K Games  ,Firaxis Games  ,0.25m,0.12m,0.11m,0.01m,0.02m,16th Nov 18  
+Zoo Tycoon 2: Ultimate Collection    ,PC,Microsoft Game Studios  ,Blue Fang Games  ,0.25m,0.04m,0.19m,N/A,0.03m,05th Dec 08  
+Dune 2000    ,PS,Electronic Arts  ,Westwood Studios  ,0.25m,0.14m,0.09m,N/A,0.02m,11th Feb 00  
+Panzer General    ,PS,SSI  ,"Strategic Simulations, Inc.  ",0.24m,0.14m,0.09m,N/A,0.02m,01st Jan 96  
+Command & Conquer 3: Kane's Wrath    ,X360,Electronic Arts  ,EA Los Angeles  ,0.24m,0.16m,0.06m,N/A,0.02m,23rd Jun 08  
+Super Robot Taisen D    ,GBA,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.23m,0.01m,08th Aug 03  
+Anno 2205    ,PC,Ubisoft  ,Blue Byte  ,0.23m,0.04m,0.17m,N/A,0.02m,03rd Nov 15  
+Super Robot Taisen F Kanketsuhen    ,PS,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.21m,0.01m,15th Apr 99  
+Yu-Gi-Oh! GX: Tag Force 3    ,PSP,Konami  ,Konami  ,0.23m,N/A,0.03m,0.18m,0.01m,28th Nov 08  
+Code Name: S.T.E.A.M.    ,3DS,Nintendo  ,Intelligent Systems  ,0.22m,0.14m,0.05m,0.02m,0.02m,13th Mar 15  
+Age of Empires: The Age of Kings    ,DS,Majesco  ,Backbone Entertainment  ,0.22m,0.18m,0.02m,N/A,0.02m,14th Feb 06  
+Total War: WARHAMMER    ,PC,Sega  ,Creative Assembly  ,0.22m,N/A,0.21m,N/A,0.01m,24th May 16  
+Worms: Battle Islands    ,Wii,THQ  ,Team17 Software  ,0.22m,0.10m,0.10m,N/A,0.02m,23rd Nov 10  
+The Lord of the Rings: The Third Age    ,GBA,Electronic Arts  ,Griptonite Games  ,0.22m,0.16m,0.06m,N/A,0.00m,02nd Nov 04  
+Kartia: The Word of Fate    ,PS,Atlus  ,Atlus Co.  ,0.22m,0.05m,0.03m,0.12m,0.01m,31st Jul 98  
+Pokémon Stadium    ,N64,Nintendo  ,HAL Laboratory  ,5.45m,3.18m,1.24m,0.94m,0.09m,06th Mar 00  
+Warzone 2100    ,PS,Eidos Interactive  ,Pumpkin Studios  ,5.01m,2.79m,1.89m,N/A,0.33m,31st May 99  
+StarCraft II: Wings of Liberty    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.86m,2.60m,1.70m,N/A,0.56m,27th Jul 10  
+Warcraft II: Tides of Darkness    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.21m,1.70m,2.27m,N/A,0.23m,30th Apr 96  
+Pokémon Trading Card Game    ,GB,Nintendo  ,Hudson Soft  ,3.70m,1.49m,0.73m,1.38m,0.10m,10th Apr 00  
+Command & Conquer: Red Alert    ,PC,Virgin Interactive  ,Westwood Studios  ,2.85m,1.37m,1.34m,N/A,0.14m,01st Nov 96  
+Pokémon Stadium 2    ,N64,Nintendo  ,HAL Laboratory  ,2.73m,1.02m,0.36m,1.13m,0.23m,28th Mar 01  
+Halo Wars    ,X360,Microsoft Game Studios  ,Ensemble Studios  ,2.67m,1.58m,0.80m,0.04m,0.25m,03rd Mar 09  
+Mario + Rabbids: Kingdom Battle    ,NS,Ubisoft  ,Ubisoft Milan  ,2.59m,1.10m,1.08m,0.22m,0.20m,29th Aug 17  
+Theme Hospital    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.40m,2.30m,0.10m,N/A,N/A,31st Mar 97  
+Sim Theme Park    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.08m,2.04m,0.04m,N/A,N/A,31st Oct 99  
+Warcraft: Orcs & Humans    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,2.08m,0.89m,1.08m,N/A,0.11m,15th Jan 94  
+Yu-Gi-Oh! The Eternal Duelist Soul    ,GBA,Konami  ,Konami Computer Entertainment Japan  ,2.07m,1.64m,0.36m,N/A,0.07m,15th Oct 02  
+Sid Meier's Civilization V    ,PC,2K Games  ,Firaxis Games  ,1.70m,1.00m,0.53m,N/A,0.17m,21st Sep 10  
+StarCraft II: Heart of the Swarm    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.67m,0.85m,0.68m,N/A,0.14m,12th Mar 13  
+Pikmin    ,GC,Nintendo  ,Nintendo EAD  ,1.63m,0.78m,0.25m,0.56m,0.04m,03rd Dec 01  
+Yu-Gi-Oh! Duel Monsters    ,GB,Konami  ,Konami Computer Entertainment Shinjuku  ,1.61m,N/A,N/A,1.61m,0.01m,16th Dec 98  
+Command & Conquer: Tiberian Sun    ,PC,Westwood Studios  ,Westwood Studios  ,1.55m,1.55m,0.00m,N/A,N/A,24th Aug 99  
+Warcraft III: The Frozen Throne    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.54m,0.58m,0.87m,N/A,0.09m,01st Jul 03  
+LEGO Battles: Ninjago    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.48m,1.03m,0.33m,N/A,0.12m,12th Apr 11  
+Anno 2070    ,PC,Ubisoft  ,Blue Byte Studio  ,1.40m,N/A,1.14m,N/A,0.26m,17th Nov 11  
+Pocket Monsters Stadium    ,N64,Nintendo  ,HAL Laboratory  ,1.37m,N/A,N/A,1.37m,N/A,01st Aug 98  
+Command & Conquer: Red Alert 2    ,PC,Electronic Arts  ,Westwood Studios  ,1.34m,1.32m,0.02m,N/A,N/A,21st Oct 00  
+LEGO Battles    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.29m,0.79m,0.38m,N/A,0.12m,10th Jun 09  
+RollerCoaster Tycoon 2    ,PC,Atari  ,Chris Sawyer  ,1.25m,1.19m,0.06m,N/A,N/A,15th Oct 02  
+Pikmin 3    ,WiiU,Nintendo  ,Nintendo EAD  ,1.23m,0.47m,0.38m,0.29m,0.08m,04th Aug 13  
+Pikmin 2    ,GC,Nintendo  ,Nintendo EAD  ,1.20m,0.48m,0.13m,0.56m,0.03m,30th Aug 04  
+Spore    ,PC,Electronic Arts  ,Maxis  ,1.16m,0.03m,1.06m,N/A,0.07m,07th Sep 08  
+Plants vs. Zombies    ,DS,PopCap Games  ,PopCap Games  ,1.11m,0.90m,0.13m,N/A,0.09m,18th Jan 11  
+Yu-Gi-Oh! Duel Monsters II: Dark Duel Stories    ,GB,Konami  ,Konami  ,1.10m,N/A,N/A,1.10m,0.00m,08th Jul 99  
+Empire: Total War    ,PC,Sega  ,The Creative Assembly  ,1.07m,0.01m,0.98m,N/A,0.09m,03rd Mar 09  
+Worms Armageddon    ,PS,Microprose  ,Team17 Software  ,1.06m,0.18m,0.81m,N/A,0.08m,30th Nov 99  
+Zoo Tycoon DS    ,DS,THQ  ,Blue Fang Games  ,0.98m,0.86m,0.03m,0.01m,0.07m,11th Oct 05  
+Fire Emblem    ,GBA,Nintendo  ,Intelligent Systems  ,0.97m,0.49m,0.18m,0.29m,0.01m,03rd Nov 03  
+Kessen    ,PS2,Electronic Arts  ,Koei  ,0.95m,0.27m,0.21m,0.41m,0.07m,13th Nov 00  
+Tom Clancy's EndWar    ,X360,Ubisoft  ,Ubisoft Shanghai  ,0.91m,0.58m,0.24m,0.01m,0.09m,04th Nov 08  
+Fire Emblem: The Sacred Stones    ,GBA,Nintendo  ,Intelligent Systems  ,0.89m,0.42m,0.16m,0.30m,0.02m,23rd May 05  
+Pokémon Card GB2: GRdan Sanjou    ,GB,Nintendo  ,Hudson Soft  ,0.89m,N/A,N/A,0.89m,N/A,28th Mar 01  
+Metal Gear Ac!d    ,PSP,Konami  ,Konami  ,0.87m,0.32m,0.26m,0.12m,0.17m,22nd Mar 05  
+Sid Meier's Civilization Revolution    ,X360,2K Games  ,Firaxis Games  ,0.83m,0.58m,0.17m,0.00m,0.07m,08th Jul 08  
+Battle of Giants: Dinosaurs    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.81m,0.37m,0.35m,N/A,0.08m,21st Oct 08  
+Super Robot Taisen α    ,PS,Banpresto  ,Banpresto  ,0.80m,N/A,N/A,0.75m,0.05m,25th May 00  
+Invizimals    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.79m,0.17m,0.51m,N/A,0.11m,12th Oct 10  
+Sid Meier's Civilization Revolution    ,PS3,2K Games  ,Firaxis Games  ,0.78m,0.49m,0.19m,0.01m,0.09m,08th Jul 08  
+Battle Stations    ,PS,Electronic Arts  ,Realtime Associates  ,0.78m,0.43m,0.29m,N/A,0.05m,31st Mar 97  
+Worms: Open Warfare    ,PSP,THQ  ,Team17 Software  ,0.77m,0.11m,0.43m,N/A,0.23m,22nd Mar 06  
+Full Spectrum Warrior    ,XB,THQ  ,Pandemic Studios  ,0.73m,0.54m,0.16m,N/A,0.03m,01st Jun 04  
+XCOM: Enemy Unknown    ,PC,2K Games  ,Firaxis Games  ,0.72m,0.28m,0.37m,N/A,0.07m,09th Oct 12  
+SD Gundam G Generation    ,PS,Bandai  ,Bandai  ,0.72m,N/A,N/A,0.67m,0.05m,06th Aug 98  
+Yu-Gi-Oh! The Falsebound Kingdom    ,GC,Konami  ,Konami  ,0.71m,0.49m,0.13m,0.07m,0.02m,04th Nov 03  
+Command & Conquer: Red Alert Retaliation    ,PS,Virgin Interactive  ,Westwood Studios  ,0.70m,0.39m,0.27m,N/A,0.05m,28th Aug 98  
+Advance Wars    ,GBA,Nintendo  ,Intelligent Systems  ,0.70m,0.50m,0.19m,N/A,0.01m,09th Sep 01  
+Fire Emblem: Monshou no Nazo    ,SNES,Nintendo  ,Intelligent Systems  ,0.70m,N/A,N/A,0.70m,N/A,21st Jan 94  
+Total War: Rome II    ,PC,Sega  ,The Creative Assembly  ,0.69m,0.12m,0.52m,N/A,0.05m,03rd Sep 13  
+Tom Clancy's EndWar    ,PS3,Ubisoft  ,Ubisoft Shanghai  ,0.67m,0.33m,0.22m,0.01m,0.11m,04th Nov 08  
+Napoleon: Total War    ,PC,Sega  ,The Creative Assembly  ,0.67m,0.02m,0.54m,N/A,0.11m,23rd Feb 10  
+Command & Conquer: Red Alert 3    ,PC,Electronic Arts  ,EA Los Angeles  ,0.66m,0.01m,0.64m,N/A,0.02m,28th Oct 08  
+Thrillville    ,PS2,LucasArts  ,Frontier Developments  ,0.66m,0.55m,0.02m,N/A,0.09m,21st Nov 06  
+Advance Wars 2: Black Hole Rising    ,GBA,Nintendo  ,Intelligent Systems  ,0.65m,0.47m,0.17m,N/A,0.01m,24th Jun 03  
+Super Robot Taisen Impact    ,PS2,Banpresto  ,Banpresto  ,0.65m,N/A,N/A,0.65m,N/A,28th Mar 02  
+New Play Control! Pikmin    ,Wii,Nintendo  ,Nintendo EAD  ,0.64m,0.28m,0.13m,0.19m,0.04m,09th Mar 09  
+Sim Theme Park    ,PS,Electronic Arts  ,Climax Group  ,0.63m,0.35m,0.24m,N/A,0.04m,24th Oct 99  
+Nobunaga no Yabou: Haouden    ,SNES,KOEI  ,Koei  ,0.62m,0.30m,N/A,0.32m,N/A,09th Dec 93  
+Battle of Giants: Dragons    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.62m,0.30m,0.25m,N/A,0.06m,29th Sep 09  
+Super Robot Taisen α Gaiden    ,PS,Banpresto  ,Banpresto  ,0.62m,N/A,N/A,0.58m,0.04m,29th Mar 01  
+Fire Emblem: Shadow Dragon    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.29m,0.03m,0.27m,0.03m,16th Feb 09  
+Advance Wars: Days of Ruin    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.43m,0.13m,N/A,0.05m,21st Jan 08  
+New Play Control! Pikmin 2    ,Wii,Nintendo  ,Nintendo EAD  ,0.61m,0.11m,0.13m,0.34m,0.02m,10th Jun 12  
+Shogun 2: Total War    ,PC,Sega  ,The Creative Assembly  ,0.60m,0.19m,0.32m,N/A,0.08m,15th Mar 11  
+Front Mission    ,SNES,Square  ,G-Craft  ,0.60m,N/A,N/A,0.60m,N/A,24th Feb 95  
+Dai-2-Ji Super Robot Taisen α    ,PS2,Banpresto  ,Banpresto  ,0.60m,N/A,N/A,0.60m,N/A,27th Mar 03  
+Dai-3-Ji Super Robot Taisen α: Shuuen no Ginga e    ,PS2,Banpresto  ,Banpresto  ,0.59m,N/A,N/A,0.59m,N/A,28th Jul 05  
+XCOM: Enemy Unknown    ,PS3,2K Games  ,Firaxis Games  ,0.59m,0.25m,0.24m,N/A,0.10m,09th Oct 12  
+Fire Emblem: Seisen no Keifu    ,SNES,Nintendo  ,Intelligent Systems  ,0.58m,N/A,N/A,0.58m,N/A,14th May 96  
+Theme Park    ,PS,Electronic Arts  ,Bullfrog Productions  ,0.57m,0.24m,0.16m,0.13m,0.04m,01st Jan 95  
+StarCraft II: Legacy of the Void    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,0.57m,0.23m,0.30m,N/A,0.05m,10th Nov 15  
+Mobile Suit Gundam: Giren no Yabou- Zeon no Keifu    ,PS,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.54m,0.04m,10th Feb 00  
+SD Gundam G Generation Neo    ,PS2,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.57m,N/A,28th Nov 02  
+Yu-Gi-Oh! Reshef of Destruction    ,GBA,Konami  ,Konami  ,0.56m,0.40m,0.15m,N/A,0.01m,29th Jun 04  
+Shin Super Robot Taisen    ,PS,Banpresto  ,Winky Soft  ,0.55m,N/A,N/A,0.52m,0.04m,27th Dec 96  
+SD Gundam G Generation Zero    ,PS,Bandai  ,Bandai  ,0.55m,N/A,N/A,0.51m,0.04m,12th Aug 99  
+Super Robot Taisen F Kanketsuhen    ,SAT,Banpresto  ,Banpresto  ,0.55m,N/A,N/A,0.55m,0.00m,23rd Apr 98  
+Front Mission 4    ,PS2,Square Enix  ,Square Enix  ,0.54m,0.14m,0.11m,0.25m,0.04m,15th Jun 04  
+Romance of the Three Kingdoms IV: Wall of Fire    ,SNES,KOEI  ,Koei / Inis  ,0.53m,N/A,N/A,0.53m,N/A,13th Jan 95  
+Front Mission 2    ,PS,Square  ,SquareSoft  ,0.53m,N/A,N/A,0.49m,0.03m,25th Sep 97  
+Front Mission 3    ,PS,Square  ,SquareSoft  ,0.52m,0.10m,0.07m,0.31m,0.03m,29th Feb 00  
+Halo Wars 2    ,XOne,Microsoft Studios  ,Creative Assembly  ,0.51m,0.31m,0.15m,N/A,0.05m,21st Feb 17  
+Dai-4-Ji Super Robot Taisen S    ,PS,Banpresto  ,Winky Soft  ,0.51m,N/A,N/A,0.48m,0.03m,26th Jan 96  
+R.U.S.E.    ,PS3,Ubisoft  ,Eugen Systems  ,0.50m,0.18m,0.22m,0.02m,0.08m,07th Sep 10  
+Super Robot Taisen MX    ,PS2,Banpresto  ,TOSE  ,0.50m,N/A,N/A,0.50m,N/A,27th May 04  
+Super Robot Taisen Z    ,PS2,Namco Bandai  ,Banpresto  ,0.50m,N/A,N/A,0.50m,N/A,25th Sep 08  
+Fire Emblem: Radiant Dawn    ,Wii,Nintendo  ,Intelligent Systems  ,0.49m,0.27m,0.03m,0.17m,0.03m,05th Nov 07  
+Theme Park Roller Coaster    ,PS2,Electronic Arts  ,Bullfrog Productions  ,0.48m,0.23m,0.18m,N/A,0.06m,04th Dec 00  
+"Warhammer 40,000: Dawn of War II    ",PC,THQ  ,Relic  ,0.47m,N/A,0.45m,N/A,0.01m,19th Feb 09  
+Kessen II    ,PS2,KOEI  ,Koei  ,0.46m,0.13m,0.10m,0.20m,0.03m,26th Sep 01  
+Command & Conquer: Red Alert 3    ,X360,Bethesda Softworks  ,EA Los Angeles  ,0.45m,0.18m,0.23m,N/A,0.05m,11th Nov 08  
+Worms: Open Warfare 2    ,PSP,THQ  ,Team17 Software / Two Tribes  ,0.45m,0.04m,0.27m,N/A,0.14m,04th Sep 07  
+Sid Meier's Civilization Revolution    ,DS,2K Games  ,Firaxis  ,0.45m,0.37m,0.03m,0.02m,0.03m,08th Jul 08  
+Super Robot Taisen OG: Original Generations    ,PS2,Banpresto  ,Banpresto  ,0.44m,N/A,N/A,0.44m,N/A,28th Jun 07  
+Yu-Gi-Oh! 5D's Tag Force 4    ,PSP,Konami  ,Konami  ,0.44m,0.19m,0.07m,0.12m,0.05m,17th Nov 09  
+Sid Meier's Civilization VI    ,PC,2K Games  ,Firaxis Games  ,0.44m,0.12m,0.29m,N/A,0.03m,21st Oct 16  
+Thrillville: Off the Rails    ,Wii,LucasArts  ,Frontier Developments  ,0.44m,0.38m,0.02m,N/A,0.03m,09th Oct 07  
+Dai-2-Ji Super Robot Taisen Z: Hakai-hen    ,PSP,Banpresto  ,Banpresto  ,0.42m,N/A,N/A,0.42m,N/A,14th Apr 11  
+Command & Conquer 3: Tiberium Wars    ,X360,Electronic Arts  ,EA Los Angeles  ,0.42m,0.35m,0.04m,N/A,0.03m,08th May 07  
+Thrillville: Off the Rails    ,PS2,LucasArts  ,Frontier Developments  ,0.42m,0.20m,0.16m,N/A,0.05m,09th Oct 07  
+Yu-Gi-Oh! GX: Tag Force 2    ,PSP,Konami  ,Konami  ,0.42m,0.03m,0.19m,0.10m,0.10m,18th Sep 07  
+Command & Conquer: Red Alert    ,PS,Westwood Studios  ,Westwood Studios  ,0.41m,0.23m,0.16m,N/A,0.03m,31st Oct 97  
+Pet in TV    ,PS,Sony Computer Entertainment  ,SCE  ,0.40m,N/A,N/A,0.38m,0.03m,01st Aug 98  
+Battalion Wars    ,GC,Nintendo  ,Kuju Entertainment  ,0.40m,0.25m,0.07m,0.07m,0.01m,19th Sep 05  
+Command & Conquer    ,PS,Westwood Studios  ,Westwood Studios  ,0.40m,0.22m,0.15m,N/A,0.03m,28th Feb 97  
+SD Gundam G Generation Seed    ,PS2,Bandai  ,Bandai  ,0.40m,N/A,N/A,0.40m,N/A,19th Feb 04  
+Combat of Giants: Dinosaurs 3D    ,3DS,Ubisoft  ,Ubisoft  ,0.39m,0.25m,0.07m,0.05m,0.03m,22nd Mar 11  
+Advance Wars: Dual Strike    ,DS,Nintendo  ,Intelligent Systems  ,0.39m,0.30m,0.03m,0.04m,0.03m,22nd Aug 05  
+SD Gundam G Generation Spirits    ,PS2,Namco Bandai  ,Tom Create  ,0.38m,N/A,N/A,0.38m,N/A,29th Nov 07  
+Mobile Suit Gundam: Giren no Yabou Zeon Dokuritsu Sensouden    ,PS2,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.38m,N/A,02nd May 02  
+SD Gundam G Generation-F    ,PS,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.36m,0.02m,03rd Aug 00  
+Risk: Global Domination    ,PS2,Atari  ,Cyberlore Studios  ,0.38m,0.19m,0.15m,N/A,0.05m,05th Nov 03  
+Dai-4-Ji Super Robot Taisen    ,SNES,Banpresto  ,Banpresto  ,0.38m,N/A,N/A,0.38m,N/A,17th Mar 95  
+Age of Empires III    ,PC,Microsoft Game Studios  ,Ensemble Studios  ,0.37m,N/A,0.33m,N/A,0.04m,18th Oct 05  
+Super Robot Taisen EX    ,SNES,Banpresto  ,WinkySoft  ,0.37m,N/A,N/A,0.37m,N/A,25th Mar 94  
+Mini-Yonku GB: Let's & Go!!    ,GB,ASCII Entertainment  ,Jupiter Multimedia  ,0.37m,N/A,N/A,0.37m,0.00m,23rd May 97  
+Medieval II: Total War Gold Edition    ,PC,Sega  ,The Creative Assembly  ,0.36m,N/A,0.34m,N/A,0.03m,05th Feb 08  
+Dai-2-Ji Super Robot Taisen Z Saisei-hen    ,PSP,Namco Bandai Games  ,Banpresto  ,0.36m,N/A,N/A,0.36m,N/A,05th Apr 12  
+Super Robot Taisen A    ,GBA,Banpresto  ,Banpresto  ,0.36m,N/A,N/A,0.35m,0.01m,21st Sep 01  
+Worms: Open Warfare 2    ,DS,THQ  ,Team17 Software / Two Tribes  ,0.35m,0.07m,0.24m,N/A,0.04m,04th Sep 07  
+Command & Conquer: Red Alert 3 Ultimate Edition    ,PS3,Electronic Arts  ,EA Los Angeles  ,0.35m,0.14m,0.16m,N/A,0.06m,23rd Mar 09  
+Tropico 4    ,X360,Kalypso  ,Haemimont Games  ,0.35m,0.20m,0.12m,N/A,0.03m,18th Oct 11  
+Yu-Gi-Oh! 5D's Tag Force 5    ,PSP,Konami  ,Konami  ,0.35m,0.13m,0.05m,0.14m,0.03m,26th Oct 10  
+SD Gundam G Generation World    ,PSP,Namco Bandai  ,Tom Create  ,0.34m,N/A,N/A,0.34m,N/A,24th Feb 11  
+Battalion Wars 2    ,Wii,Nintendo  ,Kuju Entertainment  ,0.34m,0.22m,0.02m,0.08m,0.02m,29th Oct 07  
+Supreme Commander 2    ,X360,Square Enix  ,Gas Powered Games  ,0.34m,0.23m,0.09m,N/A,0.03m,16th Mar 10  
+Iron Storm    ,SAT,Working Designs  ,SystemSoft  ,0.34m,N/A,N/A,0.34m,0.00m,01st Jan 96  
+Tom Clancy's Ghost Recon: Shadow Wars    ,3DS,Ubisoft  ,Ubisoft  ,0.34m,0.22m,0.10m,N/A,0.03m,22nd Mar 11  
+The Eye of Judgment    ,PS3,Sony Computer Entertainment  ,SCE Japan Studio  ,0.34m,0.28m,0.00m,0.02m,0.03m,24th Oct 07  
+Kidou Senshi Gundam F91: Formula Senki 0122    ,SNES,Bandai  ,Bandai  ,0.33m,N/A,N/A,0.33m,0.00m,06th Jul 91  
+"Warhammer 40,000: Squad Command    ",PSP,THQ  ,RedLynx  ,0.33m,0.11m,0.14m,N/A,0.08m,12th Nov 07  
+Battlestations: Pacific    ,X360,Eidos Interactive  ,Eidos Studios Hungary  ,0.32m,0.17m,0.11m,0.01m,0.03m,12th May 09  
+Dragon Quest Monsters: Battle Road Victory    ,Wii,Square Enix  ,Armor Project/Bird Studio  ,0.32m,N/A,N/A,0.32m,N/A,15th Jul 10  
+Shin Super Robot Taisen Special Disk    ,PS,Banpresto  ,Banpresto  ,0.32m,N/A,N/A,0.30m,0.02m,28th Mar 97  
+Kingdom Under Fire: The Crusaders    ,XB,Microsoft  ,Phantagram  ,0.32m,0.24m,0.07m,N/A,0.01m,12th Oct 04  
+Romance of the Three Kingdoms VII    ,PS2,KOEI  ,Koei  ,0.32m,0.08m,0.06m,0.16m,0.02m,25th Jun 02  
+WarCraft II: The Dark Saga    ,PS,Electronic Arts  ,Blizzard Entertainment  ,0.31m,0.18m,0.12m,N/A,0.02m,31st Aug 97  
+Yu-Gi-Oh! The Dawn of Destiny    ,XB,Konami  ,Konami Computer Entertainment Japan  ,0.31m,0.23m,0.07m,N/A,0.01m,23rd Mar 04  
+SD Gundam G Generation Wars    ,PS2,Bandai  ,Tom Create  ,0.31m,N/A,N/A,0.31m,N/A,06th Aug 09  
+Super Robot Taisen Complete Box    ,PS,Banpresto  ,Bandai  ,0.31m,N/A,N/A,0.29m,0.02m,10th Jun 99  
+XCOM 2    ,PC,2K Games  ,Firaxis Games  ,0.31m,0.12m,0.16m,N/A,0.02m,30th Nov 15  
+Lord of the Rings: Battle for Middle-Earth     ,X360,Electronic Arts  ,EA Los Angeles  ,0.31m,0.28m,N/A,N/A,0.02m,05th Jul 06  
+Yu-Gi-Oh! 5D's World Championship 2010 Reverse of Arcadia    ,DS,Konami  ,Konami  ,0.31m,0.18m,0.02m,0.09m,0.02m,23rd Feb 10  
+SD Gundam G Generation: Overworld    ,PSP,Namco Bandai Games  ,Namco Bandai Games  ,0.31m,N/A,N/A,0.31m,N/A,27th Sep 12  
+XCOM 2    ,PS4,2K Games  ,Firaxis Games  ,0.31m,0.16m,0.10m,N/A,0.05m,27th Sep 16  
+The Settlers 7: Paths to a Kingdom    ,PC,Ubisoft  ,Blue Byte  ,0.31m,N/A,0.27m,N/A,0.04m,23rd Mar 10  
+Super Robot Taisen W    ,DS,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,01st Mar 07  
+Super Robot Taisen OG: Original Generations Gaiden    ,PS2,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,27th Dec 07  
+Romance of the Three Kingdoms VIII    ,PS2,KOEI  ,Koei  ,0.30m,0.05m,0.04m,0.19m,0.01m,13th Aug 03  
+Invizimals: Shadow Zone    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.30m,0.05m,0.16m,N/A,0.08m,25th Oct 11  
+Dragon Force    ,SAT,Working Designs  ,Sega  ,0.30m,N/A,N/A,0.30m,0.00m,30th Nov 96  
+Full Spectrum Warrior    ,PS2,THQ  ,Pandemic Studios  ,0.30m,0.15m,0.11m,N/A,0.04m,21st Mar 05  
+Little King's Story    ,Wii,Xseed Games  ,Cing Inc. / Town Factory  ,0.29m,0.14m,0.11m,0.02m,0.02m,21st Jul 09  
+Kagero: Deception II    ,PS,Tecmo  ,Tecmo  ,0.29m,0.03m,0.02m,0.22m,0.02m,14th Oct 98  
+Zoo Tycoon 2 DS    ,DS,THQ  ,Altron  ,0.29m,0.24m,0.03m,N/A,0.02m,04th Feb 08  
+SD Gundam G Century    ,PS,Bandai  ,Bandai  ,0.29m,N/A,N/A,0.27m,0.02m,20th Mar 97  
+Dynasty Tactics    ,PS2,KOEI  ,Koei  ,0.29m,0.06m,0.05m,0.16m,0.02m,17th Sep 02  
+Romance of the Three Kingdoms III: Dragon of Destiny    ,SNES,KOEI  ,Koei  ,0.29m,N/A,N/A,0.29m,N/A,01st Jan 93  
+Culdcept    ,3DS,NIS America  ,OmiyaSoft  ,0.29m,0.04m,0.01m,0.23m,0.01m,03rd Oct 17  
+Lord of Darkness    ,SNES,KOEI  ,Koei  ,0.28m,N/A,N/A,0.28m,0.00m,01st Jan 94  
+Yu-Gi-Oh! World Championship 2008    ,DS,Konami  ,Konami  ,0.28m,0.13m,0.02m,0.12m,0.01m,04th Dec 07  
+Kakyuusei    ,SAT,Elf  ,Elf  ,0.28m,N/A,N/A,0.28m,0.00m,25th Apr 97  
+Civilization II    ,PS,Activision  ,LTI Grey Matter  ,0.28m,0.15m,0.11m,N/A,0.02m,20th Jan 98  
+SD Gundam G Generation Portable    ,PSP,Namco Bandai  ,Bandai Namco Games  ,0.27m,N/A,N/A,0.27m,N/A,03rd Aug 06  
+Command & Conquer    ,N64,Nintendo  ,Looking Glass Studios  ,0.27m,0.22m,0.05m,N/A,0.00m,31st May 99  
+Fire Emblem: Shin Monshou no Nazo Hikari to Kage no Eiyuu    ,DS,Nintendo  ,Intelligent Systems  ,0.27m,N/A,N/A,0.27m,N/A,15th Jul 10  
+Plants vs. Zombies    ,X360,PopCap Games  ,PopCap Games  ,0.27m,0.24m,N/A,N/A,0.02m,28th Sep 10  
+R.U.S.E.    ,X360,Ubisoft  ,Eugen Systems  ,0.27m,0.12m,0.11m,0.00m,0.02m,07th Sep 10  
+Duel Masters    ,PS2,Atari  ,High Voltage Software  ,0.27m,0.13m,0.10m,N/A,0.03m,02nd Nov 04  
+Battle of Giants: Mutant Insects    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.27m,0.09m,0.15m,N/A,0.03m,02nd Mar 10  
+Total War: Attila    ,PC,Sega  ,Creative Assembly  ,0.26m,0.11m,0.14m,N/A,0.02m,17th Feb 15  
+Tropico 4    ,PC,Kalypso  ,Haemimont Games  ,0.26m,0.10m,0.13m,N/A,0.03m,30th Aug 11  
+R.U.S.E.    ,PC,Ubisoft  ,Eugen Systems  ,0.26m,0.04m,0.19m,N/A,0.03m,07th Sep 10  
+Battlestations: Midway    ,X360,Eidos Interactive  ,Eidos Hungary  ,0.26m,0.21m,0.02m,0.00m,0.02m,30th Jan 07  
+SD Gundam G Generation: Cross Drive    ,DS,Namco Bandai  ,Vanguard  ,0.26m,N/A,N/A,0.26m,N/A,09th Aug 07  
+RollerCoaster Tycoon 3    ,PC,Atari  ,Frontier Developments  ,0.26m,0.01m,0.22m,N/A,0.02m,26th Oct 04  
+Fire Emblem: Thracia 776    ,SNES,Nintendo  ,Intelligent Systems  ,0.26m,N/A,N/A,0.26m,N/A,01st Sep 99  
+Super Robot Taisen R    ,GBA,Banpresto  ,Banpresto  ,0.26m,N/A,N/A,0.25m,0.01m,02nd Aug 02  
+Romance of the Three Kingdoms II    ,SNES,KOEI  ,Koei  ,0.25m,N/A,N/A,0.25m,N/A,01st May 92  
+A. IV Evolution: A Ressha de Ikou 4    ,PS,ArtDink  ,ArtDink  ,0.25m,N/A,N/A,0.24m,0.02m,03rd Dec 94  
+Sid Meier's Civilization VI    ,NS,2K Games  ,Firaxis Games  ,0.25m,0.12m,0.11m,0.01m,0.02m,16th Nov 18  
+Zoo Tycoon 2: Ultimate Collection    ,PC,Microsoft Game Studios  ,Blue Fang Games  ,0.25m,0.04m,0.19m,N/A,0.03m,05th Dec 08  
+Dune 2000    ,PS,Electronic Arts  ,Westwood Studios  ,0.25m,0.14m,0.09m,N/A,0.02m,11th Feb 00  
+Panzer General    ,PS,SSI  ,"Strategic Simulations, Inc.  ",0.24m,0.14m,0.09m,N/A,0.02m,01st Jan 96  
+Command & Conquer 3: Kane's Wrath    ,X360,Electronic Arts  ,EA Los Angeles  ,0.24m,0.16m,0.06m,N/A,0.02m,23rd Jun 08  
+Super Robot Taisen D    ,GBA,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.23m,0.01m,08th Aug 03  
+Anno 2205    ,PC,Ubisoft  ,Blue Byte  ,0.23m,0.04m,0.17m,N/A,0.02m,03rd Nov 15  
+Super Robot Taisen F Kanketsuhen    ,PS,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.21m,0.01m,15th Apr 99  
+Yu-Gi-Oh! GX: Tag Force 3    ,PSP,Konami  ,Konami  ,0.23m,N/A,0.03m,0.18m,0.01m,28th Nov 08  
+Code Name: S.T.E.A.M.    ,3DS,Nintendo  ,Intelligent Systems  ,0.22m,0.14m,0.05m,0.02m,0.02m,13th Mar 15  
+Age of Empires: The Age of Kings    ,DS,Majesco  ,Backbone Entertainment  ,0.22m,0.18m,0.02m,N/A,0.02m,14th Feb 06  
+Total War: WARHAMMER    ,PC,Sega  ,Creative Assembly  ,0.22m,N/A,0.21m,N/A,0.01m,24th May 16  
+Worms: Battle Islands    ,Wii,THQ  ,Team17 Software  ,0.22m,0.10m,0.10m,N/A,0.02m,23rd Nov 10  
+The Lord of the Rings: The Third Age    ,GBA,Electronic Arts  ,Griptonite Games  ,0.22m,0.16m,0.06m,N/A,0.00m,02nd Nov 04  
+Kartia: The Word of Fate    ,PS,Atlus  ,Atlus Co.  ,0.22m,0.05m,0.03m,0.12m,0.01m,31st Jul 98  
+Pokémon Stadium    ,N64,Nintendo  ,HAL Laboratory  ,5.45m,3.18m,1.24m,0.94m,0.09m,06th Mar 00  
+Warzone 2100    ,PS,Eidos Interactive  ,Pumpkin Studios  ,5.01m,2.79m,1.89m,N/A,0.33m,31st May 99  
+StarCraft II: Wings of Liberty    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.86m,2.60m,1.70m,N/A,0.56m,27th Jul 10  
+Warcraft II: Tides of Darkness    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.21m,1.70m,2.27m,N/A,0.23m,30th Apr 96  
+Pokémon Trading Card Game    ,GB,Nintendo  ,Hudson Soft  ,3.70m,1.49m,0.73m,1.38m,0.10m,10th Apr 00  
+Command & Conquer: Red Alert    ,PC,Virgin Interactive  ,Westwood Studios  ,2.85m,1.37m,1.34m,N/A,0.14m,01st Nov 96  
+Pokémon Stadium 2    ,N64,Nintendo  ,HAL Laboratory  ,2.73m,1.02m,0.36m,1.13m,0.23m,28th Mar 01  
+Halo Wars    ,X360,Microsoft Game Studios  ,Ensemble Studios  ,2.67m,1.58m,0.80m,0.04m,0.25m,03rd Mar 09  
+Mario + Rabbids: Kingdom Battle    ,NS,Ubisoft  ,Ubisoft Milan  ,2.59m,1.10m,1.08m,0.22m,0.20m,29th Aug 17  
+Theme Hospital    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.40m,2.30m,0.10m,N/A,N/A,31st Mar 97  
+Sim Theme Park    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.08m,2.04m,0.04m,N/A,N/A,31st Oct 99  
+Warcraft: Orcs & Humans    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,2.08m,0.89m,1.08m,N/A,0.11m,15th Jan 94  
+Yu-Gi-Oh! The Eternal Duelist Soul    ,GBA,Konami  ,Konami Computer Entertainment Japan  ,2.07m,1.64m,0.36m,N/A,0.07m,15th Oct 02  
+Sid Meier's Civilization V    ,PC,2K Games  ,Firaxis Games  ,1.70m,1.00m,0.53m,N/A,0.17m,21st Sep 10  
+StarCraft II: Heart of the Swarm    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.67m,0.85m,0.68m,N/A,0.14m,12th Mar 13  
+Pikmin    ,GC,Nintendo  ,Nintendo EAD  ,1.63m,0.78m,0.25m,0.56m,0.04m,03rd Dec 01  
+Yu-Gi-Oh! Duel Monsters    ,GB,Konami  ,Konami Computer Entertainment Shinjuku  ,1.61m,N/A,N/A,1.61m,0.01m,16th Dec 98  
+Command & Conquer: Tiberian Sun    ,PC,Westwood Studios  ,Westwood Studios  ,1.55m,1.55m,0.00m,N/A,N/A,24th Aug 99  
+Warcraft III: The Frozen Throne    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.54m,0.58m,0.87m,N/A,0.09m,01st Jul 03  
+LEGO Battles: Ninjago    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.48m,1.03m,0.33m,N/A,0.12m,12th Apr 11  
+Anno 2070    ,PC,Ubisoft  ,Blue Byte Studio  ,1.40m,N/A,1.14m,N/A,0.26m,17th Nov 11  
+Pocket Monsters Stadium    ,N64,Nintendo  ,HAL Laboratory  ,1.37m,N/A,N/A,1.37m,N/A,01st Aug 98  
+Command & Conquer: Red Alert 2    ,PC,Electronic Arts  ,Westwood Studios  ,1.34m,1.32m,0.02m,N/A,N/A,21st Oct 00  
+LEGO Battles    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.29m,0.79m,0.38m,N/A,0.12m,10th Jun 09  
+RollerCoaster Tycoon 2    ,PC,Atari  ,Chris Sawyer  ,1.25m,1.19m,0.06m,N/A,N/A,15th Oct 02  
+Pikmin 3    ,WiiU,Nintendo  ,Nintendo EAD  ,1.23m,0.47m,0.38m,0.29m,0.08m,04th Aug 13  
+Pikmin 2    ,GC,Nintendo  ,Nintendo EAD  ,1.20m,0.48m,0.13m,0.56m,0.03m,30th Aug 04  
+Spore    ,PC,Electronic Arts  ,Maxis  ,1.16m,0.03m,1.06m,N/A,0.07m,07th Sep 08  
+Plants vs. Zombies    ,DS,PopCap Games  ,PopCap Games  ,1.11m,0.90m,0.13m,N/A,0.09m,18th Jan 11  
+Yu-Gi-Oh! Duel Monsters II: Dark Duel Stories    ,GB,Konami  ,Konami  ,1.10m,N/A,N/A,1.10m,0.00m,08th Jul 99  
+Empire: Total War    ,PC,Sega  ,The Creative Assembly  ,1.07m,0.01m,0.98m,N/A,0.09m,03rd Mar 09  
+Worms Armageddon    ,PS,Microprose  ,Team17 Software  ,1.06m,0.18m,0.81m,N/A,0.08m,30th Nov 99  
+Zoo Tycoon DS    ,DS,THQ  ,Blue Fang Games  ,0.98m,0.86m,0.03m,0.01m,0.07m,11th Oct 05  
+Fire Emblem    ,GBA,Nintendo  ,Intelligent Systems  ,0.97m,0.49m,0.18m,0.29m,0.01m,03rd Nov 03  
+Kessen    ,PS2,Electronic Arts  ,Koei  ,0.95m,0.27m,0.21m,0.41m,0.07m,13th Nov 00  
+Tom Clancy's EndWar    ,X360,Ubisoft  ,Ubisoft Shanghai  ,0.91m,0.58m,0.24m,0.01m,0.09m,04th Nov 08  
+Fire Emblem: The Sacred Stones    ,GBA,Nintendo  ,Intelligent Systems  ,0.89m,0.42m,0.16m,0.30m,0.02m,23rd May 05  
+Pokémon Card GB2: GRdan Sanjou    ,GB,Nintendo  ,Hudson Soft  ,0.89m,N/A,N/A,0.89m,N/A,28th Mar 01  
+Metal Gear Ac!d    ,PSP,Konami  ,Konami  ,0.87m,0.32m,0.26m,0.12m,0.17m,22nd Mar 05  
+Sid Meier's Civilization Revolution    ,X360,2K Games  ,Firaxis Games  ,0.83m,0.58m,0.17m,0.00m,0.07m,08th Jul 08  
+Battle of Giants: Dinosaurs    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.81m,0.37m,0.35m,N/A,0.08m,21st Oct 08  
+Super Robot Taisen α    ,PS,Banpresto  ,Banpresto  ,0.80m,N/A,N/A,0.75m,0.05m,25th May 00  
+Invizimals    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.79m,0.17m,0.51m,N/A,0.11m,12th Oct 10  
+Sid Meier's Civilization Revolution    ,PS3,2K Games  ,Firaxis Games  ,0.78m,0.49m,0.19m,0.01m,0.09m,08th Jul 08  
+Battle Stations    ,PS,Electronic Arts  ,Realtime Associates  ,0.78m,0.43m,0.29m,N/A,0.05m,31st Mar 97  
+Worms: Open Warfare    ,PSP,THQ  ,Team17 Software  ,0.77m,0.11m,0.43m,N/A,0.23m,22nd Mar 06  
+Full Spectrum Warrior    ,XB,THQ  ,Pandemic Studios  ,0.73m,0.54m,0.16m,N/A,0.03m,01st Jun 04  
+XCOM: Enemy Unknown    ,PC,2K Games  ,Firaxis Games  ,0.72m,0.28m,0.37m,N/A,0.07m,09th Oct 12  
+SD Gundam G Generation    ,PS,Bandai  ,Bandai  ,0.72m,N/A,N/A,0.67m,0.05m,06th Aug 98  
+Yu-Gi-Oh! The Falsebound Kingdom    ,GC,Konami  ,Konami  ,0.71m,0.49m,0.13m,0.07m,0.02m,04th Nov 03  
+Command & Conquer: Red Alert Retaliation    ,PS,Virgin Interactive  ,Westwood Studios  ,0.70m,0.39m,0.27m,N/A,0.05m,28th Aug 98  
+Advance Wars    ,GBA,Nintendo  ,Intelligent Systems  ,0.70m,0.50m,0.19m,N/A,0.01m,09th Sep 01  
+Fire Emblem: Monshou no Nazo    ,SNES,Nintendo  ,Intelligent Systems  ,0.70m,N/A,N/A,0.70m,N/A,21st Jan 94  
+Total War: Rome II    ,PC,Sega  ,The Creative Assembly  ,0.69m,0.12m,0.52m,N/A,0.05m,03rd Sep 13  
+Tom Clancy's EndWar    ,PS3,Ubisoft  ,Ubisoft Shanghai  ,0.67m,0.33m,0.22m,0.01m,0.11m,04th Nov 08  
+Napoleon: Total War    ,PC,Sega  ,The Creative Assembly  ,0.67m,0.02m,0.54m,N/A,0.11m,23rd Feb 10  
+Command & Conquer: Red Alert 3    ,PC,Electronic Arts  ,EA Los Angeles  ,0.66m,0.01m,0.64m,N/A,0.02m,28th Oct 08  
+Thrillville    ,PS2,LucasArts  ,Frontier Developments  ,0.66m,0.55m,0.02m,N/A,0.09m,21st Nov 06  
+Advance Wars 2: Black Hole Rising    ,GBA,Nintendo  ,Intelligent Systems  ,0.65m,0.47m,0.17m,N/A,0.01m,24th Jun 03  
+Super Robot Taisen Impact    ,PS2,Banpresto  ,Banpresto  ,0.65m,N/A,N/A,0.65m,N/A,28th Mar 02  
+New Play Control! Pikmin    ,Wii,Nintendo  ,Nintendo EAD  ,0.64m,0.28m,0.13m,0.19m,0.04m,09th Mar 09  
+Sim Theme Park    ,PS,Electronic Arts  ,Climax Group  ,0.63m,0.35m,0.24m,N/A,0.04m,24th Oct 99  
+Nobunaga no Yabou: Haouden    ,SNES,KOEI  ,Koei  ,0.62m,0.30m,N/A,0.32m,N/A,09th Dec 93  
+Battle of Giants: Dragons    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.62m,0.30m,0.25m,N/A,0.06m,29th Sep 09  
+Super Robot Taisen α Gaiden    ,PS,Banpresto  ,Banpresto  ,0.62m,N/A,N/A,0.58m,0.04m,29th Mar 01  
+Fire Emblem: Shadow Dragon    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.29m,0.03m,0.27m,0.03m,16th Feb 09  
+Advance Wars: Days of Ruin    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.43m,0.13m,N/A,0.05m,21st Jan 08  
+New Play Control! Pikmin 2    ,Wii,Nintendo  ,Nintendo EAD  ,0.61m,0.11m,0.13m,0.34m,0.02m,10th Jun 12  
+Shogun 2: Total War    ,PC,Sega  ,The Creative Assembly  ,0.60m,0.19m,0.32m,N/A,0.08m,15th Mar 11  
+Front Mission    ,SNES,Square  ,G-Craft  ,0.60m,N/A,N/A,0.60m,N/A,24th Feb 95  
+Dai-2-Ji Super Robot Taisen α    ,PS2,Banpresto  ,Banpresto  ,0.60m,N/A,N/A,0.60m,N/A,27th Mar 03  
+Dai-3-Ji Super Robot Taisen α: Shuuen no Ginga e    ,PS2,Banpresto  ,Banpresto  ,0.59m,N/A,N/A,0.59m,N/A,28th Jul 05  
+XCOM: Enemy Unknown    ,PS3,2K Games  ,Firaxis Games  ,0.59m,0.25m,0.24m,N/A,0.10m,09th Oct 12  
+Fire Emblem: Seisen no Keifu    ,SNES,Nintendo  ,Intelligent Systems  ,0.58m,N/A,N/A,0.58m,N/A,14th May 96  
+Theme Park    ,PS,Electronic Arts  ,Bullfrog Productions  ,0.57m,0.24m,0.16m,0.13m,0.04m,01st Jan 95  
+StarCraft II: Legacy of the Void    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,0.57m,0.23m,0.30m,N/A,0.05m,10th Nov 15  
+Mobile Suit Gundam: Giren no Yabou- Zeon no Keifu    ,PS,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.54m,0.04m,10th Feb 00  
+SD Gundam G Generation Neo    ,PS2,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.57m,N/A,28th Nov 02  
+Yu-Gi-Oh! Reshef of Destruction    ,GBA,Konami  ,Konami  ,0.56m,0.40m,0.15m,N/A,0.01m,29th Jun 04  
+Shin Super Robot Taisen    ,PS,Banpresto  ,Winky Soft  ,0.55m,N/A,N/A,0.52m,0.04m,27th Dec 96  
+SD Gundam G Generation Zero    ,PS,Bandai  ,Bandai  ,0.55m,N/A,N/A,0.51m,0.04m,12th Aug 99  
+Super Robot Taisen F Kanketsuhen    ,SAT,Banpresto  ,Banpresto  ,0.55m,N/A,N/A,0.55m,0.00m,23rd Apr 98  
+Front Mission 4    ,PS2,Square Enix  ,Square Enix  ,0.54m,0.14m,0.11m,0.25m,0.04m,15th Jun 04  
+Romance of the Three Kingdoms IV: Wall of Fire    ,SNES,KOEI  ,Koei / Inis  ,0.53m,N/A,N/A,0.53m,N/A,13th Jan 95  
+Front Mission 2    ,PS,Square  ,SquareSoft  ,0.53m,N/A,N/A,0.49m,0.03m,25th Sep 97  
+Front Mission 3    ,PS,Square  ,SquareSoft  ,0.52m,0.10m,0.07m,0.31m,0.03m,29th Feb 00  
+Halo Wars 2    ,XOne,Microsoft Studios  ,Creative Assembly  ,0.51m,0.31m,0.15m,N/A,0.05m,21st Feb 17  
+Dai-4-Ji Super Robot Taisen S    ,PS,Banpresto  ,Winky Soft  ,0.51m,N/A,N/A,0.48m,0.03m,26th Jan 96  
+R.U.S.E.    ,PS3,Ubisoft  ,Eugen Systems  ,0.50m,0.18m,0.22m,0.02m,0.08m,07th Sep 10  
+Super Robot Taisen MX    ,PS2,Banpresto  ,TOSE  ,0.50m,N/A,N/A,0.50m,N/A,27th May 04  
+Super Robot Taisen Z    ,PS2,Namco Bandai  ,Banpresto  ,0.50m,N/A,N/A,0.50m,N/A,25th Sep 08  
+Fire Emblem: Radiant Dawn    ,Wii,Nintendo  ,Intelligent Systems  ,0.49m,0.27m,0.03m,0.17m,0.03m,05th Nov 07  
+Theme Park Roller Coaster    ,PS2,Electronic Arts  ,Bullfrog Productions  ,0.48m,0.23m,0.18m,N/A,0.06m,04th Dec 00  
+"Warhammer 40,000: Dawn of War II    ",PC,THQ  ,Relic  ,0.47m,N/A,0.45m,N/A,0.01m,19th Feb 09  
+Kessen II    ,PS2,KOEI  ,Koei  ,0.46m,0.13m,0.10m,0.20m,0.03m,26th Sep 01  
+Command & Conquer: Red Alert 3    ,X360,Bethesda Softworks  ,EA Los Angeles  ,0.45m,0.18m,0.23m,N/A,0.05m,11th Nov 08  
+Worms: Open Warfare 2    ,PSP,THQ  ,Team17 Software / Two Tribes  ,0.45m,0.04m,0.27m,N/A,0.14m,04th Sep 07  
+Sid Meier's Civilization Revolution    ,DS,2K Games  ,Firaxis  ,0.45m,0.37m,0.03m,0.02m,0.03m,08th Jul 08  
+Super Robot Taisen OG: Original Generations    ,PS2,Banpresto  ,Banpresto  ,0.44m,N/A,N/A,0.44m,N/A,28th Jun 07  
+Yu-Gi-Oh! 5D's Tag Force 4    ,PSP,Konami  ,Konami  ,0.44m,0.19m,0.07m,0.12m,0.05m,17th Nov 09  
+Sid Meier's Civilization VI    ,PC,2K Games  ,Firaxis Games  ,0.44m,0.12m,0.29m,N/A,0.03m,21st Oct 16  
+Thrillville: Off the Rails    ,Wii,LucasArts  ,Frontier Developments  ,0.44m,0.38m,0.02m,N/A,0.03m,09th Oct 07  
+Dai-2-Ji Super Robot Taisen Z: Hakai-hen    ,PSP,Banpresto  ,Banpresto  ,0.42m,N/A,N/A,0.42m,N/A,14th Apr 11  
+Command & Conquer 3: Tiberium Wars    ,X360,Electronic Arts  ,EA Los Angeles  ,0.42m,0.35m,0.04m,N/A,0.03m,08th May 07  
+Thrillville: Off the Rails    ,PS2,LucasArts  ,Frontier Developments  ,0.42m,0.20m,0.16m,N/A,0.05m,09th Oct 07  
+Yu-Gi-Oh! GX: Tag Force 2    ,PSP,Konami  ,Konami  ,0.42m,0.03m,0.19m,0.10m,0.10m,18th Sep 07  
+Command & Conquer: Red Alert    ,PS,Westwood Studios  ,Westwood Studios  ,0.41m,0.23m,0.16m,N/A,0.03m,31st Oct 97  
+Pet in TV    ,PS,Sony Computer Entertainment  ,SCE  ,0.40m,N/A,N/A,0.38m,0.03m,01st Aug 98  
+Battalion Wars    ,GC,Nintendo  ,Kuju Entertainment  ,0.40m,0.25m,0.07m,0.07m,0.01m,19th Sep 05  
+Command & Conquer    ,PS,Westwood Studios  ,Westwood Studios  ,0.40m,0.22m,0.15m,N/A,0.03m,28th Feb 97  
+SD Gundam G Generation Seed    ,PS2,Bandai  ,Bandai  ,0.40m,N/A,N/A,0.40m,N/A,19th Feb 04  
+Combat of Giants: Dinosaurs 3D    ,3DS,Ubisoft  ,Ubisoft  ,0.39m,0.25m,0.07m,0.05m,0.03m,22nd Mar 11  
+Advance Wars: Dual Strike    ,DS,Nintendo  ,Intelligent Systems  ,0.39m,0.30m,0.03m,0.04m,0.03m,22nd Aug 05  
+SD Gundam G Generation Spirits    ,PS2,Namco Bandai  ,Tom Create  ,0.38m,N/A,N/A,0.38m,N/A,29th Nov 07  
+Mobile Suit Gundam: Giren no Yabou Zeon Dokuritsu Sensouden    ,PS2,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.38m,N/A,02nd May 02  
+SD Gundam G Generation-F    ,PS,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.36m,0.02m,03rd Aug 00  
+Risk: Global Domination    ,PS2,Atari  ,Cyberlore Studios  ,0.38m,0.19m,0.15m,N/A,0.05m,05th Nov 03  
+Dai-4-Ji Super Robot Taisen    ,SNES,Banpresto  ,Banpresto  ,0.38m,N/A,N/A,0.38m,N/A,17th Mar 95  
+Age of Empires III    ,PC,Microsoft Game Studios  ,Ensemble Studios  ,0.37m,N/A,0.33m,N/A,0.04m,18th Oct 05  
+Super Robot Taisen EX    ,SNES,Banpresto  ,WinkySoft  ,0.37m,N/A,N/A,0.37m,N/A,25th Mar 94  
+Mini-Yonku GB: Let's & Go!!    ,GB,ASCII Entertainment  ,Jupiter Multimedia  ,0.37m,N/A,N/A,0.37m,0.00m,23rd May 97  
+Medieval II: Total War Gold Edition    ,PC,Sega  ,The Creative Assembly  ,0.36m,N/A,0.34m,N/A,0.03m,05th Feb 08  
+Dai-2-Ji Super Robot Taisen Z Saisei-hen    ,PSP,Namco Bandai Games  ,Banpresto  ,0.36m,N/A,N/A,0.36m,N/A,05th Apr 12  
+Super Robot Taisen A    ,GBA,Banpresto  ,Banpresto  ,0.36m,N/A,N/A,0.35m,0.01m,21st Sep 01  
+Worms: Open Warfare 2    ,DS,THQ  ,Team17 Software / Two Tribes  ,0.35m,0.07m,0.24m,N/A,0.04m,04th Sep 07  
+Command & Conquer: Red Alert 3 Ultimate Edition    ,PS3,Electronic Arts  ,EA Los Angeles  ,0.35m,0.14m,0.16m,N/A,0.06m,23rd Mar 09  
+Tropico 4    ,X360,Kalypso  ,Haemimont Games  ,0.35m,0.20m,0.12m,N/A,0.03m,18th Oct 11  
+Yu-Gi-Oh! 5D's Tag Force 5    ,PSP,Konami  ,Konami  ,0.35m,0.13m,0.05m,0.14m,0.03m,26th Oct 10  
+SD Gundam G Generation World    ,PSP,Namco Bandai  ,Tom Create  ,0.34m,N/A,N/A,0.34m,N/A,24th Feb 11  
+Battalion Wars 2    ,Wii,Nintendo  ,Kuju Entertainment  ,0.34m,0.22m,0.02m,0.08m,0.02m,29th Oct 07  
+Supreme Commander 2    ,X360,Square Enix  ,Gas Powered Games  ,0.34m,0.23m,0.09m,N/A,0.03m,16th Mar 10  
+Iron Storm    ,SAT,Working Designs  ,SystemSoft  ,0.34m,N/A,N/A,0.34m,0.00m,01st Jan 96  
+Tom Clancy's Ghost Recon: Shadow Wars    ,3DS,Ubisoft  ,Ubisoft  ,0.34m,0.22m,0.10m,N/A,0.03m,22nd Mar 11  
+The Eye of Judgment    ,PS3,Sony Computer Entertainment  ,SCE Japan Studio  ,0.34m,0.28m,0.00m,0.02m,0.03m,24th Oct 07  
+Kidou Senshi Gundam F91: Formula Senki 0122    ,SNES,Bandai  ,Bandai  ,0.33m,N/A,N/A,0.33m,0.00m,06th Jul 91  
+"Warhammer 40,000: Squad Command    ",PSP,THQ  ,RedLynx  ,0.33m,0.11m,0.14m,N/A,0.08m,12th Nov 07  
+Battlestations: Pacific    ,X360,Eidos Interactive  ,Eidos Studios Hungary  ,0.32m,0.17m,0.11m,0.01m,0.03m,12th May 09  
+Dragon Quest Monsters: Battle Road Victory    ,Wii,Square Enix  ,Armor Project/Bird Studio  ,0.32m,N/A,N/A,0.32m,N/A,15th Jul 10  
+Shin Super Robot Taisen Special Disk    ,PS,Banpresto  ,Banpresto  ,0.32m,N/A,N/A,0.30m,0.02m,28th Mar 97  
+Kingdom Under Fire: The Crusaders    ,XB,Microsoft  ,Phantagram  ,0.32m,0.24m,0.07m,N/A,0.01m,12th Oct 04  
+Romance of the Three Kingdoms VII    ,PS2,KOEI  ,Koei  ,0.32m,0.08m,0.06m,0.16m,0.02m,25th Jun 02  
+WarCraft II: The Dark Saga    ,PS,Electronic Arts  ,Blizzard Entertainment  ,0.31m,0.18m,0.12m,N/A,0.02m,31st Aug 97  
+Yu-Gi-Oh! The Dawn of Destiny    ,XB,Konami  ,Konami Computer Entertainment Japan  ,0.31m,0.23m,0.07m,N/A,0.01m,23rd Mar 04  
+SD Gundam G Generation Wars    ,PS2,Bandai  ,Tom Create  ,0.31m,N/A,N/A,0.31m,N/A,06th Aug 09  
+Super Robot Taisen Complete Box    ,PS,Banpresto  ,Bandai  ,0.31m,N/A,N/A,0.29m,0.02m,10th Jun 99  
+XCOM 2    ,PC,2K Games  ,Firaxis Games  ,0.31m,0.12m,0.16m,N/A,0.02m,30th Nov 15  
+Lord of the Rings: Battle for Middle-Earth     ,X360,Electronic Arts  ,EA Los Angeles  ,0.31m,0.28m,N/A,N/A,0.02m,05th Jul 06  
+Yu-Gi-Oh! 5D's World Championship 2010 Reverse of Arcadia    ,DS,Konami  ,Konami  ,0.31m,0.18m,0.02m,0.09m,0.02m,23rd Feb 10  
+SD Gundam G Generation: Overworld    ,PSP,Namco Bandai Games  ,Namco Bandai Games  ,0.31m,N/A,N/A,0.31m,N/A,27th Sep 12  
+XCOM 2    ,PS4,2K Games  ,Firaxis Games  ,0.31m,0.16m,0.10m,N/A,0.05m,27th Sep 16  
+The Settlers 7: Paths to a Kingdom    ,PC,Ubisoft  ,Blue Byte  ,0.31m,N/A,0.27m,N/A,0.04m,23rd Mar 10  
+Super Robot Taisen W    ,DS,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,01st Mar 07  
+Super Robot Taisen OG: Original Generations Gaiden    ,PS2,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,27th Dec 07  
+Romance of the Three Kingdoms VIII    ,PS2,KOEI  ,Koei  ,0.30m,0.05m,0.04m,0.19m,0.01m,13th Aug 03  
+Invizimals: Shadow Zone    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.30m,0.05m,0.16m,N/A,0.08m,25th Oct 11  
+Dragon Force    ,SAT,Working Designs  ,Sega  ,0.30m,N/A,N/A,0.30m,0.00m,30th Nov 96  
+Full Spectrum Warrior    ,PS2,THQ  ,Pandemic Studios  ,0.30m,0.15m,0.11m,N/A,0.04m,21st Mar 05  
+Little King's Story    ,Wii,Xseed Games  ,Cing Inc. / Town Factory  ,0.29m,0.14m,0.11m,0.02m,0.02m,21st Jul 09  
+Kagero: Deception II    ,PS,Tecmo  ,Tecmo  ,0.29m,0.03m,0.02m,0.22m,0.02m,14th Oct 98  
+Zoo Tycoon 2 DS    ,DS,THQ  ,Altron  ,0.29m,0.24m,0.03m,N/A,0.02m,04th Feb 08  
+SD Gundam G Century    ,PS,Bandai  ,Bandai  ,0.29m,N/A,N/A,0.27m,0.02m,20th Mar 97  
+Dynasty Tactics    ,PS2,KOEI  ,Koei  ,0.29m,0.06m,0.05m,0.16m,0.02m,17th Sep 02  
+Romance of the Three Kingdoms III: Dragon of Destiny    ,SNES,KOEI  ,Koei  ,0.29m,N/A,N/A,0.29m,N/A,01st Jan 93  
+Culdcept    ,3DS,NIS America  ,OmiyaSoft  ,0.29m,0.04m,0.01m,0.23m,0.01m,03rd Oct 17  
+Lord of Darkness    ,SNES,KOEI  ,Koei  ,0.28m,N/A,N/A,0.28m,0.00m,01st Jan 94  
+Yu-Gi-Oh! World Championship 2008    ,DS,Konami  ,Konami  ,0.28m,0.13m,0.02m,0.12m,0.01m,04th Dec 07  
+Kakyuusei    ,SAT,Elf  ,Elf  ,0.28m,N/A,N/A,0.28m,0.00m,25th Apr 97  
+Civilization II    ,PS,Activision  ,LTI Grey Matter  ,0.28m,0.15m,0.11m,N/A,0.02m,20th Jan 98  
+SD Gundam G Generation Portable    ,PSP,Namco Bandai  ,Bandai Namco Games  ,0.27m,N/A,N/A,0.27m,N/A,03rd Aug 06  
+Command & Conquer    ,N64,Nintendo  ,Looking Glass Studios  ,0.27m,0.22m,0.05m,N/A,0.00m,31st May 99  
+Fire Emblem: Shin Monshou no Nazo Hikari to Kage no Eiyuu    ,DS,Nintendo  ,Intelligent Systems  ,0.27m,N/A,N/A,0.27m,N/A,15th Jul 10  
+Plants vs. Zombies    ,X360,PopCap Games  ,PopCap Games  ,0.27m,0.24m,N/A,N/A,0.02m,28th Sep 10  
+R.U.S.E.    ,X360,Ubisoft  ,Eugen Systems  ,0.27m,0.12m,0.11m,0.00m,0.02m,07th Sep 10  
+Duel Masters    ,PS2,Atari  ,High Voltage Software  ,0.27m,0.13m,0.10m,N/A,0.03m,02nd Nov 04  
+Battle of Giants: Mutant Insects    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.27m,0.09m,0.15m,N/A,0.03m,02nd Mar 10  
+Total War: Attila    ,PC,Sega  ,Creative Assembly  ,0.26m,0.11m,0.14m,N/A,0.02m,17th Feb 15  
+Tropico 4    ,PC,Kalypso  ,Haemimont Games  ,0.26m,0.10m,0.13m,N/A,0.03m,30th Aug 11  
+R.U.S.E.    ,PC,Ubisoft  ,Eugen Systems  ,0.26m,0.04m,0.19m,N/A,0.03m,07th Sep 10  
+Battlestations: Midway    ,X360,Eidos Interactive  ,Eidos Hungary  ,0.26m,0.21m,0.02m,0.00m,0.02m,30th Jan 07  
+SD Gundam G Generation: Cross Drive    ,DS,Namco Bandai  ,Vanguard  ,0.26m,N/A,N/A,0.26m,N/A,09th Aug 07  
+RollerCoaster Tycoon 3    ,PC,Atari  ,Frontier Developments  ,0.26m,0.01m,0.22m,N/A,0.02m,26th Oct 04  
+Fire Emblem: Thracia 776    ,SNES,Nintendo  ,Intelligent Systems  ,0.26m,N/A,N/A,0.26m,N/A,01st Sep 99  
+Super Robot Taisen R    ,GBA,Banpresto  ,Banpresto  ,0.26m,N/A,N/A,0.25m,0.01m,02nd Aug 02  
+Romance of the Three Kingdoms II    ,SNES,KOEI  ,Koei  ,0.25m,N/A,N/A,0.25m,N/A,01st May 92  
+A. IV Evolution: A Ressha de Ikou 4    ,PS,ArtDink  ,ArtDink  ,0.25m,N/A,N/A,0.24m,0.02m,03rd Dec 94  
+Sid Meier's Civilization VI    ,NS,2K Games  ,Firaxis Games  ,0.25m,0.12m,0.11m,0.01m,0.02m,16th Nov 18  
+Zoo Tycoon 2: Ultimate Collection    ,PC,Microsoft Game Studios  ,Blue Fang Games  ,0.25m,0.04m,0.19m,N/A,0.03m,05th Dec 08  
+Dune 2000    ,PS,Electronic Arts  ,Westwood Studios  ,0.25m,0.14m,0.09m,N/A,0.02m,11th Feb 00  
+Panzer General    ,PS,SSI  ,"Strategic Simulations, Inc.  ",0.24m,0.14m,0.09m,N/A,0.02m,01st Jan 96  
+Command & Conquer 3: Kane's Wrath    ,X360,Electronic Arts  ,EA Los Angeles  ,0.24m,0.16m,0.06m,N/A,0.02m,23rd Jun 08  
+Super Robot Taisen D    ,GBA,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.23m,0.01m,08th Aug 03  
+Anno 2205    ,PC,Ubisoft  ,Blue Byte  ,0.23m,0.04m,0.17m,N/A,0.02m,03rd Nov 15  
+Super Robot Taisen F Kanketsuhen    ,PS,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.21m,0.01m,15th Apr 99  
+Yu-Gi-Oh! GX: Tag Force 3    ,PSP,Konami  ,Konami  ,0.23m,N/A,0.03m,0.18m,0.01m,28th Nov 08  
+Code Name: S.T.E.A.M.    ,3DS,Nintendo  ,Intelligent Systems  ,0.22m,0.14m,0.05m,0.02m,0.02m,13th Mar 15  
+Age of Empires: The Age of Kings    ,DS,Majesco  ,Backbone Entertainment  ,0.22m,0.18m,0.02m,N/A,0.02m,14th Feb 06  
+Total War: WARHAMMER    ,PC,Sega  ,Creative Assembly  ,0.22m,N/A,0.21m,N/A,0.01m,24th May 16  
+Worms: Battle Islands    ,Wii,THQ  ,Team17 Software  ,0.22m,0.10m,0.10m,N/A,0.02m,23rd Nov 10  
+The Lord of the Rings: The Third Age    ,GBA,Electronic Arts  ,Griptonite Games  ,0.22m,0.16m,0.06m,N/A,0.00m,02nd Nov 04  
+Kartia: The Word of Fate    ,PS,Atlus  ,Atlus Co.  ,0.22m,0.05m,0.03m,0.12m,0.01m,31st Jul 98  
+Pokémon Stadium    ,N64,Nintendo  ,HAL Laboratory  ,5.45m,3.18m,1.24m,0.94m,0.09m,06th Mar 00  
+Warzone 2100    ,PS,Eidos Interactive  ,Pumpkin Studios  ,5.01m,2.79m,1.89m,N/A,0.33m,31st May 99  
+StarCraft II: Wings of Liberty    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.86m,2.60m,1.70m,N/A,0.56m,27th Jul 10  
+Warcraft II: Tides of Darkness    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,4.21m,1.70m,2.27m,N/A,0.23m,30th Apr 96  
+Pokémon Trading Card Game    ,GB,Nintendo  ,Hudson Soft  ,3.70m,1.49m,0.73m,1.38m,0.10m,10th Apr 00  
+Command & Conquer: Red Alert    ,PC,Virgin Interactive  ,Westwood Studios  ,2.85m,1.37m,1.34m,N/A,0.14m,01st Nov 96  
+Pokémon Stadium 2    ,N64,Nintendo  ,HAL Laboratory  ,2.73m,1.02m,0.36m,1.13m,0.23m,28th Mar 01  
+Halo Wars    ,X360,Microsoft Game Studios  ,Ensemble Studios  ,2.67m,1.58m,0.80m,0.04m,0.25m,03rd Mar 09  
+Mario + Rabbids: Kingdom Battle    ,NS,Ubisoft  ,Ubisoft Milan  ,2.59m,1.10m,1.08m,0.22m,0.20m,29th Aug 17  
+Theme Hospital    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.40m,2.30m,0.10m,N/A,N/A,31st Mar 97  
+Sim Theme Park    ,PC,Electronic Arts  ,Bullfrog Productions  ,2.08m,2.04m,0.04m,N/A,N/A,31st Oct 99  
+Warcraft: Orcs & Humans    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,2.08m,0.89m,1.08m,N/A,0.11m,15th Jan 94  
+Yu-Gi-Oh! The Eternal Duelist Soul    ,GBA,Konami  ,Konami Computer Entertainment Japan  ,2.07m,1.64m,0.36m,N/A,0.07m,15th Oct 02  
+Sid Meier's Civilization V    ,PC,2K Games  ,Firaxis Games  ,1.70m,1.00m,0.53m,N/A,0.17m,21st Sep 10  
+StarCraft II: Heart of the Swarm    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.67m,0.85m,0.68m,N/A,0.14m,12th Mar 13  
+Pikmin    ,GC,Nintendo  ,Nintendo EAD  ,1.63m,0.78m,0.25m,0.56m,0.04m,03rd Dec 01  
+Yu-Gi-Oh! Duel Monsters    ,GB,Konami  ,Konami Computer Entertainment Shinjuku  ,1.61m,N/A,N/A,1.61m,0.01m,16th Dec 98  
+Command & Conquer: Tiberian Sun    ,PC,Westwood Studios  ,Westwood Studios  ,1.55m,1.55m,0.00m,N/A,N/A,24th Aug 99  
+Warcraft III: The Frozen Throne    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,1.54m,0.58m,0.87m,N/A,0.09m,01st Jul 03  
+LEGO Battles: Ninjago    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.48m,1.03m,0.33m,N/A,0.12m,12th Apr 11  
+Anno 2070    ,PC,Ubisoft  ,Blue Byte Studio  ,1.40m,N/A,1.14m,N/A,0.26m,17th Nov 11  
+Pocket Monsters Stadium    ,N64,Nintendo  ,HAL Laboratory  ,1.37m,N/A,N/A,1.37m,N/A,01st Aug 98  
+Command & Conquer: Red Alert 2    ,PC,Electronic Arts  ,Westwood Studios  ,1.34m,1.32m,0.02m,N/A,N/A,21st Oct 00  
+LEGO Battles    ,DS,Warner Bros. Interactive  ,Hellbent Games  ,1.29m,0.79m,0.38m,N/A,0.12m,10th Jun 09  
+RollerCoaster Tycoon 2    ,PC,Atari  ,Chris Sawyer  ,1.25m,1.19m,0.06m,N/A,N/A,15th Oct 02  
+Pikmin 3    ,WiiU,Nintendo  ,Nintendo EAD  ,1.23m,0.47m,0.38m,0.29m,0.08m,04th Aug 13  
+Pikmin 2    ,GC,Nintendo  ,Nintendo EAD  ,1.20m,0.48m,0.13m,0.56m,0.03m,30th Aug 04  
+Spore    ,PC,Electronic Arts  ,Maxis  ,1.16m,0.03m,1.06m,N/A,0.07m,07th Sep 08  
+Plants vs. Zombies    ,DS,PopCap Games  ,PopCap Games  ,1.11m,0.90m,0.13m,N/A,0.09m,18th Jan 11  
+Yu-Gi-Oh! Duel Monsters II: Dark Duel Stories    ,GB,Konami  ,Konami  ,1.10m,N/A,N/A,1.10m,0.00m,08th Jul 99  
+Empire: Total War    ,PC,Sega  ,The Creative Assembly  ,1.07m,0.01m,0.98m,N/A,0.09m,03rd Mar 09  
+Worms Armageddon    ,PS,Microprose  ,Team17 Software  ,1.06m,0.18m,0.81m,N/A,0.08m,30th Nov 99  
+Zoo Tycoon DS    ,DS,THQ  ,Blue Fang Games  ,0.98m,0.86m,0.03m,0.01m,0.07m,11th Oct 05  
+Fire Emblem    ,GBA,Nintendo  ,Intelligent Systems  ,0.97m,0.49m,0.18m,0.29m,0.01m,03rd Nov 03  
+Kessen    ,PS2,Electronic Arts  ,Koei  ,0.95m,0.27m,0.21m,0.41m,0.07m,13th Nov 00  
+Tom Clancy's EndWar    ,X360,Ubisoft  ,Ubisoft Shanghai  ,0.91m,0.58m,0.24m,0.01m,0.09m,04th Nov 08  
+Fire Emblem: The Sacred Stones    ,GBA,Nintendo  ,Intelligent Systems  ,0.89m,0.42m,0.16m,0.30m,0.02m,23rd May 05  
+Pokémon Card GB2: GRdan Sanjou    ,GB,Nintendo  ,Hudson Soft  ,0.89m,N/A,N/A,0.89m,N/A,28th Mar 01  
+Metal Gear Ac!d    ,PSP,Konami  ,Konami  ,0.87m,0.32m,0.26m,0.12m,0.17m,22nd Mar 05  
+Sid Meier's Civilization Revolution    ,X360,2K Games  ,Firaxis Games  ,0.83m,0.58m,0.17m,0.00m,0.07m,08th Jul 08  
+Battle of Giants: Dinosaurs    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.81m,0.37m,0.35m,N/A,0.08m,21st Oct 08  
+Super Robot Taisen α    ,PS,Banpresto  ,Banpresto  ,0.80m,N/A,N/A,0.75m,0.05m,25th May 00  
+Invizimals    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.79m,0.17m,0.51m,N/A,0.11m,12th Oct 10  
+Sid Meier's Civilization Revolution    ,PS3,2K Games  ,Firaxis Games  ,0.78m,0.49m,0.19m,0.01m,0.09m,08th Jul 08  
+Battle Stations    ,PS,Electronic Arts  ,Realtime Associates  ,0.78m,0.43m,0.29m,N/A,0.05m,31st Mar 97  
+Worms: Open Warfare    ,PSP,THQ  ,Team17 Software  ,0.77m,0.11m,0.43m,N/A,0.23m,22nd Mar 06  
+Full Spectrum Warrior    ,XB,THQ  ,Pandemic Studios  ,0.73m,0.54m,0.16m,N/A,0.03m,01st Jun 04  
+XCOM: Enemy Unknown    ,PC,2K Games  ,Firaxis Games  ,0.72m,0.28m,0.37m,N/A,0.07m,09th Oct 12  
+SD Gundam G Generation    ,PS,Bandai  ,Bandai  ,0.72m,N/A,N/A,0.67m,0.05m,06th Aug 98  
+Yu-Gi-Oh! The Falsebound Kingdom    ,GC,Konami  ,Konami  ,0.71m,0.49m,0.13m,0.07m,0.02m,04th Nov 03  
+Command & Conquer: Red Alert Retaliation    ,PS,Virgin Interactive  ,Westwood Studios  ,0.70m,0.39m,0.27m,N/A,0.05m,28th Aug 98  
+Advance Wars    ,GBA,Nintendo  ,Intelligent Systems  ,0.70m,0.50m,0.19m,N/A,0.01m,09th Sep 01  
+Fire Emblem: Monshou no Nazo    ,SNES,Nintendo  ,Intelligent Systems  ,0.70m,N/A,N/A,0.70m,N/A,21st Jan 94  
+Total War: Rome II    ,PC,Sega  ,The Creative Assembly  ,0.69m,0.12m,0.52m,N/A,0.05m,03rd Sep 13  
+Tom Clancy's EndWar    ,PS3,Ubisoft  ,Ubisoft Shanghai  ,0.67m,0.33m,0.22m,0.01m,0.11m,04th Nov 08  
+Napoleon: Total War    ,PC,Sega  ,The Creative Assembly  ,0.67m,0.02m,0.54m,N/A,0.11m,23rd Feb 10  
+Command & Conquer: Red Alert 3    ,PC,Electronic Arts  ,EA Los Angeles  ,0.66m,0.01m,0.64m,N/A,0.02m,28th Oct 08  
+Thrillville    ,PS2,LucasArts  ,Frontier Developments  ,0.66m,0.55m,0.02m,N/A,0.09m,21st Nov 06  
+Advance Wars 2: Black Hole Rising    ,GBA,Nintendo  ,Intelligent Systems  ,0.65m,0.47m,0.17m,N/A,0.01m,24th Jun 03  
+Super Robot Taisen Impact    ,PS2,Banpresto  ,Banpresto  ,0.65m,N/A,N/A,0.65m,N/A,28th Mar 02  
+New Play Control! Pikmin    ,Wii,Nintendo  ,Nintendo EAD  ,0.64m,0.28m,0.13m,0.19m,0.04m,09th Mar 09  
+Sim Theme Park    ,PS,Electronic Arts  ,Climax Group  ,0.63m,0.35m,0.24m,N/A,0.04m,24th Oct 99  
+Nobunaga no Yabou: Haouden    ,SNES,KOEI  ,Koei  ,0.62m,0.30m,N/A,0.32m,N/A,09th Dec 93  
+Battle of Giants: Dragons    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.62m,0.30m,0.25m,N/A,0.06m,29th Sep 09  
+Super Robot Taisen α Gaiden    ,PS,Banpresto  ,Banpresto  ,0.62m,N/A,N/A,0.58m,0.04m,29th Mar 01  
+Fire Emblem: Shadow Dragon    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.29m,0.03m,0.27m,0.03m,16th Feb 09  
+Advance Wars: Days of Ruin    ,DS,Nintendo  ,Intelligent Systems  ,0.61m,0.43m,0.13m,N/A,0.05m,21st Jan 08  
+New Play Control! Pikmin 2    ,Wii,Nintendo  ,Nintendo EAD  ,0.61m,0.11m,0.13m,0.34m,0.02m,10th Jun 12  
+Shogun 2: Total War    ,PC,Sega  ,The Creative Assembly  ,0.60m,0.19m,0.32m,N/A,0.08m,15th Mar 11  
+Front Mission    ,SNES,Square  ,G-Craft  ,0.60m,N/A,N/A,0.60m,N/A,24th Feb 95  
+Dai-2-Ji Super Robot Taisen α    ,PS2,Banpresto  ,Banpresto  ,0.60m,N/A,N/A,0.60m,N/A,27th Mar 03  
+Dai-3-Ji Super Robot Taisen α: Shuuen no Ginga e    ,PS2,Banpresto  ,Banpresto  ,0.59m,N/A,N/A,0.59m,N/A,28th Jul 05  
+XCOM: Enemy Unknown    ,PS3,2K Games  ,Firaxis Games  ,0.59m,0.25m,0.24m,N/A,0.10m,09th Oct 12  
+Fire Emblem: Seisen no Keifu    ,SNES,Nintendo  ,Intelligent Systems  ,0.58m,N/A,N/A,0.58m,N/A,14th May 96  
+Theme Park    ,PS,Electronic Arts  ,Bullfrog Productions  ,0.57m,0.24m,0.16m,0.13m,0.04m,01st Jan 95  
+StarCraft II: Legacy of the Void    ,PC,Blizzard Entertainment  ,Blizzard Entertainment  ,0.57m,0.23m,0.30m,N/A,0.05m,10th Nov 15  
+Mobile Suit Gundam: Giren no Yabou- Zeon no Keifu    ,PS,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.54m,0.04m,10th Feb 00  
+SD Gundam G Generation Neo    ,PS2,Bandai  ,Bandai  ,0.57m,N/A,N/A,0.57m,N/A,28th Nov 02  
+Yu-Gi-Oh! Reshef of Destruction    ,GBA,Konami  ,Konami  ,0.56m,0.40m,0.15m,N/A,0.01m,29th Jun 04  
+Shin Super Robot Taisen    ,PS,Banpresto  ,Winky Soft  ,0.55m,N/A,N/A,0.52m,0.04m,27th Dec 96  
+SD Gundam G Generation Zero    ,PS,Bandai  ,Bandai  ,0.55m,N/A,N/A,0.51m,0.04m,12th Aug 99  
+Super Robot Taisen F Kanketsuhen    ,SAT,Banpresto  ,Banpresto  ,0.55m,N/A,N/A,0.55m,0.00m,23rd Apr 98  
+Front Mission 4    ,PS2,Square Enix  ,Square Enix  ,0.54m,0.14m,0.11m,0.25m,0.04m,15th Jun 04  
+Romance of the Three Kingdoms IV: Wall of Fire    ,SNES,KOEI  ,Koei / Inis  ,0.53m,N/A,N/A,0.53m,N/A,13th Jan 95  
+Front Mission 2    ,PS,Square  ,SquareSoft  ,0.53m,N/A,N/A,0.49m,0.03m,25th Sep 97  
+Front Mission 3    ,PS,Square  ,SquareSoft  ,0.52m,0.10m,0.07m,0.31m,0.03m,29th Feb 00  
+Halo Wars 2    ,XOne,Microsoft Studios  ,Creative Assembly  ,0.51m,0.31m,0.15m,N/A,0.05m,21st Feb 17  
+Dai-4-Ji Super Robot Taisen S    ,PS,Banpresto  ,Winky Soft  ,0.51m,N/A,N/A,0.48m,0.03m,26th Jan 96  
+R.U.S.E.    ,PS3,Ubisoft  ,Eugen Systems  ,0.50m,0.18m,0.22m,0.02m,0.08m,07th Sep 10  
+Super Robot Taisen MX    ,PS2,Banpresto  ,TOSE  ,0.50m,N/A,N/A,0.50m,N/A,27th May 04  
+Super Robot Taisen Z    ,PS2,Namco Bandai  ,Banpresto  ,0.50m,N/A,N/A,0.50m,N/A,25th Sep 08  
+Fire Emblem: Radiant Dawn    ,Wii,Nintendo  ,Intelligent Systems  ,0.49m,0.27m,0.03m,0.17m,0.03m,05th Nov 07  
+Theme Park Roller Coaster    ,PS2,Electronic Arts  ,Bullfrog Productions  ,0.48m,0.23m,0.18m,N/A,0.06m,04th Dec 00  
+"Warhammer 40,000: Dawn of War II    ",PC,THQ  ,Relic  ,0.47m,N/A,0.45m,N/A,0.01m,19th Feb 09  
+Kessen II    ,PS2,KOEI  ,Koei  ,0.46m,0.13m,0.10m,0.20m,0.03m,26th Sep 01  
+Command & Conquer: Red Alert 3    ,X360,Bethesda Softworks  ,EA Los Angeles  ,0.45m,0.18m,0.23m,N/A,0.05m,11th Nov 08  
+Worms: Open Warfare 2    ,PSP,THQ  ,Team17 Software / Two Tribes  ,0.45m,0.04m,0.27m,N/A,0.14m,04th Sep 07  
+Sid Meier's Civilization Revolution    ,DS,2K Games  ,Firaxis  ,0.45m,0.37m,0.03m,0.02m,0.03m,08th Jul 08  
+Super Robot Taisen OG: Original Generations    ,PS2,Banpresto  ,Banpresto  ,0.44m,N/A,N/A,0.44m,N/A,28th Jun 07  
+Yu-Gi-Oh! 5D's Tag Force 4    ,PSP,Konami  ,Konami  ,0.44m,0.19m,0.07m,0.12m,0.05m,17th Nov 09  
+Sid Meier's Civilization VI    ,PC,2K Games  ,Firaxis Games  ,0.44m,0.12m,0.29m,N/A,0.03m,21st Oct 16  
+Thrillville: Off the Rails    ,Wii,LucasArts  ,Frontier Developments  ,0.44m,0.38m,0.02m,N/A,0.03m,09th Oct 07  
+Dai-2-Ji Super Robot Taisen Z: Hakai-hen    ,PSP,Banpresto  ,Banpresto  ,0.42m,N/A,N/A,0.42m,N/A,14th Apr 11  
+Command & Conquer 3: Tiberium Wars    ,X360,Electronic Arts  ,EA Los Angeles  ,0.42m,0.35m,0.04m,N/A,0.03m,08th May 07  
+Thrillville: Off the Rails    ,PS2,LucasArts  ,Frontier Developments  ,0.42m,0.20m,0.16m,N/A,0.05m,09th Oct 07  
+Yu-Gi-Oh! GX: Tag Force 2    ,PSP,Konami  ,Konami  ,0.42m,0.03m,0.19m,0.10m,0.10m,18th Sep 07  
+Command & Conquer: Red Alert    ,PS,Westwood Studios  ,Westwood Studios  ,0.41m,0.23m,0.16m,N/A,0.03m,31st Oct 97  
+Pet in TV    ,PS,Sony Computer Entertainment  ,SCE  ,0.40m,N/A,N/A,0.38m,0.03m,01st Aug 98  
+Battalion Wars    ,GC,Nintendo  ,Kuju Entertainment  ,0.40m,0.25m,0.07m,0.07m,0.01m,19th Sep 05  
+Command & Conquer    ,PS,Westwood Studios  ,Westwood Studios  ,0.40m,0.22m,0.15m,N/A,0.03m,28th Feb 97  
+SD Gundam G Generation Seed    ,PS2,Bandai  ,Bandai  ,0.40m,N/A,N/A,0.40m,N/A,19th Feb 04  
+Combat of Giants: Dinosaurs 3D    ,3DS,Ubisoft  ,Ubisoft  ,0.39m,0.25m,0.07m,0.05m,0.03m,22nd Mar 11  
+Advance Wars: Dual Strike    ,DS,Nintendo  ,Intelligent Systems  ,0.39m,0.30m,0.03m,0.04m,0.03m,22nd Aug 05  
+SD Gundam G Generation Spirits    ,PS2,Namco Bandai  ,Tom Create  ,0.38m,N/A,N/A,0.38m,N/A,29th Nov 07  
+Mobile Suit Gundam: Giren no Yabou Zeon Dokuritsu Sensouden    ,PS2,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.38m,N/A,02nd May 02  
+SD Gundam G Generation-F    ,PS,Bandai  ,Bandai  ,0.38m,N/A,N/A,0.36m,0.02m,03rd Aug 00  
+Risk: Global Domination    ,PS2,Atari  ,Cyberlore Studios  ,0.38m,0.19m,0.15m,N/A,0.05m,05th Nov 03  
+Dai-4-Ji Super Robot Taisen    ,SNES,Banpresto  ,Banpresto  ,0.38m,N/A,N/A,0.38m,N/A,17th Mar 95  
+Age of Empires III    ,PC,Microsoft Game Studios  ,Ensemble Studios  ,0.37m,N/A,0.33m,N/A,0.04m,18th Oct 05  
+Super Robot Taisen EX    ,SNES,Banpresto  ,WinkySoft  ,0.37m,N/A,N/A,0.37m,N/A,25th Mar 94  
+Mini-Yonku GB: Let's & Go!!    ,GB,ASCII Entertainment  ,Jupiter Multimedia  ,0.37m,N/A,N/A,0.37m,0.00m,23rd May 97  
+Medieval II: Total War Gold Edition    ,PC,Sega  ,The Creative Assembly  ,0.36m,N/A,0.34m,N/A,0.03m,05th Feb 08  
+Dai-2-Ji Super Robot Taisen Z Saisei-hen    ,PSP,Namco Bandai Games  ,Banpresto  ,0.36m,N/A,N/A,0.36m,N/A,05th Apr 12  
+Super Robot Taisen A    ,GBA,Banpresto  ,Banpresto  ,0.36m,N/A,N/A,0.35m,0.01m,21st Sep 01  
+Worms: Open Warfare 2    ,DS,THQ  ,Team17 Software / Two Tribes  ,0.35m,0.07m,0.24m,N/A,0.04m,04th Sep 07  
+Command & Conquer: Red Alert 3 Ultimate Edition    ,PS3,Electronic Arts  ,EA Los Angeles  ,0.35m,0.14m,0.16m,N/A,0.06m,23rd Mar 09  
+Tropico 4    ,X360,Kalypso  ,Haemimont Games  ,0.35m,0.20m,0.12m,N/A,0.03m,18th Oct 11  
+Yu-Gi-Oh! 5D's Tag Force 5    ,PSP,Konami  ,Konami  ,0.35m,0.13m,0.05m,0.14m,0.03m,26th Oct 10  
+SD Gundam G Generation World    ,PSP,Namco Bandai  ,Tom Create  ,0.34m,N/A,N/A,0.34m,N/A,24th Feb 11  
+Battalion Wars 2    ,Wii,Nintendo  ,Kuju Entertainment  ,0.34m,0.22m,0.02m,0.08m,0.02m,29th Oct 07  
+Supreme Commander 2    ,X360,Square Enix  ,Gas Powered Games  ,0.34m,0.23m,0.09m,N/A,0.03m,16th Mar 10  
+Iron Storm    ,SAT,Working Designs  ,SystemSoft  ,0.34m,N/A,N/A,0.34m,0.00m,01st Jan 96  
+Tom Clancy's Ghost Recon: Shadow Wars    ,3DS,Ubisoft  ,Ubisoft  ,0.34m,0.22m,0.10m,N/A,0.03m,22nd Mar 11  
+The Eye of Judgment    ,PS3,Sony Computer Entertainment  ,SCE Japan Studio  ,0.34m,0.28m,0.00m,0.02m,0.03m,24th Oct 07  
+Kidou Senshi Gundam F91: Formula Senki 0122    ,SNES,Bandai  ,Bandai  ,0.33m,N/A,N/A,0.33m,0.00m,06th Jul 91  
+"Warhammer 40,000: Squad Command    ",PSP,THQ  ,RedLynx  ,0.33m,0.11m,0.14m,N/A,0.08m,12th Nov 07  
+Battlestations: Pacific    ,X360,Eidos Interactive  ,Eidos Studios Hungary  ,0.32m,0.17m,0.11m,0.01m,0.03m,12th May 09  
+Dragon Quest Monsters: Battle Road Victory    ,Wii,Square Enix  ,Armor Project/Bird Studio  ,0.32m,N/A,N/A,0.32m,N/A,15th Jul 10  
+Shin Super Robot Taisen Special Disk    ,PS,Banpresto  ,Banpresto  ,0.32m,N/A,N/A,0.30m,0.02m,28th Mar 97  
+Kingdom Under Fire: The Crusaders    ,XB,Microsoft  ,Phantagram  ,0.32m,0.24m,0.07m,N/A,0.01m,12th Oct 04  
+Romance of the Three Kingdoms VII    ,PS2,KOEI  ,Koei  ,0.32m,0.08m,0.06m,0.16m,0.02m,25th Jun 02  
+WarCraft II: The Dark Saga    ,PS,Electronic Arts  ,Blizzard Entertainment  ,0.31m,0.18m,0.12m,N/A,0.02m,31st Aug 97  
+Yu-Gi-Oh! The Dawn of Destiny    ,XB,Konami  ,Konami Computer Entertainment Japan  ,0.31m,0.23m,0.07m,N/A,0.01m,23rd Mar 04  
+SD Gundam G Generation Wars    ,PS2,Bandai  ,Tom Create  ,0.31m,N/A,N/A,0.31m,N/A,06th Aug 09  
+Super Robot Taisen Complete Box    ,PS,Banpresto  ,Bandai  ,0.31m,N/A,N/A,0.29m,0.02m,10th Jun 99  
+XCOM 2    ,PC,2K Games  ,Firaxis Games  ,0.31m,0.12m,0.16m,N/A,0.02m,30th Nov 15  
+Lord of the Rings: Battle for Middle-Earth     ,X360,Electronic Arts  ,EA Los Angeles  ,0.31m,0.28m,N/A,N/A,0.02m,05th Jul 06  
+Yu-Gi-Oh! 5D's World Championship 2010 Reverse of Arcadia    ,DS,Konami  ,Konami  ,0.31m,0.18m,0.02m,0.09m,0.02m,23rd Feb 10  
+SD Gundam G Generation: Overworld    ,PSP,Namco Bandai Games  ,Namco Bandai Games  ,0.31m,N/A,N/A,0.31m,N/A,27th Sep 12  
+XCOM 2    ,PS4,2K Games  ,Firaxis Games  ,0.31m,0.16m,0.10m,N/A,0.05m,27th Sep 16  
+The Settlers 7: Paths to a Kingdom    ,PC,Ubisoft  ,Blue Byte  ,0.31m,N/A,0.27m,N/A,0.04m,23rd Mar 10  
+Super Robot Taisen W    ,DS,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,01st Mar 07  
+Super Robot Taisen OG: Original Generations Gaiden    ,PS2,Banpresto  ,Banpresto  ,0.30m,N/A,N/A,0.30m,N/A,27th Dec 07  
+Romance of the Three Kingdoms VIII    ,PS2,KOEI  ,Koei  ,0.30m,0.05m,0.04m,0.19m,0.01m,13th Aug 03  
+Invizimals: Shadow Zone    ,PSP,Sony Computer Entertainment  ,Novarama  ,0.30m,0.05m,0.16m,N/A,0.08m,25th Oct 11  
+Dragon Force    ,SAT,Working Designs  ,Sega  ,0.30m,N/A,N/A,0.30m,0.00m,30th Nov 96  
+Full Spectrum Warrior    ,PS2,THQ  ,Pandemic Studios  ,0.30m,0.15m,0.11m,N/A,0.04m,21st Mar 05  
+Little King's Story    ,Wii,Xseed Games  ,Cing Inc. / Town Factory  ,0.29m,0.14m,0.11m,0.02m,0.02m,21st Jul 09  
+Kagero: Deception II    ,PS,Tecmo  ,Tecmo  ,0.29m,0.03m,0.02m,0.22m,0.02m,14th Oct 98  
+Zoo Tycoon 2 DS    ,DS,THQ  ,Altron  ,0.29m,0.24m,0.03m,N/A,0.02m,04th Feb 08  
+SD Gundam G Century    ,PS,Bandai  ,Bandai  ,0.29m,N/A,N/A,0.27m,0.02m,20th Mar 97  
+Dynasty Tactics    ,PS2,KOEI  ,Koei  ,0.29m,0.06m,0.05m,0.16m,0.02m,17th Sep 02  
+Romance of the Three Kingdoms III: Dragon of Destiny    ,SNES,KOEI  ,Koei  ,0.29m,N/A,N/A,0.29m,N/A,01st Jan 93  
+Culdcept    ,3DS,NIS America  ,OmiyaSoft  ,0.29m,0.04m,0.01m,0.23m,0.01m,03rd Oct 17  
+Lord of Darkness    ,SNES,KOEI  ,Koei  ,0.28m,N/A,N/A,0.28m,0.00m,01st Jan 94  
+Yu-Gi-Oh! World Championship 2008    ,DS,Konami  ,Konami  ,0.28m,0.13m,0.02m,0.12m,0.01m,04th Dec 07  
+Kakyuusei    ,SAT,Elf  ,Elf  ,0.28m,N/A,N/A,0.28m,0.00m,25th Apr 97  
+Civilization II    ,PS,Activision  ,LTI Grey Matter  ,0.28m,0.15m,0.11m,N/A,0.02m,20th Jan 98  
+SD Gundam G Generation Portable    ,PSP,Namco Bandai  ,Bandai Namco Games  ,0.27m,N/A,N/A,0.27m,N/A,03rd Aug 06  
+Command & Conquer    ,N64,Nintendo  ,Looking Glass Studios  ,0.27m,0.22m,0.05m,N/A,0.00m,31st May 99  
+Fire Emblem: Shin Monshou no Nazo Hikari to Kage no Eiyuu    ,DS,Nintendo  ,Intelligent Systems  ,0.27m,N/A,N/A,0.27m,N/A,15th Jul 10  
+Plants vs. Zombies    ,X360,PopCap Games  ,PopCap Games  ,0.27m,0.24m,N/A,N/A,0.02m,28th Sep 10  
+R.U.S.E.    ,X360,Ubisoft  ,Eugen Systems  ,0.27m,0.12m,0.11m,0.00m,0.02m,07th Sep 10  
+Duel Masters    ,PS2,Atari  ,High Voltage Software  ,0.27m,0.13m,0.10m,N/A,0.03m,02nd Nov 04  
+Battle of Giants: Mutant Insects    ,DS,Ubisoft  ,Ubisoft Quebec  ,0.27m,0.09m,0.15m,N/A,0.03m,02nd Mar 10  
+Total War: Attila    ,PC,Sega  ,Creative Assembly  ,0.26m,0.11m,0.14m,N/A,0.02m,17th Feb 15  
+Tropico 4    ,PC,Kalypso  ,Haemimont Games  ,0.26m,0.10m,0.13m,N/A,0.03m,30th Aug 11  
+R.U.S.E.    ,PC,Ubisoft  ,Eugen Systems  ,0.26m,0.04m,0.19m,N/A,0.03m,07th Sep 10  
+Battlestations: Midway    ,X360,Eidos Interactive  ,Eidos Hungary  ,0.26m,0.21m,0.02m,0.00m,0.02m,30th Jan 07  
+SD Gundam G Generation: Cross Drive    ,DS,Namco Bandai  ,Vanguard  ,0.26m,N/A,N/A,0.26m,N/A,09th Aug 07  
+RollerCoaster Tycoon 3    ,PC,Atari  ,Frontier Developments  ,0.26m,0.01m,0.22m,N/A,0.02m,26th Oct 04  
+Fire Emblem: Thracia 776    ,SNES,Nintendo  ,Intelligent Systems  ,0.26m,N/A,N/A,0.26m,N/A,01st Sep 99  
+Super Robot Taisen R    ,GBA,Banpresto  ,Banpresto  ,0.26m,N/A,N/A,0.25m,0.01m,02nd Aug 02  
+Romance of the Three Kingdoms II    ,SNES,KOEI  ,Koei  ,0.25m,N/A,N/A,0.25m,N/A,01st May 92  
+A. IV Evolution: A Ressha de Ikou 4    ,PS,ArtDink  ,ArtDink  ,0.25m,N/A,N/A,0.24m,0.02m,03rd Dec 94  
+Sid Meier's Civilization VI    ,NS,2K Games  ,Firaxis Games  ,0.25m,0.12m,0.11m,0.01m,0.02m,16th Nov 18  
+Zoo Tycoon 2: Ultimate Collection    ,PC,Microsoft Game Studios  ,Blue Fang Games  ,0.25m,0.04m,0.19m,N/A,0.03m,05th Dec 08  
+Dune 2000    ,PS,Electronic Arts  ,Westwood Studios  ,0.25m,0.14m,0.09m,N/A,0.02m,11th Feb 00  
+Panzer General    ,PS,SSI  ,"Strategic Simulations, Inc.  ",0.24m,0.14m,0.09m,N/A,0.02m,01st Jan 96  
+Command & Conquer 3: Kane's Wrath    ,X360,Electronic Arts  ,EA Los Angeles  ,0.24m,0.16m,0.06m,N/A,0.02m,23rd Jun 08  
+Super Robot Taisen D    ,GBA,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.23m,0.01m,08th Aug 03  
+Anno 2205    ,PC,Ubisoft  ,Blue Byte  ,0.23m,0.04m,0.17m,N/A,0.02m,03rd Nov 15  
+Super Robot Taisen F Kanketsuhen    ,PS,Banpresto  ,Banpresto  ,0.23m,N/A,N/A,0.21m,0.01m,15th Apr 99  
+Yu-Gi-Oh! GX: Tag Force 3    ,PSP,Konami  ,Konami  ,0.23m,N/A,0.03m,0.18m,0.01m,28th Nov 08  
+Code Name: S.T.E.A.M.    ,3DS,Nintendo  ,Intelligent Systems  ,0.22m,0.14m,0.05m,0.02m,0.02m,13th Mar 15  
+Age of Empires: The Age of Kings    ,DS,Majesco  ,Backbone Entertainment  ,0.22m,0.18m,0.02m,N/A,0.02m,14th Feb 06  
+Total War: WARHAMMER    ,PC,Sega  ,Creative Assembly  ,0.22m,N/A,0.21m,N/A,0.01m,24th May 16  
+Worms: Battle Islands    ,Wii,THQ  ,Team17 Software  ,0.22m,0.10m,0.10m,N/A,0.02m,23rd Nov 10  
+The Lord of the Rings: The Third Age    ,GBA,Electronic Arts  ,Griptonite Games  ,0.22m,0.16m,0.06m,N/A,0.00m,02nd Nov 04  
+Kartia: The Word of Fate    ,PS,Atlus  ,Atlus Co.  ,0.22m,0.05m,0.03m,0.12m,0.01m,31st Jul 98  
