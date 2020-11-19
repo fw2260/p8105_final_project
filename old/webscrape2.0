@@ -1,0 +1,138 @@
+---
+title: "Webscrap 2.0"
+author: "Lily Wang"
+date: "11/6/2020"
+output: github_document
+---
+
+```{r setup}
+library(tidyverse)
+library(rvest)
+library(polite)
+```
+
+```{r}
+title_vec = c()
+link_vec = c()
+platform_vec = c()
+release_date_vec = c()
+meta_score_vec = c()
+user_score_vec = c()
+
+for (i in 0:179) {
+  pmessage("Scraping page ", i)
+  
+  url = paste("http://www.metacritic.com/browse/games/score/metascore/all/psvita/filtered?view=detailed&page=", i, sep = "")
+
+  metacritic_html = bow(url, force = TRUE)
+
+  link = scrape(metacritic_html) %>% 
+  html_nodes(".title") %>% 
+  html_attr("href")
+  link_vec = append(link_vec, link) %>% 
+  na.omit()
+
+  title = scrape(metacritic_html) %>% 
+  html_nodes(".title h3") %>% 
+  html_text() 
+  title_vec = append(title_vec, title[-1])
+
+  platform = 
+    scrape(metacritic_html) %>% 
+    html_nodes(".platform .data") %>% 
+    html_text() %>% 
+    gsub("\n","",.)  %>% 
+    gsub("^\\s+|\\s+$","",.) 
+  platform_vec = append(platform_vec,platform)
+
+  release_date = 
+    scrape(metacritic_html) %>% 
+    html_nodes(".platform+ span") %>% 
+    html_text()
+  release_date_vec = append(release_date_vec,release_date)
+  
+  meta_score = 
+    scrape(metacritic_html) %>% 
+    html_nodes(".clamp-metascore .positive") %>% 
+    html_text() %>% 
+    ifelse(length(.) == 0, NA, .)
+  meta_score_vec = append(meta_score_vec,meta_score)
+  
+  user_score = 
+    scrape(metacritic_html) %>% 
+    html_nodes(".user") %>% 
+    html_text()
+  user_score_vec = append(user_score_vec,user_score)
+
+}
+
+```
+
+```{r}
+developer_vec = c()
+genre_vec = c()
+esrb_rating_vec = c()
+
+# platform_add = tolower(platform_vec) %>% 
+#   str_replace_all(" ","-")
+#   
+# # I think this works too? It's also shorter
+# title_add = tolower(title_vec) %>%
+#   str_replace_all("\\ &","") %>%
+#   str_replace_all(" /","") %>%
+#   str_replace_all(" :","") %>% 
+#   str_replace_all("[^[:alnum:][:blank:]-!+]", "") %>%
+#   str_replace_all(" ","-")
+
+ 
+for (i in 1:length(link_vec)) {
+url = paste("https://www.metacritic.com", link_vec[i], sep = "")
+  tryCatch({
+    detail_html = bow(url, force = TRUE)
+    developer = 
+      scrape(detail_html) %>% 
+      html_nodes(".developer .data") %>% 
+      html_text() %>% 
+      ifelse(length(.) == 0, NA, .) %>% 
+      gsub("\n","",.)  %>% 
+      gsub("^\\s+|\\s+$","",.)
+    developer_vec = append(developer_vec,developer)},
+    error = function(e) {
+      print(i)
+      print(e)
+      return(NA)}) 
+
+genre = 
+  scrape(detail_html) %>% 
+  html_nodes(".product_genre .data") %>% 
+  html_text() %>% 
+  ifelse(length(.) == 0, NA, .) %>% 
+  gsub("\n","",.)
+
+genre_vec = append(genre_vec,genre)
+
+esrb_rating = 
+  scrape(detail_html) %>% 
+  html_nodes(".product_rating .data") %>% 
+  html_text() %>% 
+  ifelse(length(.) == 0, NA, .) %>% 
+  gsub("\n","",.)
+
+esrb_rating_vec = append(esrb_rating_vec,esrb_rating)
+
+}
+```
+
+```{r}
+games_df = tibble(
+  title = title_vec,
+  platform = platform_vec,
+  release_date = release_date_vec,
+  user_score = user_score_vec
+  developer = developer_vec,
+  genre = genre_vec,
+  esrb_rating = esrb_rating_vec)
+
+write_csv(games_df, "data/metacritic.csv")
+```
+
