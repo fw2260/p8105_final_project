@@ -26,10 +26,10 @@ library(tidyverse)
     ## x purrr::pluck()          masks rvest::pluck()
 
 ``` r
-url = "https://www.vgchartz.com/games/games.php?page=1&results=200&genre=Action&order=TotalSales&ownership=Both&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=1&showdeveloper=1&showreleasedate=1&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&showmultiplat=Yes"
-
-read_sales_values = function(url) {
-
+read_sales_values <- function(x) {
+  
+  url = sprintf("https://www.vgchartz.com/games/games.php?page=%s&results=200&genre=Action&order=TotalSales&ownership=Both&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=1&showdeveloper=1&showreleasedate=1&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&showmultiplat=Yes", x)
+  
 html = read_html(url)
 
 titles = 
@@ -97,24 +97,8 @@ tibble(
 }
 ```
 
-We can use this function to read 16 pages
-
 ``` r
-url_base = "https://www.vgchartz.com/games/games.php?page=1&results=200&genre=Action&order=TotalSales&ownership=Both&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=1&showdeveloper=1&showreleasedate=1&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&showmultiplat=Yes"
-
-vec_urls = str_c(url_base, 1:16)
-```
-
-``` r
-output = vector("list", 16)
-
-for (i in 1:16) {
-  output[[i]] = read_sales_values(vec_urls[[i]])
-}
-
-sale_values = bind_rows(output)
-
-sale_values = map_df(vec_urls, read_sales_values)
+sale_values = map_df(1:16, read_sales_values)
 ```
 
 ``` r
