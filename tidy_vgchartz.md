@@ -3,7 +3,7 @@ Tidy VGChartz
 11/19/2020
 
 ``` r
-game_df <- 
+game_df = 
   tibble(
     path = list.files("data/genre_sales")) %>% 
   mutate(genre = str_extract(path, "[^.]+"),
@@ -13,25 +13,13 @@ game_df <-
   select(-path) %>% 
   select(title, console, genre, release_date, everything()) %>%   mutate_at(7:11, funs(gsub("m","",.))) %>% 
   mutate_at(7:11, funs(gsub("N/A",NA,.))) %>% 
+  mutate_at(7:11, funs(as.numeric(.))) %>% 
   mutate(release_date = lubridate::dmy(release_date)) %>% 
-  distinct(.keep_all = T)
+  distinct() %>% 
+  filter(total_sale != 0) %>% 
+  filter(!is.na(total_sale)) 
 ```
 
-    ## 
-    ## -- Column specification --------------------------------------------------------
-    ## cols(
-    ##   title = col_character(),
-    ##   console = col_character(),
-    ##   publisher = col_character(),
-    ##   developer = col_character(),
-    ##   total_sale = col_character(),
-    ##   na_sale = col_character(),
-    ##   pal_sale = col_character(),
-    ##   japan_sale = col_character(),
-    ##   other_sale = col_character(),
-    ##   release_date = col_character()
-    ## )
-    ## 
     ## 
     ## -- Column specification --------------------------------------------------------
     ## cols(
@@ -242,10 +230,10 @@ game_df <-
     ## Call `lifecycle::last_warnings()` to see where this warning was generated.
 
     ## Warning: Problem with `mutate()` input `release_date`.
-    ## i  8 failed to parse.
+    ## i  149 failed to parse.
     ## i Input `release_date` is `lubridate::dmy(release_date)`.
 
-    ## Warning: 8 failed to parse.
+    ## Warning: 149 failed to parse.
 
 ``` r
 write_csv(game_df, "./data/vgchartz.csv")
