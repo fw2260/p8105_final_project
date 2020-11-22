@@ -1,0 +1,11 @@
+---
+title: "Tentative Title"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+# Exploring video game sales data
+By: Lily Wang (fw2260), Haoyang Yi (hy2669), Pengyuan Su (ps3195), Ying Jin (yj2622), Tu Nguyen (tnn2113)
+
+
