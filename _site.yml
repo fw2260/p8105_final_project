@@ -1,14 +1,22 @@
-name: "Games"
+name: "Settings"
 output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
-    - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+    - text: "Contact Us"
+      menu:
+      - text: "Ying Jin"
+        href: mailto:<yj2622@cumc.columbia.edu>
+      - text: "Tu Nguyen"
+        href: mailto:<tnn2113@cumc.columbia.edu>
+      - text: "Pengyuan Su"
+        href: mailto:<ps3195@cumc.columbia.edu>
+      - text: "Lily Wang"
+        href: mailto:<fw2260@columbia.edu>
+      - text: "Haoyang Yi"
+        href: mailto:<hy2669@cumc.columbia.edu> 
     - icon: fa-github fa-lg
       href: https://github.com/fw2260/p8105_final_project
 output:
   html_document:
-    theme: cerulean
+    theme: cosmo

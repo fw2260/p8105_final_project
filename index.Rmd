@@ -1,11 +1,21 @@
 ---
-title: "Tentative Title"
+title: "The Console Wars: Microsoft vs Nintendo vs Sony"
 output: 
   html_document:
-    theme: cerulean
+    toc: true
+    toc_float: true
 ---
 
-# Exploring video game sales data
-By: Lily Wang (fw2260), Haoyang Yi (hy2669), Pengyuan Su (ps3195), Ying Jin (yj2622), Tu Nguyen (tnn2113)
+By:  Ying Jin (yj2622), Tu Nguyen (tnn2113), Pengyuan Su (ps3195), Lily Wang (fw2260), Haoyang Yi (hy2669)
 
+<center>
+<img src="images/home_image.jpg" style="width:75%">
+</center>
 
+<br></br>
+
+# Introduction
+
+# Dataset
+
+# Results
