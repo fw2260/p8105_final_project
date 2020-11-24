@@ -3,6 +3,8 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
+    - text: "Final Report"
+      href: final_report.html
     - text: "Contact Us"
       menu:
       - text: "Ying Jin"
