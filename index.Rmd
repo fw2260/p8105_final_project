@@ -14,11 +14,15 @@ By:  Ying Jin (yj2622), Tu Nguyen (tnn2113), Pengyuan Su (ps3195), Lily Wang (fw
 
 # Introduction
 
-Video games are becoming increasingly popular and mainstream, a favorite pastime across a wide demographic with something out there for everyone. Currently, three major video game console manufacturers dominate the market: Microsoft, which makes the Xbox consoles, Nintendo, which makes consoles such as Nintendo DS and Wii, and Sony, which makes the PlayStation consoles. 
+Video games are becoming increasingly popular and mainstream, a favorite pastime across a wide demographic with something out there for everyone. Currently, three major video game console manufacturers dominate the market: **Microsoft**, which makes the Xbox consoles, **Nintendo**, which makes consoles such as Nintendo DS and Wii, and **Sony**, which makes the PlayStation consoles. Video games are released across multiple consoles, although some games can be exclusive to one console (company). Fans may also be loyal to one company for a multitude of reasons, which makes for intriguing comparisons among these three companies. 
 
+In particular we are interested in exploring the multiple factors that influence video game sales data on the consoles made by Microsoft, Nintendo, and Sony.
+
+
+<*insert screencast here*>
 
 # Dataset
 
-We webscraped our data from [vgchartz.com](https://www.vgchartz.com/games/games.php?name=&keyword=&console=&region=All&developer=&publisher=&goty_year=&genre=&boxart=Both&banner=Both&ownership=Both&showmultiplat=Yes&results=200&order=TotalSales&showtotalsales=0&showtotalsales=1&showpublisher=0&showvgchartzscore=0&shownasales=0&shownasales=1&showdeveloper=0&showcriticscore=0&showcriticscore=1&showpalsales=0&showpalsales=1&showreleasedate=0&showuserscore=0&showuserscore=1&showjapansales=0&showjapansales=1&showlastupdate=0&showothersales=0&showothersales=1&showshipped=0), a video game sales tracking website.
+We webscraped our data from [vgchartz.com](https://www.vgchartz.com/games/games.php?name=&keyword=&console=&region=All&developer=&publisher=&goty_year=&genre=&boxart=Both&banner=Both&ownership=Both&showmultiplat=Yes&results=200&order=TotalSales&showtotalsales=0&showtotalsales=1&showpublisher=0&showvgchartzscore=0&shownasales=0&shownasales=1&showdeveloper=0&showcriticscore=0&showcriticscore=1&showpalsales=0&showpalsales=1&showreleasedate=0&showuserscore=0&showuserscore=1&showjapansales=0&showjapansales=1&showlastupdate=0&showothersales=0&showothersales=1&showshipped=0), a video game sales tracking website. VGChartz produces their weekly sales estimates by extrapolating from retail sampling and trends, and regularly compares them to official shipment figures and figures estimated by regional trackers  ([source](https://www.vgchartz.com/methodology.php)).
 
 # Results
