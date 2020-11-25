@@ -1,0 +1,145 @@
+---
+title: "Tidy VGChartz"
+date: "11/19/2020"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+## Merge dataset
+
+```{r}
+game_df = 
+  tibble(
+    path = list.files("data/genre_sales")) %>% 
+  mutate(genre = str_extract(path, "[^.]+"),
+         path = str_c("data/genre_sales/", path),
+         data = map(.x = path, ~read_csv(.x))) %>% 
+  unnest(data) %>% 
+  select(-path) %>% 
+  select(title, console, genre, release_date, everything()) %>%              mutate_at(9:13, funs(gsub("m","",.))) %>% 
+  mutate_at(7:13, funs(gsub("N/A",NA,.))) %>% 
+  mutate_at(7:13, funs(as.numeric(.))) %>% 
+  mutate(release_date = lubridate::dmy(release_date)) %>% 
+  distinct() %>% 
+  filter(total_sale != 0) %>% 
+  filter(!is.na(total_sale)) 
+
+write_csv(game_df, "./data/vgchartz.csv")
+```
+
+## Import Data
+
+```{r}
+vgc_data = read_csv("./data/vgchartz.csv")
+```
+
+## Deal with NAs
+
+Inspect NAs in each columns
+
+```{r}
+vgc_data %>% 
+  sapply(., function(x) sum(is.na(x)))
+```
+
+There are NAs in some columns, especially in user_score, there are 17291 NAs, which `r round((17291/nrow(vgc_data))*100, digits = 2)`%.
+
+Replace NAs in regional sales with 0, drop user_score, and drop NAs in other columns
+
+```{r}
+vgc_data = 
+  vgc_data %>% 
+  select(-user_score) %>%
+  drop_na(release_date, critic_score) %>% 
+  mutate_at(
+    vars(ends_with("sale")),
+    ~replace(.,is.na(.), 0)
+  ) 
+```
+
+## Tidy Data
+
+Get released year and omit released month and day
+
+```{r}
+vgc_tidy = 
+  vgc_data %>%
+  separate(
+    release_date, into = c("release_year", "release_month", "release_day"), sep = "-", remove = TRUE
+  ) %>% 
+  mutate(
+    release_year = as.numeric(release_year)
+  ) %>% 
+  select(-release_month, -release_day) 
+```
+
+Add new columns: the number of consoles that each game was on and consoles' developers 
+
+```{r}
+n_plf_df = 
+  vgc_tidy %>% 
+  group_by(title) %>% 
+  summarise(
+    n_platforms = n(),
+  ) 
+  
+vgc_new = 
+  vgc_tidy %>% 
+  left_join(n_plf_df, by = "title") %>% 
+  relocate(n_platforms, .after = console) %>% 
+  mutate(console_developer = case_when(
+                                console == 'SNES' ~ 'Nintendo',
+                                str_detect(console,"^Wii") ~ "Nintendo",
+                                str_detect(console,"^G") ~ "Nintendo",
+                                str_detect(console,"^N") ~ "Nintendo",
+                                str_detect(console,"DS$") ~ "Nintendo",
+                                str_detect(console,"^PS[0-9A-Z]") ~"Sony",
+                                str_detect(console,"^X") ~ "Microsoft",
+                                console == 'PSP' ~ "Sony",
+                                console == 'PS' ~ "Sony"
+                                 ),
+         console_developer = as.factor(console_developer)
+        ) %>% 
+   relocate(console_developer, .after = console) 
+```
+
+Only include games which were on consoles developed by Nintendo, Sony and Microsoft, and games released after 2001 (the time when Microsoft started developing consoles), and then recode the console names
+
+```{r}
+vgc_rename =
+vgc_new %>% 
+  filter(!is.na(console_developer)) %>% 
+  filter(release_year >= 2001) %>% 
+  mutate(
+     console = recode(console, 
+       PS = "PlayStation",
+       PS2 = "PlayStation 2",
+       PS3 = "PlayStation 3",
+       PS4 = "PlayStation 4",
+       PSP = "PlayStation Portable",
+       PSN = "PlayStation Network",
+       GBA = "Game Boy Advance",
+       GB = "Game Boy",
+       GBC = "Game Boy Color",
+       X360 = "Xbox 360",
+       NS = "Switch",
+       N64 = "Nintendo 64",
+       XOne = "Xbox One",
+       XB = "Xbox",
+       XBL = "Xbox Live",
+       WiiU = "Wii U",
+       GC = "GameCube",
+       PSV = "PlayStation Vita"
+       )
+  ) 
+```
+
+## Export Dataset
+
+```{r}
+write_csv(vgc_rename, "./data/games.csv")
+```
+
