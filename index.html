@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -264,69 +261,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -334,16 +268,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -417,9 +341,13 @@ div.tocify {
 <p><br></br></p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
+<p>Video games are becoming increasingly popular and mainstream, a favorite pastime across a wide demographic with something out there for everyone. Currently, three major video game console manufacturers dominate the market: <strong>Microsoft</strong>, which makes the Xbox consoles, <strong>Nintendo</strong>, which makes consoles such as Nintendo DS and Wii, and <strong>Sony</strong>, which makes the PlayStation consoles. Video games are released across multiple consoles, although some games can be exclusive to one console (company). Fans may also be loyal to one company for a multitude of reasons, which makes for intriguing comparisons among these three companies.</p>
+<p>In particular we are interested in exploring the multiple factors that influence video game sales data on the consoles made by Microsoft, Nintendo, and Sony.</p>
+<p>&lt;<em>insert screencast here</em>&gt;</p>
 </div>
 <div id="dataset" class="section level1">
 <h1>Dataset</h1>
+<p>We webscraped our data from <a href="https://www.vgchartz.com/games/games.php?name=&amp;keyword=&amp;console=&amp;region=All&amp;developer=&amp;publisher=&amp;goty_year=&amp;genre=&amp;boxart=Both&amp;banner=Both&amp;ownership=Both&amp;showmultiplat=Yes&amp;results=200&amp;order=TotalSales&amp;showtotalsales=0&amp;showtotalsales=1&amp;showpublisher=0&amp;showvgchartzscore=0&amp;shownasales=0&amp;shownasales=1&amp;showdeveloper=0&amp;showcriticscore=0&amp;showcriticscore=1&amp;showpalsales=0&amp;showpalsales=1&amp;showreleasedate=0&amp;showuserscore=0&amp;showuserscore=1&amp;showjapansales=0&amp;showjapansales=1&amp;showlastupdate=0&amp;showothersales=0&amp;showothersales=1&amp;showshipped=0">vgchartz.com</a>, a video game sales tracking website. VGChartz produces their weekly sales estimates by extrapolating from retail sampling and trends, and regularly compares them to official shipment figures and figures estimated by regional trackers (<a href="https://www.vgchartz.com/methodology.php">source</a>).</p>
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
@@ -427,8 +355,6 @@ div.tocify {
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -461,32 +387,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
