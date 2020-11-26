@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2020-11-19" />
+
+<title>Tidy VGChartz</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="final_report.html">Final Report</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Contact Us
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="mailto:&lt;yj2622@cumc.columbia.edu&gt;">Ying Jin</a>
+    </li>
+    <li>
+      <a href="mailto:&lt;tnn2113@cumc.columbia.edu&gt;">Tu Nguyen</a>
+    </li>
+    <li>
+      <a href="mailto:&lt;ps3195@cumc.columbia.edu&gt;">Pengyuan Su</a>
+    </li>
+    <li>
+      <a href="mailto:&lt;fw2260@columbia.edu&gt;">Lily Wang</a>
+    </li>
+    <li>
+      <a href="mailto:&lt;hy2669@cumc.columbia.edu&gt;">Haoyang Yi</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://github.com/fw2260/p8105_final_project">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Tidy VGChartz</h1>
+<h4 class="date">11/19/2020</h4>
+
+</div>
+
+
+<div id="merge-datasets" class="section level2">
+<h2>Merge datasets</h2>
+<pre class="r"><code>game_df = 
+  tibble(
+    path = list.files(&quot;data/genre_sales&quot;)) %&gt;% 
+  mutate(genre = str_extract(path, &quot;[^.]+&quot;),
+         path = str_c(&quot;data/genre_sales/&quot;, path),
+         data = map(.x = path, ~read_csv(.x))) %&gt;% 
+  unnest(data) %&gt;% 
+  select(-path) %&gt;% 
+  select(title, console, genre, release_date, everything()) %&gt;%              mutate_at(9:13, funs(gsub(&quot;m&quot;,&quot;&quot;,.))) %&gt;% 
+  mutate_at(7:13, funs(gsub(&quot;N/A&quot;,NA,.))) %&gt;% 
+  mutate_at(7:13, funs(as.numeric(.))) %&gt;% 
+  mutate(release_date = lubridate::dmy(release_date)) %&gt;% 
+  distinct() %&gt;% 
+  filter(total_sale != 0) %&gt;% 
+  filter(!is.na(total_sale)) </code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )
+## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_character(),
+##   user_score = col_character(),
+##   total_sale = col_character(),
+##   na_sale = col_character(),
+##   pal_sale = col_character(),
+##   japan_sale = col_character(),
+##   other_sale = col_character(),
+##   release_date = col_character()
+## )</code></pre>
+<pre><code>## Warning: `funs()` is deprecated as of dplyr 0.8.0.
+## Please use a list of either functions or lambdas: 
+## 
+##   # Simple named list: 
+##   list(mean = mean, median = median)
+## 
+##   # Auto named with `tibble::lst()`: 
+##   tibble::lst(mean, median)
+## 
+##   # Using lambdas
+##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<pre><code>## Warning: Problem with `mutate()` input `release_date`.
+## i  149 failed to parse.
+## i Input `release_date` is `lubridate::dmy(release_date)`.</code></pre>
+<pre><code>## Warning: 149 failed to parse.</code></pre>
+<pre class="r"><code>write_csv(game_df, &quot;./data/vgchartz.csv&quot;)</code></pre>
+</div>
+<div id="import-data" class="section level2">
+<h2>Import Data</h2>
+<pre class="r"><code>vgc_data = read_csv(&quot;./data/vgchartz.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   console = col_character(),
+##   genre = col_character(),
+##   release_date = col_date(format = &quot;&quot;),
+##   publisher = col_character(),
+##   developer = col_character(),
+##   critic_score = col_double(),
+##   user_score = col_double(),
+##   total_sale = col_double(),
+##   na_sale = col_double(),
+##   pal_sale = col_double(),
+##   japan_sale = col_double(),
+##   other_sale = col_double()
+## )</code></pre>
+<p>then recode the console names</p>
+<pre class="r"><code>vgc_data = 
+  vgc_data %&gt;% 
+ mutate(
+     console = recode(console, 
+       PS = &quot;PlayStation&quot;,
+       PS2 = &quot;PlayStation 2&quot;,
+       PS3 = &quot;PlayStation 3&quot;,
+       PS4 = &quot;PlayStation 4&quot;,
+       PSP = &quot;PlayStation Portable&quot;,
+       PSN = &quot;PlayStation Network&quot;,
+       GBA = &quot;Game Boy Advance&quot;,
+       GB = &quot;Game Boy&quot;,
+       GBC = &quot;Game Boy Color&quot;,
+       X360 = &quot;Xbox 360&quot;,
+       NS = &quot;Switch&quot;,
+       N64 = &quot;Nintendo 64&quot;,
+       XOne = &quot;Xbox One&quot;,
+       XB = &quot;Xbox&quot;,
+       XBL = &quot;Xbox Live&quot;,
+       WiiU = &quot;Wii U&quot;,
+       GC = &quot;GameCube&quot;,
+       PSV = &quot;PlayStation Vita&quot;
+       )
+  ) </code></pre>
+</div>
+<div id="deal-with-nas" class="section level2">
+<h2>Deal with NAs</h2>
+<p>Inspect NAs in each columns</p>
+<pre class="r"><code>vgc_data %&gt;% 
+  sapply(., function(x) sum(is.na(x)))</code></pre>
+<pre><code>##        title      console        genre release_date    publisher    developer 
+##            0            0            0           49            0            0 
+## critic_score   user_score   total_sale      na_sale     pal_sale   japan_sale 
+##        12998        17291            0         4665         5104        10837 
+##   other_sale 
+##         2940</code></pre>
+<p>There are NAs in some columns, especially in user_score, there are 17291 NAs, which 98.56%.</p>
+<p>Inspect NAs in each genre.</p>
+<pre class="r"><code>vgc_data %&gt;% 
+  group_by(genre) %&gt;% 
+  summarise(
+    n_na = sum(is.na(critic_score)),
+    pct_na = n_na/n()) %&gt;% 
+  knitr::kable()</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">genre</th>
+<th align="right">n_na</th>
+<th align="right">pct_na</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">action</td>
+<td align="right">2053</td>
+<td align="right">0.7226329</td>
+</tr>
+<tr class="even">
+<td align="left">action_adventure</td>
+<td align="right">196</td>
+<td align="right">0.6877193</td>
+</tr>
+<tr class="odd">
+<td align="left">adventure</td>
+<td align="right">1504</td>
+<td align="right">0.8497175</td>
+</tr>
+<tr class="even">
+<td align="left">fighting</td>
+<td align="right">681</td>
+<td align="right">0.7252396</td>
+</tr>
+<tr class="odd">
+<td align="left">miscellaneous</td>
+<td align="right">789</td>
+<td align="right">0.7897898</td>
+</tr>
+<tr class="even">
+<td align="left">platform</td>
+<td align="right">657</td>
+<td align="right">0.6281071</td>
+</tr>
+<tr class="odd">
+<td align="left">puzzle</td>
+<td align="right">543</td>
+<td align="right">0.8165414</td>
+</tr>
+<tr class="even">
+<td align="left">racing</td>
+<td align="right">1080</td>
+<td align="right">0.7632509</td>
+</tr>
+<tr class="odd">
+<td align="left">role_playing</td>
+<td align="right">1095</td>
+<td align="right">0.6403509</td>
+</tr>
+<tr class="even">
+<td align="left">shooting</td>
+<td align="right">921</td>
+<td align="right">0.6227181</td>
+</tr>
+<tr class="odd">
+<td align="left">simulation</td>
+<td align="right">899</td>
+<td align="right">0.8425492</td>
+</tr>
+<tr class="even">
+<td align="left">sports</td>
+<td align="right">1991</td>
+<td align="right">0.7813972</td>
+</tr>
+<tr class="odd">
+<td align="left">strategy</td>
+<td align="right">589</td>
+<td align="right">0.7551282</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that the percentage of NAs in each genre is quite high and uniform.</p>
+<p>Replace NAs in regional sales with 0, drop user_score, and drop NAs in other columns</p>
+<pre class="r"><code>vgc_score_1 = 
+  vgc_data %&gt;% 
+  select(-user_score) %&gt;%
+  drop_na(release_date, critic_score) %&gt;% 
+  mutate_at(
+    vars(ends_with(&quot;sale&quot;)),
+    ~replace(.,is.na(.), 0)
+  ) </code></pre>
+<p>Get meta_score from metacritic dataset</p>
+<pre class="r"><code>metacritic_df = read_csv(&quot;./old/data/metacritic.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   title = col_character(),
+##   link = col_character(),
+##   platform = col_character(),
+##   release_date = col_character(),
+##   meta_score = col_double(),
+##   user_score = col_character(),
+##   developer = col_character(),
+##   publisher = col_character(),
+##   genre = col_character(),
+##   esrb_rating = col_character()
+## )</code></pre>
+<pre class="r"><code>metacritic_score = 
+  metacritic_df %&gt;% 
+  rename(
+    critic_score = meta_score,
+    console = platform) %&gt;% 
+  select(title,console, critic_score) %&gt;% 
+  mutate(
+    critic_score = critic_score/10
+  )
+
+vgc_score_2 =
+  vgc_data %&gt;% 
+  select(-user_score) %&gt;% 
+  drop_na(release_date) %&gt;% 
+  mutate_at(
+    vars(ends_with(&quot;sale&quot;)),
+    ~replace(.,is.na(.), 0)
+  ) %&gt;% 
+  filter(is.na(critic_score)) %&gt;% 
+  select(-critic_score) %&gt;% 
+  left_join(metacritic_score, by = c(&quot;title&quot;,&quot;console&quot;)) %&gt;% 
+  relocate(critic_score, .after = developer) %&gt;% 
+  filter(!is.na(critic_score))
+ 
+vgc_data = 
+  vgc_score_1 %&gt;% 
+  bind_rows(vgc_score_2)</code></pre>
+</div>
+<div id="tidy-data" class="section level2">
+<h2>Tidy Data</h2>
+<p>Get released year and omit released month and day</p>
+<pre class="r"><code>vgc_tidy = 
+  vgc_data %&gt;%
+  separate(
+    release_date, into = c(&quot;release_year&quot;, &quot;release_month&quot;, &quot;release_day&quot;), sep = &quot;-&quot;, remove = TRUE
+  ) %&gt;% 
+  mutate(
+    release_year = as.numeric(release_year)
+  ) %&gt;% 
+  select(-release_month, -release_day) </code></pre>
+<p>Add new columns: the number of consoles that each game was on and consoles’ developers</p>
+<pre class="r"><code>n_plf_df = 
+  vgc_tidy %&gt;% 
+  group_by(title) %&gt;% 
+  summarise(
+    n_platforms = n(),
+  ) </code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>vgc_new = 
+  vgc_tidy %&gt;% 
+  left_join(n_plf_df, by = &quot;title&quot;) %&gt;% 
+  relocate(n_platforms, .after = console) %&gt;% 
+  mutate(console_developer = case_when(
+                                console == &#39;SNES&#39; ~ &#39;Nintendo&#39;,
+                                str_detect(console,&quot;^Wii&quot;) ~ &quot;Nintendo&quot;,
+                                str_detect(console,&quot;^G&quot;) ~ &quot;Nintendo&quot;,
+                                str_detect(console,&quot;^N&quot;) ~ &quot;Nintendo&quot;,
+                                str_detect(console,&quot;DS$&quot;) ~ &quot;Nintendo&quot;,
+                                str_detect(console,&quot;^PS[0-9A-Z]&quot;) ~&quot;Sony&quot;,
+                                str_detect(console,&quot;^X&quot;) ~ &quot;Microsoft&quot;,
+                                console == &#39;PSP&#39; ~ &quot;Sony&quot;,
+                                console == &#39;PS&#39; ~ &quot;Sony&quot;
+                                 ),
+         console_developer = as.factor(console_developer)
+        ) %&gt;% 
+   relocate(console_developer, .after = console) </code></pre>
+<p>Only include games which were on consoles developed by Nintendo, Sony and Microsoft, and games released after 2001 (the time when Microsoft started developing consoles)</p>
+<pre class="r"><code>vgc_df =
+vgc_new %&gt;% 
+  filter(!is.na(console_developer)) %&gt;% 
+  filter(release_year &gt;= 2001) </code></pre>
+</div>
+<div id="export-dataset" class="section level2">
+<h2>Export Dataset</h2>
+<pre class="r"><code>write_csv(vgc_df, &quot;./data/games.csv&quot;)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
