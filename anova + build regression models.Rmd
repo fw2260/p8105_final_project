@@ -2,7 +2,7 @@
 title: "anova + regression model"
 author: "haoyang,yi"
 date: "2020/11/26"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -10,6 +10,8 @@ library(tidyverse)
 library(arsenal)
 library(multcomp)
 library(dplyr)
+library(modelr)
+library(mgcv)
 ```
 
 ```{r include = F ,message = F}
@@ -36,19 +38,23 @@ games_df = games_df %>%
                                  n_platforms >= '4' & n_platforms <= '6' ~ 'median',
                                  n_platforms >= '7' ~ 'large',),as.factor(n_platforms)) 
 ```
-## Anova test
-# Period
-```{r }
+
+# Anova test
+## Period
+```{r ANOVA_Period, include = F}
 aovmodel1 = aov(total_sale ~ period, data = games_df)
 broom::tidy(aovmodel1)
 multicomp1 = TukeyHSD(aovmodel1)
 plot(multicomp1)
 broom::tidy(multicomp1)
 ```
-Anova test indicates that least two periods have different average total_sales of video games. Multiple comparison by Tukey's method shows that significant differences exists in 2006-2010 vs 2001-2005, 2011-2015 vs 2001-2005, 2011-2015 vs 2006-2010, 2016-2020 vs 2011-2015.
-# Console_developers * period
 
-```{r }
+Anova test indicates that least two periods have different average total_sales of video games. Multiple comparison by Tukey's method shows that significant differences exists in 2006-2010 vs 2001-2005, 2011-2015 vs 2001-2005, 2011-2015 vs 2006-2010, 2016-2020 vs 2011-2015.
+
+
+## Console_developers * period
+
+```{r ANOVA_Console_developers_period, include = F}
 aovmodel2 = aov(total_sale ~ console_developer * period, data = games_df)
 broom::tidy(aovmodel2)
 multicomp2 = TukeyHSD(aovmodel2)
@@ -62,8 +68,8 @@ multi_df = broom::tidy(multicomp2) %>%
 ```
     Considering interaction between console_developers and period (eg. Nintendo develops less popular game in recent years while Sony maintain a relatively stable trend). The new anova model and multi-comparison shows that significant difference exists in `r nrow(multi_df)` combinations among `r nrow(ori_df)` combinations of developers and period
 
-# Genre
-```{r }
+## Genre
+```{r ANOVA_Genre, include = F}
 aovmodel3 = aov(total_sale ~ genre, data = games_df)
 broom::tidy(aovmodel3)
 multicomp3 = TukeyHSD(aovmodel3)
@@ -81,8 +87,8 @@ multi2_df = broom::tidy(multicomp4) %>%
 ```
     Anova test shows that there are significant differences of average total_sales between genre and 60% of comparisons in Tukey's method have signigicant differences. Also, considering interaction between console_developers and genre, the differences is still significant in anova model, with `r nrow(multi2_df)` significant different combinations among `r nrow(ori2_df)` combinations of developers and genre
 
-# Number of platforms
-```{r }
+## Number of platforms
+```{r include = F}
 aovmodel5 = aov(total_sale ~ n_platforms, data = games_df)
 broom::tidy(aovmodel5)
 multicomp5 = TukeyHSD(aovmodel5)
@@ -90,46 +96,152 @@ plot(multicomp5)
 ``` 
   Anova test and multi-comparison shows that there are significant differences of average total_sales between number of platforms a game is released on. Significant difference occurs in comparisons of small and median n_platforms .
 
-## Regression models
-# Model 1: Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms
-```{r include = F}
+
+
+
+
+
+
+# Regression models
+
+```{r regression dataset}
 regression_df = games_df %>%
   filter(total_sale < 40) %>% # cutoff outliers
   dplyr::select(total_sale,genre,console_developer,period,critic_score,n_platforms,na_sale,japan_sale,pal_sale,other_sale)
+
+```
+## Model 1: Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms
+
+```{r regresion_model_1}
 lm1 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + 0, data = regression_df)
 summary(lm1)
-
+plot(lm1)
 ```
-# Model 2: Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score 
-```{r include = F}
+
+
+## Model 2: Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score 
+```{r regression_modole_2}
 lm2 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + 0, data = regression_df)
 summary(lm2)
-
+plot(lm2)
 ```
-# Model 3: Total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score
-```{r include = F}
+
+
+## Model 3: Total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score
+```{r regression_modole_3}
 lm3 = lm(total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score + 0, data = regression_df)
 summary(lm3)
-
+plot(lm3)
 ```
-# Model 4 : Total_sale ~ console_developer: period + console_developer:genre +  console_developer:critic_score
-```{r include = F}
+
+
+## Model 4 : Total_sale ~ console_developer: period + console_developer:genre +  console_developer:critic_score
+```{r regression_modole_4}
 lm4 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:critic_score + 0, data = regression_df)
 summary(lm4)
-
+plot(lm4)
 ```
-# Decide what variable (period, critic_score, n_platform) can stay in the model, then consider if it's necessary to add some (but not all) regional sale into the model.
+
+## Decide what variable (period, critic_score, n_platform) can stay in the model, then consider if it's necessary to add some (but not all) regional sale into the model.
 
 
-# Model 5 : Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale (delete unnecessary variables discovered above)
-```{r include = F}
+```{r regression_rmse_1}
+cv_df = 
+  crossv_mc(regression_df, 1000) %>% 
+  mutate(
+    train = map(train, as_tibble),
+    test = map(test, as_tibble)
+  )
+  
+  
+cv_df = 
+  cv_df %>% 
+  mutate(
+    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + 0, data = .x)),
+    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + 0, data = .x)),
+    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score + 0, data = .x)),
+    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:critic_score + 0, data = .x))
+  ) %>% 
+  mutate(
+    rmse_1 = map2_dbl(.x = linear_1, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_2 = map2_dbl(.x = linear_2, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_3 = map2_dbl(.x = linear_3, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_4 = map2_dbl(.x = linear_4, .y = test, ~rmse(model = .x, data = .y))
+  )
+```
+
+
+```{r regression_rmse_compare1234}
+cv_df %>% 
+  dplyr::select(starts_with("rmse")) %>% 
+  pivot_longer(
+    everything(),
+    names_to = "model",
+    values_to = "rmse",
+    names_prefix = "rmse_"
+  ) %>% 
+  ggplot(aes(x = model, y = rmse)) +
+  geom_violin()
+```
+
+
+
+
+
+
+
+## Model 5 : Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale (delete unnecessary variables discovered above)
+```{r regression_modole_5}
 lm5 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale +0, data = regression_df)
 summary(lm5)
-
+plot(lm5)
 ```
-# Model 6 : Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale (delete unnecessary variables discovered above)
-```{r include = F}
+
+
+## Model 6 : Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale (delete unnecessary variables discovered above)
+
+```{r regression_modole_6}
 lm6 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale + 0, data = regression_df)
 summary(lm6)
+plot(lm6)
+```
 
+
+```{r regression_rmse_2}
+cv_df_else = 
+  crossv_mc(regression_df, 1000) %>% 
+  mutate(
+    train = map(train, as_tibble),
+    test = map(test, as_tibble)
+  )
+  
+  
+cv_df_else = 
+  cv_df_else %>% 
+  mutate(
+    linear_5 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale +0, data = .x)),
+    linear_6 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale + 0, data = .x)),
+    linear_7 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + japan_sale + 0, data = .x))
+    #linear_8 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:japan_sale + 0, data = .x))
+  ) %>% 
+  mutate(
+    rmse_5 = map2_dbl(.x = linear_5, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_6 = map2_dbl(.x = linear_6, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_7 = map2_dbl(.x = linear_7, .y = test, ~rmse(model = .x, data = .y))
+    #rmse_8 = map2_dbl(.x = linear_8, .y = test, ~rmse(model = .x, data = .y))
+  )
+```
+
+
+```{r regression_rmse_compare56}
+cv_df_else %>% 
+  dplyr::select(starts_with("rmse")) %>% 
+  pivot_longer(
+    everything(),
+    names_to = "model",
+    values_to = "rmse",
+    names_prefix = "rmse_"
+  ) %>% 
+  ggplot(aes(x = model, y = rmse)) +
+  geom_violin()
 ```
