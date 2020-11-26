@@ -777,13 +777,11 @@ vgc_data =
   mutate(console_developer = case_when(
                                 console == &#39;SNES&#39; ~ &#39;Nintendo&#39;,
                                 str_detect(console,&quot;^Wii&quot;) ~ &quot;Nintendo&quot;,
-                                str_detect(console,&quot;^G&quot;) ~ &quot;Nintendo&quot;,
+                                str_detect(console,&quot;^Game&quot;) ~ &quot;Nintendo&quot;,
                                 str_detect(console,&quot;^N&quot;) ~ &quot;Nintendo&quot;,
                                 str_detect(console,&quot;DS$&quot;) ~ &quot;Nintendo&quot;,
-                                str_detect(console,&quot;^PS[0-9A-Z]&quot;) ~&quot;Sony&quot;,
-                                str_detect(console,&quot;^X&quot;) ~ &quot;Microsoft&quot;,
-                                console == &#39;PSP&#39; ~ &quot;Sony&quot;,
-                                console == &#39;PS&#39; ~ &quot;Sony&quot;
+                                str_detect(console,&quot;^PlayStation&quot;)~&quot;Sony&quot;,
+                                str_detect(console,&quot;^Xbox&quot;) ~ &quot;Microsoft&quot;
                                  ),
          console_developer = as.factor(console_developer)
         ) %&gt;% 

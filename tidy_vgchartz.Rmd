@@ -172,13 +172,11 @@ vgc_new =
   mutate(console_developer = case_when(
                                 console == 'SNES' ~ 'Nintendo',
                                 str_detect(console,"^Wii") ~ "Nintendo",
-                                str_detect(console,"^G") ~ "Nintendo",
+                                str_detect(console,"^Game") ~ "Nintendo",
                                 str_detect(console,"^N") ~ "Nintendo",
                                 str_detect(console,"DS$") ~ "Nintendo",
-                                str_detect(console,"^PS[0-9A-Z]") ~"Sony",
-                                str_detect(console,"^X") ~ "Microsoft",
-                                console == 'PSP' ~ "Sony",
-                                console == 'PS' ~ "Sony"
+                                str_detect(console,"^PlayStation")~"Sony",
+                                str_detect(console,"^Xbox") ~ "Microsoft"
                                  ),
          console_developer = as.factor(console_developer)
         ) %>% 
