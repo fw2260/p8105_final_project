@@ -6,4 +6,71 @@ output: html_document
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(patchwork)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
 ```
+
+## Question 1
+
+```{r}
+game_df = read_csv("./data/vgchartz.csv") %>% 
+   separate(release_date, into = c("year", "month", "day"), sep = "-") %>% 
+  mutate(year = as.numeric(year))
+
+totalsale = game_df %>% 
+  group_by(year) %>% 
+  summarize(
+    totalsale = sum(total_sale)
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = year, y = totalsale)) +
+  geom_col() 
+
+totalcount = game_df %>% 
+ group_by(year) %>% 
+  summarize(
+    count = n()
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = year, y = count)) +
+  geom_col()  
+
+totalsale + totalcount
+
+```
+
+
+## Question 2
+
+Top 10 platforms with the most total sales of games:
+
+```{r}
+game_df %>% 
+  group_by(console) %>% 
+  summarize(totalsale = sum(total_sale)) %>% 
+  arrange(desc(totalsale)) %>% 
+  slice(1:10) %>% 
+  mutate(console = fct_reorder(console, desc(totalsale)), 
+         console_company = case_when(
+           str_detect(console, "PS") ~ "Sony",
+           str_detect(console, "X") ~ "Microsoft",
+           TRUE ~ "Nintendo")) %>% 
+  ggplot(aes(x = console, y = totalsale, fill = console_company)) + 
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+```{r}
+
+```
+
+
