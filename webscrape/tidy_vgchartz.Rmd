@@ -47,6 +47,19 @@ vgc_data %>%
 
 There are NAs in some columns, especially in user_score, there are 17291 NAs, which `r round((17291/nrow(vgc_data))*100, digits = 2)`%.
 
+Inspect NAs in each genre.
+
+```{r}
+vgc_data %>% 
+  group_by(genre) %>% 
+  summarise(
+    n_na = sum(is.na(critic_score)),
+    pct_na = n_na/n()) %>% 
+  knitr::kable()
+```
+
+We can see that the percentage of NAs in each genre is quite high and uniform.
+
 Replace NAs in regional sales with 0, drop user_score, and drop NAs in other columns
 
 ```{r}
