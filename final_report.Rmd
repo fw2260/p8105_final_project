@@ -19,7 +19,23 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-## Question 1
+## Questions
+
+For games run on consoles developed by Nintendo, Sony and Microsoft, we want to know separately:
+
+* How does the sales of games change over time?
+
+* What is the most popular/ profitable game genre on each companies' consoles?
+
+* Is there association between critic scores and game sales? In which direction?
+
+* Does the number of consoles the games are on influence their sales?
+
+## Data Collection
+
+## Exploratory Analyses
+
+### Question 1
 
 ```{r}
 game_df = read_csv("./data/vgchartz.csv") %>% 
@@ -49,7 +65,7 @@ totalsale + totalcount
 ```
 
 
-## Question 2
+### Question 2
 
 Top 10 platforms with the most total sales of games:
 
@@ -69,8 +85,14 @@ game_df %>%
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 
+### Question 3
+
 ```{r}
 
 ```
 
+### Question 4
+
+## Regression Model
+ 
 
