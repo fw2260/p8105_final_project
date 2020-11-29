@@ -64,8 +64,8 @@ games_df =
         genre %in% c('racing','sports') ~ 'Competition',
         genre %in% c('role_playing', 'simulation') ~ 'Experience',
         genre %in% c('strategy','puzzle') ~ 'Intelligence',
-        genre %in% c('platform', 'shooting')~ 'Agility'),
-        genre == 'miscellaneous' ~ "Miscellaneous"
+        genre %in% c('platform', 'shooting')~ 'Agility',
+        genre == 'miscellaneous' ~ "Miscellaneous")
     ) %>%
   filter(
     genre == "Intelligence"
