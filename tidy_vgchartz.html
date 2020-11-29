@@ -603,7 +603,7 @@ $(document).ready(function () {
    mutate(
     genre = 
       case_when(
-        genre %in% c(&#39;action&#39;,&#39;action_adventure&#39;,&quot;adventure&quot;) ~ &#39;Action&#39;,
+        genre %in% c(&#39;action&#39;,&#39;action_adventure&#39;,&quot;adventure&quot;, &quot;fighting&quot;) ~ &#39;Action&#39;,
         genre %in% c(&#39;racing&#39;,&#39;sports&#39;) ~ &#39;Competition&#39;,
         genre %in% c(&#39;miscellaneous&#39;,&#39;role_playing&#39;, &#39;simulation&#39;) ~ &#39;Experience&#39;,
         genre %in% c(&#39;strategy&#39;,&#39;puzzle&#39;) ~ &#39;Intelligence&#39;,
@@ -616,7 +616,7 @@ $(document).ready(function () {
 <pre class="r"><code>vgc_data %&gt;% 
   sapply(., function(x) sum(is.na(x)))</code></pre>
 <pre><code>##        title      console        genre release_date    publisher    developer 
-##            0            0          939           49            0            0 
+##            0            0            0           49            0            0 
 ## critic_score   user_score   total_sale      na_sale     pal_sale   japan_sale 
 ##        12998        17291            0         4665         5104        10837 
 ##   other_sale 
@@ -641,8 +641,8 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td align="left">Action</td>
-<td align="right">3753</td>
-<td align="right">0.7665441</td>
+<td align="right">4434</td>
+<td align="right">0.7598972</td>
 </tr>
 <tr class="even">
 <td align="left">Agility</td>
@@ -663,11 +663,6 @@ $(document).ready(function () {
 <td align="left">Intelligence</td>
 <td align="right">1132</td>
 <td align="right">0.7833910</td>
-</tr>
-<tr class="even">
-<td align="left">NA</td>
-<td align="right">681</td>
-<td align="right">0.7252396</td>
 </tr>
 </tbody>
 </table>
@@ -748,14 +743,15 @@ vgc_data =
   vgc_tidy %&gt;% 
   left_join(n_plf_df, by = &quot;title&quot;) %&gt;% 
   relocate(n_platforms, .after = console) %&gt;% 
-  mutate(console_developer = case_when(
-                                console == &#39;SNES&#39; ~ &#39;Nintendo&#39;,
-                                str_detect(console,&quot;^Wii&quot;) ~ &quot;Nintendo&quot;,
-                                str_detect(console,&quot;^Game&quot;) ~ &quot;Nintendo&quot;,
-                                str_detect(console,&quot;^N&quot;) ~ &quot;Nintendo&quot;,
-                                str_detect(console,&quot;DS$&quot;) ~ &quot;Nintendo&quot;,
-                                str_detect(console,&quot;^PlayStation&quot;)~&quot;Sony&quot;,
-                                str_detect(console,&quot;^Xbox&quot;) ~ &quot;Microsoft&quot;
+  mutate(console_developer = 
+           case_when(
+                      console == &#39;SNES&#39; ~ &#39;Nintendo&#39;,
+                      str_detect(console,&quot;^Wii&quot;) ~ &quot;Nintendo&quot;,
+                      str_detect(console,&quot;^Game&quot;) ~ &quot;Nintendo&quot;,
+                      str_detect(console,&quot;^N&quot;) ~ &quot;Nintendo&quot;,
+                      str_detect(console,&quot;DS$&quot;) ~ &quot;Nintendo&quot;,
+                      str_detect(console,&quot;^PlayStation&quot;)~&quot;Sony&quot;,
+                      str_detect(console,&quot;^Xbox&quot;) ~ &quot;Microsoft&quot;
                                  ),
          console_developer = as.factor(console_developer)
         ) %&gt;% 

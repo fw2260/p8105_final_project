@@ -66,7 +66,7 @@ vgc_data =
    mutate(
     genre = 
       case_when(
-        genre %in% c('action','action_adventure',"adventure") ~ 'Action',
+        genre %in% c('action','action_adventure',"adventure", "fighting") ~ 'Action',
         genre %in% c('racing','sports') ~ 'Competition',
         genre %in% c('miscellaneous','role_playing', 'simulation') ~ 'Experience',
         genre %in% c('strategy','puzzle') ~ 'Intelligence',
@@ -178,14 +178,15 @@ vgc_new =
   vgc_tidy %>% 
   left_join(n_plf_df, by = "title") %>% 
   relocate(n_platforms, .after = console) %>% 
-  mutate(console_developer = case_when(
-                                console == 'SNES' ~ 'Nintendo',
-                                str_detect(console,"^Wii") ~ "Nintendo",
-                                str_detect(console,"^Game") ~ "Nintendo",
-                                str_detect(console,"^N") ~ "Nintendo",
-                                str_detect(console,"DS$") ~ "Nintendo",
-                                str_detect(console,"^PlayStation")~"Sony",
-                                str_detect(console,"^Xbox") ~ "Microsoft"
+  mutate(console_developer = 
+           case_when(
+                      console == 'SNES' ~ 'Nintendo',
+                      str_detect(console,"^Wii") ~ "Nintendo",
+                      str_detect(console,"^Game") ~ "Nintendo",
+                      str_detect(console,"^N") ~ "Nintendo",
+                      str_detect(console,"DS$") ~ "Nintendo",
+                      str_detect(console,"^PlayStation")~"Sony",
+                      str_detect(console,"^Xbox") ~ "Microsoft"
                                  ),
          console_developer = as.factor(console_developer)
         ) %>% 
