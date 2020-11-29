@@ -1,12 +1,17 @@
 ---
 title: "Final Report"
 date: "11/23/2020"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(patchwork)
+library(ggpubr)
 
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 
@@ -19,17 +24,19 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-## Questions
+## Motivation
+
+## Initial Questions
 
 For games run on consoles developed by Nintendo, Sony and Microsoft, we want to know separately:
 
 * How does the sales of games change over time?
 
-* What is the most popular/ profitable game genre on each companies' consoles?
+* What is the most popular/profitable game genre on each companies' consoles?
 
-* Is there association between critic scores and game sales? In which direction?
+* Is there an association between critic scores and game sales? In which direction?
 
-* Does the number of consoles the games are on influence their sales?
+* Does the number of consoles the games are released on influence their sales?
 
 ## Data Collection
 
@@ -37,61 +44,58 @@ For games run on consoles developed by Nintendo, Sony and Microsoft, we want to 
 
 ### Question 1
 
-```{r}
-game_df = read_csv("./data/vgchartz.csv") %>% 
-   separate(release_date, into = c("year", "month", "day"), sep = "-") %>% 
-  mutate(year = as.numeric(year))
+```{r q1, message = FALSE}
+games_df = read_csv("./data/games.csv")
 
-totalsale = game_df %>% 
-  group_by(year) %>% 
+totalsale = games_df %>% 
+  group_by(release_year) %>% 
   summarize(
     totalsale = sum(total_sale)
   ) %>% 
   drop_na() %>% 
-  ggplot(aes(x = year, y = totalsale)) +
+  ggplot(aes(x = release_year, y = totalsale)) +
   geom_col() 
 
-totalcount = game_df %>% 
- group_by(year) %>% 
+totalcount = games_df %>% 
+ group_by(release_year) %>% 
   summarize(
     count = n()
   ) %>% 
   drop_na() %>% 
-  ggplot(aes(x = year, y = count)) +
+  ggplot(aes(x = release_year, y = count)) +
   geom_col()  
 
 totalsale + totalcount
-
 ```
-
 
 ### Question 2
 
-Top 10 platforms with the most total sales of games:
-
-```{r}
-game_df %>% 
-  group_by(console) %>% 
-  summarize(totalsale = sum(total_sale)) %>% 
-  arrange(desc(totalsale)) %>% 
-  slice(1:10) %>% 
-  mutate(console = fct_reorder(console, desc(totalsale)), 
-         console_company = case_when(
-           str_detect(console, "PS") ~ "Sony",
-           str_detect(console, "X") ~ "Microsoft",
-           TRUE ~ "Nintendo")) %>% 
-  ggplot(aes(x = console, y = totalsale, fill = console_company)) + 
-  geom_col() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```{r q2}
+games_df %>% 
+  ggplot(aes(x = genre, y = total_sale, fill = console_developer)) +
+  geom_bar(stat = "identity", position = "stack") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
 ### Question 3
 
-```{r}
+```{r q3, message = FALSE}
+games_df %>% 
+  ggscatter(., x = "critic_score", y = "total_sale", add = "reg.line", add.params = list(color = "red")) +
+  stat_cor(label.x = 3, label.y = 20) +
+  stat_regline_equation(label.x = 3, label.y = 15)
 
 ```
 
 ### Question 4
+
+```{r q4}
+games_df %>% 
+  mutate(n_platforms = as.factor(n_platforms)) %>% 
+  ggplot(aes(x = n_platforms, y = total_sale, fill = console_developer)) +
+  geom_bar(stat = "identity", position = "stack")
+```
+
 
 ## Regression Model
  
