@@ -1,0 +1,79 @@
+---
+title: "Data Explorer"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: cosmo
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+runtime: shiny
+---
+
+<style>                     
+.navbar {
+  background-color:black;
+  border-color:black;
+}
+</style> 
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r}
+games_df = read_csv("./games.csv")
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+developer_choices = arrange(games_df, console_developer) %>% pull(console_developer) %>% unique()
+radioButtons(
+  "developer_choice",
+  h3("Console Developer"),
+  choices = developer_choices
+)
+
+genre_choices = games_df %>% pull(genre) %>% unique()
+selectInput(
+  "genre_choice",
+  h3("Genre Choice"),
+  choices = genre_choices,
+  selected = "Action"
+)
+
+sliderInput(
+  "year_range",
+  h3("Year Range"),
+  2001, 2020, 
+  value = c(2005, 2015),
+  sep = "")
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```

@@ -1,0 +1,10 @@
+name: dashboard
+title:
+username:
+account: fw2260
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3320577
+bundleId: 3920345
+url: https://fw2260.shinyapps.io/dashboard/
+when: 1606688461.23902

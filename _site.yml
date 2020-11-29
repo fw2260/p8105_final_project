@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "Final Report"
       href: final_report.html
+    - text: "Data Explorer"
+      href: https://fw2260.shinyapps.io/data_explorer/
     - text: "Contact Us"
       menu:
       - text: "Ying Jin"
