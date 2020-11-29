@@ -599,16 +599,7 @@ $(document).ready(function () {
        GC = &quot;GameCube&quot;,
        PSV = &quot;PlayStation Vita&quot;
        )
-  ) %&gt;% 
-   mutate(
-    genre = 
-      case_when(
-        genre %in% c(&#39;action&#39;,&#39;action_adventure&#39;,&quot;adventure&quot;, &quot;fighting&quot;) ~ &#39;Action&#39;,
-        genre %in% c(&#39;racing&#39;,&#39;sports&#39;) ~ &#39;Competition&#39;,
-        genre %in% c(&#39;miscellaneous&#39;,&#39;role_playing&#39;, &#39;simulation&#39;) ~ &#39;Experience&#39;,
-        genre %in% c(&#39;strategy&#39;,&#39;puzzle&#39;) ~ &#39;Intelligence&#39;,
-        genre %in% c(&#39;platform&#39;, &#39;shooting&#39;)~ &#39;Agility&#39;)
-    )</code></pre>
+  ) </code></pre>
 </div>
 <div id="deal-with-nas" class="section level2">
 <h2>Deal with NAs</h2>
@@ -640,29 +631,69 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Action</td>
-<td align="right">4434</td>
-<td align="right">0.7598972</td>
+<td align="left">action</td>
+<td align="right">2053</td>
+<td align="right">0.7226329</td>
 </tr>
 <tr class="even">
-<td align="left">Agility</td>
-<td align="right">1578</td>
-<td align="right">0.6249505</td>
+<td align="left">action_adventure</td>
+<td align="right">196</td>
+<td align="right">0.6877193</td>
 </tr>
 <tr class="odd">
-<td align="left">Competition</td>
-<td align="right">3071</td>
-<td align="right">0.7749180</td>
+<td align="left">adventure</td>
+<td align="right">1504</td>
+<td align="right">0.8497175</td>
 </tr>
 <tr class="even">
-<td align="left">Experience</td>
-<td align="right">2783</td>
-<td align="right">0.7370233</td>
+<td align="left">fighting</td>
+<td align="right">681</td>
+<td align="right">0.7252396</td>
 </tr>
 <tr class="odd">
-<td align="left">Intelligence</td>
-<td align="right">1132</td>
-<td align="right">0.7833910</td>
+<td align="left">miscellaneous</td>
+<td align="right">789</td>
+<td align="right">0.7897898</td>
+</tr>
+<tr class="even">
+<td align="left">platform</td>
+<td align="right">657</td>
+<td align="right">0.6281071</td>
+</tr>
+<tr class="odd">
+<td align="left">puzzle</td>
+<td align="right">543</td>
+<td align="right">0.8165414</td>
+</tr>
+<tr class="even">
+<td align="left">racing</td>
+<td align="right">1080</td>
+<td align="right">0.7632509</td>
+</tr>
+<tr class="odd">
+<td align="left">role_playing</td>
+<td align="right">1095</td>
+<td align="right">0.6403509</td>
+</tr>
+<tr class="even">
+<td align="left">shooting</td>
+<td align="right">921</td>
+<td align="right">0.6227181</td>
+</tr>
+<tr class="odd">
+<td align="left">simulation</td>
+<td align="right">899</td>
+<td align="right">0.8425492</td>
+</tr>
+<tr class="even">
+<td align="left">sports</td>
+<td align="right">1991</td>
+<td align="right">0.7813972</td>
+</tr>
+<tr class="odd">
+<td align="left">strategy</td>
+<td align="right">589</td>
+<td align="right">0.7551282</td>
 </tr>
 </tbody>
 </table>
