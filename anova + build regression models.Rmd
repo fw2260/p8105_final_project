@@ -62,9 +62,13 @@ games_df =
       case_when(
         genre %in% c('action','action_adventure',"adventure") ~ 'Action',
         genre %in% c('racing','sports') ~ 'Competition',
-        genre %in% c('miscellaneous','role_playing', 'simulation',            'strategy','puzzle') ~ 'Stragety',
+        genre %in% c('miscellaneous','role_playing', 'simulation') ~ 'Experience',
+        genre %in% c('strategy','puzzle') ~ 'Intelligence',
         genre %in% c('platform', 'shooting')~ 'Agility')
     ) %>%
+  filter(
+    genre == "Intelligence"
+  ) %>% 
   mutate(
     n_platforms = 
       case_when(n_platforms == '1' ~ 'small',
@@ -72,7 +76,7 @@ games_df =
                 n_platforms >= '4' ~ 'large'),
     n_platforms = as.factor(n_platforms)
     ) %>% 
-  dplyr::select(title:genre,critic_score, total_sale) 
+  dplyr::select(title:genre,critic_score, total_sale)
 ```
 
 
@@ -160,50 +164,56 @@ regression_df =
   filter(total_sale < 5) # cutoff outliers
 ```
 
-## Model 1: total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms
+## Model 1: total_sale ~ console_developer:genre + console_developer:n_platforms
 
 ```{r regresion_model_1}
-lm_1 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + 0, data = regression_df)
-
-broom::tidy(lm_1) %>% 
-  select(term, estimate, p.value) %>% 
-  mutate(term = str_replace(term, "^borough", "Borough: ")) %>% 
-  knitr::kable(digits = 3
-
-plot(lm1)
+lm_1 = lm(total_sale ~ console_developer:genre +  console_developer:n_platforms, data = regression_df)
 ```
 
-## Model 2: total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score 
+## Model 2: total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score 
 
-```{r regression_modole_2}
-lm2 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + 0, data = regression_df)
-summary(lm2)
-plot(lm2)
+```{r regression_modole_2 ,warning = F ,message = F}
+lm2 = lm(total_sale ~ console_developer:genre +  console_developer:n_platforms + console_developer:critic_score, data = regression_df)
+
+coe_df = data.frame(lm2$coefficients) 
+coe_df = coe_df %>%
+  mutate(name = rownames(coe_df)) %>%
+  mutate(coe_df, name1 = map(.x = name, ~str_split(.x, pattern = ':')[[1]][1])) %>%
+  mutate(coe_df, variable = map(.x = name, ~str_split(.x, pattern = ':')[[1]][2])) %>%
+  dplyr::select(-name) %>%
+  pivot_wider(names_from = 'name1', values_from = 'lm2.coefficients') 
+knitr::kable(coe_df)
+regression_df %>%
+  add_predictions(lm2) %>%
+  add_residuals(lm2) %>%
+  ggplot(aes(x = pred, y = resid))+ 
+  geom_point(alpha = 0.3)+
+  geom_smooth(method = 'lm', color = 'red')+
+  labs(x = 'fitted values of total_sales', y = 'model residuals', title = 'Residuals vs fitted values')
+
 ```
 
-## Model 3: total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score
+## Model 3: total_sale ~ console_developer:genre + console_developer:critic_score
 
 ```{r regression_modole_3}
-lm3 = lm(total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score + 0, data = regression_df)
-summary(lm3)
-plot(lm3)
+lm3 = lm(total_sale ~ console_developer:genre + console_developer:critic_score, data = regression_df)
+
 ```
 
-## Model 4 : total_sale ~ console_developer: period + console_developer:genre +  console_developer:critic_score
+## Model 4 : total_sale ~ console_developer:n_platforms +  console_developer:critic_score
 
 ```{r regression_modole_4}
-lm4 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:critic_score + 0, data = regression_df)
-summary(lm4)
-plot(lm4)
+lm4 = lm(total_sale ~ console_developer:n_platforms  + console_developer:critic_score, data = regression_df)
+
 ```
 
 ## Cross Validation
 
 Decide which predictor should be included in the final model, then consider if it's necessary to add some (but not all) regional sale into the model.
 
-```{r regression_rmse_1}
+```{r regression_rmse_1,warning = F ,include = F}
 cv_df = 
-  crossv_mc(regression_df, 1000) %>% 
+  crossv_mc(regression_df, 300) %>% 
   mutate(
     train = map(train, as_tibble),
     test = map(test, as_tibble)
@@ -213,10 +223,10 @@ cv_df =
 cv_df = 
   cv_df %>% 
   mutate(
-    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + 0, data = .x)),
-    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + 0, data = .x)),
-    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score + 0, data = .x)),
-    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:critic_score + 0, data = .x))
+    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:n_platforms, data = .x)),
+    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score, data = .x)),
+    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:critic_score, data = .x)),
+    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer:n_platforms + console_developer:critic_score, data = .x))
   ) %>% 
   mutate(
     rmse_1 = map2_dbl(.x = linear_1, .y = test, ~rmse(model = .x, data = .y)),
@@ -227,7 +237,7 @@ cv_df =
 ```
 
 
-```{r regression_rmse_compare1234}
+```{r regression_rmse_compare1234,warning = F ,message = F}
 cv_df %>% 
   dplyr::select(starts_with("rmse")) %>% 
   pivot_longer(
@@ -240,58 +250,7 @@ cv_df %>%
   geom_violin()
 ```
 
-## Model 5 : Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale (delete unnecessary variables discovered above)
-
-```{r regression_modole_5}
-lm5 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale +0, data = regression_df)
-summary(lm5)
-plot(lm5)
-```
-
-## Model 6 : Total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale (delete unnecessary variables discovered above)
-
-```{r regression_modole_6}
-lm6 = lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale + 0, data = regression_df)
-summary(lm6)
-plot(lm6)
-```
-
-
-```{r regression_rmse_2}
-cv_df_else = 
-  crossv_mc(regression_df, 1000) %>% 
-  mutate(
-    train = map(train, as_tibble),
-    test = map(test, as_tibble)
-  )
-  
-  
-cv_df_else = 
-  cv_df_else %>% 
-  mutate(
-    linear_5 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + na_sale +0, data = .x)),
-    linear_6 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:na_sale + 0, data = .x)),
-    linear_7 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + japan_sale + 0, data = .x))
-    #linear_8 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:period + console_developer:n_platforms + console_developer:critic_score + console_developer:japan_sale + 0, data = .x))
-  ) %>% 
-  mutate(
-    rmse_5 = map2_dbl(.x = linear_5, .y = test, ~rmse(model = .x, data = .y)),
-    rmse_6 = map2_dbl(.x = linear_6, .y = test, ~rmse(model = .x, data = .y)),
-    rmse_7 = map2_dbl(.x = linear_7, .y = test, ~rmse(model = .x, data = .y))
-    #rmse_8 = map2_dbl(.x = linear_8, .y = test, ~rmse(model = .x, data = .y))
-  )
-```
-
-
-```{r regression_rmse_compare56}
-cv_df_else %>% 
-  dplyr::select(starts_with("rmse")) %>% 
-  pivot_longer(
-    everything(),
-    names_to = "model",
-    values_to = "rmse",
-    names_prefix = "rmse_"
-  ) %>% 
-  ggplot(aes(x = model, y = rmse)) +
-  geom_violin()
+### Anova test of nested model
+```{r}
+anova(lm4,lm2)
 ```

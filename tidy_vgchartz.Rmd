@@ -62,7 +62,16 @@ vgc_data =
        GC = "GameCube",
        PSV = "PlayStation Vita"
        )
-  ) 
+  ) %>% 
+   mutate(
+    genre = 
+      case_when(
+        genre %in% c('action','action_adventure',"adventure") ~ 'Action',
+        genre %in% c('racing','sports') ~ 'Competition',
+        genre %in% c('miscellaneous','role_playing', 'simulation') ~ 'Experience',
+        genre %in% c('strategy','puzzle') ~ 'Intelligence',
+        genre %in% c('platform', 'shooting')~ 'Agility')
+    )
 ```
 
 
