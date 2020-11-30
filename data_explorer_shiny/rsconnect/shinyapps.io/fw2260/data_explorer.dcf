@@ -1,0 +1,13 @@
+name: data_explorer
+title:
+username:
+account: fw2260
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3320706
+bundleId: 3920461
+url: https://fw2260.shinyapps.io/data_explorer/
+when: 1606691382.39013
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: _site.yml|final_report.html|final_report.Rmd|index.html|index.Rmd|proposal.html|proposal.md|proposal.Rmd|README.md|tests.html|tests.Rmd|tidy_vgchartz.html|tidy_vgchartz.md|tidy_vgchartz.Rmd|data_explorer_shiny/data_explorer.Rmd|data_explorer_shiny/games.csv|data_explorer_shiny/rsconnect/documents/dashboard.Rmd/shinyapps.io/fw2260/dashboard.dcf|data_explorer_shiny/rsconnect/documents/data_explorer.Rmd/shinyapps.io/fw2260/data_explorer.dcf|images/home_image.jpg|images/meme_reference.png|data|final_report_files|old|site_libs|tests_files|webscrape

@@ -30,17 +30,13 @@ games_df = read_csv("./games.csv")
 Column {.sidebar}
 -----------------------------------------------------------------------
 
-```{r}
-#developer_choices = arrange(games_df, console_developer) %>% pull(console_developer) %>% unique()
-
+```{r sidebar}
 developer_choices = c("All", unique(sort(games_df$console_developer)))
 radioButtons(
   "developer_choice",
   h3("Console Developer"),
   choices = developer_choices, selected = "All"
 )
-
-#genre_choices = games_df %>% pull(genre) %>% unique()
 
 genre_choices = c("All", unique(sort(games_df$genre)))
 selectInput(
@@ -89,7 +85,7 @@ sub_console_df = reactive({
     }
   } else {
     if(input$genre_choice == "All") {
-      console_df %>% filter(genre == input$genre_choice)
+      console_df %>% filter(console_developer == input$developer_choice)
     } else {
     console_df %>% 
       filter(genre == input$genre_choice,
@@ -125,5 +121,46 @@ renderPlotly({
 ### Chart C
 
 ```{r}
+sub_games_df = reactive({
+  
+  if (input$developer_choice == "All") {
+    if (input$genre_choice == "All"){
+      games_df
+    } else {
+      games_df %>% filter(genre == input$genre_choice)
+    }
+  } else {
+    if(input$genre_choice == "All") {
+      games_df %>% filter(console_developer == input$developer_choice)
+    } else {
+      games_df %>% 
+      filter(genre == input$genre_choice,
+             console_developer == input$developer_choice)
+    }
+  }
+})
 
+renderPlotly({
+  sub_games_df() %>%
+    group_by(release_year) %>% 
+    filter(release_year %in% input$year_range[1]:input$year_range[2]) %>%
+    summarize(totalsale = sum(total_sale)) %>%
+    plot_ly(x = ~release_year, y = ~totalsale, type = "bar") %>% 
+    layout(
+      xaxis = list(
+        title = "Year",
+        titlefont = list(
+          family = "Courier New, monospace",
+          size = 18,
+          color = "#7f7f7f"
+        )),
+      yaxis = list(
+        title = "Total Sale (million USD)",
+        titlefont = list(
+          family = "Courier New, monospace",
+          size = 18,
+          color = "#7f7f7f"
+        )))
+
+})
 ```

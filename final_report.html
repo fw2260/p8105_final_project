@@ -456,7 +456,8 @@ totalsale = games_df %&gt;%
   ) %&gt;% 
   drop_na() %&gt;% 
   ggplot(aes(x = release_year, y = totalsale)) +
-  geom_col() 
+  geom_col() +
+  labs(x = &quot;Year&quot;, y = &quot;Total Sale (million USD)&quot;)
 
 totalcount = games_df %&gt;% 
  group_by(release_year) %&gt;% 
@@ -465,7 +466,9 @@ totalcount = games_df %&gt;%
   ) %&gt;% 
   drop_na() %&gt;% 
   ggplot(aes(x = release_year, y = count)) +
-  geom_col()  
+  geom_col() +
+  labs(x = &quot;Year&quot;, y = &quot;Number of Games&quot;)
+
 
 totalsale + totalcount</code></pre>
 <p><img src="final_report_files/figure-html/q1-1.png" width="672" /></p>
@@ -475,15 +478,18 @@ totalsale + totalcount</code></pre>
 <pre class="r"><code>games_df %&gt;% 
   ggplot(aes(x = genre, y = total_sale, fill = console_developer)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))</code></pre>
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  labs(x = &quot;Genre&quot;, y = &quot;Total Sale (million USD)&quot;, fill = &quot;Console Developer&quot;)</code></pre>
 <p><img src="final_report_files/figure-html/q2-1.png" width="672" /></p>
 </div>
 <div id="question-3" class="section level3">
 <h3>Question 3</h3>
 <pre class="r"><code>games_df %&gt;% 
-  ggscatter(., x = &quot;critic_score&quot;, y = &quot;total_sale&quot;, add = &quot;reg.line&quot;, add.params = list(color = &quot;red&quot;)) +
-  stat_cor(label.x = 3, label.y = 20) +
-  stat_regline_equation(label.x = 3, label.y = 15)</code></pre>
+  filter(total_sale &lt; 5) %&gt;% 
+  ggplot(aes(x = critic_score, y = total_sale, color = console_developer)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = &#39;lm&#39;, se = F) +
+  labs(x = &quot;Critic Score&quot;, y = &quot;Total Sale (million USD)&quot;, color = &quot;Console Developer&quot;)</code></pre>
 <p><img src="final_report_files/figure-html/q3-1.png" width="672" /></p>
 </div>
 <div id="question-4" class="section level3">
@@ -491,7 +497,8 @@ totalsale + totalcount</code></pre>
 <pre class="r"><code>games_df %&gt;% 
   mutate(n_platforms = as.factor(n_platforms)) %&gt;% 
   ggplot(aes(x = n_platforms, y = total_sale, fill = console_developer)) +
-  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;)</code></pre>
+  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
+  labs(x = &quot;Number of Platforms&quot;, y = &quot;Total Sale (million USD)&quot;, fill = &quot;Console Developer&quot;)</code></pre>
 <p><img src="final_report_files/figure-html/q4-1.png" width="672" /></p>
 </div>
 </div>
