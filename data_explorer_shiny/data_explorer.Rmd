@@ -50,7 +50,8 @@ sliderInput(
   "year_range",
   h3("Year Range"),
   2001, 2020, 
-  value = c(2005, 2015),
+  value = c(2001, 2020),
+  ticks = FALSE,
   sep = "")
 ```
 
@@ -58,16 +59,16 @@ sliderInput(
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Annual global video game market per region
 
 ```{r}
 
 ```
 
-Column {data-width=350}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-### Chart B
+### Annual global video game market per console  
 
 ```{r}
 console_df = 
@@ -105,14 +106,14 @@ renderPlotly({
         title = "Console",
         titlefont = list(
           family = "Courier New, monospace",
-          size = 18,
+          size = 14,
           color = "#7f7f7f"
         )),
       yaxis = list(
         title = "Total Sale (million)",
         titlefont = list(
           family = "Courier New, monospace",
-          size = 18,
+          size = 14,
           color = "#7f7f7f"
         )),
       showlegend = FALSE)
