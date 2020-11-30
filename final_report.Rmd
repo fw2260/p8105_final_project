@@ -54,7 +54,8 @@ totalsale = games_df %>%
   ) %>% 
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
-  geom_col() 
+  geom_col() +
+  labs(x = "Year", y = "Total Sale (million USD)")
 
 totalcount = games_df %>% 
  group_by(release_year) %>% 
@@ -63,7 +64,9 @@ totalcount = games_df %>%
   ) %>% 
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
-  geom_col()  
+  geom_col() +
+  labs(x = "Year", y = "Number of Games")
+
 
 totalsale + totalcount
 ```
@@ -74,17 +77,19 @@ totalsale + totalcount
 games_df %>% 
   ggplot(aes(x = genre, y = total_sale, fill = console_developer)) +
   geom_bar(stat = "identity", position = "stack") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console Developer")
 ```
 
 ### Question 3
 
 ```{r q3, message = FALSE}
 games_df %>% 
-  ggscatter(., x = "critic_score", y = "total_sale", add = "reg.line", add.params = list(color = "red")) +
-  stat_cor(label.x = 3, label.y = 20) +
-  stat_regline_equation(label.x = 3, label.y = 15)
-
+  filter(total_sale < 5) %>% 
+  ggplot(aes(x = critic_score, y = total_sale, color = console_developer)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = 'lm', se = F) +
+  labs(x = "Critic Score", y = "Total Sale (million USD)", color = "Console Developer")
 ```
 
 ### Question 4
@@ -93,7 +98,8 @@ games_df %>%
 games_df %>% 
   mutate(n_platforms = as.factor(n_platforms)) %>% 
   ggplot(aes(x = n_platforms, y = total_sale, fill = console_developer)) +
-  geom_bar(stat = "identity", position = "stack")
+  geom_bar(stat = "identity", position = "stack") +
+  labs(x = "Number of Platforms", y = "Total Sale (million USD)", fill = "Console Developer")
 ```
 
 

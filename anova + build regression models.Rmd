@@ -67,9 +67,6 @@ games_df =
         genre %in% c('platform', 'shooting')~ 'Agility',
         genre == 'miscellaneous' ~ "Miscellaneous")
     ) %>%
-  filter(
-    genre == "Intelligence"
-  ) %>% 
   mutate(
     n_platforms = 
       case_when(n_platforms == '1' ~ 'small',
@@ -98,7 +95,7 @@ broom::tidy(multi_comp_1)
 plot(multi_comp_1)
 ```
 
-Anova test shows that there are significant differences of average total_sales between genre and 60% of comparisons in Tukey's method have signigicant differences.
+Anova test shows that there are significant differences of average total_sales between genre and % of comparisons in Tukey's method have signigicant differences.
 
 ### genre * console_developer
 
@@ -249,9 +246,4 @@ cv_df %>%
   ) %>% 
   ggplot(aes(x = model, y = rmse)) +
   geom_violin()
-```
-
-### Anova test of nested model
-```{r}
-anova(lm4,lm2)
 ```
