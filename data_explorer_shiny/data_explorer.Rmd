@@ -20,6 +20,7 @@ runtime: shiny
 library(tidyverse)
 library(plotly)
 library(flexdashboard)
+library(shiny)
 ```
 
 ```{r}
@@ -30,19 +31,23 @@ Column {.sidebar}
 -----------------------------------------------------------------------
 
 ```{r}
-developer_choices = arrange(games_df, console_developer) %>% pull(console_developer) %>% unique()
+#developer_choices = arrange(games_df, console_developer) %>% pull(console_developer) %>% unique()
+
+developer_choices = c("All", unique(sort(games_df$console_developer)))
 radioButtons(
   "developer_choice",
   h3("Console Developer"),
-  choices = developer_choices
+  choices = developer_choices, selected = "All"
 )
 
-genre_choices = games_df %>% pull(genre) %>% unique()
+#genre_choices = games_df %>% pull(genre) %>% unique()
+
+genre_choices = c("All", unique(sort(games_df$genre)))
 selectInput(
   "genre_choice",
   h3("Genre Choice"),
   choices = genre_choices,
-  selected = "Action"
+  selected = "All"
 )
 
 sliderInput(
@@ -69,7 +74,52 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
+console_df = 
+  games_df %>% 
+  group_by(console, genre, console_developer, release_year) %>% 
+  mutate(sum_console = sum(total_sale))
 
+sub_console_df = reactive({
+  
+  if (input$developer_choice == "All") {
+    if (input$genre_choice == "All"){
+      console_df
+    } else {
+      console_df %>% filter(genre == input$genre_choice)
+    }
+  } else {
+    if(input$genre_choice == "All") {
+      console_df %>% filter(genre == input$genre_choice)
+    } else {
+    console_df %>% 
+      filter(genre == input$genre_choice,
+             console_developer == input$developer_choice)
+    }
+  }
+})
+
+renderPlotly({
+  sub_console_df() %>% 
+    filter(
+       release_year %in% input$year_range[1]:input$year_range[2] 
+    ) %>% 
+    plot_ly(x = ~console, y = ~sum_console, color = ~console, type = "bar") %>% 
+    layout(
+      xaxis = list(
+        title = "Console",
+        titlefont = list(
+          family = "Courier New, monospace",
+          size = 18,
+          color = "#7f7f7f"
+        )),
+      yaxis = list(
+        title = "Total Sale (million)",
+        titlefont = list(
+          family = "Courier New, monospace",
+          size = 18,
+          color = "#7f7f7f"
+        )))
+})
 ```
 
 ### Chart C
