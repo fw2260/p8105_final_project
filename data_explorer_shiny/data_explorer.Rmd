@@ -114,11 +114,12 @@ renderPlotly({
           family = "Courier New, monospace",
           size = 18,
           color = "#7f7f7f"
-        )))
+        )),
+      showlegend = FALSE)
 })
 ```
 
-### Chart C
+### Total sales over time
 
 ```{r}
 sub_games_df = reactive({
@@ -144,8 +145,10 @@ renderPlotly({
   sub_games_df() %>%
     group_by(release_year) %>% 
     filter(release_year %in% input$year_range[1]:input$year_range[2]) %>%
-    summarize(totalsale = sum(total_sale)) %>%
-    plot_ly(x = ~release_year, y = ~totalsale, type = "bar") %>% 
+    summarize(totalsale = sum(total_sale),
+              count = n()) %>%
+    mutate(text_label = str_c("Number of games: ", count)) %>%
+    plot_ly(x = ~release_year, y = ~totalsale, type = "bar", text = ~text_label) %>% 
     layout(
       xaxis = list(
         title = "Year",
