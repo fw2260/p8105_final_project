@@ -58,6 +58,64 @@ sliderInput(
 
 Column {data-width=650}
 -----------------------------------------------------------------------
+### Top 10 video games per developer
+
+```{r}
+top_10_df = 
+  games_df %>% 
+  group_by(console_developer) %>% 
+  top_n(10, total_sale)
+
+
+sub_games_10_df = reactive({
+  
+  if (input$developer_choice == "All") {
+    if (input$genre_choice == "All"){
+      top_10_df
+    } else {
+      top_10_df %>% filter(genre == input$genre_choice)
+    }
+  } else {
+    if(input$genre_choice == "All") {
+      top_10_df %>% filter(console_developer == input$developer_choice)
+    } else {
+      top_10_df %>% 
+        filter(genre == input$genre_choice,
+               console_developer == input$developer_choice)
+    }
+  }
+})
+
+renderPlotly({
+  sub_games_10_df() %>% 
+    top_n(10, total_sale) %>% 
+    filter(
+      release_year %in% input$year_range[1]:input$year_range[2] 
+    ) %>% 
+    plot_ly(x = ~title, y = ~total_sale, type = "bar") %>%
+    layout(
+      xaxis = list(
+        title = "Game title",
+        titlefont = list(
+          family = "Courier New, monospace",
+          size = 13,
+          color = "#7f7f7f"
+        )),
+      yaxis = list(
+        title = "Total Sale (million USD)",
+        titlefont = list(
+          family = "Courier New, monospace",
+          size = 13,
+          color = "#7f7f7f"
+        )),
+      showlegend = FALSE)
+})
+
+```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
 ### Annual global video game market per console
 
 ```{r}
@@ -90,7 +148,7 @@ renderPlotly({
     filter(
        release_year %in% input$year_range[1]:input$year_range[2] 
     ) %>% 
-    plot_ly(x = ~console, y = ~sum_console, color = ~console, type = "bar") %>% 
+    plot_ly(x = ~sum_console, y = ~console, color = ~console, type = "scatter") %>% 
     layout(
       xaxis = list(
         title = "Console",
@@ -107,64 +165,6 @@ renderPlotly({
           color = "#7f7f7f"
         )),
       showlegend = FALSE)
-})
-
-
-```
-
-Column {data-width=630}
------------------------------------------------------------------------
-
-### Annual global video game market per region
-
-```{r}
-region_df = 
-  games_df %>% 
-  select(-c(title, console, publisher, developer)) %>% 
-  pivot_longer(
-    na_sale:other_sale,
-    names_to = "region",
-    values_to = "revenue"
-  ) %>% 
-  mutate(region = 
-           recode(
-             region,
-             japan_sale = "Japan",
-             na_sale = "North America",
-             other_sale = "Other regions",
-             pal_sale = "Europe, Australia, Africa"
-           ))
-
-
-sub_region_df = reactive({
-  
-  if (input$developer_choice == "All") {
-    if (input$genre_choice == "All"){
-      region_df
-    } else {
-      region_df %>% filter(genre == input$genre_choice)
-    }
-  } else {
-    if(input$genre_choice == "All") {
-      region_df %>% filter(console_developer == input$developer_choice)
-    } else {
-      region_df %>% 
-        filter(genre == input$genre_choice,
-               console_developer == input$developer_choice)
-    }
-  }
-})
-
-renderPlotly({
-  sub_region_df() %>% 
-    group_by(release_year, region) %>% 
-    filter(
-      release_year %in% input$year_range[1]:input$year_range[2] 
-    ) %>% 
-    summarise(total_region_revenue = sum(revenue)) %>% 
-    plot_ly(type = "pie", labels = ~region, values = ~total_region_revenue,
-            textinfo = 'label+percent', insidetextorientation = 'radial') %>%
-    layout(title = "Regional video games revenue", showlegend = FALSE)
 })
 ```
 
