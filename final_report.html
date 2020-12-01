@@ -701,7 +701,7 @@ coe_df1</code></pre>
 </tr>
 </tbody>
 </table>
-<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)</p>
+<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.</p>
 <p>Interpretation:</p>
 <pre class="r"><code>coe_df = broom::tidy(lm2) 
 coe_df2 = coe_df[c(1:11),] %&gt;%

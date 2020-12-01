@@ -224,7 +224,7 @@ coe_df1 = coe_df[-c(2:11),] %>%
 coe_df1
 ```
 
-  We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)
+  We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.
   
   Interpretation:
   
