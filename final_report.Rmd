@@ -241,6 +241,9 @@ Model 4:  total_sale ~ console_developer * n_platforms + console_developer * cri
 
 ### 2. Cross validation:
 
+We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of **RMSE** values for each candidate model:
+
+
 ```{r regression_rmse_1,warning = F ,include = F}
 cv_df = 
   crossv_mc(regression_df, 300) %>% 
@@ -279,6 +282,19 @@ cv_df %>%
   ggplot(aes(x = model, y = rmse)) +
   geom_violin()
 ```
+
+Base on these results, there's clearly some improvement for adding `console_developer*critic_score` as an additional predictor and they suggests that the different critic score among the three developers could influence the total sale in some way. 
+
+
+Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less. 
+
+
+Hence, we finally choose model 2 and 4 for the final comparison and consider whether the model could be 'superior' by adding the predictor `console_developer*genre`.
+
+
+ ANOVA test:
+ 
+
 
 
 ### 3. Diagnosis and interpretation

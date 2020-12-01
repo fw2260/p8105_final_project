@@ -27,10 +27,21 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -909,6 +920,7 @@ multi_df =
 </div>
 <div id="cross-validation" class="section level3">
 <h3>2. Cross validation:</h3>
+<p>We use <code>crossv_mc</code> method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of <strong>RMSE</strong> values for each candidate model:</p>
 <pre class="r"><code>cv_df %&gt;% 
   dplyr::select(starts_with(&quot;rmse&quot;)) %&gt;% 
   pivot_longer(
@@ -920,6 +932,10 @@ multi_df =
   ggplot(aes(x = model, y = rmse)) +
   geom_violin()</code></pre>
 <p><img src="final_report_files/figure-html/regression_rmse_compare1234-1.png" width="672" /></p>
+<p>Base on these results, there’s clearly some improvement for adding <code>console_developer*critic_score</code> as an additional predictor and they suggests that the different critic score among the three developers could influence the total sale in some way.</p>
+<p>Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less.</p>
+<p>Hence, we finally choose model 2 and 4 for the final comparison and consider whether the model could be ‘superior’ by adding the predictor <code>console_developer*genre</code>.</p>
+<p>ANOVA test:</p>
 </div>
 <div id="diagnosis-and-interpretation" class="section level3">
 <h3>3. Diagnosis and interpretation</h3>
@@ -1311,7 +1327,7 @@ critic_score
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
