@@ -162,25 +162,33 @@ regression_df =
   filter(total_sale < 5) # cutoff outliers
 ```
 
-## Model 1: total_sale ~ console_developer:genre + console_developer:n_platforms
+## Model 1: total_sale ~ console_developer*genre + console_developer*n_platforms
 
 ```{r regresion_model_1}
-lm_1 = lm(total_sale ~ console_developer:genre +  console_developer:n_platforms, data = regression_df)
+lm_1 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms, data = regression_df)
 ```
 
-## Model 2: total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score 
+## Model 2: total_sale ~ console_developer*genre + console_developer*n_platforms + console_developer*critic_score 
 
 ```{r regression_modole_2 ,warning = F ,message = F}
-lm2 = lm(total_sale ~ console_developer:genre +  console_developer:n_platforms + console_developer:critic_score, data = regression_df)
+lm2 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms + console_developer*critic_score, data = regression_df)
 
-coe_df = data.frame(lm2$coefficients) 
-coe_df = coe_df %>%
-  mutate(name = rownames(coe_df)) %>%
-  mutate(coe_df, name1 = map(.x = name, ~str_split(.x, pattern = ':')[[1]][1])) %>%
-  mutate(coe_df, variable = map(.x = name, ~str_split(.x, pattern = ':')[[1]][2])) %>%
-  dplyr::select(-name) %>%
-  pivot_wider(names_from = 'name1', values_from = 'lm2.coefficients') 
-knitr::kable(coe_df)
+coe1_df = lm2$coefficients 
+coe1_df = coe1_df [-(2:11)] %>%
+  data.frame() %>%
+  rename(coefficient = '.') 
+coe1_df =  mutate(coe1_df,name0 = rownames(coe1_df)) %>%
+  mutate( name1 = map(.x = name0, ~str_split(.x, pattern = ':')[[1]][1])) %>%
+  mutate( variable = map(.x = name0, ~str_split(.x, pattern = ':')[[1]][2])) %>%
+  dplyr::select(-name0) %>%
+  pivot_wider(names_from = 'name1', values_from = 'coefficient') 
+knitr::kable(coe1_df)
+coe2_df = lm2$coefficients
+coe2_df = coe2_df[1:11] %>%
+  data.frame() %>%
+  rename(coefficient ='.' ) %>%
+  knitr::kable()
+coe2_df
 regression_df %>%
   add_predictions(lm2) %>%
   add_residuals(lm2) %>%
@@ -191,17 +199,17 @@ regression_df %>%
 
 ```
 
-## Model 3: total_sale ~ console_developer:genre + console_developer:critic_score
+## Model 3: total_sale ~ console_developer*genre + console_developer*critic_score
 
 ```{r regression_modole_3}
-lm3 = lm(total_sale ~ console_developer:genre + console_developer:critic_score, data = regression_df)
+lm3 = lm(total_sale ~ console_developer*genre + console_developer*critic_score, data = regression_df)
 
 ```
 
-## Model 4 : total_sale ~ console_developer:n_platforms +  console_developer:critic_score
+## Model 4 : total_sale ~ console_developer*n_platforms +  console_developer*critic_score
 
 ```{r regression_modole_4}
-lm4 = lm(total_sale ~ console_developer:n_platforms  + console_developer:critic_score, data = regression_df)
+lm4 = lm(total_sale ~ console_developer*n_platforms  + console_developer*critic_score, data = regression_df)
 
 ```
 
@@ -221,10 +229,10 @@ cv_df =
 cv_df = 
   cv_df %>% 
   mutate(
-    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:n_platforms, data = .x)),
-    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:n_platforms + console_developer:critic_score, data = .x)),
-    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer:genre + console_developer:critic_score, data = .x)),
-    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer:n_platforms + console_developer:critic_score, data = .x))
+    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*n_platforms, data = .x)),
+    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*n_platforms + console_developer*critic_score, data = .x)),
+    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*critic_score, data = .x)),
+    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer*n_platforms + console_developer*critic_score, data = .x))
   ) %>% 
   mutate(
     rmse_1 = map2_dbl(.x = linear_1, .y = test, ~rmse(model = .x, data = .y)),
