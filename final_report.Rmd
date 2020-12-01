@@ -148,7 +148,7 @@ games_df %>%
 ```
 
 
-## Anova Analysis
+## Anova Test
 ```{r }
 games_df = games_df %>%
    mutate(
@@ -237,7 +237,7 @@ Model 4:  total_sale ~ console_developer * n_platforms + console_developer * cri
 ### 3. Diagnosis and interpretation
 
   In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers. 
-```{r}
+```{r, message = FALSE}
 regression_df = 
   games_df %>%
   filter(total_sale < 5)
@@ -279,4 +279,4 @@ coe_df2
  
   In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.
   
-  Interpretation:
+## Main Finding
