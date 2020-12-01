@@ -1,5 +1,5 @@
 ---
-title: "Data Explorer"
+title: "Play with our game data!"
 output: 
   flexdashboard::flex_dashboard:
     theme: cosmo
@@ -58,7 +58,6 @@ sliderInput(
 
 Column {data-width=650}
 -----------------------------------------------------------------------
-
 ### Annual global video game market per console
 
 ```{r}
@@ -116,7 +115,7 @@ renderPlotly({
 Column {data-width=630}
 -----------------------------------------------------------------------
 
-### Annual global video game market per region  
+### Annual global video game market per region
 
 ```{r}
 region_df = 
@@ -133,7 +132,7 @@ region_df =
              japan_sale = "Japan",
              na_sale = "North America",
              other_sale = "Other regions",
-             pal_sale = "Europe, Australia, Africa and Asia"
+             pal_sale = "Europe, Australia, Africa"
            ))
 
 
@@ -198,7 +197,7 @@ renderPlotly({
     summarize(totalsale = sum(total_sale),
               count = n()) %>%
     mutate(text_label = str_c("Number of games: ", count)) %>%
-    plot_ly(x = ~release_year, y = ~totalsale, type = "bar", text = ~text_label) %>% 
+    plot_ly(x = ~release_year, y = ~totalsale, type = "scatter", mode = "lines", text = ~text_label) %>% 
     layout(
       xaxis = list(
         title = "Year",
