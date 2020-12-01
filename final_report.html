@@ -27,21 +27,10 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -431,6 +420,8 @@ div.tocify {
 
 <div id="motivation" class="section level2">
 <h2>Motivation</h2>
+<p>Video games have been around for decades, providing entertainment for children and adults alike. They have been involved significantly from the early days of computer games and the early versions of Nintendo and Atari. As technology continues to improve, so do video games. Video game creation has become increasingly complicated, and the cost of creating a game to run one of the major consoles has risen with this greater complexity.</p>
+<p>No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. <a href="https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/">Analysts</a> reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe. In this project, we are going to analyze the 2001-2020 global games market per device from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues.</p>
 </div>
 <div id="initial-questions" class="section level2">
 <h2>Initial Questions</h2>
@@ -448,18 +439,18 @@ div.tocify {
 <p>There are 7340 rows and 14 columns in our final dataset.</p>
 <p>Important variables include:</p>
 <ul>
-<li><p><code>title</code>: The games name</p></li>
-<li><p><code>console</code>: Platform on which the game was released or is playable (i.e.Switch,PS4, etc.)</p></li>
-<li><p><code>console_developer</code>: The developers of the platforms</p></li>
-<li><p><code>n_platforms</code>: Number of platforms that the game is on</p></li>
-<li><p><code>genre</code>: Genre of the game</p></li>
-<li><p><code>release_year</code>: Year of the game’s release</p></li>
+<li><p><code>title</code>: unique title of each game</p></li>
+<li><p><code>console</code>: platform on which the game was released or is playable (i.e. Switch, PS4, etc.)</p></li>
+<li><p><code>console_developer</code>: company produces the consoles</p></li>
+<li><p><code>n_platforms</code>: number of platforms per game title</p></li>
+<li><p><code>genre</code>: genre of the game</p></li>
+<li><p><code>release_year</code>: year of the game’s release</p></li>
 <li><p><code>critic_score</code>: Aggregate score compiled by the websites</p></li>
-<li><p><code>total_sale</code>: Total worldwide sales (in millions $)</p></li>
-<li><p><code>na_sale</code>: Sales in North America (in millions $)</p></li>
-<li><p><code>pal_sale</code>: Sales in Europe (in millions $)</p></li>
-<li><p><code>japan_sale</code>: Sales in Japan (in millions $)</p></li>
-<li><p><code>other_sale</code>: Sales in other regions (in millions $)</p></li>
+<li><p><code>total_sale</code>: global revenues (millions $)</p></li>
+<li><p><code>na_sale</code>: revenues in North America (millions $)</p></li>
+<li><p><code>pal_sale</code>: revenues in Europe (millions $)</p></li>
+<li><p><code>japan_sale</code>: revenues in Japan (millions $)</p></li>
+<li><p><code>other_sale</code>: revenues in other regions (millions $)</p></li>
 </ul>
 <p>The first ten rows of the dataset is as follow:</p>
 <pre class="r"><code>head(games_df) %&gt;% 
@@ -1328,7 +1319,7 @@ critic_score
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

@@ -30,6 +30,10 @@ scale_fill_discrete = scale_fill_viridis_d
 
 ## Motivation
 
+Video games have been around for decades, providing entertainment for children and adults alike. They have been involved significantly from the early days of computer games and the early versions of Nintendo and Atari. As technology continues to improve, so do video games. Video game creation has become increasingly complicated, and the cost of creating a game to run one of the major consoles has risen with this greater complexity. 
+
+No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. [Analysts](https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/) reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe. In this project, we are going to analyze the 2001-2020 global games market per device from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues. 
+
 ## Initial Questions
 
 For games run on consoles developed by Nintendo, Sony and Microsoft, we want to know separately:
@@ -43,6 +47,7 @@ For games run on consoles developed by Nintendo, Sony and Microsoft, we want to 
 * Does the number of consoles the games are released on influence their sales?
 
 ## Data Collection
+
 ```{r, include = FALSE}
 games_df = read_csv("./data/games.csv")
 ```
@@ -53,29 +58,29 @@ There are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final da
 
 Important variables include:
 
-* `title`: The games name
+* `title`: unique title of each game
 
-* `console`: Platform on which the game was released or is playable (i.e.Switch,PS4, etc.)
+* `console`: platform on which the game was released or is playable (i.e. Switch, PS4, etc.)
 
-* `console_developer`: The developers of the platforms
+* `console_developer`: company produces the consoles
 
-* `n_platforms`: Number of platforms that the game is on
+* `n_platforms`: number of platforms per game title
 
-* `genre`: Genre of the game
+* `genre`: genre of the game 
 
-* `release_year`: Year of the game's release
+* `release_year`: year of the game's release
 
 * `critic_score`: Aggregate score compiled by the websites
 
-* `total_sale`: Total worldwide sales (in millions $)
+* `total_sale`: global revenues (millions $)
 
-* `na_sale`: Sales in North America (in millions $)
+* `na_sale`: revenues in North America (millions $)
 
-* `pal_sale`: Sales in Europe (in millions $)
+* `pal_sale`: revenues in Europe (millions $)
 
-* `japan_sale`: Sales in Japan (in millions $)
+* `japan_sale`: revenues in Japan (millions $)
 
-* `other_sale`: Sales in other regions (in millions $)
+* `other_sale`: revenues in other regions (millions $)
 
 The first ten rows of the dataset is as follow:
 
