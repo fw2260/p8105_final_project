@@ -27,19 +27,10 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -442,14 +433,350 @@ div.tocify {
 </div>
 <div id="data-collection" class="section level2">
 <h2>Data Collection</h2>
+<p>Our dataset is a combination of data scraped from <a href="https://www.vgchartz.com/games/games.php?page=1&amp;results=200&amp;name=&amp;console=&amp;keyword=&amp;publisher=&amp;genre=&amp;order=TotalSales&amp;ownership=Both&amp;boxart=Both&amp;banner=Both&amp;showdeleted=&amp;region=All&amp;goty_year=&amp;developer=&amp;direction=DESC&amp;showtotalsales=1&amp;shownasales=1&amp;showpalsales=1&amp;showjapansales=1&amp;showothersales=1&amp;showpublisher=0&amp;showdeveloper=0&amp;showreleasedate=0&amp;showlastupdate=0&amp;showvgchartzscore=0&amp;showcriticscore=0&amp;showuserscore=0&amp;showshipped=0&amp;alphasort=&amp;showmultiplat=No">VGChartz</a>, a reliable video game sales tracking website, and <a href="https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&amp;distribution=&amp;sort=desc&amp;view=detailed">Metacritic</a>, a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.</p>
+<p>There are 7340 rows and 14 columns in our final dataset.</p>
+<p>Important variables include:</p>
+<ul>
+<li><p><code>title</code>: The games name</p></li>
+<li><p><code>console</code>: Platform on which the game was released or is playable (i.e.Switch,PS4, etc.)</p></li>
+<li><p><code>console_developer</code>: The developers of the platforms</p></li>
+<li><p><code>n_platforms</code>: Number of platforms that the game is on</p></li>
+<li><p><code>genre</code>: Genre of the game</p></li>
+<li><p><code>release_year</code>: Year of the game’s release</p></li>
+<li><p><code>critic_score</code>: Aggregate score compiled by the websites</p></li>
+<li><p><code>total_sale</code>: Total worldwide sales (in millions $)</p></li>
+<li><p><code>na_sale</code>: Sales in North America (in millions $)</p></li>
+<li><p><code>pal_sale</code>: Sales in Europe (in millions $)</p></li>
+<li><p><code>japan_sale</code>: Sales in Japan (in millions $)</p></li>
+<li><p><code>other_sale</code>: Sales in other regions (in millions $)</p></li>
+</ul>
+<p>The first ten rows of the dataset is as follow:</p>
+<pre class="r"><code>head(games_df) %&gt;% 
+  knitr::kable(format = &quot;html&quot;, col.names = colnames(games_df), align=&quot;c&quot;) %&gt;%
+  kableExtra::kable_styling(&quot;striped&quot;, &quot;hover&quot;, row_label_position = &quot;c&quot;) %&gt;%
+  kableExtra::scroll_box(width = &quot;100%&quot;, height = &quot;200px&quot;)</code></pre>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+title
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+console
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+console_developer
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+n_platforms
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+genre
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+release_year
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+publisher
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+developer
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+critic_score
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+total_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+na_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+pal_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+japan_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+other_sale
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto: San Andreas
+</td>
+<td style="text-align:center;">
+PlayStation 2
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2004
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.5
+</td>
+<td style="text-align:center;">
+20.81
+</td>
+<td style="text-align:center;">
+9.43
+</td>
+<td style="text-align:center;">
+0.40
+</td>
+<td style="text-align:center;">
+0.41
+</td>
+<td style="text-align:center;">
+10.57
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto V
+</td>
+<td style="text-align:center;">
+PlayStation 3
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2013
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.4
+</td>
+<td style="text-align:center;">
+20.32
+</td>
+<td style="text-align:center;">
+6.37
+</td>
+<td style="text-align:center;">
+9.85
+</td>
+<td style="text-align:center;">
+0.99
+</td>
+<td style="text-align:center;">
+3.12
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto V
+</td>
+<td style="text-align:center;">
+PlayStation 4
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2014
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.7
+</td>
+<td style="text-align:center;">
+19.39
+</td>
+<td style="text-align:center;">
+6.06
+</td>
+<td style="text-align:center;">
+9.71
+</td>
+<td style="text-align:center;">
+0.60
+</td>
+<td style="text-align:center;">
+3.02
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto: Vice City
+</td>
+<td style="text-align:center;">
+PlayStation 2
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2002
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.6
+</td>
+<td style="text-align:center;">
+16.15
+</td>
+<td style="text-align:center;">
+8.41
+</td>
+<td style="text-align:center;">
+5.49
+</td>
+<td style="text-align:center;">
+0.47
+</td>
+<td style="text-align:center;">
+1.78
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto III
+</td>
+<td style="text-align:center;">
+PlayStation 2
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2001
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+DMA Design
+</td>
+<td style="text-align:center;">
+9.5
+</td>
+<td style="text-align:center;">
+13.10
+</td>
+<td style="text-align:center;">
+6.99
+</td>
+<td style="text-align:center;">
+4.51
+</td>
+<td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+1.30
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto IV
+</td>
+<td style="text-align:center;">
+Xbox 360
+</td>
+<td style="text-align:center;">
+Microsoft
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2008
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+10.0
+</td>
+<td style="text-align:center;">
+11.09
+</td>
+<td style="text-align:center;">
+6.80
+</td>
+<td style="text-align:center;">
+3.11
+</td>
+<td style="text-align:center;">
+0.14
+</td>
+<td style="text-align:center;">
+1.04
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="exploratory-analyses" class="section level2">
 <h2>Exploratory Analyses</h2>
 <div id="question-1" class="section level3">
 <h3>Question 1</h3>
-<pre class="r"><code>games_df = read_csv(&quot;./data/games.csv&quot;)
-
-totalsale = games_df %&gt;% 
+<pre class="r"><code>totalsale = games_df %&gt;% 
   group_by(release_year) %&gt;% 
   summarize(
     totalsale = sum(total_sale)
@@ -535,7 +862,7 @@ totalsale + totalcount</code></pre>
 ## 2 Residuals  7334 29440.   4.01      NA   NA</code></pre>
 <pre class="r"><code>multi_comp_1 = TukeyHSD(aov_mod_1)
 plot(multi_comp_1)</code></pre>
-<p><img src="final_report_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="final_report_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>With p.value &lt; 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey’s method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.</p>
 </div>
 <div id="anova-with-interaction-total_sale-console_developer-genre" class="section level3">
@@ -609,7 +936,7 @@ regression_df %&gt;%
   geom_smooth(method = &#39;lm&#39;, color = &#39;red&#39;)+
   labs(x = &#39;fitted values of total_sales&#39;, y = &#39;model residuals&#39;, title = &#39;Residuals vs fitted values&#39;)</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="final_report_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="final_report_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>As shown in the graph, there are many outliers with residuals &gt; 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals. make jeff’s table</p>
 <pre class="r"><code>coe_df = broom::tidy(lm2) 
 coe_df1 = coe_df[-c(2:11),] %&gt;%
@@ -621,101 +948,209 @@ coe_df1 = coe_df[-c(2:11),] %&gt;%
 coe_df1</code></pre>
 <table>
 <thead>
-<tr class="header">
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">p.value</th>
+<tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+p.value
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">-0.835</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.835
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: genreAgility</td>
-<td align="right">-0.102</td>
-<td align="right">0.110</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreAgility
+</td>
+<td style="text-align:right;">
+-0.102
+</td>
+<td style="text-align:right;">
+0.110
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: genreAgility</td>
-<td align="right">-0.071</td>
-<td align="right">0.239</td>
+<tr>
+<td style="text-align:left;">
+Sony: genreAgility
+</td>
+<td style="text-align:right;">
+-0.071
+</td>
+<td style="text-align:right;">
+0.239
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: genreCompetition</td>
-<td align="right">-0.025</td>
-<td align="right">0.683</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreCompetition
+</td>
+<td style="text-align:right;">
+-0.025
+</td>
+<td style="text-align:right;">
+0.683
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: genreCompetition</td>
-<td align="right">0.054</td>
-<td align="right">0.321</td>
+<tr>
+<td style="text-align:left;">
+Sony: genreCompetition
+</td>
+<td style="text-align:right;">
+0.054
+</td>
+<td style="text-align:right;">
+0.321
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: genreExperience</td>
-<td align="right">0.067</td>
-<td align="right">0.393</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreExperience
+</td>
+<td style="text-align:right;">
+0.067
+</td>
+<td style="text-align:right;">
+0.393
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: genreExperience</td>
-<td align="right">-0.249</td>
-<td align="right">0.001</td>
+<tr>
+<td style="text-align:left;">
+Sony: genreExperience
+</td>
+<td style="text-align:right;">
+-0.249
+</td>
+<td style="text-align:right;">
+0.001
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: genreIntelligence</td>
-<td align="right">0.129</td>
-<td align="right">0.256</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreIntelligence
+</td>
+<td style="text-align:right;">
+0.129
+</td>
+<td style="text-align:right;">
+0.256
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: genreIntelligence</td>
-<td align="right">-0.205</td>
-<td align="right">0.089</td>
+<tr>
+<td style="text-align:left;">
+Sony: genreIntelligence
+</td>
+<td style="text-align:right;">
+-0.205
+</td>
+<td style="text-align:right;">
+0.089
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: genreMiscellaneous</td>
-<td align="right">0.350</td>
-<td align="right">0.002</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreMiscellaneous
+</td>
+<td style="text-align:right;">
+0.350
+</td>
+<td style="text-align:right;">
+0.002
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: genreMiscellaneous</td>
-<td align="right">-0.204</td>
-<td align="right">0.062</td>
+<tr>
+<td style="text-align:left;">
+Sony: genreMiscellaneous
+</td>
+<td style="text-align:right;">
+-0.204
+</td>
+<td style="text-align:right;">
+0.062
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: n_platformsmedium</td>
-<td align="right">0.210</td>
-<td align="right">0.001</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: n_platformsmedium
+</td>
+<td style="text-align:right;">
+0.210
+</td>
+<td style="text-align:right;">
+0.001
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: n_platformsmedium</td>
-<td align="right">-0.002</td>
-<td align="right">0.979</td>
+<tr>
+<td style="text-align:left;">
+Sony: n_platformsmedium
+</td>
+<td style="text-align:right;">
+-0.002
+</td>
+<td style="text-align:right;">
+0.979
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: n_platformssmall</td>
-<td align="right">0.286</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: n_platformssmall
+</td>
+<td style="text-align:right;">
+0.286
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: n_platformssmall</td>
-<td align="right">-0.140</td>
-<td align="right">0.046</td>
+<tr>
+<td style="text-align:left;">
+Sony: n_platformssmall
+</td>
+<td style="text-align:right;">
+-0.140
+</td>
+<td style="text-align:right;">
+0.046
+</td>
 </tr>
-<tr class="even">
-<td align="left">Nintendo: critic_score</td>
-<td align="right">-0.108</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+Nintendo: critic_score
+</td>
+<td style="text-align:right;">
+-0.108
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sony: critic_score</td>
-<td align="right">0.052</td>
-<td align="right">0.001</td>
+<tr>
+<td style="text-align:left;">
+Sony: critic_score
+</td>
+<td style="text-align:right;">
+0.052
+</td>
+<td style="text-align:right;">
+0.001
+</td>
 </tr>
 </tbody>
 </table>
-<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)</p>
+<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.</p>
 <p>Interpretation:</p>
 <pre class="r"><code>coe_df = broom::tidy(lm2) 
 coe_df2 = coe_df[c(1:11),] %&gt;%
@@ -724,67 +1159,139 @@ coe_df2 = coe_df[c(1:11),] %&gt;%
 coe_df2</code></pre>
 <table>
 <thead>
-<tr class="header">
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">p.value</th>
+<tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+p.value
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">-0.835</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.835
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="even">
-<td align="left">console_developerNintendo</td>
-<td align="right">0.488</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+console_developerNintendo
+</td>
+<td style="text-align:right;">
+0.488
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="odd">
-<td align="left">console_developerSony</td>
-<td align="right">-0.129</td>
-<td align="right">0.321</td>
+<tr>
+<td style="text-align:left;">
+console_developerSony
+</td>
+<td style="text-align:right;">
+-0.129
+</td>
+<td style="text-align:right;">
+0.321
+</td>
 </tr>
-<tr class="even">
-<td align="left">genreAgility</td>
-<td align="right">0.153</td>
-<td align="right">0.001</td>
+<tr>
+<td style="text-align:left;">
+genreAgility
+</td>
+<td style="text-align:right;">
+0.153
+</td>
+<td style="text-align:right;">
+0.001
+</td>
 </tr>
-<tr class="odd">
-<td align="left">genreCompetition</td>
-<td align="right">-0.031</td>
-<td align="right">0.464</td>
+<tr>
+<td style="text-align:left;">
+genreCompetition
+</td>
+<td style="text-align:right;">
+-0.031
+</td>
+<td style="text-align:right;">
+0.464
+</td>
 </tr>
-<tr class="even">
-<td align="left">genreExperience</td>
-<td align="right">0.058</td>
-<td align="right">0.360</td>
+<tr>
+<td style="text-align:left;">
+genreExperience
+</td>
+<td style="text-align:right;">
+0.058
+</td>
+<td style="text-align:right;">
+0.360
+</td>
 </tr>
-<tr class="odd">
-<td align="left">genreIntelligence</td>
-<td align="right">-0.224</td>
-<td align="right">0.023</td>
+<tr>
+<td style="text-align:left;">
+genreIntelligence
+</td>
+<td style="text-align:right;">
+-0.224
+</td>
+<td style="text-align:right;">
+0.023
+</td>
 </tr>
-<tr class="even">
-<td align="left">genreMiscellaneous</td>
-<td align="right">0.205</td>
-<td align="right">0.022</td>
+<tr>
+<td style="text-align:left;">
+genreMiscellaneous
+</td>
+<td style="text-align:right;">
+0.205
+</td>
+<td style="text-align:right;">
+0.022
+</td>
 </tr>
-<tr class="odd">
-<td align="left">n_platformsmedium</td>
-<td align="right">-0.306</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+n_platformsmedium
+</td>
+<td style="text-align:right;">
+-0.306
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="even">
-<td align="left">n_platformssmall</td>
-<td align="right">-0.275</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+n_platformssmall
+</td>
+<td style="text-align:right;">
+-0.275
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
-<tr class="odd">
-<td align="left">critic_score</td>
-<td align="right">0.230</td>
-<td align="right">0.000</td>
+<tr>
+<td style="text-align:left;">
+critic_score
+</td>
+<td style="text-align:right;">
+0.230
+</td>
+<td style="text-align:right;">
+0.000
+</td>
 </tr>
 </tbody>
 </table>
@@ -804,7 +1311,7 @@ coe_df2</code></pre>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

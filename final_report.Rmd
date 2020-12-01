@@ -43,14 +43,55 @@ For games run on consoles developed by Nintendo, Sony and Microsoft, we want to 
 * Does the number of consoles the games are released on influence their sales?
 
 ## Data Collection
+```{r, include = FALSE}
+games_df = read_csv("./data/games.csv")
+```
+
+Our dataset is a combination of data scraped from [VGChartz](https://www.vgchartz.com/games/games.php?page=1&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No), a reliable video game sales tracking website, and [Metacritic](https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&distribution=&sort=desc&view=detailed), a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.
+
+There are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final dataset.
+
+Important variables include:
+
+* `title`: The games name
+
+* `console`: Platform on which the game was released or is playable (i.e.Switch,PS4, etc.)
+
+* `console_developer`: The developers of the platforms
+
+* `n_platforms`: Number of platforms that the game is on
+
+* `genre`: Genre of the game
+
+* `release_year`: Year of the game's release
+
+* `critic_score`: Aggregate score compiled by the websites
+
+* `total_sale`: Total worldwide sales (in millions $)
+
+* `na_sale`: Sales in North America (in millions $)
+
+* `pal_sale`: Sales in Europe (in millions $)
+
+* `japan_sale`: Sales in Japan (in millions $)
+
+* `other_sale`: Sales in other regions (in millions $)
+
+The first ten rows of the dataset is as follow:
+
+```{r}
+head(games_df) %>% 
+  knitr::kable(format = "html", col.names = colnames(games_df), align="c") %>%
+  kableExtra::kable_styling("striped", "hover", row_label_position = "c") %>%
+  kableExtra::scroll_box(width = "100%", height = "200px")
+```
+
 
 ## Exploratory Analyses
 
 ### Question 1
 
 ```{r q1, message = FALSE}
-games_df = read_csv("./data/games.csv")
-
 totalsale = games_df %>% 
   group_by(release_year) %>% 
   summarize(
@@ -271,7 +312,7 @@ coe_df1 = coe_df[-c(2:11),] %>%
 coe_df1
 ```
 
-  We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)
+  We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.
   
   Interpretation:
   
