@@ -502,8 +502,240 @@ totalsale + totalcount</code></pre>
 <p><img src="final_report_files/figure-html/q4-1.png" width="672" /></p>
 </div>
 </div>
-<div id="regression-model" class="section level2">
-<h2>Regression Model</h2>
+<div id="anova-analysis" class="section level2">
+<h2>Anova Analysis</h2>
+<pre class="r"><code>games_df = games_df %&gt;%
+   mutate(
+    genre = 
+      case_when(
+        genre %in% c(&#39;action&#39;,&#39;action_adventure&#39;,&quot;adventure&quot;, &quot;fighting&quot;) ~ &#39;Action&#39;,
+        genre %in% c(&#39;racing&#39;,&#39;sports&#39;) ~ &#39;Competition&#39;,
+        genre %in% c(&#39;role_playing&#39;, &#39;simulation&#39;) ~ &#39;Experience&#39;,
+        genre %in% c(&#39;strategy&#39;,&#39;puzzle&#39;) ~ &#39;Intelligence&#39;,
+        genre %in% c(&#39;platform&#39;, &#39;shooting&#39;)~ &#39;Agility&#39;,
+        genre == &#39;miscellaneous&#39; ~ &quot;Miscellaneous&quot;)
+    ) %&gt;%
+  mutate(
+    n_platforms = 
+      case_when(n_platforms == &#39;1&#39; ~ &#39;small&#39;,
+                n_platforms &gt;= &#39;2&#39; &amp; n_platforms &lt;= &#39;3&#39; ~ &#39;medium&#39;,
+                n_platforms &gt;= &#39;4&#39; ~ &#39;large&#39;),
+    n_platforms = as.factor(n_platforms)
+    ) %&gt;% 
+  dplyr::select(title:genre,critic_score, total_sale)</code></pre>
+<p>By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : genre and n_platforms.In the test of genre, we want to answer the question: Whether there are true differences in games sales among different genres?</p>
+<div id="one-way-anova-total_sale-genre" class="section level3">
+<h3>1. One-way ANOVA: Total_sale ~ genre</h3>
+<pre class="r"><code>aov_mod_1 = aov(total_sale ~ genre, data = games_df)</code></pre>
+<pre class="r"><code>broom::tidy(aov_mod_1)</code></pre>
+<pre><code>## # A tibble: 2 x 6
+##   term         df  sumsq meansq statistic   p.value
+##   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 genre         5   208.  41.5       10.3  6.76e-10
+## 2 Residuals  7334 29440.   4.01      NA   NA</code></pre>
+<pre class="r"><code>multi_comp_1 = TukeyHSD(aov_mod_1)
+plot(multi_comp_1)</code></pre>
+<p><img src="final_report_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>With p.value &lt; 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey’s method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.</p>
+</div>
+<div id="anova-with-interaction-total_sale-console_developer-genre" class="section level3">
+<h3>2. ANOVA with interaction: Total_sale ~ console_developer * genre</h3>
+<pre class="r"><code>aov_mod_2 = aov(total_sale ~ console_developer * genre, data = games_df)</code></pre>
+<pre class="r"><code>broom::tidy(aov_mod_2)</code></pre>
+<pre><code>## # A tibble: 4 x 6
+##   term                       df   sumsq meansq statistic   p.value
+##   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 console_developer           2    23.8  11.9       2.99  5.04e- 2
+## 2 genre                       5   213.   42.6      10.7   2.91e-10
+## 3 console_developer:genre    10   251.   25.1       6.30  1.08e- 9
+## 4 Residuals                7322 29159.    3.98     NA    NA</code></pre>
+<pre class="r"><code>multi_comp_2 = TukeyHSD(aov_mod_2)
+
+ori_df = 
+  broom::tidy(multi_comp_2) %&gt;%
+  filter(term == &#39;console_developer:genre&#39;) %&gt;%
+  na.omit() 
+
+multi_df = 
+  ori_df %&gt;%
+  filter(adj.p.value &lt; 0.05)</code></pre>
+<p>With p.value of the interaction term = 1.08e-9 &lt; 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.</p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>3. Conclusion:</h3>
+<p>Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well. Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.</p>
+<p>Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model</p>
+</div>
+</div>
+<div id="linear-regression" class="section level2">
+<h2>Linear Regression</h2>
+<div id="build-models" class="section level3">
+<h3>1. Build models:</h3>
+<p>Model 1: total_sale ~ console_developer * genre + console_developer * n_platforms.</p>
+<p>Model 2: total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score</p>
+<p>Model 3: total_sale ~ console_developer * genre + console_developer * critic_score</p>
+<p>Model 4: total_sale ~ console_developer * n_platforms + console_developer * critic_score</p>
+<p>We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors.</p>
+</div>
+<div id="cross-validation" class="section level3">
+<h3>2. Cross validation:</h3>
+</div>
+<div id="diagnosis-and-interpretation" class="section level3">
+<h3>3. Diagnosis and interpretation</h3>
+<p>In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers.</p>
+<pre class="r"><code>regression_df = 
+  games_df %&gt;%
+  filter(total_sale &lt; 5)
+lm2 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms + console_developer*critic_score, data = regression_df)
+regression_df %&gt;%
+  add_predictions(lm2) %&gt;%
+  add_residuals(lm2) %&gt;%
+  ggplot(aes(x = pred, y = resid))+ 
+  geom_point(alpha = 0.3)+
+  geom_smooth(method = &#39;lm&#39;, color = &#39;red&#39;)+
+  labs(x = &#39;fitted values of total_sales&#39;, y = &#39;model residuals&#39;, title = &#39;Residuals vs fitted values&#39;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="final_report_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>As shown in the graph, there are many outliers with residuals &gt; 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.</p>
+<pre class="r"><code>coe1_df = lm2$coefficients 
+coe1_df = coe1_df [-(2:11)] %&gt;%
+  data.frame() %&gt;%
+  rename(coefficient = &#39;.&#39;) 
+coe1_df =  mutate(coe1_df,name0 = rownames(coe1_df)) %&gt;%
+  mutate( name1 = map(.x = name0, ~str_split(.x, pattern = &#39;:&#39;)[[1]][1])) %&gt;%
+  mutate( variable = map(.x = name0, ~str_split(.x, pattern = &#39;:&#39;)[[1]][2])) %&gt;%
+  dplyr::select(-name0) %&gt;%
+  pivot_wider(names_from = &#39;name1&#39;, values_from = &#39;coefficient&#39;) 
+knitr::kable(coe1_df)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">variable</th>
+<th align="right">(Intercept)</th>
+<th align="right">console_developerNintendo</th>
+<th align="right">console_developerSony</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">-0.8349797</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">genreAgility</td>
+<td align="right">NA</td>
+<td align="right">-0.1018364</td>
+<td align="right">-0.0712082</td>
+</tr>
+<tr class="odd">
+<td align="left">genreCompetition</td>
+<td align="right">NA</td>
+<td align="right">-0.0249084</td>
+<td align="right">0.0543575</td>
+</tr>
+<tr class="even">
+<td align="left">genreExperience</td>
+<td align="right">NA</td>
+<td align="right">0.0671646</td>
+<td align="right">-0.2485996</td>
+</tr>
+<tr class="odd">
+<td align="left">genreIntelligence</td>
+<td align="right">NA</td>
+<td align="right">0.1292356</td>
+<td align="right">-0.2052032</td>
+</tr>
+<tr class="even">
+<td align="left">genreMiscellaneous</td>
+<td align="right">NA</td>
+<td align="right">0.3498507</td>
+<td align="right">-0.2044685</td>
+</tr>
+<tr class="odd">
+<td align="left">n_platformsmedium</td>
+<td align="right">NA</td>
+<td align="right">0.2104355</td>
+<td align="right">-0.0016323</td>
+</tr>
+<tr class="even">
+<td align="left">n_platformssmall</td>
+<td align="right">NA</td>
+<td align="right">0.2855924</td>
+<td align="right">-0.1395550</td>
+</tr>
+<tr class="odd">
+<td align="left">critic_score</td>
+<td align="right">NA</td>
+<td align="right">-0.1081446</td>
+<td align="right">0.0517857</td>
+</tr>
+</tbody>
+</table>
+<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.) Interpretation:</p>
+<pre class="r"><code>coe2_df = lm2$coefficients
+coe2_df = coe2_df[1:11] %&gt;%
+  data.frame() %&gt;%
+  rename(coefficient =&#39;.&#39; ) %&gt;%
+  knitr::kable()
+coe2_df</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">coefficient</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-0.8349797</td>
+</tr>
+<tr class="even">
+<td align="left">console_developerNintendo</td>
+<td align="right">0.4883362</td>
+</tr>
+<tr class="odd">
+<td align="left">console_developerSony</td>
+<td align="right">-0.1294638</td>
+</tr>
+<tr class="even">
+<td align="left">genreAgility</td>
+<td align="right">0.1533798</td>
+</tr>
+<tr class="odd">
+<td align="left">genreCompetition</td>
+<td align="right">-0.0312483</td>
+</tr>
+<tr class="even">
+<td align="left">genreExperience</td>
+<td align="right">0.0577424</td>
+</tr>
+<tr class="odd">
+<td align="left">genreIntelligence</td>
+<td align="right">-0.2241547</td>
+</tr>
+<tr class="even">
+<td align="left">genreMiscellaneous</td>
+<td align="right">0.2046807</td>
+</tr>
+<tr class="odd">
+<td align="left">n_platformsmedium</td>
+<td align="right">-0.3061644</td>
+</tr>
+<tr class="even">
+<td align="left">n_platformssmall</td>
+<td align="right">-0.2745964</td>
+</tr>
+<tr class="odd">
+<td align="left">critic_score</td>
+<td align="right">0.2300561</td>
+</tr>
+</tbody>
+</table>
+<p>In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown. Interpretation:</p>
+</div>
 </div>
 
 
