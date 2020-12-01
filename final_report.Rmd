@@ -212,18 +212,16 @@ regression_df %>%
   
   
   As shown in the graph, there are many outliers with residuals > 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.
-  
+  make jeff's table
 ```{r}
-coe1_df = lm2$coefficients 
-coe1_df = coe1_df [-(2:11)] %>%
-  data.frame() %>%
-  rename(coefficient = '.') 
-coe1_df =  mutate(coe1_df,name0 = rownames(coe1_df)) %>%
-  mutate( name1 = map(.x = name0, ~str_split(.x, pattern = ':')[[1]][1])) %>%
-  mutate( variable = map(.x = name0, ~str_split(.x, pattern = ':')[[1]][2])) %>%
-  dplyr::select(-name0) %>%
-  pivot_wider(names_from = 'name1', values_from = 'coefficient') 
-knitr::kable(coe1_df)
+coe_df = broom::tidy(lm2) 
+coe_df1 = coe_df[-c(2:11),] %>%
+  select(term, estimate, p.value) %>% 
+  mutate(term = str_replace(term, "^console_developerNintendo:", "Nintendo: "),
+         term = str_replace(term, "^console_developerSony:", "Sony: "),
+  ) %>%
+  knitr::kable(digits = 3)
+coe_df1
 ```
 
   We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)
@@ -231,12 +229,11 @@ knitr::kable(coe1_df)
   Interpretation:
   
 ```{r}
-coe2_df = lm2$coefficients
-coe2_df = coe2_df[1:11] %>%
-  data.frame() %>%
-  rename(coefficient ='.' ) %>%
-  knitr::kable()
-coe2_df
+coe_df = broom::tidy(lm2) 
+coe_df2 = coe_df[c(1:11),] %>%
+  select(term, estimate, p.value) %>% 
+  knitr::kable(digits = 3)
+coe_df2
 ```
  
   In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.
