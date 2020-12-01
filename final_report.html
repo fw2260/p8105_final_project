@@ -29,6 +29,8 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
 <script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -442,14 +444,350 @@ div.tocify {
 </div>
 <div id="data-collection" class="section level2">
 <h2>Data Collection</h2>
+<p>Our dataset is a combination of data scraped from <a href="https://www.vgchartz.com/games/games.php?page=1&amp;results=200&amp;name=&amp;console=&amp;keyword=&amp;publisher=&amp;genre=&amp;order=TotalSales&amp;ownership=Both&amp;boxart=Both&amp;banner=Both&amp;showdeleted=&amp;region=All&amp;goty_year=&amp;developer=&amp;direction=DESC&amp;showtotalsales=1&amp;shownasales=1&amp;showpalsales=1&amp;showjapansales=1&amp;showothersales=1&amp;showpublisher=0&amp;showdeveloper=0&amp;showreleasedate=0&amp;showlastupdate=0&amp;showvgchartzscore=0&amp;showcriticscore=0&amp;showuserscore=0&amp;showshipped=0&amp;alphasort=&amp;showmultiplat=No">VGChartz</a>, a reliable video game sales tracking website, and <a href="https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&amp;distribution=&amp;sort=desc&amp;view=detailed">Metacritic</a>, a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.</p>
+<p>There are 7340 rows and 14 columns in our final dataset.</p>
+<p>Important variables include:</p>
+<ul>
+<li><p><code>title</code>: The games name</p></li>
+<li><p><code>console</code>: Platform on which the game was released or is playable (i.e.Switch,PS4, etc.)</p></li>
+<li><p><code>console_developer</code>: The developers of the platforms</p></li>
+<li><p><code>n_platforms</code>: Number of platforms that the game is on</p></li>
+<li><p><code>genre</code>: Genre of the game</p></li>
+<li><p><code>release_year</code>: Year of the game’s release</p></li>
+<li><p><code>critic_score</code>: Aggregate score compiled by the websites</p></li>
+<li><p><code>total_sale</code>: Total worldwide sales (in millions $)</p></li>
+<li><p><code>na_sale</code>: Sales in North America (in millions $)</p></li>
+<li><p><code>pal_sale</code>: Sales in Europe (in millions $)</p></li>
+<li><p><code>japan_sale</code>: Sales in Japan (in millions $)</p></li>
+<li><p><code>other_sale</code>: Sales in other regions (in millions $)</p></li>
+</ul>
+<p>The first ten rows of the dataset is as follow:</p>
+<pre class="r"><code>head(games_df) %&gt;% 
+  knitr::kable(format = &quot;html&quot;, col.names = colnames(games_df), align=&quot;c&quot;) %&gt;%
+  kableExtra::kable_styling(&quot;striped&quot;, &quot;hover&quot;, row_label_position = &quot;c&quot;) %&gt;%
+  kableExtra::scroll_box(width = &quot;100%&quot;, height = &quot;200px&quot;)</code></pre>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+title
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+console
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+console_developer
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+n_platforms
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+genre
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+release_year
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+publisher
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+developer
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+critic_score
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+total_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+na_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+pal_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+japan_sale
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
+other_sale
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto: San Andreas
+</td>
+<td style="text-align:center;">
+PlayStation 2
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2004
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.5
+</td>
+<td style="text-align:center;">
+20.81
+</td>
+<td style="text-align:center;">
+9.43
+</td>
+<td style="text-align:center;">
+0.40
+</td>
+<td style="text-align:center;">
+0.41
+</td>
+<td style="text-align:center;">
+10.57
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto V
+</td>
+<td style="text-align:center;">
+PlayStation 3
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2013
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.4
+</td>
+<td style="text-align:center;">
+20.32
+</td>
+<td style="text-align:center;">
+6.37
+</td>
+<td style="text-align:center;">
+9.85
+</td>
+<td style="text-align:center;">
+0.99
+</td>
+<td style="text-align:center;">
+3.12
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto V
+</td>
+<td style="text-align:center;">
+PlayStation 4
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2014
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.7
+</td>
+<td style="text-align:center;">
+19.39
+</td>
+<td style="text-align:center;">
+6.06
+</td>
+<td style="text-align:center;">
+9.71
+</td>
+<td style="text-align:center;">
+0.60
+</td>
+<td style="text-align:center;">
+3.02
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto: Vice City
+</td>
+<td style="text-align:center;">
+PlayStation 2
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2002
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+9.6
+</td>
+<td style="text-align:center;">
+16.15
+</td>
+<td style="text-align:center;">
+8.41
+</td>
+<td style="text-align:center;">
+5.49
+</td>
+<td style="text-align:center;">
+0.47
+</td>
+<td style="text-align:center;">
+1.78
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto III
+</td>
+<td style="text-align:center;">
+PlayStation 2
+</td>
+<td style="text-align:center;">
+Sony
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2001
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+DMA Design
+</td>
+<td style="text-align:center;">
+9.5
+</td>
+<td style="text-align:center;">
+13.10
+</td>
+<td style="text-align:center;">
+6.99
+</td>
+<td style="text-align:center;">
+4.51
+</td>
+<td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+1.30
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Grand Theft Auto IV
+</td>
+<td style="text-align:center;">
+Xbox 360
+</td>
+<td style="text-align:center;">
+Microsoft
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+action
+</td>
+<td style="text-align:center;">
+2008
+</td>
+<td style="text-align:center;">
+Rockstar Games
+</td>
+<td style="text-align:center;">
+Rockstar North
+</td>
+<td style="text-align:center;">
+10.0
+</td>
+<td style="text-align:center;">
+11.09
+</td>
+<td style="text-align:center;">
+6.80
+</td>
+<td style="text-align:center;">
+3.11
+</td>
+<td style="text-align:center;">
+0.14
+</td>
+<td style="text-align:center;">
+1.04
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="exploratory-analyses" class="section level2">
 <h2>Exploratory Analyses</h2>
 <div id="question-1" class="section level3">
 <h3>Question 1</h3>
-<pre class="r"><code>games_df = read_csv(&quot;./data/games.csv&quot;)
-
-totalsale = games_df %&gt;% 
+<pre class="r"><code>totalsale = games_df %&gt;% 
   group_by(release_year) %&gt;% 
   summarize(
     totalsale = sum(total_sale)
@@ -502,8 +840,480 @@ totalsale + totalcount</code></pre>
 <p><img src="final_report_files/figure-html/q4-1.png" width="672" /></p>
 </div>
 </div>
-<div id="regression-model" class="section level2">
-<h2>Regression Model</h2>
+<div id="anova-analysis" class="section level2">
+<h2>Anova Analysis</h2>
+<pre class="r"><code>games_df = games_df %&gt;%
+   mutate(
+    genre = 
+      case_when(
+        genre %in% c(&#39;action&#39;,&#39;action_adventure&#39;,&quot;adventure&quot;, &quot;fighting&quot;) ~ &#39;Action&#39;,
+        genre %in% c(&#39;racing&#39;,&#39;sports&#39;) ~ &#39;Competition&#39;,
+        genre %in% c(&#39;role_playing&#39;, &#39;simulation&#39;) ~ &#39;Experience&#39;,
+        genre %in% c(&#39;strategy&#39;,&#39;puzzle&#39;) ~ &#39;Intelligence&#39;,
+        genre %in% c(&#39;platform&#39;, &#39;shooting&#39;)~ &#39;Agility&#39;,
+        genre == &#39;miscellaneous&#39; ~ &quot;Miscellaneous&quot;)
+    ) %&gt;%
+  mutate(
+    n_platforms = 
+      case_when(n_platforms == &#39;1&#39; ~ &#39;small&#39;,
+                n_platforms &gt;= &#39;2&#39; &amp; n_platforms &lt;= &#39;3&#39; ~ &#39;medium&#39;,
+                n_platforms &gt;= &#39;4&#39; ~ &#39;large&#39;),
+    n_platforms = as.factor(n_platforms)
+    ) %&gt;% 
+  dplyr::select(title:genre,critic_score, total_sale)</code></pre>
+<p>By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : genre and n_platforms.In the test of genre, we want to answer the question: Whether there are true differences in games sales among different genres?</p>
+<div id="one-way-anova-total_sale-genre" class="section level3">
+<h3>1. One-way ANOVA: Total_sale ~ genre</h3>
+<pre class="r"><code>aov_mod_1 = aov(total_sale ~ genre, data = games_df)</code></pre>
+<pre class="r"><code>broom::tidy(aov_mod_1)</code></pre>
+<pre><code>## # A tibble: 2 x 6
+##   term         df  sumsq meansq statistic   p.value
+##   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 genre         5   208.  41.5       10.3  6.76e-10
+## 2 Residuals  7334 29440.   4.01      NA   NA</code></pre>
+<pre class="r"><code>multi_comp_1 = TukeyHSD(aov_mod_1)
+plot(multi_comp_1)</code></pre>
+<p><img src="final_report_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>With p.value &lt; 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey’s method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.</p>
+</div>
+<div id="anova-with-interaction-total_sale-console_developer-genre" class="section level3">
+<h3>2. ANOVA with interaction: Total_sale ~ console_developer * genre</h3>
+<pre class="r"><code>aov_mod_2 = aov(total_sale ~ console_developer * genre, data = games_df)</code></pre>
+<pre class="r"><code>broom::tidy(aov_mod_2)</code></pre>
+<pre><code>## # A tibble: 4 x 6
+##   term                       df   sumsq meansq statistic   p.value
+##   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 console_developer           2    23.8  11.9       2.99  5.04e- 2
+## 2 genre                       5   213.   42.6      10.7   2.91e-10
+## 3 console_developer:genre    10   251.   25.1       6.30  1.08e- 9
+## 4 Residuals                7322 29159.    3.98     NA    NA</code></pre>
+<pre class="r"><code>multi_comp_2 = TukeyHSD(aov_mod_2)
+
+ori_df = 
+  broom::tidy(multi_comp_2) %&gt;%
+  filter(term == &#39;console_developer:genre&#39;) %&gt;%
+  na.omit() 
+
+multi_df = 
+  ori_df %&gt;%
+  filter(adj.p.value &lt; 0.05)</code></pre>
+<p>With p.value of the interaction term = 1.08e-9 &lt; 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.</p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>3. Conclusion:</h3>
+<p>Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well. Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.</p>
+<p>Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model</p>
+</div>
+</div>
+<div id="linear-regression" class="section level2">
+<h2>Linear Regression</h2>
+<pre class="r"><code>regression_df = 
+  games_df %&gt;%
+  filter(total_sale &lt; 5) # cutoff outliers</code></pre>
+<div id="build-models" class="section level3">
+<h3>1. Build models:</h3>
+<p>Model 1: total_sale ~ console_developer * genre + console_developer * n_platforms.</p>
+<p>Model 2: total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score</p>
+<p>Model 3: total_sale ~ console_developer * genre + console_developer * critic_score</p>
+<p>Model 4: total_sale ~ console_developer * n_platforms + console_developer * critic_score</p>
+<p>We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors.</p>
+</div>
+<div id="cross-validation" class="section level3">
+<h3>2. Cross validation:</h3>
+<p>We use <code>crossv_mc</code> method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of <strong>RMSE</strong> values for each candidate model:</p>
+<pre class="r"><code>cv_df %&gt;% 
+  dplyr::select(starts_with(&quot;rmse&quot;)) %&gt;% 
+  pivot_longer(
+    everything(),
+    names_to = &quot;model&quot;,
+    values_to = &quot;rmse&quot;,
+    names_prefix = &quot;rmse_&quot;
+  ) %&gt;% 
+  ggplot(aes(x = model, y = rmse)) +
+  geom_violin()</code></pre>
+<p><img src="final_report_files/figure-html/regression_rmse_compare1234-1.png" width="672" /></p>
+<p>Base on these results, there’s clearly some improvement for adding <code>console_developer*critic_score</code> as an additional predictor and they suggests that the different critic score among the three developers could influence the total sale in some way.</p>
+<p>Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less.</p>
+<p>Hence, we finally choose model 2 and 4 for the final comparison and consider whether the model could be ‘superior’ by adding the predictor <code>console_developer*genre</code>.</p>
+<p>ANOVA test:</p>
+</div>
+<div id="diagnosis-and-interpretation" class="section level3">
+<h3>3. Diagnosis and interpretation</h3>
+<p>In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers.</p>
+<pre class="r"><code>regression_df = 
+  games_df %&gt;%
+  filter(total_sale &lt; 5)
+lm2 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms + console_developer*critic_score, data = regression_df)
+regression_df %&gt;%
+  add_predictions(lm2) %&gt;%
+  add_residuals(lm2) %&gt;%
+  ggplot(aes(x = pred, y = resid))+ 
+  geom_point(alpha = 0.3)+
+  geom_smooth(method = &#39;lm&#39;, color = &#39;red&#39;)+
+  labs(x = &#39;fitted values of total_sales&#39;, y = &#39;model residuals&#39;, title = &#39;Residuals vs fitted values&#39;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="final_report_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>As shown in the graph, there are many outliers with residuals &gt; 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals. make jeff’s table</p>
+<pre class="r"><code>coe_df = broom::tidy(lm2) 
+coe_df1 = coe_df[-c(2:11),] %&gt;%
+  select(term, estimate, p.value) %&gt;% 
+  mutate(term = str_replace(term, &quot;^console_developerNintendo:&quot;, &quot;Nintendo: &quot;),
+         term = str_replace(term, &quot;^console_developerSony:&quot;, &quot;Sony: &quot;),
+  ) %&gt;%
+  knitr::kable(digits = 3)
+coe_df1</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+p.value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.835
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreAgility
+</td>
+<td style="text-align:right;">
+-0.102
+</td>
+<td style="text-align:right;">
+0.110
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: genreAgility
+</td>
+<td style="text-align:right;">
+-0.071
+</td>
+<td style="text-align:right;">
+0.239
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreCompetition
+</td>
+<td style="text-align:right;">
+-0.025
+</td>
+<td style="text-align:right;">
+0.683
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: genreCompetition
+</td>
+<td style="text-align:right;">
+0.054
+</td>
+<td style="text-align:right;">
+0.321
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreExperience
+</td>
+<td style="text-align:right;">
+0.067
+</td>
+<td style="text-align:right;">
+0.393
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: genreExperience
+</td>
+<td style="text-align:right;">
+-0.249
+</td>
+<td style="text-align:right;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreIntelligence
+</td>
+<td style="text-align:right;">
+0.129
+</td>
+<td style="text-align:right;">
+0.256
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: genreIntelligence
+</td>
+<td style="text-align:right;">
+-0.205
+</td>
+<td style="text-align:right;">
+0.089
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: genreMiscellaneous
+</td>
+<td style="text-align:right;">
+0.350
+</td>
+<td style="text-align:right;">
+0.002
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: genreMiscellaneous
+</td>
+<td style="text-align:right;">
+-0.204
+</td>
+<td style="text-align:right;">
+0.062
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: n_platformsmedium
+</td>
+<td style="text-align:right;">
+0.210
+</td>
+<td style="text-align:right;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: n_platformsmedium
+</td>
+<td style="text-align:right;">
+-0.002
+</td>
+<td style="text-align:right;">
+0.979
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: n_platformssmall
+</td>
+<td style="text-align:right;">
+0.286
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: n_platformssmall
+</td>
+<td style="text-align:right;">
+-0.140
+</td>
+<td style="text-align:right;">
+0.046
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nintendo: critic_score
+</td>
+<td style="text-align:right;">
+-0.108
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sony: critic_score
+</td>
+<td style="text-align:right;">
+0.052
+</td>
+<td style="text-align:right;">
+0.001
+</td>
+</tr>
+</tbody>
+</table>
+<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.</p>
+<p>Interpretation:</p>
+<pre class="r"><code>coe_df = broom::tidy(lm2) 
+coe_df2 = coe_df[c(1:11),] %&gt;%
+  select(term, estimate, p.value) %&gt;% 
+  knitr::kable(digits = 3)
+coe_df2</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+p.value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.835
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+console_developerNintendo
+</td>
+<td style="text-align:right;">
+0.488
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+console_developerSony
+</td>
+<td style="text-align:right;">
+-0.129
+</td>
+<td style="text-align:right;">
+0.321
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+genreAgility
+</td>
+<td style="text-align:right;">
+0.153
+</td>
+<td style="text-align:right;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+genreCompetition
+</td>
+<td style="text-align:right;">
+-0.031
+</td>
+<td style="text-align:right;">
+0.464
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+genreExperience
+</td>
+<td style="text-align:right;">
+0.058
+</td>
+<td style="text-align:right;">
+0.360
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+genreIntelligence
+</td>
+<td style="text-align:right;">
+-0.224
+</td>
+<td style="text-align:right;">
+0.023
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+genreMiscellaneous
+</td>
+<td style="text-align:right;">
+0.205
+</td>
+<td style="text-align:right;">
+0.022
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+n_platformsmedium
+</td>
+<td style="text-align:right;">
+-0.306
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+n_platformssmall
+</td>
+<td style="text-align:right;">
+-0.275
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+critic_score
+</td>
+<td style="text-align:right;">
+0.230
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+</tbody>
+</table>
+<p>In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.</p>
+<p>Interpretation:</p>
+</div>
 </div>
 
 

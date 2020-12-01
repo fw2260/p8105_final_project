@@ -12,7 +12,11 @@ output:
 library(tidyverse)
 library(patchwork)
 library(ggpubr)
-
+library(arsenal)
+library(multcomp)
+library(modelr)
+library(mgcv)
+library(plotly)
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 
 options(
@@ -39,14 +43,55 @@ For games run on consoles developed by Nintendo, Sony and Microsoft, we want to 
 * Does the number of consoles the games are released on influence their sales?
 
 ## Data Collection
+```{r, include = FALSE}
+games_df = read_csv("./data/games.csv")
+```
+
+Our dataset is a combination of data scraped from [VGChartz](https://www.vgchartz.com/games/games.php?page=1&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No), a reliable video game sales tracking website, and [Metacritic](https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&distribution=&sort=desc&view=detailed), a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.
+
+There are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final dataset.
+
+Important variables include:
+
+* `title`: The games name
+
+* `console`: Platform on which the game was released or is playable (i.e.Switch,PS4, etc.)
+
+* `console_developer`: The developers of the platforms
+
+* `n_platforms`: Number of platforms that the game is on
+
+* `genre`: Genre of the game
+
+* `release_year`: Year of the game's release
+
+* `critic_score`: Aggregate score compiled by the websites
+
+* `total_sale`: Total worldwide sales (in millions $)
+
+* `na_sale`: Sales in North America (in millions $)
+
+* `pal_sale`: Sales in Europe (in millions $)
+
+* `japan_sale`: Sales in Japan (in millions $)
+
+* `other_sale`: Sales in other regions (in millions $)
+
+The first ten rows of the dataset is as follow:
+
+```{r}
+head(games_df) %>% 
+  knitr::kable(format = "html", col.names = colnames(games_df), align="c") %>%
+  kableExtra::kable_styling("striped", "hover", row_label_position = "c") %>%
+  kableExtra::scroll_box(width = "100%", height = "200px")
+```
+
 
 ## Exploratory Analyses
 
 ### Question 1
 
 ```{r q1, message = FALSE}
-games_df = read_csv("./data/games.csv")
-
 totalsale = games_df %>% 
   group_by(release_year) %>% 
   summarize(
@@ -103,6 +148,198 @@ games_df %>%
 ```
 
 
-## Regression Model
+## Anova Test
+```{r }
+games_df = games_df %>%
+   mutate(
+    genre = 
+      case_when(
+        genre %in% c('action','action_adventure',"adventure", "fighting") ~ 'Action',
+        genre %in% c('racing','sports') ~ 'Competition',
+        genre %in% c('role_playing', 'simulation') ~ 'Experience',
+        genre %in% c('strategy','puzzle') ~ 'Intelligence',
+        genre %in% c('platform', 'shooting')~ 'Agility',
+        genre == 'miscellaneous' ~ "Miscellaneous")
+    ) %>%
+  mutate(
+    n_platforms = 
+      case_when(n_platforms == '1' ~ 'small',
+                n_platforms >= '2' & n_platforms <= '3' ~ 'medium',
+                n_platforms >= '4' ~ 'large'),
+    n_platforms = as.factor(n_platforms)
+    ) %>% 
+  dplyr::select(title:genre,critic_score, total_sale)
+```
+ 
+By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : genre and n_platforms.In the test of genre, we want to answer the question: Whether there are true differences in games sales among different genres? 
+    
+### 1. One-way ANOVA: Total_sale ~ genre 
+```{r ANOVA_Genre}
+aov_mod_1 = aov(total_sale ~ genre, data = games_df)
+```
+```{r }
+broom::tidy(aov_mod_1)
+```
+```{r }
+multi_comp_1 = TukeyHSD(aov_mod_1)
+plot(multi_comp_1)
+```
+
+With p.value < 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey's method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.
+
+### 2. ANOVA with interaction: Total_sale ~ console_developer * genre 
+
+```{r }
+aov_mod_2 = aov(total_sale ~ console_developer * genre, data = games_df)
+```
+
+```{r}
+broom::tidy(aov_mod_2)
+```
+
+```{r }
+multi_comp_2 = TukeyHSD(aov_mod_2)
+
+ori_df = 
+  broom::tidy(multi_comp_2) %>%
+  filter(term == 'console_developer:genre') %>%
+  na.omit() 
+
+multi_df = 
+  ori_df %>%
+  filter(adj.p.value < 0.05)
+```
+
+ With p.value of the interaction term = 1.08e-9 < 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.
+ 
+### 3. Conclusion: 
+
+  Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.
+  
+  Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model 
+
+## Linear Regression
+
+```{r regression dataset}
+regression_df = 
+  games_df %>%
+  filter(total_sale < 5) # cutoff outliers
+```
+
+
+### 1. Build models: 
+Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
+
+Model 2:  total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score
+
+Model 3:  total_sale ~ console_developer * genre + console_developer * critic_score
+
+Model 4:  total_sale ~ console_developer * n_platforms + console_developer * critic_score
+
+   We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors. 
+
+
+### 2. Cross validation:
+
+We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of **RMSE** values for each candidate model:
+
+
+```{r regression_rmse_1,warning = F ,include = F}
+cv_df = 
+  crossv_mc(regression_df, 300) %>% 
+  mutate(
+    train = map(train, as_tibble),
+    test = map(test, as_tibble)
+  )
+  
+  
+cv_df = 
+  cv_df %>% 
+  mutate(
+    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*n_platforms, data = .x)),
+    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*n_platforms + console_developer*critic_score, data = .x)),
+    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*critic_score, data = .x)),
+    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer*n_platforms + console_developer*critic_score, data = .x))
+  ) %>% 
+  mutate(
+    rmse_1 = map2_dbl(.x = linear_1, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_2 = map2_dbl(.x = linear_2, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_3 = map2_dbl(.x = linear_3, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_4 = map2_dbl(.x = linear_4, .y = test, ~rmse(model = .x, data = .y))
+  )
+```
+
+
+```{r regression_rmse_compare1234,warning = F ,message = F}
+cv_df %>% 
+  dplyr::select(starts_with("rmse")) %>% 
+  pivot_longer(
+    everything(),
+    names_to = "model",
+    values_to = "rmse",
+    names_prefix = "rmse_"
+  ) %>% 
+  ggplot(aes(x = model, y = rmse)) +
+  geom_violin()
+```
+
+Base on these results, there's clearly some improvement for adding `console_developer*critic_score` as an additional predictor and they suggests that the different critic score among the three developers could influence the total sale in some way. 
+
+
+Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less. 
+
+
+Hence, we finally choose model 2 and 4 for the final comparison and consider whether the model could be 'superior' by adding the predictor `console_developer*genre`.
+
+
+ ANOVA test:
  
 
+
+
+### 3. Diagnosis and interpretation
+
+  In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers. 
+```{r, message = FALSE}
+regression_df = 
+  games_df %>%
+  filter(total_sale < 5)
+lm2 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms + console_developer*critic_score, data = regression_df)
+regression_df %>%
+  add_predictions(lm2) %>%
+  add_residuals(lm2) %>%
+  ggplot(aes(x = pred, y = resid))+ 
+  geom_point(alpha = 0.3)+
+  geom_smooth(method = 'lm', color = 'red')+
+  labs(x = 'fitted values of total_sales', y = 'model residuals', title = 'Residuals vs Fitted Values')
+```
+  
+  
+  As shown in the graph, there are many outliers with residuals > 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.
+  make jeff's table
+```{r}
+coe_df = broom::tidy(lm2) 
+coe_df1 = coe_df[-c(2:11),] %>%
+  select(term, estimate, p.value) %>% 
+  mutate(term = str_replace(term, "^console_developerNintendo:", "Nintendo: "),
+         term = str_replace(term, "^console_developerSony:", "Sony: "),
+  ) %>%
+  knitr::kable(digits = 3)
+coe_df1
+```
+
+  We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.
+  
+  Interpretation:
+  
+```{r}
+coe_df = broom::tidy(lm2) 
+coe_df2 = coe_df[c(1:11),] %>%
+  select(term, estimate, p.value) %>% 
+  knitr::kable(digits = 3)
+coe_df2
+```
+ 
+  In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.
+  
+## Main Finding
