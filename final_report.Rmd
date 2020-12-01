@@ -12,7 +12,11 @@ output:
 library(tidyverse)
 library(patchwork)
 library(ggpubr)
-
+library(arsenal)
+library(multcomp)
+library(modelr)
+library(mgcv)
+library(plotly)
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 
 options(
@@ -103,6 +107,138 @@ games_df %>%
 ```
 
 
-## Regression Model
+## Anova Analysis
+```{r }
+games_df = games_df %>%
+   mutate(
+    genre = 
+      case_when(
+        genre %in% c('action','action_adventure',"adventure", "fighting") ~ 'Action',
+        genre %in% c('racing','sports') ~ 'Competition',
+        genre %in% c('role_playing', 'simulation') ~ 'Experience',
+        genre %in% c('strategy','puzzle') ~ 'Intelligence',
+        genre %in% c('platform', 'shooting')~ 'Agility',
+        genre == 'miscellaneous' ~ "Miscellaneous")
+    ) %>%
+  mutate(
+    n_platforms = 
+      case_when(n_platforms == '1' ~ 'small',
+                n_platforms >= '2' & n_platforms <= '3' ~ 'medium',
+                n_platforms >= '4' ~ 'large'),
+    n_platforms = as.factor(n_platforms)
+    ) %>% 
+  dplyr::select(title:genre,critic_score, total_sale)
+```
  
+By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : genre and n_platforms.In the test of genre, we want to answer the question: Whether there are true differences in games sales among different genres? 
+    
+### 1. One-way ANOVA: Total_sale ~ genre 
+```{r ANOVA_Genre}
+aov_mod_1 = aov(total_sale ~ genre, data = games_df)
+```
+```{r }
+broom::tidy(aov_mod_1)
+```
+```{r }
+multi_comp_1 = TukeyHSD(aov_mod_1)
+plot(multi_comp_1)
+```
 
+With p.value < 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey's method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.
+
+### 2. ANOVA with interaction: Total_sale ~ console_developer * genre 
+
+```{r }
+aov_mod_2 = aov(total_sale ~ console_developer * genre, data = games_df)
+```
+
+```{r}
+broom::tidy(aov_mod_2)
+```
+
+```{r }
+multi_comp_2 = TukeyHSD(aov_mod_2)
+
+ori_df = 
+  broom::tidy(multi_comp_2) %>%
+  filter(term == 'console_developer:genre') %>%
+  na.omit() 
+
+multi_df = 
+  ori_df %>%
+  filter(adj.p.value < 0.05)
+```
+
+ With p.value of the interaction term = 1.08e-9 < 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.
+ 
+### 3. Conclusion: 
+
+  Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.
+  
+  Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model 
+
+## Linear Regression
+
+### 1. Build models: 
+Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
+
+Model 2:  total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score
+
+Model 3:  total_sale ~ console_developer * genre + console_developer * critic_score
+
+Model 4:  total_sale ~ console_developer * n_platforms + console_developer * critic_score
+
+   We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors. 
+
+
+### 2. Cross validation: 
+
+### 3. Diagnosis and interpretation
+
+  In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers. 
+```{r}
+regression_df = 
+  games_df %>%
+  filter(total_sale < 5)
+lm2 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms + console_developer*critic_score, data = regression_df)
+regression_df %>%
+  add_predictions(lm2) %>%
+  add_residuals(lm2) %>%
+  ggplot(aes(x = pred, y = resid))+ 
+  geom_point(alpha = 0.3)+
+  geom_smooth(method = 'lm', color = 'red')+
+  labs(x = 'fitted values of total_sales', y = 'model residuals', title = 'Residuals vs fitted values')
+```
+  
+  
+  As shown in the graph, there are many outliers with residuals > 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.
+  
+```{r}
+coe1_df = lm2$coefficients 
+coe1_df = coe1_df [-(2:11)] %>%
+  data.frame() %>%
+  rename(coefficient = '.') 
+coe1_df =  mutate(coe1_df,name0 = rownames(coe1_df)) %>%
+  mutate( name1 = map(.x = name0, ~str_split(.x, pattern = ':')[[1]][1])) %>%
+  mutate( variable = map(.x = name0, ~str_split(.x, pattern = ':')[[1]][2])) %>%
+  dplyr::select(-name0) %>%
+  pivot_wider(names_from = 'name1', values_from = 'coefficient') 
+knitr::kable(coe1_df)
+```
+
+  We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)
+  
+  Interpretation:
+  
+```{r}
+coe2_df = lm2$coefficients
+coe2_df = coe2_df[1:11] %>%
+  data.frame() %>%
+  rename(coefficient ='.' ) %>%
+  knitr::kable()
+coe2_df
+```
+ 
+  In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.
+  
+  Interpretation:
