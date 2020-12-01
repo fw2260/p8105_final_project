@@ -248,7 +248,7 @@ regression_df %>%
   ggplot(aes(x = pred, y = resid))+ 
   geom_point(alpha = 0.3)+
   geom_smooth(method = 'lm', color = 'red')+
-  labs(x = 'fitted values of total_sales', y = 'model residuals', title = 'Residuals vs fitted values')
+  labs(x = 'fitted values of total_sales', y = 'model residuals', title = 'Residuals vs Fitted Values')
 ```
   
   
