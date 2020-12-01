@@ -148,7 +148,7 @@ The revenues of each company, however, were not the same across the genres. **Ni
 
 <br>
 
-### Question 3
+### Relationship between critic score and total revenues
 
 ```{r q3, message = FALSE}
 games_df %>% 
@@ -159,16 +159,24 @@ games_df %>%
   labs(x = "Critic Score", y = "Total Sale (million USD)", color = "Console Developer")
 ```
 
-### Question 4
+Critic consensus on a game usually has some correlation with the success of the game in the market in which the critic score can influence the consumer’s decision to buy games. Sony’s games had the best correlation of the critic score and the total sales, their games overall had the highest scores and the global revenues of approximately more than 1.0 million USD. 
+Microsoft and Nintendo, respectively, are the second and third companies that had lower overall total sales and critic scores relationship. Overall, our data shows that the majority of games with higher scores were produced by **Sony** and thus, having the highest total revenues. 
+
+<br>
+
+### Platform Availability
 
 ```{r q4}
 games_df %>% 
   mutate(n_platforms = as.factor(n_platforms)) %>% 
-  ggplot(aes(x = n_platforms, y = total_sale, fill = console_developer)) +
-  geom_bar(stat = "identity", position = "stack") +
-  labs(x = "Number of Platforms", y = "Total Sale (million USD)", fill = "Console Developer")
+  ggplot(aes(x = n_platforms, y = log(total_sale))) +
+  geom_boxplot() +
+  labs(x = "Number of Platforms", y = "Total Sale Log(million USD)")
 ```
 
+Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that most players owned only 1 or 2 consoles. There was a large distribution of total revenues in games sold in 1 and 2 platforms. 
+
+<br>
 
 ## Anova Test
 ```{r }

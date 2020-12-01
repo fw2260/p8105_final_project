@@ -820,8 +820,8 @@ totalsale + totalcount</code></pre>
 <p>The revenues of each company, however, were not the same across the genres. <strong>Nintendo</strong> earned more profits from making games in sports, role-playing, and platform, with each of them brought back more than 250 million USD. <strong>Sony</strong>’s gaming sales were mostly from the action, sports, and shooting genre with each brought approximately more than 500 million USD. <strong>Microsoft</strong>, despite the latest competitor to enter the video game industry, dominates the field in shooting, sports, and action genres. The company’s highest revenue was from shooting games with more than 350 million USD.</p>
 <p><br></p>
 </div>
-<div id="question-3" class="section level3">
-<h3>Question 3</h3>
+<div id="relationship-between-critic-score-and-total-revenues" class="section level3">
+<h3>Relationship between critic score and total revenues</h3>
 <pre class="r"><code>games_df %&gt;% 
   filter(total_sale &lt; 5) %&gt;% 
   ggplot(aes(x = critic_score, y = total_sale, color = console_developer)) +
@@ -829,15 +829,19 @@ totalsale + totalcount</code></pre>
   geom_smooth(method = &#39;lm&#39;, se = F) +
   labs(x = &quot;Critic Score&quot;, y = &quot;Total Sale (million USD)&quot;, color = &quot;Console Developer&quot;)</code></pre>
 <p><img src="final_report_files/figure-html/q3-1.png" width="672" /></p>
+<p>Critic consensus on a game usually has some correlation with the success of the game in the market in which the critic score can influence the consumer’s decision to buy games. Sony’s games had the best correlation of the critic score and the total sales, their games overall had the highest scores and the global revenues of approximately more than 1.0 million USD. Microsoft and Nintendo, respectively, are the second and third companies that had lower overall total sales and critic scores relationship. Overall, our data shows that the majority of games with higher scores were produced by <strong>Sony</strong> and thus, having the highest total revenues.</p>
+<p><br></p>
 </div>
-<div id="question-4" class="section level3">
-<h3>Question 4</h3>
+<div id="platform-availability" class="section level3">
+<h3>Platform Availability</h3>
 <pre class="r"><code>games_df %&gt;% 
   mutate(n_platforms = as.factor(n_platforms)) %&gt;% 
-  ggplot(aes(x = n_platforms, y = total_sale, fill = console_developer)) +
-  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
-  labs(x = &quot;Number of Platforms&quot;, y = &quot;Total Sale (million USD)&quot;, fill = &quot;Console Developer&quot;)</code></pre>
+  ggplot(aes(x = n_platforms, y = log(total_sale))) +
+  geom_boxplot() +
+  labs(x = &quot;Number of Platforms&quot;, y = &quot;Total Sale Log(million USD)&quot;)</code></pre>
 <p><img src="final_report_files/figure-html/q4-1.png" width="672" /></p>
+<p>Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that most players owned only 1 or 2 consoles. There was a large distribution of total revenues in games sold in 1 and 2 platforms.</p>
+<p><br></p>
 </div>
 </div>
 <div id="anova-test" class="section level2">
