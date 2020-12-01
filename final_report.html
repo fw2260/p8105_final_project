@@ -596,145 +596,186 @@ regression_df %&gt;%
   labs(x = &#39;fitted values of total_sales&#39;, y = &#39;model residuals&#39;, title = &#39;Residuals vs fitted values&#39;)</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="final_report_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>As shown in the graph, there are many outliers with residuals &gt; 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.</p>
-<pre class="r"><code>coe1_df = lm2$coefficients 
-coe1_df = coe1_df [-(2:11)] %&gt;%
-  data.frame() %&gt;%
-  rename(coefficient = &#39;.&#39;) 
-coe1_df =  mutate(coe1_df,name0 = rownames(coe1_df)) %&gt;%
-  mutate( name1 = map(.x = name0, ~str_split(.x, pattern = &#39;:&#39;)[[1]][1])) %&gt;%
-  mutate( variable = map(.x = name0, ~str_split(.x, pattern = &#39;:&#39;)[[1]][2])) %&gt;%
-  dplyr::select(-name0) %&gt;%
-  pivot_wider(names_from = &#39;name1&#39;, values_from = &#39;coefficient&#39;) 
-knitr::kable(coe1_df)</code></pre>
+<p>As shown in the graph, there are many outliers with residuals &gt; 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals. make jeff’s table</p>
+<pre class="r"><code>coe_df = broom::tidy(lm2) 
+coe_df1 = coe_df[-c(2:11),] %&gt;%
+  select(term, estimate, p.value) %&gt;% 
+  mutate(term = str_replace(term, &quot;^console_developerNintendo:&quot;, &quot;Nintendo: &quot;),
+         term = str_replace(term, &quot;^console_developerSony:&quot;, &quot;Sony: &quot;),
+  ) %&gt;%
+  knitr::kable(digits = 3)
+coe_df1</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th align="left">variable</th>
-<th align="right">(Intercept)</th>
-<th align="right">console_developerNintendo</th>
-<th align="right">console_developerSony</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">NA</td>
-<td align="right">-0.8349797</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-</tr>
-<tr class="even">
-<td align="left">genreAgility</td>
-<td align="right">NA</td>
-<td align="right">-0.1018364</td>
-<td align="right">-0.0712082</td>
-</tr>
-<tr class="odd">
-<td align="left">genreCompetition</td>
-<td align="right">NA</td>
-<td align="right">-0.0249084</td>
-<td align="right">0.0543575</td>
-</tr>
-<tr class="even">
-<td align="left">genreExperience</td>
-<td align="right">NA</td>
-<td align="right">0.0671646</td>
-<td align="right">-0.2485996</td>
-</tr>
-<tr class="odd">
-<td align="left">genreIntelligence</td>
-<td align="right">NA</td>
-<td align="right">0.1292356</td>
-<td align="right">-0.2052032</td>
-</tr>
-<tr class="even">
-<td align="left">genreMiscellaneous</td>
-<td align="right">NA</td>
-<td align="right">0.3498507</td>
-<td align="right">-0.2044685</td>
-</tr>
-<tr class="odd">
-<td align="left">n_platformsmedium</td>
-<td align="right">NA</td>
-<td align="right">0.2104355</td>
-<td align="right">-0.0016323</td>
-</tr>
-<tr class="even">
-<td align="left">n_platformssmall</td>
-<td align="right">NA</td>
-<td align="right">0.2855924</td>
-<td align="right">-0.1395550</td>
-</tr>
-<tr class="odd">
-<td align="left">critic_score</td>
-<td align="right">NA</td>
-<td align="right">-0.1081446</td>
-<td align="right">0.0517857</td>
-</tr>
-</tbody>
-</table>
-<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.) Interpretation:</p>
-<pre class="r"><code>coe2_df = lm2$coefficients
-coe2_df = coe2_df[1:11] %&gt;%
-  data.frame() %&gt;%
-  rename(coefficient =&#39;.&#39; ) %&gt;%
-  knitr::kable()
-coe2_df</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">coefficient</th>
+<th align="left">term</th>
+<th align="right">estimate</th>
+<th align="right">p.value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.8349797</td>
+<td align="right">-0.835</td>
+<td align="right">0.000</td>
 </tr>
 <tr class="even">
-<td align="left">console_developerNintendo</td>
-<td align="right">0.4883362</td>
+<td align="left">Nintendo: genreAgility</td>
+<td align="right">-0.102</td>
+<td align="right">0.110</td>
 </tr>
 <tr class="odd">
-<td align="left">console_developerSony</td>
-<td align="right">-0.1294638</td>
+<td align="left">Sony: genreAgility</td>
+<td align="right">-0.071</td>
+<td align="right">0.239</td>
 </tr>
 <tr class="even">
-<td align="left">genreAgility</td>
-<td align="right">0.1533798</td>
+<td align="left">Nintendo: genreCompetition</td>
+<td align="right">-0.025</td>
+<td align="right">0.683</td>
 </tr>
 <tr class="odd">
-<td align="left">genreCompetition</td>
-<td align="right">-0.0312483</td>
+<td align="left">Sony: genreCompetition</td>
+<td align="right">0.054</td>
+<td align="right">0.321</td>
 </tr>
 <tr class="even">
-<td align="left">genreExperience</td>
-<td align="right">0.0577424</td>
+<td align="left">Nintendo: genreExperience</td>
+<td align="right">0.067</td>
+<td align="right">0.393</td>
 </tr>
 <tr class="odd">
-<td align="left">genreIntelligence</td>
-<td align="right">-0.2241547</td>
+<td align="left">Sony: genreExperience</td>
+<td align="right">-0.249</td>
+<td align="right">0.001</td>
 </tr>
 <tr class="even">
-<td align="left">genreMiscellaneous</td>
-<td align="right">0.2046807</td>
+<td align="left">Nintendo: genreIntelligence</td>
+<td align="right">0.129</td>
+<td align="right">0.256</td>
 </tr>
 <tr class="odd">
-<td align="left">n_platformsmedium</td>
-<td align="right">-0.3061644</td>
+<td align="left">Sony: genreIntelligence</td>
+<td align="right">-0.205</td>
+<td align="right">0.089</td>
 </tr>
 <tr class="even">
-<td align="left">n_platformssmall</td>
-<td align="right">-0.2745964</td>
+<td align="left">Nintendo: genreMiscellaneous</td>
+<td align="right">0.350</td>
+<td align="right">0.002</td>
 </tr>
 <tr class="odd">
-<td align="left">critic_score</td>
-<td align="right">0.2300561</td>
+<td align="left">Sony: genreMiscellaneous</td>
+<td align="right">-0.204</td>
+<td align="right">0.062</td>
+</tr>
+<tr class="even">
+<td align="left">Nintendo: n_platformsmedium</td>
+<td align="right">0.210</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">Sony: n_platformsmedium</td>
+<td align="right">-0.002</td>
+<td align="right">0.979</td>
+</tr>
+<tr class="even">
+<td align="left">Nintendo: n_platformssmall</td>
+<td align="right">0.286</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Sony: n_platformssmall</td>
+<td align="right">-0.140</td>
+<td align="right">0.046</td>
+</tr>
+<tr class="even">
+<td align="left">Nintendo: critic_score</td>
+<td align="right">-0.108</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Sony: critic_score</td>
+<td align="right">0.052</td>
+<td align="right">0.001</td>
 </tr>
 </tbody>
 </table>
-<p>In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown. Interpretation:</p>
+<p>We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table. (For example, console_developerNintendo:genreAgility is separated into row name-genreAgility and column name-console_developerNintendo.)</p>
+<p>Interpretation:</p>
+<pre class="r"><code>coe_df = broom::tidy(lm2) 
+coe_df2 = coe_df[c(1:11),] %&gt;%
+  select(term, estimate, p.value) %&gt;% 
+  knitr::kable(digits = 3)
+coe_df2</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">term</th>
+<th align="right">estimate</th>
+<th align="right">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-0.835</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">console_developerNintendo</td>
+<td align="right">0.488</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">console_developerSony</td>
+<td align="right">-0.129</td>
+<td align="right">0.321</td>
+</tr>
+<tr class="even">
+<td align="left">genreAgility</td>
+<td align="right">0.153</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">genreCompetition</td>
+<td align="right">-0.031</td>
+<td align="right">0.464</td>
+</tr>
+<tr class="even">
+<td align="left">genreExperience</td>
+<td align="right">0.058</td>
+<td align="right">0.360</td>
+</tr>
+<tr class="odd">
+<td align="left">genreIntelligence</td>
+<td align="right">-0.224</td>
+<td align="right">0.023</td>
+</tr>
+<tr class="even">
+<td align="left">genreMiscellaneous</td>
+<td align="right">0.205</td>
+<td align="right">0.022</td>
+</tr>
+<tr class="odd">
+<td align="left">n_platformsmedium</td>
+<td align="right">-0.306</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">n_platformssmall</td>
+<td align="right">-0.275</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">critic_score</td>
+<td align="right">0.230</td>
+<td align="right">0.000</td>
+</tr>
+</tbody>
+</table>
+<p>In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.</p>
+<p>Interpretation:</p>
 </div>
 </div>
 
