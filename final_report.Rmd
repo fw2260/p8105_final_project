@@ -191,7 +191,47 @@ Model 4:  total_sale ~ console_developer * n_platforms + console_developer * cri
    We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors. 
 
 
-### 2. Cross validation: 
+### 2. Cross validation:
+
+```{r regression_rmse_1,warning = F ,include = F}
+cv_df = 
+  crossv_mc(regression_df, 300) %>% 
+  mutate(
+    train = map(train, as_tibble),
+    test = map(test, as_tibble)
+  )
+  
+  
+cv_df = 
+  cv_df %>% 
+  mutate(
+    linear_1 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*n_platforms, data = .x)),
+    linear_2 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*n_platforms + console_developer*critic_score, data = .x)),
+    linear_3 = map(.x = train, ~lm(total_sale ~ console_developer*genre + console_developer*critic_score, data = .x)),
+    linear_4 = map(.x = train, ~lm(total_sale ~ console_developer*n_platforms + console_developer*critic_score, data = .x))
+  ) %>% 
+  mutate(
+    rmse_1 = map2_dbl(.x = linear_1, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_2 = map2_dbl(.x = linear_2, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_3 = map2_dbl(.x = linear_3, .y = test, ~rmse(model = .x, data = .y)),
+    rmse_4 = map2_dbl(.x = linear_4, .y = test, ~rmse(model = .x, data = .y))
+  )
+```
+
+
+```{r regression_rmse_compare1234,warning = F ,message = F}
+cv_df %>% 
+  dplyr::select(starts_with("rmse")) %>% 
+  pivot_longer(
+    everything(),
+    names_to = "model",
+    values_to = "rmse",
+    names_prefix = "rmse_"
+  ) %>% 
+  ggplot(aes(x = model, y = rmse)) +
+  geom_violin()
+```
+
 
 ### 3. Diagnosis and interpretation
 
