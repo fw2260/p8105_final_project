@@ -179,6 +179,13 @@ multi_df =
 
 ## Linear Regression
 
+```{r regression dataset}
+regression_df = 
+  games_df %>%
+  filter(total_sale < 5) # cutoff outliers
+```
+
+
 ### 1. Build models: 
 Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
 

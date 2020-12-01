@@ -569,6 +569,9 @@ multi_df =
 </div>
 <div id="linear-regression" class="section level2">
 <h2>Linear Regression</h2>
+<pre class="r"><code>regression_df = 
+  games_df %&gt;%
+  filter(total_sale &lt; 5) # cutoff outliers</code></pre>
 <div id="build-models" class="section level3">
 <h3>1. Build models:</h3>
 <p>Model 1: total_sale ~ console_developer * genre + console_developer * n_platforms.</p>
@@ -579,6 +582,17 @@ multi_df =
 </div>
 <div id="cross-validation" class="section level3">
 <h3>2. Cross validation:</h3>
+<pre class="r"><code>cv_df %&gt;% 
+  dplyr::select(starts_with(&quot;rmse&quot;)) %&gt;% 
+  pivot_longer(
+    everything(),
+    names_to = &quot;model&quot;,
+    values_to = &quot;rmse&quot;,
+    names_prefix = &quot;rmse_&quot;
+  ) %&gt;% 
+  ggplot(aes(x = model, y = rmse)) +
+  geom_violin()</code></pre>
+<p><img src="final_report_files/figure-html/regression_rmse_compare1234-1.png" width="672" /></p>
 </div>
 <div id="diagnosis-and-interpretation" class="section level3">
 <h3>3. Diagnosis and interpretation</h3>
