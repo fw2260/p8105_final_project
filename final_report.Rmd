@@ -28,11 +28,15 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
+<br>
+
 ## Motivation
 
 Video games have been around for decades, providing entertainment for children and adults alike. They have been involved significantly from the early days of computer games and the early versions of Nintendo and Atari. As technology continues to improve, so do video games. Video game creation has become increasingly complicated, and the cost of creating a game to run one of the major consoles has risen with this greater complexity. 
 
 No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. [Analysts](https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/) reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe. In this project, we are going to analyze the 2001-2020 global games market per device from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues. 
+
+<br>
 
 ## Initial Questions
 
@@ -45,6 +49,8 @@ For games run on consoles developed by Nintendo, Sony and Microsoft, we want to 
 * Is there an association between critic scores and game sales? In which direction?
 
 * Does the number of consoles the games are released on influence their sales?
+
+<br> 
 
 ## Data Collection
 
@@ -91,10 +97,11 @@ head(games_df) %>%
   kableExtra::scroll_box(width = "100%", height = "200px")
 ```
 
+<br>
 
 ## Exploratory Analyses
 
-### Question 1
+### Global sales and Number of games released across the years
 
 ```{r q1, message = FALSE}
 totalsale = games_df %>% 
@@ -121,7 +128,11 @@ totalcount = games_df %>%
 totalsale + totalcount
 ```
 
-### Question 2
+The left and right bar graphs showed the annual global revenues of video games (in millions USD) and the total of video games respectively from 2001 to 2020. Video game industry increased at a rapid rate after 2001 in which it reached a peak of more than $700 million in global revenue in 2009 in accordance with the highest total video games produced in the same year. The similar trend appeared in both plots in which from 2012 to 2016, there was a drop in both the annual total sales and the number of games released. After 2016, the number of games released remained stable while the total revenues continued to decline.
+
+<br>
+
+### Global sales of games per genre
 
 ```{r q2}
 games_df %>% 
@@ -130,6 +141,12 @@ games_df %>%
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console Developer")
 ```
+
+**Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales approximately 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 8.75 billion USD. 
+
+The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in sports, role-playing, and platform, with each of them brought back more than 250 million USD. **Sony**’s gaming sales were mostly from the action, sports, and shooting genre with each brought approximately more than 500 million USD. **Microsoft**, despite the latest competitor to enter the video game industry, dominates the field in shooting, sports, and action genres. The company’s highest revenue was from shooting games with more than 350 million USD.  
+
+<br>
 
 ### Question 3
 
@@ -217,7 +234,7 @@ multi_df =
 
  With p.value of the interaction term = 1.08e-9 < 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.
  
-### 3. Conclusion: 
+### 3. Conclusion 
 
   Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.
   

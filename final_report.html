@@ -418,10 +418,12 @@ div.tocify {
 </div>
 
 
+<p><br></p>
 <div id="motivation" class="section level2">
 <h2>Motivation</h2>
 <p>Video games have been around for decades, providing entertainment for children and adults alike. They have been involved significantly from the early days of computer games and the early versions of Nintendo and Atari. As technology continues to improve, so do video games. Video game creation has become increasingly complicated, and the cost of creating a game to run one of the major consoles has risen with this greater complexity.</p>
 <p>No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. <a href="https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/">Analysts</a> reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe. In this project, we are going to analyze the 2001-2020 global games market per device from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues.</p>
+<p><br></p>
 </div>
 <div id="initial-questions" class="section level2">
 <h2>Initial Questions</h2>
@@ -432,6 +434,7 @@ div.tocify {
 <li><p>Is there an association between critic scores and game sales? In which direction?</p></li>
 <li><p>Does the number of consoles the games are released on influence their sales?</p></li>
 </ul>
+<p><br></p>
 </div>
 <div id="data-collection" class="section level2">
 <h2>Data Collection</h2>
@@ -773,11 +776,12 @@ Rockstar North
 </tbody>
 </table>
 </div>
+<p><br></p>
 </div>
 <div id="exploratory-analyses" class="section level2">
 <h2>Exploratory Analyses</h2>
-<div id="question-1" class="section level3">
-<h3>Question 1</h3>
+<div id="global-sales-and-number-of-games-released-across-the-years" class="section level3">
+<h3>Global sales and Number of games released across the years</h3>
 <pre class="r"><code>totalsale = games_df %&gt;% 
   group_by(release_year) %&gt;% 
   summarize(
@@ -801,15 +805,20 @@ totalcount = games_df %&gt;%
 
 totalsale + totalcount</code></pre>
 <p><img src="final_report_files/figure-html/q1-1.png" width="672" /></p>
+<p>The left and right bar graphs showed the annual global revenues of video games (in millions USD) and the total of video games respectively from 2001 to 2020. Video game industry increased at a rapid rate after 2001 in which it reached a peak of more than $700 million in global revenue in 2009 in accordance with the highest total video games produced in the same year. The similar trend appeared in both plots in which from 2012 to 2016, there was a drop in both the annual total sales and the number of games released. After 2016, the number of games released remained stable while the total revenues continued to decline.</p>
+<p><br></p>
 </div>
-<div id="question-2" class="section level3">
-<h3>Question 2</h3>
+<div id="global-sales-of-games-per-genre" class="section level3">
+<h3>Global sales of games per genre</h3>
 <pre class="r"><code>games_df %&gt;% 
   ggplot(aes(x = genre, y = total_sale, fill = console_developer)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(x = &quot;Genre&quot;, y = &quot;Total Sale (million USD)&quot;, fill = &quot;Console Developer&quot;)</code></pre>
 <p><img src="final_report_files/figure-html/q2-1.png" width="672" /></p>
+<p><strong>Sports</strong> games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales approximately 1.0 billion USD. Challenging the player’s reflexes and coordination, <strong>Action</strong> and <strong>Shooting</strong> are the second and third genres in which their total sales are more than 8.75 billion USD.</p>
+<p>The revenues of each company, however, were not the same across the genres. <strong>Nintendo</strong> earned more profits from making games in sports, role-playing, and platform, with each of them brought back more than 250 million USD. <strong>Sony</strong>’s gaming sales were mostly from the action, sports, and shooting genre with each brought approximately more than 500 million USD. <strong>Microsoft</strong>, despite the latest competitor to enter the video game industry, dominates the field in shooting, sports, and action genres. The company’s highest revenue was from shooting games with more than 350 million USD.</p>
+<p><br></p>
 </div>
 <div id="question-3" class="section level3">
 <h3>Question 3</h3>
@@ -891,7 +900,7 @@ multi_df =
 <p>With p.value of the interaction term = 1.08e-9 &lt; 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.</p>
 </div>
 <div id="conclusion" class="section level3">
-<h3>3. Conclusion:</h3>
+<h3>3. Conclusion</h3>
 <p>Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well. Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.</p>
 <p>Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model</p>
 </div>
