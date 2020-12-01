@@ -5,7 +5,7 @@ navbar:
   right:
     - text: "Final Report"
       href: final_report.html
-    - text: "Data Explorer"
+    - text: "Play with our game data!"
       href: https://fw2260.shinyapps.io/data_explorer/
     - text: "Contact Us"
       menu:

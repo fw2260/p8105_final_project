@@ -374,7 +374,7 @@ div.tocify {
   <a href="final_report.html">Final Report</a>
 </li>
 <li>
-  <a href="https://fw2260.shinyapps.io/data_explorer/">Data Explorer</a>
+  <a href="https://fw2260.shinyapps.io/data_explorer/">Play with our game data!</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -840,8 +840,8 @@ totalsale + totalcount</code></pre>
 <p><img src="final_report_files/figure-html/q4-1.png" width="672" /></p>
 </div>
 </div>
-<div id="anova-analysis" class="section level2">
-<h2>Anova Analysis</h2>
+<div id="anova-test" class="section level2">
+<h2>Anova Test</h2>
 <pre class="r"><code>games_df = games_df %&gt;%
    mutate(
     genre = 
@@ -950,8 +950,7 @@ regression_df %&gt;%
   ggplot(aes(x = pred, y = resid))+ 
   geom_point(alpha = 0.3)+
   geom_smooth(method = &#39;lm&#39;, color = &#39;red&#39;)+
-  labs(x = &#39;fitted values of total_sales&#39;, y = &#39;model residuals&#39;, title = &#39;Residuals vs fitted values&#39;)</code></pre>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+  labs(x = &#39;fitted values of total_sales&#39;, y = &#39;model residuals&#39;, title = &#39;Residuals vs Fitted Values&#39;)</code></pre>
 <p><img src="final_report_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>As shown in the graph, there are many outliers with residuals &gt; 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals. make jeff’s table</p>
 <pre class="r"><code>coe_df = broom::tidy(lm2) 
@@ -1312,8 +1311,10 @@ critic_score
 </tbody>
 </table>
 <p>In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.</p>
-<p>Interpretation:</p>
 </div>
+</div>
+<div id="main-finding" class="section level2">
+<h2>Main Finding</h2>
 </div>
 
 
