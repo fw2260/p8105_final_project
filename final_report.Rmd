@@ -246,15 +246,15 @@ games_df = games_df %>%
   dplyr::select(title:genre,critic_score, total_sale)
 ```
  
-By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : genre and n_platforms.In the test of genre, we want to answer the question: Whether there are true differences in games sales among different genres? 
+By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : n_platforms and genre.In the test of n_platforms, we want to answer the question: Whether there are true differences in games sales among different groups of number of platforms? 
+
+We divided n_platform into 3 groups (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large). 
     
-<br>
-
-#### 1. One-way ANOVA: Total_sale ~ genre
-
-
+### 1. One-way ANOVA: Total_sale ~ n_platforms 
 ```{r ANOVA_Genre}
-aov_mod_1 = aov(total_sale ~ genre, data = games_df)
+games_df = games_df %>%
+  filter(total_sale < 5)
+aov_mod_1 = aov(total_sale ~ n_platforms, data = games_df)
 ```
 ```{r }
 broom::tidy(aov_mod_1)
@@ -264,14 +264,12 @@ multi_comp_1 = TukeyHSD(aov_mod_1)
 plot(multi_comp_1)
 ```
 
-With p.value < 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey's method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.
+With p.value < 0.001, we conclude that at least two of the n_platforms groups have different average total_sales. Then Tukey's method was performed to make pairwise comparisons.All comparisons have significant differences in mean of total_sale.
 
-<br>
-
-#### 2. ANOVA with interaction: Total_sale ~ console_developer * genre 
+### 2. ANOVA with interaction: Total_sale ~ console_developer * n_platforms 
 
 ```{r }
-aov_mod_2 = aov(total_sale ~ console_developer * genre, data = games_df)
+aov_mod_2 = aov(total_sale ~ console_developer * n_platforms, data = games_df)
 ```
 
 ```{r}
@@ -283,7 +281,7 @@ multi_comp_2 = TukeyHSD(aov_mod_2)
 
 ori_df = 
   broom::tidy(multi_comp_2) %>%
-  filter(term == 'console_developer:genre') %>%
+  filter(term == 'console_developer:n_platforms') %>%
   na.omit() 
 
 multi_df = 
@@ -291,15 +289,15 @@ multi_df =
   filter(adj.p.value < 0.05)
 ```
 
- With p.value of the interaction term = 1.08e-9 < 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.
+ With p.value of the interaction term = < 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are `r nrow(multi_df)` significant different combinations among `r nrow(ori_df)` combinations of console_developer and n_platforms.
  
 <br>
 
-#### 3. Conclusion
+### 3. Conclusion
 
-  Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.
+   Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer * n_platforms in the linear regression model.
   
-  Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model 
+  Following similar procedures, we also conclude that significant differences exist in groups of genres and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer * genre in the linear regression model 
 
 <br>
 
@@ -312,7 +310,7 @@ regression_df =
 ```
 
 
-#### 1. Build models
+### 1. Build models
 
 Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
 
@@ -326,7 +324,7 @@ Model 4:  total_sale ~ console_developer * n_platforms + console_developer * cri
 
 <br>
 
-#### 2. Cross validation
+### 2. Cross validation
 
 We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of **RMSE** values for each candidate model:
 
@@ -384,7 +382,7 @@ Hence, we finally choose model 2 and 4 for the final comparison and consider whe
 
 <br>
 
-#### 3. Diagnosis and interpretation
+### 3. Diagnosis and interpretation
 
   In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers. 
 ```{r, message = FALSE}
