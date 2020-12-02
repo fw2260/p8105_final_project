@@ -185,10 +185,9 @@ genre_sale_plot =
   ggplot(aes(x = genre, y = sum_sale, fill = console_developer)) +
   geom_bar(stat = "identity") +
   theme(
-    axis.text.x = element_text(angle = 70, vjust = 0.5, hjust = 1),
-    text = element_text(size = 7),
+    axis.text.x = element_text(angle = 70, vjust = 0.5, hjust = 1, size = 8),
     legend.position = "bottom",
-    legend.text = element_text(size = 7)) +
+    legend.text = element_text(size = 8)) +
   labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console Developer")
 
 ggplotly(genre_sale_plot) 
