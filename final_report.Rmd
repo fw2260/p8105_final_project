@@ -43,8 +43,6 @@ library(modelr)
 library(mgcv)
 library(plotly)
 
-
-
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 
 options(
@@ -62,15 +60,15 @@ scale_fill_discrete = scale_fill_viridis_d
 
 Video games have been around for decades, providing entertainment for children and adults alike. They have been involved significantly from the early days of computer games and the early versions of Nintendo and Atari. As technology continues to improve, so do video games. Video game creation has become increasingly complicated, and the cost of creating a game to run one of the major consoles has risen with this greater complexity. 
 
-No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. [Analysts](https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/) reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe. In this project, we are going to analyze the 2001-2020 global games market per device from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues. 
+No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. Analysts reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe ([source]((https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/)). In this project, we are going to analyze the 2001-2020 global games market per console from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues. 
 
 <br>
 
 ## Initial Questions
 
-For games run on consoles developed by Nintendo, Sony and Microsoft, we want to know separately:
+In contrast to the questions we initially posed in our proposal, we decided to focus on the three major console developers and factors influencing their total sales. In other words, for games released on consoles developed by Nintendo, Sony, and Microsoft, we want to know separately:
 
-* How does the sales of games change over time?
+* How do the sales of games change over time?
 
 * What is the most popular/profitable game genre on each companies' consoles?
 
@@ -86,21 +84,28 @@ For games run on consoles developed by Nintendo, Sony and Microsoft, we want to 
 games_df = read_csv("./data/games.csv")
 ```
 
-Our dataset is a combination of data scraped from [VGChartz](https://www.vgchartz.com/games/games.php?page=1&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No), a reliable video game sales tracking website, and [Metacritic](https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&distribution=&sort=desc&view=detailed), a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.
+We initially proposed to scrape most of our data from all 180 pages of games on [Metacritic](https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0) and merge them with sales data from [VGChartz](https://www.vgchartz.com/games/games.php?name=&keyword=&console=&region=All&developer=&publisher=&goty_year=&genre=Action&boxart=Both&banner=Both&ownership=Both&showmultiplat=No&results=200&order=TotalSales&showtotalsales=0&showtotalsales=1&showpublisher=0&showpublisher=1&showvgchartzscore=0&shownasales=0&shownasales=1&showdeveloper=0&showdeveloper=1&showcriticscore=0&showcriticscore=1&showpalsales=0&showpalsales=1&showreleasedate=0&showreleasedate=1&showuserscore=0&showuserscore=1&showjapansales=0&showjapansales=1&showlastupdate=0&showothersales=0&showothersales=1&showshipped=0). Metacritic is a well-known review aggregate site and is relatively transparent with its methodology for gathering critic reviews but does not contain information on sales. VGChartz is a video game sales tracking website that provides weekly sales figures of console software and hardware by region. According to their methodology page, they produce their estimates by extrapolating from retail sampling and trends, and regularly compare them to official shipment figures and figures estimated by regional trackers.
+
+In an arduous process of figuring out how to scrape information such as genre that was only listed on the individual detail page of each game and repeatedly running into HTTP connection errors on Metacritic, we found and utilized the `polite` package to safely scrape the data without overwhelming the website. However, because some pages simply did not exist and we had ~18,000 games to scrape, the entire scraping process took over 24 hours to complete. The sales data from VGChartz was scraped relatively easily without the need of the `polite` package.
+
+Unfortunately, after merging, our ~18,000 entries were reduced to ~2,500. We then realized that this reduction was because the two sites named many of the game titles slightly differently, and that Metacritic would list different versions of a game as separate entries while VGChartz grouped them together into one, resulting in many games that could not be merged as is. Simply dropping those entries from our dataset would be invalid, but recoding the inconsistencies manually would be entirely too time-consuming, so we decided to obtain our dataset mainly from VGChartz, possibly at the expense of having accurate critic review scores. All of the code we’ve written up to this point can be found in its own folder [here](https://github.com/fw2260/p8105_final_project/tree/main/old).
+
+
+Thus our final dataset comes mainly from VGChartz, with some critic scores from the dataset mentioned above from Metacritic. Based on the raw dataset, we also created some other new columns.
 
 The key steps for data cleaning are:
 
-* Only keep games run on consoles of Nintendo, Sony or Mircrsoft by `filter`;
+* Only keep games released on consoles by Nintendo, Sony or Microsoft using `filter`;
 
-* Get `critic_score` from Metacritic using `left_join` method by `title` and `console`;
+* Get `critic_score` from the previously scraped Metacritic dataset using `left_join` by `title` and `console`;
 
-* Obtain release year from `release_date` using `separate` function;
+* Obtain the year the game was released from `release_date` using `separate`;
 
-* Add a new column: `console_developer`, which indicates the developer of the console;
+* Add a new column, `console_developer`, which indicates the developer of the console (Nintendo, Sony, or Microsoft);
 
-* Add another new column: `n_platforms`, which shows the number of consoles the game runs on.
+* Add another new column, `n_platforms`, which shows the number of consoles the game was released on.
 
-There are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final dataset.
+After dropping NAs, there are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final dataset.
 
 Important variables include:
 
@@ -108,17 +113,17 @@ Important variables include:
 
 * `console`: platform on which the game was released or is playable (i.e. Switch, PS4, etc.)
 
-* `console_developer`: company produces the consoles
+* `console_developer`: company that produces the console
 
-* `n_platforms`: number of platforms per game title
+* `n_platforms`: number of platforms the game was released on
 
 * `genre`: genre of the game 
 
 * `release_year`: year of the game's release
 
-* `critic_score`: Aggregate score compiled by the websites
+* `critic_score`: aggregate critic review score compiled by VGChartz and Metacritic
 
-* `total_sale`: global revenues (millions $) the game earned on one platform
+* `total_sale`: global revenues (million $) the game earned on that particular console
 
 The first ten rows of the dataset is as follow:
 
@@ -166,11 +171,13 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-The left bar graphs showed the cumulative global revenues (in millions USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one showed the number of video games released on these platforms in the same period. 
+The left bar graph showed the annual global revenues (in million USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one showed the number of video games released on these platforms in the same period. 
 
-Video game industry increased at a rapid rate after 2001 with drastic increase in number of game released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2008, like Grand Theft Auto IV on Xbox 360. 
+The video game industry increased at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2008, like Grand Theft Auto IV on Xbox 360. 
 
-Cumulative sales for games which came after 2008 decreased over year. It's quite intuitive because they are younger than their predecessor. And also, as the hardware lifecycle progressed, the sales of games went down. Also, there was a drop in the number of games released on these major consoles after 2008. Maybe that's because nowadays, hardware makers are not eager to release new models every five years, which also decreased the number of games published each year. In addition, noticing there is drastic drop for both sales and number of games after 2018. The number of game release from the three giants in 2019 is only 18 and that in 2020 is 5, which is not the case. We consider data in 2019 and 2020 as inaccurate and exclude them in our further analyses.
+Both annual sales and number of games released from 2008 on decreased over time, possibly reflecting the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advanced. It may also be the case that hardware makers are not eager to release new models every five years, which also decreased the number of games published each year. Furthermore, annual sales of more recent years could be lower because the games are younger than their predecessors. 
+
+Additionally, note that there is a drastic drop for both sales and number of games after 2018. The number of game releases from the three companies in 2019 was only 18 and in 2020 was 5, which is not the case in reality. Therefore, we considered data in 2019 and 2020 to be inaccurate and excluded them in our further analyses.
 
 <br>
 
@@ -191,7 +198,8 @@ totalsale = games_df %>%
 totalsale_plotly = ggplotly(totalsale)
 
 totalcount = games_df %>% 
- group_by(release_year) %>% 
+  filter(console_developer == "Nintendo") %>% 
+  group_by(release_year) %>% 
   summarize(
     count = n()
   ) %>% 
@@ -225,7 +233,8 @@ totalsale = games_df %>%
 totalsale_plotly = ggplotly(totalsale)
 
 totalcount = games_df %>% 
- group_by(release_year) %>% 
+  filter(console_developer == "Microsoft") %>% 
+  group_by(release_year) %>% 
   summarize(
     count = n()
   ) %>% 
@@ -259,7 +268,8 @@ totalsale = games_df %>%
 totalsale_plotly = ggplotly(totalsale)
 
 totalcount = games_df %>% 
- group_by(release_year) %>% 
+  filter(console_developer == "Sony") %>% 
+  group_by(release_year) %>% 
   summarize(
     count = n()
   ) %>% 
@@ -274,19 +284,21 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-However, for **Sony**, it's a different story. The cumulative sales for games released after 2001 kept decreasing, so as the number.
+However, for **Sony**, it's a different story. Both the annual sales and number of releases started high and then kept decreasing.
 
 ### Global sales of games per genre
 
 ```{r q2, message=FALSE, warning=FALSE}
 genre_sale_plot = 
   games_df %>% 
-  group_by(console_developer, genre) %>% 
+  group_by(genre) %>% 
+  mutate(total = sum(total_sale)) %>% 
+  ungroup() %>% 
+  mutate(
+    genre = fct_reorder(genre, desc(total))) %>% 
+  group_by(genre, console_developer) %>% 
   summarise(
     sum_sale = sum(total_sale)
-  ) %>% 
-  mutate(
-    genre = fct_reorder(genre, sum_sale)
   ) %>% 
   ggplot(aes(x = genre, y = sum_sale, fill = console_developer)) +
   geom_bar(stat = "identity", alpha = .7) +
@@ -301,7 +313,7 @@ ggplotly(genre_sale_plot)
 
 **Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales more than 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 1.84 billion USD. 
 
-The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in **sports**, **role-playing**, and **platform**, with each of them brought back more than 290 million USD. **Sony**’s best-selling genre is **action**,which achieved 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brought huge profits to Sony, with 481.72 and 410.72 million USD respectively. **Microsoft**, despite the latest competitor to enter the video game industry, performs well in **shooting**, **sports**, and **action** genres. The company’s highest revenue was from shooting games with 403.39 million USD.  
+The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in **sports**, **role-playing**, and **platform**, with each of them bring back more than 290 million USD. **Sony**’s best-selling genre is **action**, which achieved 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brought huge profits to Sony, with 481.72 and 410.72 million USD respectively. **Microsoft**, despite being the latest competitor to enter the video game industry, performed well in **shooting**, **sports**, and **action** genres. The company’s highest revenue was from shooting games with 403.39 million USD.  
 
 <br>
 
@@ -507,7 +519,7 @@ coe_df_tidy
 
 <br>
 
-## Findings
+## Discussion
 
 * From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. After 2012, in general ,there was a slight decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
 
@@ -516,7 +528,3 @@ coe_df_tidy
 * It seems that as the critic scores increase, there is a general associated increase in the globlal sales. **Sony** was the company in which their games had the highest critic score and highest global sales. 
 
 * Another factor that also impacts how well a game sales is the number of platforms the game is available. Most gamers do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number, thus higher sales. 
-
-<br>
-
-## Discussion
