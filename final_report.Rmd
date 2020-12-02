@@ -90,7 +90,7 @@ Our dataset is a combination of data scraped from [VGChartz](https://www.vgchart
 
 The key steps for data cleaning are:
 
-* Recode console names (e.g.recode PS4 as PlayStation 4) for data scraped from VGChartz;
+* Only keep games run on consoles of Nintendo, Sony or Mircrsoft by `filter`;
 
 * Get `critic_score` from Metacritic using `left_join` method by `title` and `console`;
 
@@ -164,21 +164,34 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-The left and right bar graphs showed the annual global revenues of video games (in millions USD) and the total of video games respectively from 2001 to 2020. Video game industry increased at a rapid rate after 2001 in which it reached a peak of more than $700 million in global revenue in 2008 in accordance with the highest total video games produced in the same year. The similar trend appeared in both plots in which from 2012 to 2016, there was a drop in both the annual total sales and the number of games released. After 2016, the number of games released remained stable while the total revenues continued to decline.
+The left bar graphs showed the cumulative global revenues (in millions USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one showed the number of video games released on these platforms in the same period. 
+
+Video game industry increased at a rapid rate after 2001 with drastic increase in number of game released each year and the high volume reached its peak in 2009, with 587 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2009, like Call of Duty: Modern Warfare 2 on Xbox 360. Cumulative sales for games which came after 2009 decreased over year. It's quite intuitive because they are younger than their predecessor. And also, as the hardware lifecycle progressed, the sales of games went down. Also, there was a drop in the number of games released on these major consoles after 2009, especially after 2018. Apart from unavailability of sales information, it's also because of the higher expense to produce game consoles. Nowadays, hardware makers are not eager to release new models every five years, which also decreased the number of games published each year.
 
 <br>
 
 ### Global sales of games per genre
 
 ```{r q2}
-consolesale = 
+genre_sale_plot = 
   games_df %>% 
-  ggplot(aes(x = genre, y = total_sale, fill = console_developer)) +
-  geom_bar(stat = "identity", position = "stack") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  group_by(console_developer, genre) %>% 
+  summarise(
+    sum_sale = sum(total_sale)
+  ) %>% 
+  mutate(
+    genre = fct_reorder(genre, sum_sale)
+  ) %>% 
+  ggplot(aes(x = genre, y = sum_sale, fill = console_developer)) +
+  geom_bar(stat = "identity") +
+  theme(
+    axis.text.x = element_text(angle = 70, vjust = 0.5, hjust = 1),
+    text = element_text(size = 7),
+    legend.position = "bottom",
+    legend.text = element_text(size = 7)) +
   labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console Developer")
 
-ggplotly(consolesale)
+ggplotly(genre_sale_plot) 
 ```
 
 **Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales approximately 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 8.75 billion USD. 
