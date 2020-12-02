@@ -133,7 +133,9 @@ head(games_df) %>%
 
 ## Exploratory Analyses
 
-### Global sales and Number of games released across the years
+### Global sales and Number of games released across the years{.tabset}
+
+#### All Consoles
 
 ```{r q1, message=FALSE, warning=FALSE}
 totalsale = games_df %>% 
@@ -171,6 +173,108 @@ Video game industry increased at a rapid rate after 2001 with drastic increase i
 Cumulative sales for games which came after 2008 decreased over year. It's quite intuitive because they are younger than their predecessor. And also, as the hardware lifecycle progressed, the sales of games went down. Also, there was a drop in the number of games released on these major consoles after 2008. Maybe that's because nowadays, hardware makers are not eager to release new models every five years, which also decreased the number of games published each year. In addition, noticing there is drastic drop for both sales and number of games after 2018. The number of game release from the three giants in 2019 is only 18 and that in 2020 is 5, which is not the case. We consider data in 2019 and 2020 as inaccurate and exclude them in our further analyses.
 
 <br>
+
+#### Nintendo
+
+```{r, message=FALSE, warning=FALSE}
+totalsale = games_df %>% 
+  filter(console_developer == "Nintendo") %>% 
+  group_by(release_year) %>% 
+  summarize(
+    totalsale = sum(total_sale)
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = release_year, y = totalsale)) +
+  geom_col(color = "navyblue", fill = "white") +
+  labs(x = "Year", y = "Total Sale (million USD)")
+
+totalsale_plotly = ggplotly(totalsale)
+
+totalcount = games_df %>% 
+ group_by(release_year) %>% 
+  summarize(
+    count = n()
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = release_year, y = count)) +
+  geom_col(color = "darkred", fill = "white") +
+  labs(x = "Year", y = "Number of Games")
+
+totalcount_plotly = ggplotly(totalcount)
+
+subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margin = 0.1)
+
+```
+
+We can see a similar trend for **Nintendo** and **Microsoft**. 
+
+#### Microsoft
+
+```{r, message=FALSE, warning=FALSE}
+totalsale = games_df %>% 
+  filter(console_developer == "Microsoft") %>% 
+  group_by(release_year) %>% 
+  summarize(
+    totalsale = sum(total_sale)
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = release_year, y = totalsale)) +
+  geom_col(color = "navyblue", fill = "white") +
+  labs(x = "Year", y = "Total Sale (million USD)")
+
+totalsale_plotly = ggplotly(totalsale)
+
+totalcount = games_df %>% 
+ group_by(release_year) %>% 
+  summarize(
+    count = n()
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = release_year, y = count)) +
+  geom_col(color = "darkred", fill = "white") +
+  labs(x = "Year", y = "Number of Games")
+
+totalcount_plotly = ggplotly(totalcount)
+
+subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margin = 0.1)
+
+```
+
+We can see a similar trend for **Nintendo** and **Microsoft**.
+
+#### Sony
+
+```{r, message=FALSE, warning=FALSE}
+totalsale = games_df %>% 
+  filter(console_developer == "Sony") %>% 
+  group_by(release_year) %>% 
+  summarize(
+    totalsale = sum(total_sale)
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = release_year, y = totalsale)) +
+  geom_col(color = "navyblue", fill = "white") +
+  labs(x = "Year", y = "Total Sale (million USD)")
+
+totalsale_plotly = ggplotly(totalsale)
+
+totalcount = games_df %>% 
+ group_by(release_year) %>% 
+  summarize(
+    count = n()
+  ) %>% 
+  drop_na() %>% 
+  ggplot(aes(x = release_year, y = count)) +
+  geom_col(color = "darkred", fill = "white") +
+  labs(x = "Year", y = "Number of Games")
+
+totalcount_plotly = ggplotly(totalcount)
+
+subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margin = 0.1)
+
+```
+
+However, for **Sony**, it's a different story. The cumulative sales for games released after 2001 kept decreasing, so as the number.
 
 ### Global sales of games per genre
 
