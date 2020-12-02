@@ -150,7 +150,7 @@ totalsale = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
   geom_col(color = "navyblue", fill = "white") +
-  labs(x = "Year", y = "Total Sale (million USD)")
+  labs(x = "Release Year", y = "Total Sale (million USD)")
 
 totalsale_plotly = ggplotly(totalsale)
 
@@ -162,7 +162,7 @@ totalcount = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
   geom_col(color = "darkred", fill = "white") +
-  labs(x = "Year", y = "Number of Games")
+  labs(x = "Release Year", y = "Number of Games")
 
 totalcount_plotly = ggplotly(totalcount)
 
@@ -170,11 +170,11 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-The left bar graph shows the annual global revenues (in million USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one shows the number of video games released on these platforms in the same period. 
+The left bar graph shows the cumulative global revenues (in million USD) of each game by release year from 2001 and 2020 on the three companies' platforms. In other words, it is showing how much the games made (from its release year to present) by their release year. *Note: this graph is NOT showing annual sales of games.* The right graph shows the number of video games released on these platforms in the same period. 
 
 The video game industry increased at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2008, like Grand Theft Auto IV on Xbox 360. 
 
-Both annual sales and number of games released from 2008 on decreases over time, possibly reflecting the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advances. It may also be the case that console makers are not eager to release new models as often, which also decreases the number of games published each year. Furthermore, annual sales of more recent years may be lower because the games are younger than their predecessors. 
+Both cumulative sales and number of games released from 2008 on decreases over time, possibly reflecting the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advances. It may also be the case that console makers are not eager to release new models as often, which also decreases the number of games published each year. Furthermore, sales of more recently released games may be lower because they are younger than their predecessors. 
 
 Additionally, note that there is a drastic drop for both sales and number of games after 2018. The number of game releases from the three companies in 2019 is only 18 and in 2020 is 5, which is not the case in reality. Therefore, we consider data in 2019 and 2020 to be inaccurate and will exclude them in our statistical analyses.
 
@@ -192,7 +192,7 @@ totalsale = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
   geom_col(color = "navyblue", fill = "white") +
-  labs(x = "Year", y = "Total Sale (million USD)")
+  labs(x = "Release Year", y = "Total Sale (million USD)")
 
 totalsale_plotly = ggplotly(totalsale)
 
@@ -205,7 +205,7 @@ totalcount = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
   geom_col(color = "darkred", fill = "white") +
-  labs(x = "Year", y = "Number of Games")
+  labs(x = "Release Year", y = "Number of Games")
 
 totalcount_plotly = ggplotly(totalcount)
 
@@ -227,7 +227,7 @@ totalsale = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
   geom_col(color = "navyblue", fill = "white") +
-  labs(x = "Year", y = "Total Sale (million USD)")
+  labs(x = "Release Year", y = "Total Sale (million USD)")
 
 totalsale_plotly = ggplotly(totalsale)
 
@@ -240,7 +240,7 @@ totalcount = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
   geom_col(color = "darkred", fill = "white") +
-  labs(x = "Year", y = "Number of Games")
+  labs(x = "Release Year", y = "Number of Games")
 
 totalcount_plotly = ggplotly(totalcount)
 
@@ -262,7 +262,7 @@ totalsale = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
   geom_col(color = "navyblue", fill = "white") +
-  labs(x = "Year", y = "Total Sale (million USD)")
+  labs(x = "Release Year", y = "Total Sale (million USD)")
 
 totalsale_plotly = ggplotly(totalsale)
 
@@ -275,7 +275,7 @@ totalcount = games_df %>%
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
   geom_col(color = "darkred", fill = "white") +
-  labs(x = "Year", y = "Number of Games")
+  labs(x = "Release Year", y = "Number of Games")
 
 totalcount_plotly = ggplotly(totalcount)
 
