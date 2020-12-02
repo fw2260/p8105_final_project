@@ -84,6 +84,18 @@ games_df = read_csv("./data/games.csv")
 
 Our dataset is a combination of data scraped from [VGChartz](https://www.vgchartz.com/games/games.php?page=1&results=200&name=&console=&keyword=&publisher=&genre=&order=TotalSales&ownership=Both&boxart=Both&banner=Both&showdeleted=&region=All&goty_year=&developer=&direction=DESC&showtotalsales=1&shownasales=1&showpalsales=1&showjapansales=1&showothersales=1&showpublisher=0&showdeveloper=0&showreleasedate=0&showlastupdate=0&showvgchartzscore=0&showcriticscore=0&showuserscore=0&showshipped=0&alphasort=&showmultiplat=No), a reliable video game sales tracking website, and [Metacritic](https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&distribution=&sort=desc&view=detailed), a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.
 
+The key steps for data cleaning are:
+
+* Recode console names (e.g.recode PS4 as PlayStation 4) for data scraped from VGChartz;
+
+* Get `critic_score` from Metacritic using `left_join` method by `title` and `console`;
+
+* Obtain release year from `release_date` using `separate` function;
+
+* Add a new column: `console_developer`, which indicates the developer of the console;
+
+* Add another new column: `n_platforms`, which shows the number of consoles the game runs on.
+
 There are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final dataset.
 
 Important variables include:
@@ -103,14 +115,6 @@ Important variables include:
 * `critic_score`: Aggregate score compiled by the websites
 
 * `total_sale`: global revenues (millions $)
-
-* `na_sale`: revenues in North America (millions $)
-
-* `pal_sale`: revenues in Europe (millions $)
-
-* `japan_sale`: revenues in Japan (millions $)
-
-* `other_sale`: revenues in other regions (millions $)
 
 The first ten rows of the dataset is as follow:
 
