@@ -62,15 +62,15 @@ Our dataset is a combination of data scraped from [VGChartz](https://www.vgchart
 
 The key steps for data cleaning are:
 
-* Recode console names (e.g.recode PS4 as PlayStation 4) for data scrapedfrom VGChartz;
+* Recode console names (e.g.recode PS4 as PlayStation 4) for data scraped from VGChartz;
 
-* Get `critic_score` from Metacritic using `left_join` by `title` and `console`;
+* Get `critic_score` from Metacritic using `left_join` method by `title` and `console`;
 
-* Obtain realse year from `release_date` using `separate` function;
+* Obtain release year from `release_date` using `separate` function;
 
 * Add a new column: `console_developer`, which indicates the developer of the console;
 
-* Add another new column: `n_platforms`, which shows the number of consoles the game run on.
+* Add another new column: `n_platforms`, which shows the number of consoles the game runs on.
 
 There are `r nrow(games_df)` rows and `r ncol(games_df)` columns in our final dataset.
 

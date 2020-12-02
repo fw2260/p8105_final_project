@@ -441,11 +441,11 @@ div.tocify {
 <p>Our dataset is a combination of data scraped from <a href="https://www.vgchartz.com/games/games.php?page=1&amp;results=200&amp;name=&amp;console=&amp;keyword=&amp;publisher=&amp;genre=&amp;order=TotalSales&amp;ownership=Both&amp;boxart=Both&amp;banner=Both&amp;showdeleted=&amp;region=All&amp;goty_year=&amp;developer=&amp;direction=DESC&amp;showtotalsales=1&amp;shownasales=1&amp;showpalsales=1&amp;showjapansales=1&amp;showothersales=1&amp;showpublisher=0&amp;showdeveloper=0&amp;showreleasedate=0&amp;showlastupdate=0&amp;showvgchartzscore=0&amp;showcriticscore=0&amp;showuserscore=0&amp;showshipped=0&amp;alphasort=&amp;showmultiplat=No">VGChartz</a>, a reliable video game sales tracking website, and <a href="https://www.metacritic.com/browse/games/score/metascore/year/all/filtered?year_selected=2020&amp;distribution=&amp;sort=desc&amp;view=detailed">Metacritic</a>, a well-known review aggregate site for video games. Some information of our dataset comes from VGChartz while others come from Metacritic. Based on the raw dataset, we also created some other new columns.</p>
 <p>The key steps for data cleaning are:</p>
 <ul>
-<li><p>Recode console names (e.g.recode PS4 as PlayStation 4) for data scrapedfrom VGChartz;</p></li>
-<li><p>Get <code>critic_score</code> from Metacritic using <code>left_join</code> by <code>title</code> and <code>console</code>;</p></li>
-<li><p>Obtain realse year from <code>release_date</code> using <code>separate</code> function;</p></li>
+<li><p>Recode console names (e.g.recode PS4 as PlayStation 4) for data scraped from VGChartz;</p></li>
+<li><p>Get <code>critic_score</code> from Metacritic using <code>left_join</code> method by <code>title</code> and <code>console</code>;</p></li>
+<li><p>Obtain release year from <code>release_date</code> using <code>separate</code> function;</p></li>
 <li><p>Add a new column: <code>console_developer</code>, which indicates the developer of the console;</p></li>
-<li><p>Add another new column: <code>n_platforms</code>, which shows the number of consoles the game run on.</p></li>
+<li><p>Add another new column: <code>n_platforms</code>, which shows the number of consoles the game runs on.</p></li>
 </ul>
 <p>There are 7340 rows and 14 columns in our final dataset.</p>
 <p>Important variables include:</p>
