@@ -167,11 +167,14 @@ The left and right bar graphs showed the annual global revenues of video games (
 ### Global sales of games per genre
 
 ```{r q2}
-games_df %>% 
+consolesale = 
+  games_df %>% 
   ggplot(aes(x = genre, y = total_sale, fill = console_developer)) +
   geom_bar(stat = "identity", position = "stack") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console Developer")
+
+ggplotly(consolesale)
 ```
 
 **Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales approximately 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 8.75 billion USD. 
@@ -199,14 +202,17 @@ Microsoft and Nintendo, respectively, are the second and third companies that ha
 ### Platform Availability
 
 ```{r q4}
-games_df %>% 
+platform_available = 
+  games_df %>% 
   mutate(n_platforms = as.factor(n_platforms)) %>% 
   ggplot(aes(x = n_platforms, y = log(total_sale))) +
   geom_boxplot() +
   labs(x = "Number of Platforms", y = "Total Sale Log(million USD)")
+
+ggplotly(platform_available)
 ```
 
-Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that most players owned only 1 or 2 consoles. There was a large distribution of total revenues in games sold in 1 and 2 platforms. 
+Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that there was a large distribution of total revenues in the smaller number of platforms since most players owned only 1 or 2 consoles.
 
 <br>
 
