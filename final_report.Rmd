@@ -195,7 +195,7 @@ ggplotly(genre_sale_plot)
 
 **Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales more than 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 1.84 billion USD. 
 
-The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in sports, role-playing, and platform, with each of them brought back more than 290 million USD. **Sony**’s best-selling genre is action,which achieved 580.94 million USD revenue between 2001 to 2020. Sports and shooting also brought huge profits to Sony, with 481.72 and 410.72 million USD respectively. **Microsoft**, despite the latest competitor to enter the video game industry, performs well in  shooting, sports, and action genres. The company’s highest revenue was from shooting games with 403.39 million USD.  
+The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in **sports**, **role-playing**, and **platform**, with each of them brought back more than 290 million USD. **Sony**’s best-selling genre is **action**,which achieved 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brought huge profits to Sony, with 481.72 and 410.72 million USD respectively. **Microsoft**, despite the latest competitor to enter the video game industry, performs well in **shooting**, **sports**, and **action** genres. The company’s highest revenue was from shooting games with 403.39 million USD.  
 
 <br>
 
@@ -210,8 +210,13 @@ games_df %>%
   labs(x = "Critic Score", y = "Total Sale (million USD)", color = "Console Developer")
 ```
 
-Critic consensus on a game usually has some correlation with the success of the game in the market in which the critic score can influence the consumer’s decision to buy games. Sony’s games had the best correlation of the critic score and the total sales, their games overall had the highest scores and the global revenues of approximately more than 1.0 million USD. 
-Microsoft and Nintendo, respectively, are the second and third companies that had lower overall total sales and critic scores relationship. Overall, our data shows that the majority of games with higher scores were produced by **Sony** and thus, having the highest total revenues. 
+Critic consensus on a game usually has some correlation with the success of the game in the market in which the critic score can influence the consumer’s decision to buy games.
+**Microsoft** and **Sony**'s games usually have scores larger than 5, which means that their games have overall good quality. While for **Nintendo**, some of its games earned low score from the critic. 
+
+As critic score increases, sales of games on the three companies' consoles all increases. What's interesting is that **Sony**'s game sale increases more than the others for one unit increase in critic score and **Nintendo**'s increases the least.
+
+(and **Sony**’s games had the best correlation of the critic score and the total sales, their games overall had the highest scores and the global revenues of approximately more than 1.0 million USD. 
+**Microsoft** and **Nintendo**, respectively, are the second and third companies that had lower overall total sales and critic scores relationship. Overall, our data shows that the majority of games with higher scores were produced by **Sony** and thus, having the highest total revenues.)
 
 <br>
 
