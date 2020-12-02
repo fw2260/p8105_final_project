@@ -139,8 +139,10 @@ totalsale = games_df %>%
   ) %>% 
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
-  geom_col() +
+  geom_col(color = "navyblue", fill = "white") +
   labs(x = "Year", y = "Total Sale (million USD)")
+
+totalsale_plotly = ggplotly(totalsale)
 
 totalcount = games_df %>% 
  group_by(release_year) %>% 
@@ -149,11 +151,13 @@ totalcount = games_df %>%
   ) %>% 
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
-  geom_col() +
+  geom_col(color = "darkred", fill = "white") +
   labs(x = "Year", y = "Number of Games")
 
+totalcount_plotly = ggplotly(totalcount)
 
-totalsale + totalcount
+subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margin = 0.1)
+
 ```
 
 The left and right bar graphs showed the annual global revenues of video games (in millions USD) and the total of video games respectively from 2001 to 2020. Video game industry increased at a rapid rate after 2001 in which it reached a peak of more than $700 million in global revenue in 2009 in accordance with the highest total video games produced in the same year. The similar trend appeared in both plots in which from 2012 to 2016, there was a drop in both the annual total sales and the number of games released. After 2016, the number of games released remained stable while the total revenues continued to decline.
