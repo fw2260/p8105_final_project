@@ -340,6 +340,8 @@ platform_available =
   theme(
     text = element_text(size = 9),
     legend.text = element_text(size = 9),
+    axis.title.x = element_text(vjust = -0.5),
+    axis.title.y = element_text(vjust = 3.5),
     legend.position = "none"
   )
 
