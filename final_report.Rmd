@@ -8,6 +8,27 @@ output:
     code_folding: hide
 ---
 
+<style type="text/css">
+
+h1.title {
+  font-size: 40px;
+  font-family: 'Abel', sans-serif;
+  color: #003399;
+}
+h1 { /* Header 1 */
+  font-size: 36px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 30px;
+  color: DarkBlue;
+}
+h3 { /* Header 3 */
+  font-size: 22px;
+  color: DarkBlue;
+}
+</style>
+
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(patchwork)
@@ -17,6 +38,9 @@ library(multcomp)
 library(modelr)
 library(mgcv)
 library(plotly)
+
+
+
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 
 options(
@@ -178,7 +202,10 @@ Another factor that has a big impact on how well a game sales is the number of p
 
 <br>
 
-## Anova Test
+## Statistical Analyses
+
+### Anova Test
+
 ```{r }
 games_df = games_df %>%
    mutate(
@@ -203,7 +230,11 @@ games_df = games_df %>%
  
 By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : genre and n_platforms.In the test of genre, we want to answer the question: Whether there are true differences in games sales among different genres? 
     
+<br>
+
 ### 1. One-way ANOVA: Total_sale ~ genre 
+
+
 ```{r ANOVA_Genre}
 aov_mod_1 = aov(total_sale ~ genre, data = games_df)
 ```
@@ -216,6 +247,8 @@ plot(multi_comp_1)
 ```
 
 With p.value < 0.001, we conclude that at least two of the genres have different average total_sales. Then Tukey's method was performed to make pairwise comparisons. 7 of 15 comparisons (eg. Agility vs Competition) have significant differences in mean of total_sale.
+
+<br>
 
 ### 2. ANOVA with interaction: Total_sale ~ console_developer * genre 
 
@@ -242,13 +275,17 @@ multi_df =
 
  With p.value of the interaction term = 1.08e-9 < 0.001, we conclude that at least two of the interaction combinations have different average total_sales.From Tukey’s multiple comparisons we get that there are 36 significant different combinations among 153 combinations of console_developer and genre.
  
+<br>
+
 ### 3. Conclusion 
 
   Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.
   
   Following similar procedures, we also conclude that significant differences exist in groups of n_platform (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer : n_platform in the linear regression model 
 
-## Linear Regression
+<br>
+
+### Linear Regression
 
 ```{r regression dataset}
 regression_df = 
@@ -257,7 +294,8 @@ regression_df =
 ```
 
 
-### 1. Build models: 
+### 1. Build models
+
 Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
 
 Model 2:  total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score
@@ -268,8 +306,9 @@ Model 4:  total_sale ~ console_developer * n_platforms + console_developer * cri
 
    We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors. 
 
+<br>
 
-### 2. Cross validation:
+### 2. Cross validation
 
 We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of **RMSE** values for each candidate model:
 
@@ -325,7 +364,7 @@ Hence, we finally choose model 2 and 4 for the final comparison and consider whe
  ANOVA test:
  
 
-
+<br>
 
 ### 3. Diagnosis and interpretation
 
@@ -360,7 +399,7 @@ coe_df1
 
   We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.
   
-  Interpretation:
+  Interpretation
   
 ```{r}
 coe_df = broom::tidy(lm2) 
@@ -372,4 +411,10 @@ coe_df2
  
   In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.
   
-## Main Finding
+<br>
+
+## Results
+
+<br>
+
+## Discussion
