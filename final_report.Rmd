@@ -361,16 +361,6 @@ For games of **Microsoft** and **Sony**, the sales improves as the number of con
 ```{r, message=FALSE, warning=FALSE}
 games_df = games_df %>%
    filter(release_year < 2019) %>%
-   mutate(
-    genre = 
-      case_when(
-        genre %in% c('action','action_adventure',"adventure", "fighting") ~ 'Action',
-        genre %in% c('racing','sports') ~ 'Competition',
-        genre %in% c('role_playing', 'simulation') ~ 'Experience',
-        genre %in% c('strategy','puzzle') ~ 'Intelligence',
-        genre %in% c('platform', 'shooting')~ 'Agility',
-        genre == 'miscellaneous' ~ "Miscellaneous")
-    ) %>%
   mutate(
     n_platforms = 
       case_when(n_platforms == '1' ~ 'small',
@@ -381,15 +371,11 @@ games_df = games_df %>%
   dplyr::select(title:genre,critic_score, total_sale)
 ```
  
-By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : n_platforms and genre.In the test of n_platforms, we want to answer the question: Whether there are true differences in games sales among different groups of number of platforms? 
-
-We divided n_platform into 3 groups (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and further narrow down the number of genre from 13 to 6, according to their similarity.
+By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : n_platforms. We further divided n_platform into 3 groups: `small` (`n_platforms` = 1), `medium` (2 <= `n_platforms` <= 3) and `large` (4 <= `n_platforms` <= 9). 
     
 ### 1. One-way ANOVA: Total_sale ~ n_platforms 
-```{r ANOVA_Genre, message=FALSE, warning=FALSE}
-games_df = games_df %>% 
-  filter(total_sale < 5)
 
+```{r ANOVA_Genre, message=FALSE, warning=FALSE}
 aov_mod_1 = aov(total_sale ~ n_platforms, data = games_df)
 ```
 ```{r }
@@ -404,10 +390,9 @@ With p.value < 0.001, we conclude that at least two of the n_platforms groups ha
 
 ### 2. Conclusion
 
-Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer * n_platforms in the linear regression model.
-  
-Following similar procedures, we also conclude that significant differences exist in groups of genres and subgroups considering interaction with console_developer. Therefore we include the interaction term console_developer * genre in the linear regression model 
+ANOVA test above provides evidence that there are true differences in games sales among different groups of n_platforms.Therefore, we include console_developer, n_platforms, critic_score as predictors in our linear regression model 
 
+Similarly, we conducted ANOVA test for different levels of genre and concluded that there are true difference in global sales among different genres.
 <br>
 
 ### Linear Regression
@@ -429,13 +414,13 @@ Model 3:  total_sale ~ console_developer * genre + console_developer * critic_sc
 
 Model 4:  total_sale ~ console_developer * n_platforms + console_developer * critic_score
 
-We set the cutoff value at 5 (million USD). Model 2 contains interaction between console_developer and all pther interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and only two of interested predictors. 
+Model 2 contains console_developer and all other interested predictors (genre, n_platform, critic_score), as well as interactions. While Model 1,3,4 contain console_developer and only two of interested predictors and their interactions. 
 
 <br>
 
 ### 2. Cross validation
 
-We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of **RMSE** values for each candidate model:
+We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below shows the distribution of **RMSE** values for each model:
 
 
 ```{r regression_rmse_1,warning = F ,include = F}
@@ -477,65 +462,52 @@ cv_df %>%
   geom_violin()
 ```
 
-Based on these results, there's minor improvement for adding `console_developer*critic_score` as an additional predictor. Maybe Model 2 is a little bit redundant compared to Model 3 and 4, with which it have similar **RMSE** values, but it can provide information on most of our initial questions. In this way, we select Model 2 as our final model.
-
-
-(Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less. 
-
-
-Hence, we finally choose model 2 and 4 for the final comparison and consider whether the model could be 'superior' by adding the predictor `console_developer*genre`.
-ANOVA Test)
+Based on the results, Model 2 has the lowest **RMSE**, but **RMSE** of model 3 and 4 is just slightly higher than Model 2, which indictes that there's minor improvement for adding `console_developer*critic_score` as an additional predictor. Also, there are 6 subgroups in `genre`, which makes Model 3 more hard to interpret than Model 4. In this way, we decide to select **Model 4** as our final model.
 
 <br>
 
-### 3. Diagnosis and interpretation
+### 3. Diagnosis
 
-In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers. 
+In **Model 4**, we used **Residuals vs Fitted Values** plot to detect unequal error variance (heteroscedasticity) and outliers. 
+
 ```{r, message = FALSE}
-regression_df = 
-  games_df %>%
-  filter(total_sale < 5)
-lm2 = lm(total_sale ~ console_developer*genre +  console_developer*n_platforms + console_developer*critic_score, data = regression_df)
+lm4 = lm(total_sale ~ console_developer*n_platforms + console_developer*critic_score, data = regression_df)
+
 regression_df %>%
-  add_predictions(lm2) %>%
-  add_residuals(lm2) %>%
+  add_predictions(lm4) %>%
+  add_residuals(lm4) %>%
   ggplot(aes(x = pred, y = resid))+ 
   geom_point(alpha = 0.3)+
   geom_smooth(method = 'lm', color = 'red')+
   labs(x = 'fitted values of total_sales', y = 'model residuals', title = 'Residuals vs Fitted Values')
 ```
   
-  
 As shown in the graph, there are many outliers with residuals > 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.
 
+### 4. Results
+
+The summary of the selected model: latex is as follow:
+
 ```{r}
-coe_df = broom::tidy(lm2) 
-coe_df1 = coe_df[-c(2:11),] %>%
+coe_df = broom::tidy(lm4) 
+
+coe_df_tidy = 
+  coe_df %>%
   select(term, estimate, p.value) %>% 
-  mutate(term = str_replace(term, "^console_developerNintendo:", "Nintendo: "),
-         term = str_replace(term, "^console_developerSony:", "Sony: "),
+  mutate(
+    term = str_replace(term, "^console_developer:", "Developer: "),
+    term = str_replace(term, "^n_platforms:", "Num_Consoles: "),
   ) %>%
   knitr::kable(digits = 3)
-coe_df1
+
+coe_df_tidy
 ```
 
-\n
-We compare coefficients of interaction terms between console_developer and genre/n_platforms/critic_score in the first table.
 
-```{r}
-coe_df = broom::tidy(lm2) 
-coe_df2 = coe_df[c(1:11),] %>%
-  select(term, estimate, p.value) %>% 
-  knitr::kable(digits = 3)
-coe_df2
-```
- 
-\n
-In the second table, coefficients of single terms such as genreAgility, genreCompetition are shown.
-  
+
 <br>
 
-## Results
+## Findings
 
 * From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. After 2012, in general ,there was a slight decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
 
