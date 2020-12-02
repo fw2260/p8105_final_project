@@ -193,9 +193,9 @@ genre_sale_plot =
 ggplotly(genre_sale_plot) 
 ```
 
-**Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales approximately 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 8.75 billion USD. 
+**Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales more than 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 1.84 billion USD. 
 
-The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in sports, role-playing, and platform, with each of them brought back more than 250 million USD. **Sony**’s gaming sales were mostly from the action, sports, and shooting genre with each brought approximately more than 500 million USD. **Microsoft**, despite the latest competitor to enter the video game industry, dominates the field in shooting, sports, and action genres. The company’s highest revenue was from shooting games with more than 350 million USD.  
+The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in sports, role-playing, and platform, with each of them brought back more than 290 million USD. **Sony**’s best-selling genre is action,which achieved 580.94 million USD revenue between 2001 to 2020. Sports and shooting also brought huge profits to Sony, with 481.72 and 410.72 million USD respectively. **Microsoft**, despite the latest competitor to enter the video game industry, performs well in  shooting, sports, and action genres. The company’s highest revenue was from shooting games with 403.39 million USD.  
 
 <br>
 
