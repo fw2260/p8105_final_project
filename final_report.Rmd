@@ -90,7 +90,6 @@ In an arduous process of figuring out how to scrape information such as genre th
 
 Unfortunately, after merging, our ~18,000 entries were reduced to ~2,500. We then realized that this reduction was because the two sites named many of the game titles slightly differently, and that Metacritic would list different versions of a game as separate entries while VGChartz grouped them together into one, resulting in many games that could not be merged as is. Simply dropping those entries from our dataset would be invalid, but recoding the inconsistencies manually would be entirely too time-consuming, so we decided to obtain our dataset mainly from VGChartz, possibly at the expense of having accurate critic review scores. All of the code we’ve written up to this point can be found in its own folder [here](https://github.com/fw2260/p8105_final_project/tree/main/old).
 
-
 Thus our final dataset comes mainly from VGChartz, with some critic scores from the dataset mentioned above from Metacritic. Based on the raw dataset, we also created some other new columns.
 
 The key steps for data cleaning are:
@@ -171,13 +170,13 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-The left bar graph showed the annual global revenues (in million USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one showed the number of video games released on these platforms in the same period. 
+The left bar graph shows the annual global revenues (in million USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one shows the number of video games released on these platforms in the same period. 
 
 The video game industry increased at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2008, like Grand Theft Auto IV on Xbox 360. 
 
-Both annual sales and number of games released from 2008 on decreased over time, possibly reflecting the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advanced. It may also be the case that hardware makers are not eager to release new models every five years, which also decreased the number of games published each year. Furthermore, annual sales of more recent years could be lower because the games are younger than their predecessors. 
+Both annual sales and number of games released from 2008 on decreases over time, possibly reflecting the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advances. It may also be the case that console makers are not eager to release new models as often, which also decreases the number of games published each year. Furthermore, annual sales of more recent years may be lower because the games are younger than their predecessors. 
 
-Additionally, note that there is a drastic drop for both sales and number of games after 2018. The number of game releases from the three companies in 2019 was only 18 and in 2020 was 5, which is not the case in reality. Therefore, we considered data in 2019 and 2020 to be inaccurate and excluded them in our further analyses.
+Additionally, note that there is a drastic drop for both sales and number of games after 2018. The number of game releases from the three companies in 2019 is only 18 and in 2020 is 5, which is not the case in reality. Therefore, we consider data in 2019 and 2020 to be inaccurate and will exclude them in our statistical analyses.
 
 <br>
 
@@ -284,7 +283,7 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-However, for **Sony**, it's a different story. Both the annual sales and number of releases started high and then kept decreasing.
+However, for **Sony**, it's a different story. Both the annual sales and number of releases starts high and then keeps decreasing.
 
 ### Global sales of games per genre
 
@@ -311,9 +310,9 @@ genre_sale_plot =
 ggplotly(genre_sale_plot) 
 ```
 
-**Sports** games have been around since the beginning of gaming culture, and it has been one of the most popular genres with their global sales more than 1.0 billion USD. Challenging the player’s reflexes and coordination, **Action** and **Shooting** are the second and third genres in which their total sales are more than 1.84 billion USD. 
+**Sports** games have been around since the beginning of gaming, and it is the most popular genre, with global sales more than 1.0 billion USD. Coming in second and third respectively are **Action** and **Shooting**, challenging the player’s reflexes and coordination. 
 
-The revenues of each company, however, were not the same across the genres. **Nintendo** earned more profits from making games in **sports**, **role-playing**, and **platform**, with each of them bring back more than 290 million USD. **Sony**’s best-selling genre is **action**, which achieved 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brought huge profits to Sony, with 481.72 and 410.72 million USD respectively. **Microsoft**, despite being the latest competitor to enter the video game industry, performed well in **shooting**, **sports**, and **action** genres. The company’s highest revenue was from shooting games with 403.39 million USD.  
+The revenues of each company, however, are not the same across the genres. **Nintendo** earns more profit from making games in **sports**, **role-playing**, and **platform**, with each of them bring back more than 290 million USD. **Sony**’s best-selling genre is **action**, which achieves 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brings huge profits to Sony, with 481.72 and 410.72 million USD, respectively. **Microsoft**, despite being the latest competitor to enter the video game industry, performs well in the **shooting**, **sports**, and **action** genres. The company’s highest revenue is from shooting games with 403.39 million USD.  
 
 <br>
 
@@ -328,13 +327,11 @@ games_df %>%
   labs(x = "Critic Score", y = "Total Sale (million USD)", color = "Console Developer")
 ```
 
-Critic consensus on a game usually has some correlation with the success of the game in the market in which the critic score can influence the consumer’s decision to buy games.
-**Microsoft** and **Sony**'s games usually have scores larger than 5, which means that their games have overall good quality. While for **Nintendo**, some of its games earned low score from the critic. 
+Critic consensus on a game usually has some correlation with the success of the game in the market because critic reviews may influence consumers' decision to buy games.
 
-As critic score increases, sales of games on the three companies' consoles all increases. What's interesting is that **Sony**'s game sale increases more than the others for one unit increase in critic score and **Nintendo**'s increases the least.
+Based on the fitted linear regression lines, it would seem that **Microsoft** and **Sony**'s games usually has scores greater than 5/10, which means that their games have overall good quality. While for **Nintendo**, more of its games earned low scores from critics. 
 
-(and **Sony**’s games had the best correlation of the critic score and the total sales, their games overall had the highest scores and the global revenues of approximately more than 1.0 million USD. 
-**Microsoft** and **Nintendo**, respectively, are the second and third companies that had lower overall total sales and critic scores relationship. Overall, our data shows that the majority of games with higher scores were produced by **Sony** and thus, having the highest total revenues.)
+Generally though, as critic score increases, sales of games on the three companies' consoles all increase. What's interesting is that **Sony**'s game sale increases more than the others for one unit increase in critic score and **Nintendo**'s increases the least.
 
 <br>
 
@@ -360,9 +357,9 @@ platform_available =
 platform_available
 ```
 
-Platform availability refers to the number of consoles that the same game is on, and running more consoles indicates higher availability (e.g you can play Grand Theft Auto V on PlayStation 4 and Xbox One at the same time). High availability sometimes euqals to high popularity, which is supposed to bring more sales. However, nonexclusive games won't encourage people to buy certain hardware, since they can play them on products they already have. In this way, the sales brought by the game would be "diluted".
+Platform availability refers to the number of consoles that a game is released on, and running more consoles indicates higher availability (e.g. you can play Grand Theft Auto V on PlayStation 4 or on Xbox One). High availability sometimes indicates high popularity, which is supposed to bring in more sales. However, non-exclusive games won't encourage people to buy certain consoles, since they can play them on consoles they already have. In this way, the sales brought by the game would be "diluted".
 
-For games of **Microsoft** and **Sony**, the sales improves as the number of console increases overall. And this trend is more apparent for **Sony**. It means that for these two companies, more available games sells better than less available games. While that's not the case for **Nintendo**. Even though there are also nonexclusive games on **Nintendo**'s products, they didn't contributed extra revenue than games with less platform availability. 
+For games of **Microsoft** and **Sony**, the sales improves as the number of console increases overall. And this trend is more apparent for **Sony**. This means that for these two companies, more available games sells better than less available games. However, this is not the case for **Nintendo**. Even though there are also non-exclusive games on **Nintendo**'s consoles, they don't contribute more revenue than games with less platform availability. 
 
 (Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that there was a large distribution of total revenues in the smaller number of platforms since most players owned only 1 or 2 consoles.)
 
@@ -385,9 +382,9 @@ games_df = games_df %>%
   dplyr::select(title:genre,critic_score, total_sale)
 ```
  
-By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : n_platforms. We further divided n_platform into 3 groups: `small` (`n_platforms` = 1), `medium` (2 <= `n_platforms` <= 3) and `large` (4 <= `n_platforms` <= 9). 
+Using Analysis of Variance (ANOVA) we can conduct statistical comparisons among groups of our interested categorical variables: n_platforms. We further divided n_platform into 3 groups: `small` (`n_platforms` = 1), `medium` (2 <= `n_platforms` <= 3) and `large` (4 <= `n_platforms` <= 9). 
     
-### 1. One-way ANOVA: Total_sale ~ n_platforms 
+### 1. One-way ANOVA: total_sale ~ n_platforms 
 
 ```{r ANOVA_Genre, message=FALSE, warning=FALSE}
 aov_mod_1 = aov(total_sale ~ n_platforms, data = games_df)
@@ -400,13 +397,14 @@ multi_comp_1 = TukeyHSD(aov_mod_1)
 plot(multi_comp_1)
 ```
 
-With p.value < 0.001, we conclude that at least two of the n_platforms groups have different average total_sales. Then Tukey's method was performed to make pairwise comparisons.All comparisons have significant differences in mean of total_sale.
+With p.value < 0.001, we conclude that at least two of the n_platforms groups have different average total_sales. Then Tukey's method was performed to make pairwise comparisons. All comparisons have significant differences in mean of total_sale.
 
 ### 2. Conclusion
 
-ANOVA test above provides evidence that there are true differences in games sales among different groups of n_platforms.Therefore, we include console_developer, n_platforms, critic_score as predictors in our linear regression model 
+The ANOVA test above provides evidence that there are true differences in games sales among different groups of n_platforms. Therefore, we will include console_developer, n_platforms, critic_score as predictors in our linear regression model.
 
 Similarly, we conducted ANOVA test for different levels of genre and concluded that there are true difference in global sales among different genres.
+
 <br>
 
 ### Linear Regression
@@ -414,28 +412,28 @@ Similarly, we conducted ANOVA test for different levels of genre and concluded t
 ```{r regression dataset, message=FALSE, warning=FALSE}
 regression_df = 
   games_df %>%
-  filter(total_sale < 5) # cutoff outliers
+  filter(total_sale < 5) # cut off outliers
 ```
 
+**Need explanation here of why we decided to cut off data at this point**
 
 ### 1. Build Models
 
-Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
+**Model 1:**  total_sale ~ console_developer * genre + console_developer * n_platforms.
 
-Model 2:  total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score
+**Model 2:**  total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score
 
-Model 3:  total_sale ~ console_developer * genre + console_developer * critic_score
+**Model 3:**  total_sale ~ console_developer * genre + console_developer * critic_score
 
-Model 4:  total_sale ~ console_developer * n_platforms + console_developer * critic_score
+**Model 4:**  total_sale ~ console_developer * n_platforms + console_developer * critic_score
 
-Model 2 contains console_developer and all other interested predictors (genre, n_platform, critic_score), as well as interactions. While Model 1,3,4 contain console_developer and only two of interested predictors and their interactions. 
+Model 2 contains console_developer and all other interested predictors (genre, n_platform, critic_score), as well as interactions. While Model 1, 3, and 4 contain console_developer and only two of interested predictors and their interactions. 
 
 <br>
 
 ### 2. Cross validation
 
 We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below shows the distribution of **RMSE** values for each model:
-
 
 ```{r regression_rmse_1,warning = F ,include = F}
 cv_df = 
@@ -444,7 +442,6 @@ cv_df =
     train = map(train, as_tibble),
     test = map(test, as_tibble)
   )
-  
   
 cv_df = 
   cv_df %>% 
@@ -476,7 +473,7 @@ cv_df %>%
   geom_violin()
 ```
 
-Based on the results, Model 2 has the lowest **RMSE**, but **RMSE** of model 3 and 4 is just slightly higher than Model 2, which indictes that there's minor improvement for adding `console_developer*critic_score` as an additional predictor. Also, there are 6 subgroups in `genre`, which makes Model 3 more hard to interpret than Model 4. In this way, we decide to select **Model 4** as our final model.
+Based on the results, Model 2 has the lowest **RMSE**, but **RMSE** of Model 3 and 4 are just slightly higher than Model 2, which indicates that there's minor improvement for adding `console_developer*critic_score` as an additional predictor. Also, there are 6 subgroups in `genre`, which makes Model 3 harder to interpret than Model 4. In this way, we decide to select **Model 4** as our final model.
 
 <br>
 
@@ -517,16 +514,14 @@ coe_df_tidy =
 coe_df_tidy
 ```
 
-
-
 <br>
 
 ## Discussion
 
-* From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. After 2012, in general ,there was a slight decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
+* From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. After 2012, in general, there is a decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
 
-* **Action**, **sports**, and **shooting** are the most popular and the genres that bring the most profits to the gaming companies. 
+* **Action**, **sports**, and **shooting** are the most popular genres that bring the most profits to the companies overall. 
 
-* It seems that as the critic scores increase, there is a general associated increase in the globlal sales. **Sony** was the company in which their games had the highest critic score and highest global sales. 
+* It seems that as critic scores increase, there is a generally associated increase in global sales as well. **Sony** is the company in which their games has the highest critic score and highest global sales. 
 
-* Another factor that also impacts how well a game sales is the number of platforms the game is available. Most gamers do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number, thus higher sales. 
+* Another factor that also impacts how well a game sells is the number of platforms the game is available on. Some gamers do not own multiple consoles and a game that is released on multiple platforms has a much higher potential customer base, thus higher sales. 
