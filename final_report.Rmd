@@ -27,6 +27,10 @@ h3 { /* Header 3 */
   font-size: 22px;
   color: DarkBlue;
 }
+h4 {/* Header 3 */
+  font-size: 22px;
+  color: DarkBlue;
+}
 </style>
 
 ```{r setup, include=FALSE}
@@ -160,7 +164,7 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-The left and right bar graphs showed the annual global revenues of video games (in millions USD) and the total of video games respectively from 2001 to 2020. Video game industry increased at a rapid rate after 2001 in which it reached a peak of more than $700 million in global revenue in 2009 in accordance with the highest total video games produced in the same year. The similar trend appeared in both plots in which from 2012 to 2016, there was a drop in both the annual total sales and the number of games released. After 2016, the number of games released remained stable while the total revenues continued to decline.
+The left and right bar graphs showed the annual global revenues of video games (in millions USD) and the total of video games respectively from 2001 to 2020. Video game industry increased at a rapid rate after 2001 in which it reached a peak of more than $700 million in global revenue in 2008 in accordance with the highest total video games produced in the same year. The similar trend appeared in both plots in which from 2012 to 2016, there was a drop in both the annual total sales and the number of games released. After 2016, the number of games released remained stable while the total revenues continued to decline.
 
 <br>
 
@@ -246,7 +250,7 @@ By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our i
     
 <br>
 
-### 1. One-way ANOVA: Total_sale ~ genre 
+#### 1. One-way ANOVA: Total_sale ~ genre
 
 
 ```{r ANOVA_Genre}
@@ -264,7 +268,7 @@ With p.value < 0.001, we conclude that at least two of the genres have different
 
 <br>
 
-### 2. ANOVA with interaction: Total_sale ~ console_developer * genre 
+#### 2. ANOVA with interaction: Total_sale ~ console_developer * genre 
 
 ```{r }
 aov_mod_2 = aov(total_sale ~ console_developer * genre, data = games_df)
@@ -291,7 +295,7 @@ multi_df =
  
 <br>
 
-### 3. Conclusion 
+#### 3. Conclusion
 
   Anova tests above provide us evidence that indicate there are true differences in games sales among different groups of genre. When the console_developer changes, significant differences exist in subgroups as well.  Thus it’s reasonable to include the interaction term console_developer : genre in the linear regression model.
   
@@ -308,7 +312,7 @@ regression_df =
 ```
 
 
-### 1. Build models
+#### 1. Build models
 
 Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
 
@@ -322,7 +326,7 @@ Model 4:  total_sale ~ console_developer * n_platforms + console_developer * cri
 
 <br>
 
-### 2. Cross validation
+#### 2. Cross validation
 
 We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below will show the distribution of **RMSE** values for each candidate model:
 
@@ -380,7 +384,7 @@ Hence, we finally choose model 2 and 4 for the final comparison and consider whe
 
 <br>
 
-### 3. Diagnosis and interpretation
+#### 3. Diagnosis and interpretation
 
   In the selected model, we used Residuals vs Fitted values plot to detect unequal error variance (heteroscedasticity) and outliers. 
 ```{r, message = FALSE}
@@ -428,6 +432,14 @@ coe_df2
 <br>
 
 ## Results
+
+From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. After 2012, in general ,there was a slight decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
+
+**Action**, **sports**, and **shooting** are the most popular and the genres that bring the most profits to the gaming companies. 
+
+It seems that as the critic scores increase, there is a general associated increase in the globlal sales. **Sony** was the company in which their games had the highest critic score and highest global sales. 
+
+Another factor that also impacts how well a game sales is the number of platforms the game is available. Most gamers do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number, thus higher sales. 
 
 <br>
 
