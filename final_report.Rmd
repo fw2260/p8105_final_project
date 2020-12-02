@@ -118,7 +118,7 @@ Important variables include:
 
 * `critic_score`: Aggregate score compiled by the websites
 
-* `total_sale`: global revenues (millions $)
+* `total_sale`: global revenues (millions $) the game earned on one platform
 
 The first ten rows of the dataset is as follow:
 
@@ -135,7 +135,7 @@ head(games_df) %>%
 
 ### Global sales and Number of games released across the years
 
-```{r q1, message = FALSE}
+```{r q1, message=FALSE, warning=FALSE}
 totalsale = games_df %>% 
   group_by(release_year) %>% 
   summarize(
@@ -166,13 +166,15 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 The left bar graphs showed the cumulative global revenues (in millions USD) of video games released between 2001 and 2020 on the three companies' platforms, and the right one showed the number of video games released on these platforms in the same period. 
 
-Video game industry increased at a rapid rate after 2001 with drastic increase in number of game released each year and the high volume reached its peak in 2009, with 587 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2009, like Call of Duty: Modern Warfare 2 on Xbox 360. Cumulative sales for games which came after 2009 decreased over year. It's quite intuitive because they are younger than their predecessor. And also, as the hardware lifecycle progressed, the sales of games went down. Also, there was a drop in the number of games released on these major consoles after 2009, especially after 2018. Apart from unavailability of sales information, it's also because of the higher expense to produce game consoles. Nowadays, hardware makers are not eager to release new models every five years, which also decreased the number of games published each year.
+Video game industry increased at a rapid rate after 2001 with drastic increase in number of game released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2008, like Grand Theft Auto IV on Xbox 360. 
+
+Cumulative sales for games which came after 2008 decreased over year. It's quite intuitive because they are younger than their predecessor. And also, as the hardware lifecycle progressed, the sales of games went down. Also, there was a drop in the number of games released on these major consoles after 2008. Maybe that's because nowadays, hardware makers are not eager to release new models every five years, which also decreased the number of games published each year. In addition, noticing there is drastic drop for both sales and number of games after 2018. The number of game release from the three giants in 2019 is only 18 and that in 2020 is 5, which is not the case. We consider data in 2019 and 2020 as inaccurate and exclude them in our further analyses.
 
 <br>
 
 ### Global sales of games per genre
 
-```{r q2}
+```{r q2, message=FALSE, warning=FALSE}
 genre_sale_plot = 
   games_df %>% 
   group_by(console_developer, genre) %>% 
@@ -183,7 +185,7 @@ genre_sale_plot =
     genre = fct_reorder(genre, sum_sale)
   ) %>% 
   ggplot(aes(x = genre, y = sum_sale, fill = console_developer)) +
-  geom_bar(stat = "identity") +
+  geom_bar(stat = "identity", alpha = .7) +
   theme(
     axis.text.x = element_text(angle = 70, vjust = 0.5, hjust = 1, size = 8),
     legend.position = "bottom",
@@ -201,7 +203,7 @@ The revenues of each company, however, were not the same across the genres. **Ni
 
 ### Relationship between critic score and total revenues
 
-```{r q3, message = FALSE}
+```{r q3, message=FALSE, warning=FALSE}
 games_df %>% 
   filter(total_sale < 5) %>% 
   ggplot(aes(x = critic_score, y = total_sale, color = console_developer)) +
@@ -222,18 +224,29 @@ As critic score increases, sales of games on the three companies' consoles all i
 
 ### Platform Availability
 
-```{r q4}
+```{r q4, message=FALSE, warning=FALSE}
 platform_available = 
   games_df %>% 
   mutate(n_platforms = as.factor(n_platforms)) %>% 
-  ggplot(aes(x = n_platforms, y = log(total_sale))) +
-  geom_boxplot() +
-  labs(x = "Number of Platforms", y = "Total Sale Log(million USD)")
+  ggplot(aes(x = n_platforms, y = log(total_sale), fill = console_developer)) +
+  geom_violin(alpha = .5) +
+  labs(x = "\nNumber of Platforms", y = "Total Sale Log(million USD)\n") +
+  theme_light() +
+  facet_wrap(~console_developer,nrow = 3) +
+  theme(
+    text = element_text(size = 9),
+    legend.text = element_text(size = 9),
+    legend.position = "none"
+  )
 
 ggplotly(platform_available)
 ```
 
-Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that there was a large distribution of total revenues in the smaller number of platforms since most players owned only 1 or 2 consoles.
+Platform availability refers to the number of consoles that the same game is on, and running more consoles indicates higher availability (e.g you can play Grand Theft Auto V on PlayStation 4 and Xbox One at the same time). High availability sometimes euqals to high popularity, which is supposed to bring more sales. However, nonexclusive games won't encourage people to buy certain hardware, since they can play them on products they already have. In this way, the sales brought by the game would be "diluted".
+
+For games of **Microsoft** and **Sony**, the sales improves as the number of console increases overall. And this trend is more apparent for **Sony**. It means that for these two companies, more available games sells better than less available games. While that's not the case for **Nintendo**. Even though there are also nonexclusive games on **Nintendo**'s products, they didn't contributed extra revenue than games with less platform availability. 
+
+(Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that there was a large distribution of total revenues in the smaller number of platforms since most players owned only 1 or 2 consoles.)
 
 <br>
 
@@ -243,6 +256,7 @@ Another factor that has a big impact on how well a game sales is the number of p
 
 ```{r }
 games_df = games_df %>%
+   filter(release_year < 2019) %>%
    mutate(
     genre = 
       case_when(
@@ -265,12 +279,13 @@ games_df = games_df %>%
  
 By Analysis of Variance (ANOVA) we can conduct comparisons among groups of our interested categorical variables : n_platforms and genre.In the test of n_platforms, we want to answer the question: Whether there are true differences in games sales among different groups of number of platforms? 
 
-We divided n_platform into 3 groups (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large). 
+We divided n_platform into 3 groups (criteria of grouping: 1 ~ small, 2-3 ~ medium, 4-9 ~ large) and further narrow down the number of genre from 13 to 6, according to their similarity.
     
 ### 1. One-way ANOVA: Total_sale ~ n_platforms 
 ```{r ANOVA_Genre}
-games_df = games_df %>%
+games_df = games_df %>% 
   filter(total_sale < 5)
+
 aov_mod_1 = aov(total_sale ~ n_platforms, data = games_df)
 ```
 ```{r }
@@ -327,7 +342,7 @@ regression_df =
 ```
 
 
-### 1. Build models
+### 1. Build Models
 
 Model 1:  total_sale ~ console_developer * genre + console_developer * n_platforms.
 
@@ -337,7 +352,7 @@ Model 3:  total_sale ~ console_developer * genre + console_developer * critic_sc
 
 Model 4:  total_sale ~ console_developer * n_platforms + console_developer * critic_score
 
-   We set the cutoff value at 5(million dollars). Model 2 contains interaction between console_developer and all interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and two of interested predictors. 
+   We set the cutoff value at 5 (million USD). Model 2 contains interaction between console_developer and all pther interested predictors (genre, n_platform, critic_score) while Model 1,3,4 contain interaction between console_developer and only two of interested predictors. 
 
 <br>
 
@@ -385,17 +400,14 @@ cv_df %>%
   geom_violin()
 ```
 
-Base on these results, there's clearly some improvement for adding `console_developer*critic_score` as an additional predictor and they suggests that the different critic score among the three developers could influence the total sale in some way. 
+Based on these results, there's minor improvement for adding `console_developer*critic_score` as an additional predictor. Maybe Model 2 is a little bit redundant compared to Model 3 and 4, with which it have similar **RMSE** values, but it can provide information on most of our initial questions. In this way, we select Model 2 as our final model.
 
 
-Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less. 
+(Comparing model 2, 3, and 4, all of their RMSE are less than 0.8 though, the model 2 has the smallest RMSE distribution, which means it may fit better. As for 3 and 4, the distribution of them are just really similar but the range of RMSE in model 4 is less. 
 
 
 Hence, we finally choose model 2 and 4 for the final comparison and consider whether the model could be 'superior' by adding the predictor `console_developer*genre`.
-
-
- ANOVA test:
- 
+ANOVA Test)
 
 <br>
 
