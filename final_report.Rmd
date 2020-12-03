@@ -36,7 +36,6 @@ h4 {/* Header 4 */
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(patchwork)
-library(ggpubr)
 library(arsenal)
 library(multcomp)
 library(modelr)
@@ -60,7 +59,7 @@ scale_fill_discrete = scale_fill_viridis_d
 
 Video games have been around for decades, providing entertainment for children and adults alike. They have been involved significantly from the early days of computer games and the early versions of Nintendo and Atari. As technology continues to improve, so do video games. Video game creation has become increasingly complicated, and the cost of creating a game to run one of the major consoles has risen with this greater complexity. 
 
-No longer just an entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is only growing. It is no surprise that many big companies want to bring revenues from video games. There are currently more than 2.5 billion gamers across the world. Analysts reported that in 2019, the gaming business was estimated to be at 152.1 billion in which console was the second fastest-growing segment, only after mobile gaming. It is generally known that the top largest revenue regions were Asia-Pacific, North America, and Western Europe ([source]((https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/)). In this project, we are going to analyze the 2001-2020 global games market per console from Nintendo, Sony, and Microsoft, and learn about the factors that influence their total revenues. 
+No longer just a niche entertainment medium, gaming has rapidly become the largest sector in terms of production and marketing. In fact, it is larger than the movie and music industry combined, and it is still growing. There are currently more than 2.5 billion gamers across the world. Analysts reported that in 2019, the gaming business was estimated to generate $152.1 billion, in which console was the second fastest-growing gaming platform, only after mobile gaming ([source](https://newzoo.com/insights/articles/global-games-market-reaches-137-9-billion-in-2018-mobile-games-take-half/)). Since the 2000's, three major console-developing companies have dominated the console market: Nintendo, Sony, and Microsoft. In this project, we are going to analyze the 2001-2020 global games market per console from these three companies, and learn about the various factors that influence their total revenues. 
 
 <br>
 
