@@ -282,7 +282,7 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 
 ```
 
-However, for **Sony**, it's a different story. Both the annual sales and number of releases starts high and then keeps decreasing.
+However, for **Sony**, it's a different story. Cumulative sales of games released earlier starts high and those released later keeps decreasing.
 
 ### Global sales of games per genre
 
@@ -304,7 +304,7 @@ genre_sale_plot =
     axis.text.x = element_text(angle = 70, vjust = 0.5, hjust = 1, size = 8),
     legend.position = "bottom",
     legend.text = element_text(size = 8)) +
-  labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console Developer")
+  labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console \nDeveloper")
 
 ggplotly(genre_sale_plot) 
 ```
