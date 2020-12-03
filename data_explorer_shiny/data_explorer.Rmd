@@ -53,7 +53,7 @@ selectInput(
 
 sliderInput(
   "year_range",
-  h3("Year Range"),
+  h3("Release Year"),
   2001, 2020, 
   value = c(2001, 2020),
   ticks = FALSE,
@@ -161,21 +161,21 @@ renderPlotly({
         title = "Total Sale (million $)",
         titlefont = list(
           family = "Courier New, monospace",
-          size = 16,
+          size = 14,
           color = "#7f7f7f"
         )),
       yaxis = list(
         title = "Console",
         titlefont = list(
           family = "Courier New, monospace",
-          size = 16,
+          size = 14,
           color = "#7f7f7f"
         )),
       showlegend = FALSE)
 })
 ```
 
-### Total sales over time
+### Total sales by release year
 
 ```{r}
 sub_games_df = reactive({
@@ -207,17 +207,17 @@ renderPlotly({
     plot_ly(x = ~release_year, y = ~totalsale, type = "scatter", mode = "lines", text = ~text_label) %>% 
     layout(
       xaxis = list(
-        title = "Year",
+        title = "Release Year",
         titlefont = list(
           family = "Courier New, monospace",
-          size = 16,
+          size = 14,
           color = "#7f7f7f"
         )),
       yaxis = list(
         title = "Total Sale (million $)",
         titlefont = list(
           family = "Courier New, monospace",
-          size = 16,
+          size = 14,
           color = "#7f7f7f"
         )))
 
