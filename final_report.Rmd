@@ -304,7 +304,7 @@ genre_sale_plot =
     axis.text.x = element_text(angle = 70, vjust = 0.5, hjust = 1, size = 8),
     legend.position = "bottom",
     legend.text = element_text(size = 8)) +
-  labs(x = "Genre", y = "Total Sale (million USD)", fill = "Console \nDeveloper")
+  labs(x = "Genre", y = "Total Sale (million USD)", fill = "Developer")
 
 ggplotly(genre_sale_plot) 
 ```
@@ -383,6 +383,8 @@ games_df = games_df %>%
  
 Using Analysis of Variance (ANOVA) we can conduct statistical comparisons among groups of our interested categorical variables: n_platforms. We further divided n_platform into 3 groups: `small` (`n_platforms` = 1), `medium` (2 <= `n_platforms` <= 3) and `large` (4 <= `n_platforms` <= 9). 
     
+<br>
+
 ### 1. One-way ANOVA: total_sale ~ n_platforms 
 
 ```{r ANOVA_Genre, message=FALSE, warning=FALSE}
@@ -397,6 +399,8 @@ plot(multi_comp_1)
 ```
 
 With p.value < 0.001, we conclude that at least two of the n_platforms groups have different average total_sales. Then Tukey's method was performed to make pairwise comparisons. All comparisons have significant differences in mean of total_sale.
+
+<br>
 
 ### 2. Conclusion
 
@@ -415,6 +419,8 @@ regression_df =
 ```
 
 **Need explanation here of why we decided to cut off data at this point**
+
+<br>
 
 ### 1. Build Models
 
@@ -493,6 +499,8 @@ regression_df %>%
 ```
   
 As shown in the graph, there are many outliers with residuals > 3. Although the mean of residual values is close to 0 and residuals have a horizontal relationship with fitted value, the distribution of residual values is skewed. This plot indicates that our model does not have ideally distributed residuals.
+
+<br>
 
 ### 4. Results
 
