@@ -148,7 +148,7 @@ totalsale = games_df %>%
   ) %>% 
   drop_na() %>% 
   ggplot(aes(x = release_year, y = totalsale)) +
-  geom_col(color = "navyblue", fill = "white") +
+  geom_col(color = "purple4", fill = "white") +
   labs(x = "Release Year", y = "Total Sale (million USD)")
 
 totalsale_plotly = ggplotly(totalsale)
@@ -160,7 +160,7 @@ totalcount = games_df %>%
   ) %>% 
   drop_na() %>% 
   ggplot(aes(x = release_year, y = count)) +
-  geom_col(color = "darkred", fill = "white") +
+  geom_col(color = "lightseagreen", fill = "white") +
   labs(x = "Release Year", y = "Number of Games")
 
 totalcount_plotly = ggplotly(totalcount)
