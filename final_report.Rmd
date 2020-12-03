@@ -419,13 +419,13 @@ regression_df =
 
 ### 1. Build Models
 
-**Model 1:**  \(Model 1:  total\_sale \sim console\_developer * genre + console\_developer * n\_platforms \)
+**Model 1:**  \(total\_sale \sim console\_developer * genre + console\_developer * n\_platforms \)
 
-**Model 2:**  \(Model 2:  total\_sale \sim console\_developer * genre + console\_developer * n\_platforms + console\_developer * critic\_score\)
+**Model 2:**  \(total\_sale \sim console\_developer * genre + console\_developer * n\_platforms + console\_developer * critic\_score\)
 
-**Model 3:**  \(Model 3:  total\_sale \sim console\_developer * genre + console\_developer * critic\_score\)
+**Model 3:**  \(total\_sale \sim console\_developer * genre + console\_developer * critic\_score\)
 
-**Model 4:**  \(Model 4:  total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\)
+**Model 4:**  \(total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\)
 
 Model 2 contains console_developer and all other interested predictors (genre, n_platform, critic_score), as well as interactions. While Model 1, 3, and 4 contain console_developer and only two of interested predictors and their interactions. 
 
@@ -497,7 +497,7 @@ As shown in the graph, there are many outliers with residuals > 3. Although the 
 
 ### 4. Results
 
-The summary of the selected model: \(Model 4:  total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) is as follow:
+The summary of the selected model: \(total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) is as follow:
 
 ```{r}
 coe_df = broom::tidy(lm4) 
