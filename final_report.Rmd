@@ -419,13 +419,13 @@ regression_df =
 
 ### 1. Build Models
 
-**Model 1:**  total_sale ~ console_developer * genre + console_developer * n_platforms.
+**Model 1:**  \(Model 1:  total\_sale \sim console\_developer * genre + console\_developer * n\_platforms \)
 
-**Model 2:**  total_sale ~ console_developer * genre + console_developer * n_platforms + console_developer * critic_score
+**Model 2:**  \(Model 2:  total\_sale \sim console\_developer * genre + console\_developer * n\_platforms + console\_developer * critic\_score\)
 
-**Model 3:**  total_sale ~ console_developer * genre + console_developer * critic_score
+**Model 3:**  \(Model 3:  total\_sale \sim console\_developer * genre + console\_developer * critic\_score\)
 
-**Model 4:**  total_sale ~ console_developer * n_platforms + console_developer * critic_score
+**Model 4:**  \(Model 4:  total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\)
 
 Model 2 contains console_developer and all other interested predictors (genre, n_platform, critic_score), as well as interactions. While Model 1, 3, and 4 contain console_developer and only two of interested predictors and their interactions. 
 
@@ -497,7 +497,7 @@ As shown in the graph, there are many outliers with residuals > 3. Although the 
 
 ### 4. Results
 
-The summary of the selected model: latex is as follow:
+The summary of the selected model: \(Model 4:  total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) is as follow:
 
 ```{r}
 coe_df = broom::tidy(lm4) 
@@ -513,6 +513,30 @@ coe_df_tidy =
 
 coe_df_tidy
 ```
+
+According to **Model 4**, with games on **Microsoft** consoles and having large console availability as reference, we can see that:
+
+* For **Microsoft**, 
+
+  * While controlling critic score as constant, compared to sales of game on large number of consoles, estimated sales **decreases 0.299** million USD when games run on **medium** number of consoles and **decreases 0.265** million USD when games run on **small** number of consoles; 
+ 
+  * While controlling console availability as constant, the estimated total sales **increases 0.228** million USD for one unit increase in **critic score** on average.
+
+* For **Nintendo**, 
+
+  * While controlling critic score as constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **increases 0.476** million USD for **Nintendo** games with **large** number of consoles, **increases 0.691** million USD for games with **medium** number of consoles, and **increases 0.789** million USD for games with **small** number of consoles;
+ 
+  * Among **Nintendo** games, while controlling crirtic score as constant, there is supposed to be **0.084 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.048 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
+ 
+  * While controlling console availability as constant, the estimated total sales **increases 0.121** million USD for one unit increase in **critic score** on average.
+ 
+* For **Sony**, 
+
+  * While controlling critic score as constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **decreases 0.136** million USD for **Sony** games with **large** number of consoles, **decreases 0.025** million USD for games with **medium** number of consoles, and **decreases 0.21** million USD for games with **small** number of consoles;
+ 
+  * Among **Sony** games, while controlling critic score as constant, there is supposed to be **0.324 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.475 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
+ 
+  * While controlling console availability as constant, the estimated total sales **increases 0.271** million USD for one unit increase in **critic score** on average.
 
 <br>
 
