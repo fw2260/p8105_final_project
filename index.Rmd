@@ -18,7 +18,7 @@ h1.author {
   color: #003399;
 }
 h1 { /* Header 1 */
-  font-size: 36px;
+  font-size: 34px;
   color: DarkBlue;
 }
 h2 { /* Header 2 */
@@ -39,7 +39,7 @@ h3 { /* Header 3 */
 
 <br></br>
 
-## Website Overview
+<h1> Website Overview</h1>
 
 **Final Report** : contains a detailed report of our project including motivation, analyses, and conclusions. 
 
@@ -55,7 +55,7 @@ For a brief overview of our project, please view our screencast:
 
 <br>
 
-## Motivations
+<h1> Motivations</h1>
 
 Video games are becoming increasingly popular and mainstream, a favorite pastime across a wide demographic with something out there for everyone. Currently, three major video game console developers dominate the market: **Microsoft**, which makes the Xbox consoles, **Nintendo**, which makes consoles such as Nintendo DS and Wii, and **Sony**, which makes the PlayStation consoles. Video games are released across multiple consoles, although some games can be exclusive to one console (company). Fans may also be loyal to one company for a multitude of reasons, which makes for intriguing comparisons among these three companies. 
 
@@ -63,7 +63,7 @@ In particular we are interested in exploring the multiple factors that influence
 
 <br>
 
-## Initial questions
+<h1> Initial questions</h1>
 
 * How does the sales of games change over time?
 
@@ -76,13 +76,13 @@ In particular we are interested in exploring the multiple factors that influence
 
 <br>
 
-## Dataset 
+<h1> Dataset</h1> 
 
 We webscraped our data from  [VGChartz](https://www.vgchartz.com/games/games.php?name=&keyword=&console=&region=All&developer=&publisher=&goty_year=&genre=Action&boxart=Both&banner=Both&ownership=Both&showmultiplat=No&results=200&order=TotalSales&showtotalsales=0&showtotalsales=1&showpublisher=0&showpublisher=1&showvgchartzscore=0&shownasales=0&shownasales=1&showdeveloper=0&showdeveloper=1&showcriticscore=0&showcriticscore=1&showpalsales=0&showpalsales=1&showreleasedate=0&showreleasedate=1&showuserscore=0&showuserscore=1&showjapansales=0&showjapansales=1&showlastupdate=0&showothersales=0&showothersales=1&showshipped=0) and  [Metacritic](https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=detailed&page=0). VGChartz is a video game sales tracking website. They produce their weekly sales estimates by extrapolating from retail sampling and trends, and regularly compares them to official shipment figures and figures estimated by regional trackers ([source](https://www.vgchartz.com/methodology.php)). Metacritic is a website that aggregates reviews of movies, TV shows, video games, and music albums. Each product is given a “Metascore”, which is a weighted average of all reviews given by critics that were curated by the site.  
 
 <br>
 
-## Main findings
+<h1> Main findings</h1>
 
 * **2008** is the year with the **highest global revenues** and the **most games released.**
 
