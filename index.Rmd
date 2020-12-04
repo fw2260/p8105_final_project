@@ -86,7 +86,3 @@ We webscraped our data from  [VGChartz](https://www.vgchartz.com/games/games.php
 
 * Games with **more platform availability** indicates high popularity, tend to have **higher revenues**.  
 
-
-
-
-
