@@ -82,13 +82,11 @@ We webscraped our data from  [VGChartz](https://www.vgchartz.com/games/games.php
 
 * **Action**, **sports**, and **shooting** are the most popular and the genres that bring the most profits to the gaming companies.
 
-* As the critic scores increase, there is a general positive correlation with the globlal sales.
+* As the critic scores increase, there is a general positive correlation with the global sales. In general, **Sony** has the **highest critic score** and **highest global sales**. 
 
-* A game that releases on multiple platforms has a much higher potential customer number which results in higher sales. 
+* Games with **more platform availability** indicates high popularity, tend to have **higher revenues**.  
 
-<br>
 
-## Discussion
 
 
 
