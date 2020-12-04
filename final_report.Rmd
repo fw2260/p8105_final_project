@@ -170,12 +170,9 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 ```
 
 The left bar graph shows the cumulative global revenues (in million USD) of each game by release year from 2001 and 2020 on the three companies' platforms. In other words, it is showing how much the games made (from its release year to present) by their release year. *Note: this graph is NOT showing annual sales of games.* The right graph shows the number of video games released on these platforms in the same period. 
+The video game industry increased at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. After 2008, both cumulative sales and number of games released decreases over time.  
 
-The video game industry increased at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. Presently, games generating the biggest revenue are also those released in 2008, like Grand Theft Auto IV on Xbox 360. 
-
-Both cumulative sales and number of games released from 2008 on decreases over time, possibly reflecting the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advances. It may also be the case that console makers are not eager to release new models as often, which also decreases the number of games published each year. Furthermore, sales of more recently released games may be lower because they are younger than their predecessors. 
-
-Additionally, note that there is a drastic drop for both sales and number of games after 2018. The number of game releases from the three companies in 2019 is only 18 and in 2020 is 5, which is not the case in reality. Therefore, we consider data in 2019 and 2020 to be inaccurate and will exclude them in our statistical analyses.
+Note that the number of game releases from the three companies in 2019 is only 18 and in 2020 is 5, which is not the case in reality. Therefore, we consider data in 2019 and 2020 to be inaccurate and will exclude them in our statistical analyses.
 
 <br>
 
@@ -326,11 +323,9 @@ games_df %>%
   labs(x = "Critic Score", y = "Total Sale (million USD)", color = "Console Developer")
 ```
 
-Critic consensus on a game usually has some correlation with the success of the game in the market because critic reviews may influence consumers' decision to buy games.
+Critic consensus on a game usually has some correlation with the success of the game in the market because critic reviews may influence consumers' decision to buy games.Based on the fitted linear regression lines, it would seem that **Microsoft** and **Sony**'s games usually has scores greater than 5/10, which means that their games have overall good quality. While for **Nintendo**, more of its games earned low scores from critics. 
 
-Based on the fitted linear regression lines, it would seem that **Microsoft** and **Sony**'s games usually has scores greater than 5/10, which means that their games have overall good quality. While for **Nintendo**, more of its games earned low scores from critics. 
-
-Generally though, as critic score increases, sales of games on the three companies' consoles all increase. What's interesting is that **Sony**'s game sale increases more than the others for one unit increase in critic score and **Nintendo**'s increases the least.
+Generally, as critic score increases, sales of games on the three companies' consoles all increase. What's interesting is that **Sony**'s game sale increases more than the others for one unit increase in critic score and **Nintendo**'s increases the least.
 
 <br>
 
@@ -356,11 +351,7 @@ platform_available =
 platform_available
 ```
 
-Platform availability refers to the number of consoles that a game is released on, and running more consoles indicates higher availability (e.g. you can play Grand Theft Auto V on PlayStation 4 or on Xbox One). High availability sometimes indicates high popularity, which is supposed to bring in more sales. However, non-exclusive games won't encourage people to buy certain consoles, since they can play them on consoles they already have. In this way, the sales brought by the game would be "diluted".
-
 For games of **Microsoft** and **Sony**, the sales improves as the number of console increases overall. And this trend is more apparent for **Sony**. This means that for these two companies, more available games sells better than less available games. However, this is not the case for **Nintendo**. Even though there are also non-exclusive games on **Nintendo**'s consoles, they don't contribute more revenue than games with less platform availability. 
-
-(Another factor that has a big impact on how well a game sales is the number of platforms the game is available. Most players do not have multiple consoles and a game that releases on multiple platforms has a much higher potential customer number. The plot showed that there was a large distribution of total revenues in the smaller number of platforms since most players owned only 1 or 2 consoles.)
 
 <br>
 
@@ -533,7 +524,7 @@ According to **Model 4**, with games on **Microsoft** consoles and having large 
 
   * While controlling critic score as constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **increases 0.476** million USD for **Nintendo** games with **large** number of consoles, **increases 0.691** million USD for games with **medium** number of consoles, and **increases 0.789** million USD for games with **small** number of consoles;
  
-  * Among **Nintendo** games, while controlling crirtic score as constant, there is supposed to be **0.084 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.048 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
+  * Among **Nintendo** games, while controlling critic score as constant, there is supposed to be **0.084 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.048 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
  
   * While controlling console availability as constant, the estimated total sales **increases 0.121** million USD for one unit increase in **critic score** on average.
  
@@ -549,10 +540,16 @@ According to **Model 4**, with games on **Microsoft** consoles and having large 
 
 ## Discussion
 
-* From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. After 2012, in general, there is a decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
+From the analysis above, **2008** is the year with the **highest global revenues** and the **most games released**. In 2008, many popular games with high revenues are released in gaming industry such as *Grand Theft Auto IV* and *Mario Kart Wii*. After 2008, both cumulative sales and number of games released decrease due the effects of the 2008 financial recession and the rise in popularity of PC and mobile gaming as technology advances. Another possible reason for the downfall is that the console makers are not eager to release new models as often, which also decreases the number of games published each year. Furthermore, sales of more recently released games may be lower because they are younger than their predecessors. 
 
-* **Action**, **sports**, and **shooting** are the most popular genres that bring the most profits to the companies overall. 
+After 2012, in general, there is a decrease in both the number of games released and total revenues for the three big companies: Nintendo, Sony, and Microsoft. 
 
-* It seems that as critic scores increase, there is a generally associated increase in global sales as well. **Sony** is the company in which their games has the highest critic score and highest global sales. 
+**Action**, **sports**, and **shooting** are the most popular genres that bring the most profits to the companies overall. 
 
-* Another factor that also impacts how well a game sells is the number of platforms the game is available on. Some gamers do not own multiple consoles and a game that is released on multiple platforms has a much higher potential customer base, thus higher sales. 
+It seems that as critic scores increase, there is a generally associated increase in global sales as well. **Sony** is the company in which their games has the highest critic score and highest global sales. 
+
+Platform availability refers to the number of consoles that a game is released on, and running more consoles indicates higher availability (e.g. you can play Grand Theft Auto V on PlayStation 4 or on Xbox One). High availability sometimes indicates high popularity, which is supposed to bring in more sales. However, non-exclusive games won't encourage people to buy certain consoles, since they can play them on consoles they already have. In this way, the sales brought by the game would be "diluted".
+
+In our statistical analyses, it is confirmed that the critic scores and the number of available platforms per game play big factors in influencing the global revenues of each game. 
+* **Better critic scores** imply **higher game's sales** on average. 
+* Games released on higher number of platforms tend to have better sales than the games released on lower number of platforms. 
