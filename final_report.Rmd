@@ -308,7 +308,12 @@ ggplotly(genre_sale_plot)
 
 **Sports** games have been around since the beginning of gaming, and it is the most popular genre, with global sales more than 1.0 billion USD. Coming in second and third respectively are **Action** and **Shooting**, challenging the player’s reflexes and coordination. 
 
-The revenues of each company, however, are not the same across the genres. **Nintendo** earns more profit from making games in **sports**, **role-playing**, and **platform**, with each of them bring back more than 290 million USD. **Sony**’s best-selling genre is **action**, which achieves 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brings huge profits to Sony, with 481.72 and 410.72 million USD, respectively. **Microsoft**, despite being the latest competitor to enter the video game industry, performs well in the **shooting**, **sports**, and **action** genres. The company’s highest revenue is from shooting games with 403.39 million USD.  
+The revenues of each company, however, are not the same across the genres. 
+* **Nintendo** earns more profit from making games in **sports**, **role-playing**, and **platform**, with each of them bring back more than 290 million USD. 
+
+* **Sony**’s best-selling genre is **action**, which achieves 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brings huge profits to Sony, with 481.72 and 410.72 million USD, respectively. 
+
+* **Microsoft**, despite being the latest competitor to enter the video game industry, performs well in the **shooting**, **sports**, and **action** genres. The company’s highest revenue is from shooting games with 403.39 million USD.  
 
 <br>
 
@@ -549,7 +554,7 @@ It seems that as critic scores increase, there is a generally associated increas
 
 Platform availability refers to the number of consoles that a game is released on, and running more consoles indicates higher availability (e.g. you can play Grand Theft Auto V on PlayStation 4 or on Xbox One). High availability sometimes indicates high popularity, which is supposed to bring in more sales. However, non-exclusive games won't encourage people to buy certain consoles, since they can play them on consoles they already have. In this way, the sales brought by the game would be "diluted".
 
-In our statistical analyses, it is confirmed that the critic scores and the number of available platforms per game play big factors in influencing the global revenues of each game. 
+In order to validate the results of our main findings, *ANOVA test* and *linear regression* are performed. Our statistical analyses confirmed that the critic scores and the number of available platforms per game play big factors in influencing the global revenues of each game. 
 
 * **Better critic scores** imply **higher game's sales** on average. 
 * Games released on **higher number of platforms** tend to have **better sales** than the games released on lower number of platforms. 
