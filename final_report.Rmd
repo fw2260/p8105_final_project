@@ -414,7 +414,7 @@ regression_df =
   filter(total_sale < 5) # cut off outliers
 ```
 
-**Need explanation here of why we decided to cut off data at this point**
+Based on the boxplot of total sales, the values of total sales are heavily skewed right. In order to cut off the outliers, the dataset was filtered to only include values less than 5. Therefore any values greater than 5 are excluded for linear regression analysis. 
 
 <br>
 
@@ -558,3 +558,21 @@ In order to validate the results of our main findings, *ANOVA test* and *linear 
 
 * **Better critic scores** imply **higher game's sales** on average. 
 * Games released on **higher number of platforms** tend to have **better sales** than the games released on lower number of platforms. 
+
+<br>
+
+## Interactive Map
+
+### 1. Top 10 best-selling video games
+
+Video game preferences tend to shift regularly, but a look at the map of the top 10 best-selling games of the last 19 years shows how loyal players have remained to some of the industry's biggest franchises. 
+The bar graph shows the top 10 best-selling video games based on the selection of company, genre, and release year range. Overall, from 2001 to 2020, Nintendo holds the top place of total revenues with *Wii Sports* seem to dominate the chart with more than 80 million USD. 
+
+### 2. Distribution of total sales by console
+
+The second chart is a boxplot showing the distribution of total sales by console. Still regardless of developer, genre, and release year range, the second chart implies that the distribution of total sales is approximately normal, with center at around 0.5 million USD or 500,000 USD. 
+
+### 3. Total sales by release year
+
+The third chart gives the total sales of the release year. The highest total sales of the release year range occur in 2008. 
+
