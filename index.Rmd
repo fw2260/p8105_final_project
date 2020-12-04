@@ -41,15 +41,21 @@ h3 { /* Header 3 */
 
 ## Website Overview
 
+**Final Report** : contains a detailed report of our project including motivation, analyses, and conclusions. 
+
+**Interactive Map**: contains an interactive map showing the top 10 best-selling video games of each company, the distribution of total sales by console, and the total sales by the release year. 
+
+**Github repo**: click the icons at the right top corner to check our github repo. 
 
 <br>
+
 For a brief overview of our project, please view our screencast:
 
 <*insert screencast here*>
 
 <br>
 
-## Introduction
+## Motivations
 
 Video games are becoming increasingly popular and mainstream, a favorite pastime across a wide demographic with something out there for everyone. Currently, three major video game console developers dominate the market: **Microsoft**, which makes the Xbox consoles, **Nintendo**, which makes consoles such as Nintendo DS and Wii, and **Sony**, which makes the PlayStation consoles. Video games are released across multiple consoles, although some games can be exclusive to one console (company). Fans may also be loyal to one company for a multitude of reasons, which makes for intriguing comparisons among these three companies. 
 
