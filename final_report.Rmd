@@ -501,7 +501,8 @@ As shown in the graph, there are many outliers with residuals > 3. Although the 
 
 ### 4. Results
 
-The summary of the selected model: \(total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) 
+The summary of the selected model: 
+\(total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) 
 
 is as follow:
 
@@ -540,7 +541,7 @@ According to **Model 4**, with games on **Microsoft** consoles and having large 
 
   * While keeping critic score constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **decreases 0.136** million USD for **Sony** games with **large** number of consoles, **decreases 0.025** million USD for games with **medium** number of consoles, and **decreases 0.21** million USD for games with **small** number of consoles;
  
-  * Among **Sony** games, while keeping critic score constant, there is supposed to be **0.324 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.475 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
+  * Among **Sony** games, while keeping critic score constant, there is supposed to be **0.324 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.475 million USD decrease** when compared games on **small** number of platforms with **large** number of platforms;
  
   * While keeping console availability constant, the estimated total sales **increases 0.271** million USD for one unit increase in **critic score** on average.
 
