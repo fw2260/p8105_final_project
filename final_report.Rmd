@@ -170,7 +170,8 @@ subplot(totalsale_plotly, totalcount_plotly, titleX = TRUE, titleY = TRUE, margi
 ```
 
 The left bar graph shows the cumulative global revenues (in million USD) of each game by release year from 2001 and 2020 on the three companies' platforms. In other words, it is showing how much the games made (from its release year to present) by their release year. *Note: this graph is NOT showing annual sales of games.* The right graph shows the number of video games released on these platforms in the same period. 
-The video game industry increased at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reached its peak in 2008, with 620 games published on these major platforms. After 2008, both cumulative sales and number of games released decreases over time.  
+
+The video game industry increases at a rapid rate after 2001 with a drastic increase in number of games released each year and the high volume reaches its peak in 2008, with 620 games published on these major platforms. After 2008, both cumulative sales and number of games released decreases over time.  
 
 Note that the number of game releases from the three companies in 2019 is only 18 and in 2020 is 5, which is not the case in reality. Therefore, we consider data in 2019 and 2020 to be inaccurate and will exclude them in our statistical analyses.
 
@@ -521,25 +522,25 @@ According to **Model 4**, with games on **Microsoft** consoles and having large 
 
 * For **Microsoft**, 
 
-  * While controlling critic score as constant, compared to sales of game on large number of consoles, estimated sales **decreases 0.299** million USD when games run on **medium** number of consoles and **decreases 0.265** million USD when games run on **small** number of consoles; 
+  * While keeping critic score constant, compared to sales of game on large number of consoles, estimated sales **decreases 0.299** million USD when games run on **medium** number of consoles and **decreases 0.265** million USD when games run on **small** number of consoles; 
  
-  * While controlling console availability as constant, the estimated total sales **increases 0.228** million USD for one unit increase in **critic score** on average.
+  * While keeping console availability constant, the estimated total sales **increases 0.228** million USD for one unit increase in **critic score** on average.
 
 * For **Nintendo**, 
 
-  * While controlling critic score as constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **increases 0.476** million USD for **Nintendo** games with **large** number of consoles, **increases 0.691** million USD for games with **medium** number of consoles, and **increases 0.789** million USD for games with **small** number of consoles;
+  * While keeping critic score constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **increases 0.476** million USD for **Nintendo** games with **large** number of consoles, **increases 0.691** million USD for games with **medium** number of consoles, and **increases 0.789** million USD for games with **small** number of consoles;
  
-  * Among **Nintendo** games, while controlling critic score as constant, there is supposed to be **0.084 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.048 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
+  * Among **Nintendo** games, while keeping critic score constant, there is supposed to be **0.084 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.048 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
  
-  * While controlling console availability as constant, the estimated total sales **increases 0.121** million USD for one unit increase in **critic score** on average.
+  * While keeping console availability constant, the estimated total sales **increases 0.121** million USD for one unit increase in **critic score** on average.
  
 * For **Sony**, 
 
-  * While controlling critic score as constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **decreases 0.136** million USD for **Sony** games with **large** number of consoles, **decreases 0.025** million USD for games with **medium** number of consoles, and **decreases 0.21** million USD for games with **small** number of consoles;
+  * While keeping critic score constant, compared to sales of **Microsoft** game with same level of console availability, estimated sales **decreases 0.136** million USD for **Sony** games with **large** number of consoles, **decreases 0.025** million USD for games with **medium** number of consoles, and **decreases 0.21** million USD for games with **small** number of consoles;
  
-  * Among **Sony** games, while controlling critic score as constant, there is supposed to be **0.324 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.475 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
+  * Among **Sony** games, while keeping critic score constant, there is supposed to be **0.324 million USD decrease** when compared games on **medium** number of platforms with **large** number of platforms, and **0.475 million USD increase** when compared games on **small** number of platforms with **large** number of platforms;
  
-  * While controlling console availability as constant, the estimated total sales **increases 0.271** million USD for one unit increase in **critic score** on average.
+  * While keeping console availability constant, the estimated total sales **increases 0.271** million USD for one unit increase in **critic score** on average.
 
 <br>
 
@@ -566,14 +567,14 @@ There are still some limitation of our dataset. 1. The regression model only inc
 
 ### 1. Top 10 best-selling video games
 
-Video game preferences tend to shift regularly, but a look at the map of the top 10 best-selling games of the last 19 years shows how loyal players have remained to some of the industry's biggest franchises. 
-The bar graph shows the top 10 best-selling video games based on the selection of company, genre, and release year range. Overall, from 2001 to 2020, Nintendo holds the top place of total revenues with *Wii Sports* seem to dominate the chart with more than 80 million USD. 
+Video game preferences tend to shift regularly, but a look at the graph of the top 10 best-selling games of the last 19 years shows how loyal players have remained to some of the industry's biggest franchises. 
+The bar graph shows the top 10 best-selling video games based on the selection of console developer, genre, and release year range. Overall, from 2001 to 2020, Nintendo holds the top place of total revenues with *Wii Sports*, dominating the chart with sales of more than 80 million USD. 
 
 ### 2. Distribution of total sales by console
 
-The second chart is a boxplot showing the distribution of total sales by console. Still regardless of developer, genre, and release year range, the second chart implies that the distribution of total sales is approximately normal, with center at around 0.5 million USD or 500,000 USD. 
+The second chart is a boxplot showing the distribution of total sales by console. Regardless of console developer, genre, and release year range, the second chart implies that the distribution of total sales is actually very skewed (appearing normal due to a log transformation) by some extremely high-earning games, with centers at around 0.5 million USD or 500,000 USD. 
 
 ### 3. Total sales by release year
 
-The third chart gives the total sales of the release year. The highest total sales of the release year range occur in 2008. 
+The third chart gives the total sales by games' release year. The highest total sales by release year occur in 2008. 
 

@@ -121,7 +121,7 @@ renderPlotly({
 Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Distribution of total sales by console
+### Distribution of total sales by console (log scale)
 
 ```{r}
 sub_console_df = reactive({

@@ -86,7 +86,7 @@ We webscraped our data from  [VGChartz](https://www.vgchartz.com/games/games.php
 
 * **2008** is the year with the **highest global revenues** and the **most games released.**
 
-* **Action**, **sports**, and **shooting** are the most popular and the genres that bring the most profits to the gaming companies.
+* **Action**, **sports**, and **shooting** are the top three genres that bring the most profits to the gaming companies.
 
 * As the critic scores increase, there is a general positive correlation with the global sales. In general, **Sony** has the **highest critic score** and **highest global sales**. 
 
