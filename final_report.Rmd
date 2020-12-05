@@ -512,8 +512,8 @@ coe_df_tidy =
   coe_df %>%
   select(term, estimate, p.value) %>% 
   mutate(
-    term = str_replace(term, "^console_developer:", "Developer: "),
-    term = str_replace(term, "^n_platforms:", "Num_Consoles: "),
+    term = str_replace(term, "console_developer", "Developer: "),
+    term = str_replace(term, "n_platforms", "Num_Consoles: "),
   ) %>%
   knitr::kable(digits = 3)
 
