@@ -121,12 +121,12 @@ Important variables include:
 
 * `critic_score`: aggregate critic review score compiled by VGChartz and Metacritic
 
-* `total_sale`: global revenues (million $) the game earned on that particular console
+* `total_sale`: global revenues (million USD) the game earned on that particular console
 
 The first ten rows of the dataset is as follow:
 
 ```{r}
-head(games_df) %>% 
+head(games_df, n = 10) %>% 
   knitr::kable(format = "html", col.names = colnames(games_df), align="c") %>%
   kableExtra::kable_styling("striped", "hover", row_label_position = "c") %>%
   kableExtra::scroll_box(width = "100%", height = "200px")
@@ -309,7 +309,8 @@ ggplotly(genre_sale_plot)
 
 **Sports** games have been around since the beginning of gaming, and it is the most popular genre, with global sales more than 1.0 billion USD. Coming in second and third respectively are **Action** and **Shooting**, challenging the player’s reflexes and coordination. 
 
-The revenues of each company, however, are not the same across the genres. 
+The revenues of each company, however, are not the same across the genres.
+
 * **Nintendo** earns more profit from making games in **sports**, **role-playing**, and **platform**, with each of them bring back more than 290 million USD. 
 
 * **Sony**’s best-selling genre is **action**, which achieves 580.94 million USD revenue between 2001 to 2020. **Sports** and **shooting** also brings huge profits to Sony, with 481.72 and 410.72 million USD, respectively. 
@@ -386,8 +387,7 @@ Using Analysis of Variance (ANOVA) we can conduct statistical comparisons among 
 
 ```{r ANOVA_Genre, message=FALSE, warning=FALSE}
 aov_mod_1 = aov(total_sale ~ n_platforms, data = games_df)
-```
-```{r }
+
 broom::tidy(aov_mod_1)
 ```
 ```{r }
@@ -437,7 +437,7 @@ Model 2 contains console_developer and all other interested predictors (genre, n
 
 We use `crossv_mc` method to create training and testing datasets and fit the above 4 candidate models. The violin plots below shows the distribution of **RMSE** values for each model:
 
-```{r regression_rmse_1,warning = F ,include = F}
+```{r regression_rmse_1,warning = F}
 cv_df = 
   crossv_mc(regression_df, 300) %>% 
   mutate(
@@ -501,7 +501,9 @@ As shown in the graph, there are many outliers with residuals > 3. Although the 
 
 ### 4. Results
 
-The summary of the selected model: \(total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) is as follow:
+The summary of the selected model: \(total\_sale \sim console\_developer * n\_platforms + console\_developer * critic\_score\) 
+
+is as follow:
 
 ```{r}
 coe_df = broom::tidy(lm4) 
