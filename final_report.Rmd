@@ -562,6 +562,7 @@ In order to validate the results of our main findings, an *ANOVA test* and *line
 * Games released on **higher number of platforms** tend to have **better sales** than the games released on lower number of platforms. 
 
 There are many limitations to our analyses. First of all, the regression model only includes games with total sale less than 5 million USD and omits those high-earning games that would be significant outliers in the linear regression model. Ideally, we would like to include all games. Also, we built models by hypothesis instead of performing a model selection procedure such as a stepwise method to find the "best" model. The resulting model does not have an ideal distribution of residuals, and the r.square is quite low as well, which indicates that the model should be improved. We also find it difficult to interpret a large model containing all variables since there are too many categorical variables to consider. 
+
 <br>
 
 ## Interactive Map
