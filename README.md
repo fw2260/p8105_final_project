@@ -1,3 +1,5 @@
 # p8105_final_project
 
-This repo will contain everything related to the final project for P8105.
+This is the final project of our Data Science I class (p8105). We aimed to explore factors influencing global sales of video games between the three major video game console manufacturers: Sony, Microsoft, and Nintendo. The final product is a website (https://fw2260.github.io/p8105_final_project/) containing our methods, results, discussions, and a Shiny App in the form of an interactive dashboard. 
+
+Everything was built in R and we used rvest for webscraping, tidyverse, and flexdashboard, among other R packages. We gathered our data from metacritic.com and vgchartz.com and scraped information such as title, release year, genre, and global sales of 17000+ video games. After cleaning the dataset, we set out to answer some questions to look at how some of our variables were associated with global sales in each company and finally built a linear model to quantify these associations. In hindsight, the data is clearly non-linear so a different approach should've been made.
